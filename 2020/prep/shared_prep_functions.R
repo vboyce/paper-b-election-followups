@@ -8,17 +8,25 @@
 # Differences from the original MadameVicePresident pre-processing.R this
 # is derived from:
 #  - No dependency on mturk_HIT_results.tsv (not part of this repo - see
-#    STATUS.md). The real MTurk WorkerId is therefore never available, so
-#    the cross-round "did this person also do the other round" exclusion
-#    from the original post-election script cannot be reproduced here.
-#    This is reported loudly (see `process_round()`) rather than silently
-#    dropped.
+#    STATUS.md), so the real MTurk WorkerId is never available. The
+#    original post-election script's cross-round exclusion
+#    (WorkerIdInPreviousRound) can't be reproduced exactly. Instead,
+#    `process_round()` takes an optional `previous_round_participant_ids`
+#    argument: the pseudonymous participant IDs are built from a mapping
+#    shared across both rounds' raw logs (see deidentify_raw_logs.R), so
+#    the same underlying IP hash gets the same ID in both files, and a
+#    ID showing up in both rounds is used as a proxy for the same person
+#    doing both. This is not equivalent to the original WorkerId check -
+#    it only catches repeats from the same computer/IP, not someone using
+#    a different one under the same MTurk account - so it's expected to
+#    catch fewer repeats than the original. This is reported via
+#    `message()` rather than silently assumed complete.
 #  - The per-row participant identifier is a pseudonymous ID
-#    (pre_participant_NNNN / post_participant_NNNN) substituted for the raw
-#    log's MD5 IP hash before this repo was created - see
-#    deidentify_raw_logs.R. It plays the same structural role the MD5 hash
-#    played in the original script (grouping a participant's own rows
-#    together, and detecting repeat submissions within one round).
+#    (participant_NNNN) substituted for the raw log's MD5 IP hash before
+#    this repo was created - see deidentify_raw_logs.R. It plays the same
+#    structural role the MD5 hash played in the original script (grouping
+#    a participant's own rows together, and detecting repeat submissions
+#    within or across rounds).
 #  - Exclusion is tracked with a human-readable `excl_reason` rather than a
 #    single overwritten boolean, and every exclusion step reports the
 #    number of participants/trials it removes via `message()`.
@@ -30,6 +38,20 @@ library(tidyverse)
 
 RT_MIN_MS <- 180
 RT_MAX_MS <- 10000
+
+# Distinct pseudonymous participant IDs (2nd comma-separated field) seen
+# anywhere in a raw log, comment lines excluded. Used to pass one round's
+# full set of IDs into another round's `process_round()` call for the
+# cross-round repeat check - this is deliberately the full raw set, not
+# the "kept after exclusions" set, matching how the original pipeline's
+# WorkerIdInPreviousRound check looked at the full previous round's MTurk
+# records, not just its post-exclusion survivors.
+read_participant_ids <- function(raw_log_path) {
+  lines <- read_lines(raw_log_path)
+  data_rows <- lines[!str_starts(lines, "#")]
+  fields <- str_match(data_rows, "^[^,]*,([^,]*),")
+  unique(fields[, 2])
+}
 
 # Pulls out the rows of a raw Ibex log that match `pattern`, parses them as
 # headerless CSV, and keeps+renames the requested columns (1-indexed,
@@ -186,10 +208,16 @@ classify_cloze_response <- function(response) {
 
 # Processes one round's raw log end to end. `has_aware_question` selects
 # whether to parse the post-election-only "are you aware the race was
-# called" question. Returns a named list of tidy tibbles, one per task,
-# ready to be written out by the calling driver script.
+# called" question. `previous_round_participant_ids` is the set of
+# pseudonymous participant IDs seen in an earlier round (pass the
+# pre-election round's IDs when processing post-election) - anyone
+# appearing in both is excluded as a same-IP cross-round repeat; leave at
+# the default (empty) for the first round processed, since there's no
+# earlier round to check against. Returns a named list of tidy tibbles,
+# one per task, ready to be written out by the calling driver script.
 process_round <- function(raw_log_path, stimuli_path, stimuli_mazerace_path,
-                           has_aware_question) {
+                           has_aware_question,
+                           previous_round_participant_ids = character(0)) {
   lines <- read_lines(raw_log_path)
 
   code <- extract_field(lines, ",code,", c(1, 2, 8), c("time", "participant_id", "code"))
@@ -315,14 +343,17 @@ process_round <- function(raw_log_path, stimuli_path, stimuli_mazerace_path,
       sid = sprintf(paste0("Sub%0", max(nchar(sid)), "d"), sid)
     )
 
-  message(
-    "process_round: not applying the original pipeline's cross-round ",
-    "'WorkerIdInPreviousRound' exclusion (someone doing both the pre- and ",
-    "post-election round) - that check required the real MTurk WorkerId, ",
-    "joined in from mturk_HIT_results.tsv, which is not part of this repo ",
-    "(see STATUS.md). If cross-round repeats matter for this analysis, ",
-    "they will need to be re-derived from the original private data."
-  )
+  if (length(previous_round_participant_ids) > 0) {
+    message(
+      "process_round: excluding same-IP repeats against ",
+      length(previous_round_participant_ids), " participant IDs from the ",
+      "earlier round. This catches the same computer/IP being used in ",
+      "both rounds, but - unlike the original pipeline's WorkerId-based ",
+      "check, which isn't reproducible here (see STATUS.md) - it will ",
+      "miss someone who used a different IP/browser under the same MTurk ",
+      "account across rounds."
+    )
+  }
 
   # Repeat submissions within THIS round: since `participant_id` is a
   # 1:1 relabeling of the raw log's IP hash (see deidentify_raw_logs.R),
@@ -347,6 +378,7 @@ process_round <- function(raw_log_path, stimuli_path, stimuli_mazerace_path,
     mutate(
       excl_not_native = !is.na(native) & native != "yes",
       excl_repeat_participant = coalesce(repeat_participant_id, FALSE),
+      excl_participated_in_previous_round = participant_id %in% previous_round_participant_ids,
       excl_spr_rt_too_slow = !is.na(spr_max_rt) & spr_max_rt >= RT_MAX_MS,
       excl_spr_rt_too_fast = !is.na(spr_min_rt) & spr_min_rt <= RT_MIN_MS,
       excl_maze_rt_too_slow = !is.na(maze_max_rt) & maze_max_rt >= RT_MAX_MS,
@@ -361,14 +393,15 @@ process_round <- function(raw_log_path, stimuli_path, stimuli_mazerace_path,
   # per-row and need to stay aligned within a row, not concatenated
   # across rows.
   reason_labels <- c(
-    "not_native", "repeat_participant", "spr_rt_too_slow", "spr_rt_too_fast",
+    "not_native", "repeat_participant", "participated_in_previous_round",
+    "spr_rt_too_slow", "spr_rt_too_fast",
     "maze_rt_too_slow", "maze_rt_too_fast", "no_slider_movement"
   )
   reason_flags <- d |>
     select(
-      excl_not_native, excl_repeat_participant, excl_spr_rt_too_slow,
-      excl_spr_rt_too_fast, excl_maze_rt_too_slow, excl_maze_rt_too_fast,
-      excl_no_slider_movement
+      excl_not_native, excl_repeat_participant, excl_participated_in_previous_round,
+      excl_spr_rt_too_slow, excl_spr_rt_too_fast, excl_maze_rt_too_slow,
+      excl_maze_rt_too_fast, excl_no_slider_movement
     ) |>
     as.matrix()
   d$excl_reason <- apply(reason_flags, 1, function(row) {
@@ -380,9 +413,9 @@ process_round <- function(raw_log_path, stimuli_path, stimuli_mazerace_path,
   d <- d |>
     select(
       -spr_max_rt, -maze_max_rt, -spr_min_rt, -maze_min_rt, -repeat_participant_id,
-      -excl_not_native, -excl_repeat_participant, -excl_spr_rt_too_slow,
-      -excl_spr_rt_too_fast, -excl_maze_rt_too_slow, -excl_maze_rt_too_fast,
-      -excl_no_slider_movement
+      -excl_not_native, -excl_repeat_participant, -excl_participated_in_previous_round,
+      -excl_spr_rt_too_slow, -excl_spr_rt_too_fast, -excl_maze_rt_too_slow,
+      -excl_maze_rt_too_fast, -excl_no_slider_movement
     )
 
   n_participants <- n_distinct(d$sid)

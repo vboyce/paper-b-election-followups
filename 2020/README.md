@@ -4,10 +4,12 @@
 
 - `raw/` - de-identified raw data. `pre_election_results.txt` /
   `post_election_results.txt` are the original Ibex result logs with the
-  MD5 IP-hash column replaced by a per-file pseudonymous participant ID
-  (see `prep/deidentify_raw_logs.R` for how, and why). `stimuli.tsv` /
-  `stimuli_mazerace.tsv` are the experiment materials (identical between
-  the pre- and post-election rounds).
+  MD5 IP-hash column replaced by a pseudonymous participant ID (see
+  `prep/deidentify_raw_logs.R` for how, and why - the mapping is shared
+  across both files, so the same underlying IP hash gets the same
+  pseudonym in both, which is what makes the cross-round exclusion below
+  possible). `stimuli.tsv` / `stimuli_mazerace.tsv` are the experiment
+  materials (identical between the pre- and post-election rounds).
 - `prep/` - `shared_prep_functions.R` holds all the parsing/cleaning logic,
   used identically by `prep_pre_election.R` and `prep_post_election.R` so
   the two rounds can't silently drift apart in exclusion criteria or
@@ -28,33 +30,49 @@ contained plaintext AWS keys and real MTurk WorkerIds (see the top-level
 `STATUS.md`). The post-election round additionally used WorkerId to
 exclude anyone who had already done the pre-election round.
 
-Neither of those checks is reproducible here. This prep pipeline instead
-only catches repeat submissions detectable from the pseudonymous
-per-file participant ID (a stand-in for the original MD5 IP hash) within
-one round - `process_round()` prints a message noting this every run.
+Neither check can be reproduced exactly without that file. As a proxy,
+this pipeline instead:
 
-This is not a small effect: cross-validating against the original
-pipeline's published per-condition participant counts
-(`data-analysis.md` in each round's folder), the *total* number of raw
-sessions parsed matches exactly (4648 pre-election, 4543 post-election),
-but the number of participants *kept after exclusions* is higher here
-than in the original:
+- excludes repeat submissions detectable from the pseudonymous
+  participant ID (a stand-in for the original MD5 IP hash) *within* one
+  round (`excl_reason` = `repeat_participant`) - this reproduces the
+  original's `repeat.md5` check exactly, since the pseudonym is just a
+  1:1 relabeling of the same hash;
+- for the post-election round, additionally excludes anyone whose
+  pseudonymous ID also appears anywhere in the pre-election round's raw
+  log (`excl_reason` = `participated_in_previous_round`), since the
+  pseudonym mapping is shared across both rounds.
 
-|        | original kept | this pipeline's kept | difference |
-|--------|---------------|------------------------|------------|
-| pre-election  | 1607 | 1647 | +40  |
-| post-election |  589 |  927 | +338 |
+That second check only catches someone who used the *same computer/IP* in
+both rounds - it will miss a repeat participant who switched IP/browser
+but used the same MTurk account, which is exactly what the original
+WorkerId-based check *would* have caught and this can't. `process_round()`
+prints a message noting this every run.
 
-The pre-election gap (+40) is small and plausibly just the participants
-whose repeat submissions used a different IP but the same MTurk account.
-The post-election gap (+338) is much larger, because it's also missing
-the cross-round "did this person already do the pre-election round"
-exclusion - about 7% of post-election sessions here are not excluded that
-the original pipeline would have caught.
+**Validation against the original pipeline:** cross-checking against the
+original's published per-condition participant counts (`data-analysis.md`
+in each round's folder), the *total* number of raw sessions parsed
+matches exactly (4648 pre-election, 4543 post-election). The number of
+participants *kept after exclusions* is close but still somewhat higher
+here than in the original, entirely attributable to the missing
+WorkerId-based check:
 
-**If a paper is going to be built on the post-election data, this should
-be resolved before drawing conclusions from it** - e.g. by having someone
-with access to the original private `mturk_HIT_results.tsv` files compute
-just the *list* of pseudonymous participant IDs that should be excluded
-(without ever bringing the real WorkerIds into this repo) and adding that
-as a small extra exclusion input file.
+|                | original kept | this pipeline's kept | difference |
+|----------------|---------------|-----------------------|------------|
+| pre-election   | 1607          | 1647                  | +40        |
+| post-election  |  589          |  907                  | +318       |
+
+Before adding the cross-round IP-hash check, post-election's gap was
++338; the check closes 20 of those 338 (the participants who repeated
+from the same IP). The remaining +318 gap is participants the original
+WorkerId-based check would have caught that this repo's pipeline
+structurally cannot: mainly people who did both rounds from a different
+IP/browser under the same MTurk account.
+
+**If a paper is going to be built on the post-election data, this
+remaining gap should be resolved before drawing conclusions from it** -
+e.g. by having someone with access to the original private
+`mturk_HIT_results.tsv` files compute just the *list* of pseudonymous
+participant IDs that should be excluded (without ever bringing the real
+WorkerIds into this repo) and adding that as a small extra exclusion
+input file.

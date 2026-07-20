@@ -1,7 +1,6 @@
 sid,condition,recall_response,batch
 Sub0022,event-mazerace,Kamala Harris,post
 Sub0025,event-maze,Kamala Harris,post
-Sub0040,event-maze,Writer is unsure,post
 Sub0041,event-maze,Kamala Harris,post
 Sub0047,event-spr,Writer is unsure,post
 Sub0052,event-mazerace,Kamala Harris,post
@@ -16,7 +15,6 @@ Sub0109,event-maze,Kamala Harris,post
 Sub0129,event-mazerace,Kamala Harris,post
 Sub0141,event-maze,Kamala Harris,post
 Sub0145,event-maze,Mike Pence,post
-Sub0152,event-spr,Kamala Harris,post
 Sub0165,event-spr,Kamala Harris,post
 Sub0174,event-spr,Kamala Harris,post
 Sub0189,event-maze,Writer is unsure,post
@@ -45,14 +43,12 @@ Sub0725,event-maze,Writer is unsure,post
 Sub0740,event-mazerace,Kamala Harris,post
 Sub0758,event-maze,Writer is unsure,post
 Sub0768,event-spr,Mike Pence,post
-Sub0791,event-maze,Kamala Harris,post
 Sub0811,event-maze,Kamala Harris,post
 Sub0826,event-maze,I don't remember,post
 Sub0830,event-spr,Kamala Harris,post
 Sub0831,event-maze,Writer is unsure,post
 Sub0860,event-spr,Writer is unsure,post
 Sub0869,event-maze,Writer is unsure,post
-Sub0870,event-spr,Kamala Harris,post
 Sub0877,event-maze,Kamala Harris,post
 Sub0879,event-maze,Mike Pence,post
 Sub0892,event-spr,Kamala Harris,post
@@ -84,7 +80,6 @@ Sub1146,event-spr,Writer is unsure,post
 Sub1154,event-mazerace,Mike Pence,post
 Sub1183,event-maze,Writer is unsure,post
 Sub1216,event-spr,Writer is unsure,post
-Sub1222,event-spr,Writer is unsure,post
 Sub1224,event-mazerace,Kamala Harris,post
 Sub1249,event-mazerace,Kamala Harris,post
 Sub1285,event-spr,Kamala Harris,post
@@ -156,7 +151,6 @@ Sub3030,event-spr,Mike Pence,post
 Sub3035,event-mazerace,Mike Pence,post
 Sub3041,event-maze,Kamala Harris,post
 Sub3057,event-maze,Kamala Harris,post
-Sub3061,event-mazerace,Kamala Harris,post
 Sub3070,event-maze,Kamala Harris,post
 Sub3071,event-spr,Writer is unsure,post
 Sub3084,event-maze,Kamala Harris,post

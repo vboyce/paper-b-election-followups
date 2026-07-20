@@ -12,7 +12,6 @@ Sub0050,cloze-event,10,some speeches will be made.,none,post
 Sub0059,cloze-event,9,results,none,post
 Sub0060,cloze-event,2,the vice President must be prepared to take control.,none,post
 Sub0063,cloze-event,3,them.,neutral,post
-Sub0079,event-cloze,7,the vice president will need to govern in some way.,none,post
 Sub0086,cloze-event,11,it can be controlled by precautions.,none,post
 Sub0090,cloze-event,1,25,none,post
 Sub0116,event-cloze,9,will be busy with government policies,none,post
@@ -64,7 +63,6 @@ Sub0761,event-cloze,1,there is a republican majority,none,post
 Sub0773,cloze-event,1,next presidential,none,post
 Sub0774,event-cloze,3,international affairs,none,post
 Sub0781,cloze-event,10,he will attend multiple public events.,male,post
-Sub0805,cloze-event,2,she will handle most things related to it.,female,post
 Sub0819,cloze-event,3,With so much unclear about the upcoming presidential election%2C it’s nice to know that there is one absolute certainty.,none,post
 Sub0820,cloze-event,12,Worst for Trump%2C he's now behind in the count in states he needs to win — so it ... If the election comes down to Pennsylvania%2C we would have the scenario for Bush v. ... And given the unexpectedly tight race%2C Pennsylvania's 20 electoral votes may be,trump,post
 Sub0824,cloze-event,1,donald trump,trump,post
@@ -151,7 +149,6 @@ Sub1741,cloze-event,11,it is expected she will engage in all activities safely.,
 Sub1777,cloze-event,7,Presidential and Vice-Presidential,none,post
 Sub1792,cloze-event,6,safety,none,post
 Sub1881,cloze-event,9,will be busy behind the scenes.,none,post
-Sub1916,cloze-event,11,it is safe to say it will be a defining challenge of their time in office.,neutral,post
 Sub1944,event-cloze,8,KAMALA HARRIS,harris,post
 Sub1946,event-cloze,2,January 20%2C 2021,none,post
 Sub1970,cloze-event,6,as a president,none,post
@@ -159,7 +156,6 @@ Sub1988,event-cloze,11,Kamala Harris has done a great job.,harris,post
 Sub2038,cloze-event,4,they meet with many world leaders.,neutral,post
 Sub2046,cloze-event,3,the military,none,post
 Sub2072,cloze-event,5,KAMALA HARRIS,harris,post
-Sub2075,cloze-event,9,he will sometime following.,male,post
 Sub2137,cloze-event,5,presidential,none,post
 Sub2262,event-cloze,12,Pence will handle it appropriately.,pence,post
 Sub2285,event-cloze,6,safety,none,post
