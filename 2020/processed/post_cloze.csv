@@ -1,0 +1,263 @@
+sid,condition,cloze_item,cloze_response,cloze_pronoun,batch
+Sub0012,event-cloze,10,everyone of the VP's speeches will get full coverage from the liberal MSM.,none,post
+Sub0017,event-cloze,10,war begins.,none,post
+Sub0020,cloze-event,8,JOE BODEN,none,post
+Sub0026,cloze-event,10,GOOD,none,post
+Sub0030,cloze-event,6,his safety,male,post
+Sub0033,event-cloze,10,the presidential term will otherwise continue as expected.,none,post
+Sub0044,cloze-event,5,president.,none,post
+Sub0045,cloze-event,2,36,none,post
+Sub0046,cloze-event,6,safe travel of the president to the White House.,none,post
+Sub0050,cloze-event,10,some speeches will be made.,none,post
+Sub0059,cloze-event,9,results,none,post
+Sub0060,cloze-event,2,the vice President must be prepared to take control.,none,post
+Sub0063,cloze-event,3,them.,neutral,post
+Sub0079,event-cloze,7,the vice president will need to govern in some way.,none,post
+Sub0086,cloze-event,11,it can be controlled by precautions.,none,post
+Sub0090,cloze-event,1,25,none,post
+Sub0116,event-cloze,9,will be busy with government policies,none,post
+Sub0121,cloze-event,5,PRESIDENTIAL,none,post
+Sub0126,cloze-event,12,reelection can be conducted,none,post
+Sub0130,cloze-event,8,Kamala Harris,harris,post
+Sub0134,cloze-event,6,45,none,post
+Sub0138,cloze-event,7,Harris will play a big role in policy under the Biden administration.,biden,post
+Sub0148,cloze-event,12,donald trump,trump,post
+Sub0149,event-cloze,4,as president,none,post
+Sub0164,event-cloze,11,it will be very dificult,none,post
+Sub0183,cloze-event,6,the transportation of Kamala Harris to Washington.,harris,post
+Sub0186,cloze-event,4,he will be the best vice president of united states,male,post
+Sub0212,cloze-event,10,vice president will give more speeches in later days,none,post
+Sub0240,cloze-event,2,the country will protect the vice president and the president separately.,none,post
+Sub0255,cloze-event,9,she will be ready to step in if needed,female,post
+Sub0263,cloze-event,9,33,none,post
+Sub0268,event-cloze,10,MAY2021,none,post
+Sub0271,cloze-event,4,of the year,none,post
+Sub0285,event-cloze,3,virtues and serious liabilities,none,post
+Sub0288,event-cloze,5,president.,none,post
+Sub0307,cloze-event,9,the vice president will make the right decision soon.,none,post
+Sub0315,cloze-event,2,The vice president will come soon .,none,post
+Sub0358,cloze-event,3,the next president,none,post
+Sub0386,event-cloze,2,Harris would assume the position.,harris,post
+Sub0393,event-cloze,3,virtues and serious liabilities,none,post
+Sub0418,cloze-event,2,the vice president would take the reins of power.,none,post
+Sub0434,event-cloze,8,change,none,post
+Sub0436,event-cloze,5,president.,none,post
+Sub0472,event-cloze,10,donald trump,trump,post
+Sub0501,cloze-event,4,the vice president travels out of the country.,none,post
+Sub0507,event-cloze,1,the Vice President is the deciding vote.,none,post
+Sub0521,cloze-event,5,KAMALA HARRIS,harris,post
+Sub0544,cloze-event,7,Yes,none,post
+Sub0551,event-cloze,1,JANUARY 2021,none,post
+Sub0553,event-cloze,11,we have to predict the truth,none,post
+Sub0609,event-cloze,4,12,none,post
+Sub0614,event-cloze,10,they will win,neutral,post
+Sub0617,cloze-event,12,2021,none,post
+Sub0629,cloze-event,7,KAMALA HARRIS,harris,post
+Sub0647,cloze-event,2,kamala harris,harris,post
+Sub0670,event-cloze,3,As a historian who has taught and written about the Constitution for over 40 years%2C however%2C I know that one thing is certain. President Trump’s term will end at noon on Jan. 20%2C 2021. At that same instant%2C either he will begin a second term%2C or the country will have a new chief executive.  The framers of the Constitution did not establish a specific day that presidential terms end%2C but they were very clear that the president “shall hold his Office during the Term of four Years.” Not four years and a day. Not three years and 364 days. Four years.,trump,post
+Sub0702,cloze-event,6,presidential,none,post
+Sub0708,cloze-event,2,presidential,none,post
+Sub0729,cloze-event,10,YES,none,post
+Sub0747,cloze-event,10,NO,none,post
+Sub0753,event-cloze,3,AMERICA,none,post
+Sub0761,event-cloze,1,there is a republican majority,none,post
+Sub0773,cloze-event,1,next presidential,none,post
+Sub0774,event-cloze,3,international affairs,none,post
+Sub0781,cloze-event,10,he will attend multiple public events.,male,post
+Sub0805,cloze-event,2,she will handle most things related to it.,female,post
+Sub0819,cloze-event,3,With so much unclear about the upcoming presidential election%2C it’s nice to know that there is one absolute certainty.,none,post
+Sub0820,cloze-event,12,Worst for Trump%2C he's now behind in the count in states he needs to win — so it ... If the election comes down to Pennsylvania%2C we would have the scenario for Bush v. ... And given the unexpectedly tight race%2C Pennsylvania's 20 electoral votes may be,trump,post
+Sub0824,cloze-event,1,donald trump,trump,post
+Sub0839,cloze-event,11,corona affect,none,post
+Sub0848,cloze-event,10,NO,none,post
+Sub0849,event-cloze,5,YES,none,post
+Sub0856,cloze-event,6,given by the American government.,none,post
+Sub0861,event-cloze,1,Kamala Harris would be the deciding vote.,harris,post
+Sub0863,cloze-event,8,YES,none,post
+Sub0865,cloze-event,7,he will be advised what to do,male,post
+Sub0874,cloze-event,4,The vice president will do so.,none,post
+Sub0881,cloze-event,12,the vice president will fulfill their duty and do what's required to make the situation right.,neutral,post
+Sub0882,cloze-event,6,aircraft,none,post
+Sub0891,cloze-event,3,her,female,post
+Sub0899,event-cloze,10,YES,none,post
+Sub0904,cloze-event,10,winning moment,none,post
+Sub0925,cloze-event,10,YES,none,post
+Sub0926,cloze-event,5,the president,none,post
+Sub0931,cloze-event,11,PRESIDENT,none,post
+Sub0937,cloze-event,2,NO,none,post
+Sub0949,event-cloze,4,YES,none,post
+Sub0958,cloze-event,9,not.,none,post
+Sub0963,cloze-event,4,Kamala Harris will likely have some trips scheduled%2C unless Covid-19 prevents it.,harris,post
+Sub0971,event-cloze,5,president,none,post
+Sub0972,cloze-event,7,YES,none,post
+Sub0975,event-cloze,4,will continues,none,post
+Sub0980,event-cloze,7,SERVICE,none,post
+Sub0982,cloze-event,6,DURING,none,post
+Sub0986,event-cloze,5,the president.,none,post
+Sub0989,event-cloze,8,good relations between Kamala Harris and her previous colleagues on Capitol Hill.,harris,post
+Sub0990,event-cloze,12,Kalamala Harris will take complete and total control,harris,post
+Sub0992,cloze-event,11,next presidential,none,post
+Sub1001,cloze-event,11,we hope that the situation will great%2Cy improve.,none,post
+Sub1005,cloze-event,1,the Democrat Party will have majority in the House of Representatives,none,post
+Sub1006,cloze-event,9,Joe britin,none,post
+Sub1007,event-cloze,4,the vice president will travel abroad,none,post
+Sub1012,cloze-event,1,the vice president breaks the tie.,none,post
+Sub1016,event-cloze,12,the next person up,none,post
+Sub1020,cloze-event,9,YES,none,post
+Sub1023,cloze-event,8,YES,none,post
+Sub1026,cloze-event,9,she will in January.,female,post
+Sub1042,cloze-event,9,will in April 2021.,none,post
+Sub1046,event-cloze,10,the president will give a lot of speeches,none,post
+Sub1052,cloze-event,5,president,none,post
+Sub1065,cloze-event,2,the vice president might take over.,none,post
+Sub1068,event-cloze,4,THE VP WILL BE MAKING INTERNATIONAL TRIPS TO VISIT OUR ALLIES,none,post
+Sub1069,event-cloze,2,OF CORONA SESSION,none,post
+Sub1083,event-cloze,2,the vice president will act as president%2C if the president cannot perform his duties.,male,post
+Sub1106,cloze-event,12,should be solved,none,post
+Sub1136,event-cloze,12,KAMALA HARRIS,harris,post
+Sub1152,cloze-event,3,Vice-President Elect Kamala Harris.,harris,post
+Sub1160,cloze-event,4,the result will be announced,none,post
+Sub1169,cloze-event,8,she will do her best to bridge the gap,female,post
+Sub1177,cloze-event,9,KAMALA HARRIS,harris,post
+Sub1187,cloze-event,5,president,none,post
+Sub1198,event-cloze,5,president,none,post
+Sub1211,cloze-event,10,about their policies.,neutral,post
+Sub1217,cloze-event,5,president,none,post
+Sub1218,cloze-event,7,she will have a very prominent role in the country,female,post
+Sub1225,event-cloze,10,decide the winner,none,post
+Sub1227,cloze-event,6,SECURITY,none,post
+Sub1229,cloze-event,5,PRIMEMINISTER,none,post
+Sub1242,cloze-event,10,Donald trump,trump,post
+Sub1269,event-cloze,1,it's possible to other candidate will win in the election.,none,post
+Sub1280,cloze-event,6,SAFETY,none,post
+Sub1295,cloze-event,8,YES,none,post
+Sub1297,event-cloze,8,GOOD,none,post
+Sub1333,cloze-event,5,YES,none,post
+Sub1414,event-cloze,1,GETTING MAJORITY WILL BE DONE,none,post
+Sub1441,event-cloze,8,TO WIN.,none,post
+Sub1444,event-cloze,12,Mike Pence will take office.,pence,post
+Sub1452,event-cloze,12,nothing,none,post
+Sub1482,event-cloze,11,U.S presidential elections are not without Controversy.,none,post
+Sub1503,cloze-event,7,there will be division of labor,none,post
+Sub1522,cloze-event,3,OUR COUNTRY,none,post
+Sub1562,cloze-event,6,her safety.,female,post
+Sub1568,cloze-event,11,1,none,post
+Sub1628,event-cloze,6,safe travels for the vice-president,none,post
+Sub1662,event-cloze,9,she will be working hard.,female,post
+Sub1688,event-cloze,6,safety,none,post
+Sub1692,cloze-event,4,she will be traveling around the world.,female,post
+Sub1715,cloze-event,8,JOE BIDEN,biden,post
+Sub1741,cloze-event,11,it is expected she will engage in all activities safely.,female,post
+Sub1777,cloze-event,7,Presidential and Vice-Presidential,none,post
+Sub1792,cloze-event,6,safety,none,post
+Sub1881,cloze-event,9,will be busy behind the scenes.,none,post
+Sub1916,cloze-event,11,it is safe to say it will be a defining challenge of their time in office.,neutral,post
+Sub1944,event-cloze,8,KAMALA HARRIS,harris,post
+Sub1946,event-cloze,2,January 20%2C 2021,none,post
+Sub1970,cloze-event,6,as a president,none,post
+Sub1988,event-cloze,11,Kamala Harris has done a great job.,harris,post
+Sub2038,cloze-event,4,they meet with many world leaders.,neutral,post
+Sub2046,cloze-event,3,the military,none,post
+Sub2072,cloze-event,5,KAMALA HARRIS,harris,post
+Sub2075,cloze-event,9,he will sometime following.,male,post
+Sub2137,cloze-event,5,presidential,none,post
+Sub2262,event-cloze,12,Pence will handle it appropriately.,pence,post
+Sub2285,event-cloze,6,safety,none,post
+Sub2300,event-cloze,1,I am not sure,none,post
+Sub2401,event-cloze,10,election begins,none,post
+Sub2425,cloze-event,7,presidency,none,post
+Sub2427,cloze-event,10,no,none,post
+Sub2488,cloze-event,8,yes,none,post
+Sub2514,event-cloze,2,she is president,female,post
+Sub2516,event-cloze,5,president,none,post
+Sub2525,event-cloze,6,GOOD,none,post
+Sub2537,event-cloze,10,Major changes in policy are introduced,none,post
+Sub2543,event-cloze,8,KAMALIA HARRIS,harris,post
+Sub2550,cloze-event,7,will bring more responsibility to the new vice president,none,post
+Sub2557,cloze-event,3,War,none,post
+Sub2564,cloze-event,7,will end.,none,post
+Sub2571,cloze-event,5,PRESIDENT,none,post
+Sub2575,event-cloze,11,IT WILL MOST LIKELY STILL BE A MAJOR THREAT TO THE US,none,post
+Sub2593,cloze-event,12,In presidential changes in the United States%2C a certainty persists over the years: the winner is always a Republican or Democratic candidate.,none,post
+Sub2598,event-cloze,4,Kamala Harris will represent the U.S.,harris,post
+Sub2603,cloze-event,2,authorizes Congress to provide for a line of succession beyond the vice president,none,post
+Sub2609,cloze-event,5,but they were safe.,neutral,post
+Sub2611,event-cloze,4,the vice president will travel.,none,post
+Sub2635,cloze-event,10,her speeches will be amazing.,female,post
+Sub2753,event-cloze,1,the win would go to the Democrats.,none,post
+Sub2754,cloze-event,2,the vice president will,none,post
+Sub2756,cloze-event,9,will do in January.,none,post
+Sub2764,event-cloze,2,HARD WORK,none,post
+Sub2790,event-cloze,2,the vice president would step in.,none,post
+Sub2794,event-cloze,6,the usual transportation for the vice president of the United States,none,post
+Sub2818,cloze-event,4,the VP may travel overseas,none,post
+Sub2820,cloze-event,7,will end with the vice president being president,none,post
+Sub2825,cloze-event,6,their safety.,neutral,post
+Sub2851,cloze-event,4,Kamala Harris begin traveling as apart of her duties as the new Vice President.,harris,post
+Sub2853,cloze-event,12,it is going to be very tough.,none,post
+Sub2871,event-cloze,10,she will have to deliver many speeches both on the domestic and international stage throughout her time in office.,female,post
+Sub2878,cloze-event,1,According to the U.S. Senate%2C as of December 21%2C 2018%2C a tie-breaking vote had been cast 268 times by 36 vice presidents,none,post
+Sub2919,cloze-event,12,Kamala Harris will fulfill her duties as Vice President.,harris,post
+Sub2932,event-cloze,11,the main decisions about the coronavirus will still be left up to the states.,none,post
+Sub2953,cloze-event,10,true,none,post
+Sub2955,event-cloze,9,they will eventually,neutral,post
+Sub3011,cloze-event,3,her.,female,post
+Sub3013,cloze-event,6,THE SAFETY OF THE VICE-PRESIDENT,none,post
+Sub3014,cloze-event,7,The role of Vice President will be more important then ever!,none,post
+Sub3037,event-cloze,5,34,none,post
+Sub3038,event-cloze,4,IN DUE,none,post
+Sub3049,event-cloze,6,joe biden,biden,post
+Sub3055,cloze-event,6,and the plan is equipped,none,post
+Sub3067,cloze-event,12,it would be good to make a good solution for the crisis.,none,post
+Sub3072,cloze-event,8,that would help in all ways.,none,post
+Sub3080,event-cloze,9,have major role in all events.,none,post
+Sub3107,cloze-event,11,Can stay safe.,none,post
+Sub3132,cloze-event,9,OK,none,post
+Sub3142,cloze-event,1,Kamala Harris%2C vice president-elect%2C will hold decision powers for any new bills or acts being passed during the administration.,harris,post
+Sub3148,event-cloze,2,of election,none,post
+Sub3158,event-cloze,1,THE VICE PRESIDENT WILL DECIDE.,none,post
+Sub3166,event-cloze,2,the vice president will step in and take over the duties,none,post
+Sub3169,cloze-event,9,In June or July he will give some press conferences.,male,post
+Sub3232,cloze-event,5,the president,none,post
+Sub3265,cloze-event,3,Kamala Harris.,harris,post
+Sub3267,cloze-event,9,he will make at least one.,male,post
+Sub3304,event-cloze,10,yes,none,post
+Sub3322,event-cloze,5,president,none,post
+Sub3335,cloze-event,7,Kamala Harris will have a pivotal role in the White House.,harris,post
+Sub3353,event-cloze,8,them to get to work right away for the American people.,neutral,post
+Sub3389,cloze-event,8,some growing pains,none,post
+Sub3397,cloze-event,2,PRESIDENT,none,post
+Sub3398,cloze-event,8,Doing good job,none,post
+Sub3442,event-cloze,9,the president will make public appearances.,none,post
+Sub3443,event-cloze,6,safe transport.,none,post
+Sub3460,cloze-event,5,the president,none,post
+Sub3470,cloze-event,2,this post will be very challenging.,none,post
+Sub3472,cloze-event,7,this post will be very challenging,none,post
+Sub3475,cloze-event,7,she will have a lot on her plate,female,post
+Sub3543,cloze-event,3,the president,none,post
+Sub3554,event-cloze,12,The best luxury hotel to stay near the 2021 Presidential Inauguration Ceremony and Parade. Book Balcony Suites & Best DC Event Venue Space. Guest Room floor rentals or hotel buyout. On D.C.’S Waterfront. Understated luxe. Discovery & Allure.,none,post
+Sub3576,event-cloze,11,we will watch it closely.,none,post
+Sub3602,cloze-event,4,she will do for Biden.,biden,post
+Sub3618,cloze-event,9,she'll be working hard behind the scenes.,female,post
+Sub3624,cloze-event,8,great things.,none,post
+Sub3645,cloze-event,7,KAMALA HARRISH,harris,post
+Sub3669,cloze-event,9,she'll be available if she needs to make an appearance.,female,post
+Sub3687,event-cloze,8,MS,none,post
+Sub3701,cloze-event,5,president,none,post
+Sub3714,event-cloze,11,she will work very hard to reduce the effects of the coronavirus.,female,post
+Sub3731,cloze-event,10,joe biden,biden,post
+Sub3757,cloze-event,6,Air Force,none,post
+Sub3784,event-cloze,3,Kampala Harris,harris,post
+Sub3838,cloze-event,7,YES,none,post
+Sub3913,event-cloze,7,there will be a lot of work to do.,none,post
+Sub3922,event-cloze,10,the president himself will.,none,post
+Sub3925,cloze-event,6,president,none,post
+Sub4016,cloze-event,6,safett,none,post
+Sub4065,cloze-event,5,president,none,post
+Sub4072,cloze-event,2,he would take office.,male,post
+Sub4143,cloze-event,3,Joe Biden,biden,post
+Sub4308,cloze-event,2,5,none,post
+Sub4319,cloze-event,8,GOOD,none,post
+Sub4335,cloze-event,12,Vice President elect shall act as President,none,post
+Sub4388,cloze-event,3,her.,female,post
+Sub4403,cloze-event,4,6,none,post

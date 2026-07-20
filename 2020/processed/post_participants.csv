@@ -1,0 +1,928 @@
+sid,participant_id,submission_time,condition,display_order,asked_about_vp,news_consumption,age,gender,state,education,political_affiliation,citizen,native,resident,election_pref,aware,batch
+Sub0003,post_participant_0002,2020-11-07T18:28:38Z,spr-event,rep_first,FALSE,daily,46,Male,CA,High school graduate,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0004,post_participant_0003,2020-11-07T18:28:49Z,spr-event,dem_first,FALSE,daily,26,Male,NY,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub0005,post_participant_0004,2020-11-07T18:29:14Z,spr-event,dem_first,FALSE,daily,60,Male,CA,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0012,post_participant_0011,2020-11-07T18:35:36Z,event-cloze,rep_first,FALSE,daily,70,Male,MI,4-year college degree,Republican,yes,yes,yes,I'd rather not say,yes,post
+Sub0017,post_participant_0016,2020-11-07T18:40:55Z,event-cloze,dem_first,FALSE,daily,45,Male,MO,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0020,post_participant_0018,2020-11-07T18:42:41Z,cloze-event,dem_first,FALSE,daily,51,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0022,post_participant_0019,2020-11-07T18:44:09Z,event-mazerace,dem_first,FALSE,daily,46,Male,NJ,4-year college degree,Republican,yes,yes,yes,Mike Pence,no,post
+Sub0025,post_participant_0022,2020-11-07T18:45:13Z,event-maze,dem_first,FALSE,daily,35,Male,CA,Some college,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0026,post_participant_0023,2020-11-07T18:46:27Z,cloze-event,dem_first,FALSE,weekly,66,Male,CA,4-year college degree,Democrat,yes,yes,yes,Donald Trump,yes,post
+Sub0030,post_participant_0025,2020-11-07T18:50:45Z,cloze-event,rep_first,FALSE,weekly,30,Male,MI,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0031,post_participant_0026,2020-11-07T18:52:09Z,mazerace-event,rep_first,FALSE,daily,30,Male,CO,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0033,post_participant_0027,2020-11-07T18:56:21Z,event-cloze,dem_first,FALSE,daily,22,Male,MI,High school graduate,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0040,post_participant_0034,2020-11-07T18:59:23Z,event-maze,rep_first,FALSE,daily,27,Male,ME,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0041,post_participant_0035,2020-11-07T19:00:02Z,event-maze,dem_first,FALSE,daily,32,Male,WA,High school graduate,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub0042,post_participant_0036,2020-11-07T19:00:21Z,spr-event,dem_first,FALSE,daily,43,Male,NC,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0044,post_participant_0038,2020-11-07T19:02:30Z,cloze-event,dem_first,FALSE,weekly,33,Male,TX,High school graduate,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0045,post_participant_0039,2020-11-07T19:02:40Z,cloze-event,dem_first,FALSE,monthly,25,Male,FL,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0046,post_participant_0040,2020-11-07T19:02:47Z,cloze-event,dem_first,FALSE,daily,34,Male,other,High school graduate,None,no,yes,no,Kamala Harris,yes,post
+Sub0047,post_participant_0041,2020-11-07T19:02:57Z,event-spr,rep_first,FALSE,daily,33,Male,CA,4-year college degree,Democrat,no,yes,no,Joe Biden,yes,post
+Sub0050,post_participant_0043,2020-11-07T19:03:50Z,cloze-event,dem_first,FALSE,daily,36,Male,OH,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0051,post_participant_0044,2020-11-07T19:04:33Z,mazerace-event,rep_first,FALSE,daily,38,Male,PA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0052,post_participant_0045,2020-11-07T19:06:08Z,event-mazerace,rep_first,FALSE,daily,46,Male,FL,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0053,post_participant_0046,2020-11-07T19:06:22Z,event-maze,dem_first,FALSE,daily,28,Female,NE,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0055,post_participant_0048,2020-11-07T19:06:42Z,maze-event,dem_first,FALSE,daily,46,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0056,post_participant_0049,2020-11-07T19:07:47Z,event-mazerace,dem_first,FALSE,daily,34,Male,OR,High school graduate,Democrat,yes,yes,yes,I don't care,yes,post
+Sub0057,post_participant_0050,2020-11-07T19:08:13Z,spr-event,dem_first,FALSE,weekly,45,Male,CA,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0059,post_participant_0051,2020-11-07T19:10:17Z,cloze-event,rep_first,FALSE,weekly,30,Male,VA,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0060,post_participant_0052,2020-11-07T19:10:53Z,cloze-event,rep_first,FALSE,daily,29,Female,MI,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0061,post_participant_0053,2020-11-07T19:10:55Z,spr-event,rep_first,FALSE,daily,67,Male,CA,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0062,post_participant_0054,2020-11-07T19:11:06Z,maze-event,dem_first,FALSE,daily,58,Female,FL,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub0063,post_participant_0055,2020-11-07T19:11:20Z,cloze-event,dem_first,FALSE,daily,26,Female,TX,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0064,post_participant_0056,2020-11-07T19:11:48Z,event-mazerace,rep_first,FALSE,daily,31,Male,NC,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0067,post_participant_0058,2020-11-07T19:12:21Z,maze-event,rep_first,FALSE,daily,28,Male,IL,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0069,post_participant_0059,2020-11-07T19:14:44Z,spr-event,dem_first,FALSE,daily,40,Male,IL,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0072,post_participant_0061,2020-11-07T19:16:10Z,mazerace-event,dem_first,FALSE,daily,32,Female,CA,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0073,post_participant_0062,2020-11-07T19:16:13Z,event-mazerace,rep_first,FALSE,daily,38,Male,MO,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0074,post_participant_0063,2020-11-07T19:16:14Z,spr-event,dem_first,FALSE,daily,32,Male,CA,Professional degree,Other,yes,yes,yes,Joe Biden,yes,post
+Sub0078,post_participant_0066,2020-11-07T19:17:34Z,event-maze,rep_first,FALSE,daily,30,Male,WA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0079,post_participant_0067,2020-11-07T19:17:36Z,event-cloze,rep_first,FALSE,daily,44,Female,PA,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0084,post_participant_0071,2020-11-07T19:19:48Z,event-spr,rep_first,FALSE,daily,48,Female,NY,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0086,post_participant_0072,2020-11-07T19:20:33Z,cloze-event,rep_first,FALSE,weekly,58,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0089,post_participant_0075,2020-11-07T19:22:25Z,event-mazerace,rep_first,FALSE,weekly,22,Male,CA,2-year college degree,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub0090,post_participant_0076,2020-11-07T19:23:02Z,cloze-event,rep_first,FALSE,daily,40,Female,UT,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0092,post_participant_0078,2020-11-07T19:24:55Z,spr-event,rep_first,FALSE,less than monthly,32,Male,TX,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0097,post_participant_0082,2020-11-07T19:29:13Z,mazerace-event,dem_first,FALSE,daily,38,Female,NY,Professional degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0098,post_participant_0083,2020-11-07T19:29:39Z,spr-event,rep_first,FALSE,daily,26,Female,VA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0101,post_participant_0084,2020-11-07T19:30:39Z,mazerace-event,dem_first,FALSE,daily,43,Female,ID,Some college,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0103,post_participant_0085,2020-11-07T19:30:56Z,maze-event,dem_first,FALSE,daily,28,Male,TN,Some college,Democrat,yes,yes,yes,I don't care,yes,post
+Sub0104,post_participant_0086,2020-11-07T19:31:42Z,mazerace-event,dem_first,FALSE,daily,34,Female,NY,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0106,post_participant_0087,2020-11-07T19:33:15Z,maze-event,dem_first,FALSE,weekly,47,Female,TX,Professional degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0109,post_participant_0089,2020-11-07T19:34:08Z,event-maze,dem_first,FALSE,weekly,28,Male,CA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0116,post_participant_0095,2020-11-07T19:36:32Z,event-cloze,rep_first,FALSE,daily,25,Male,AZ,4-year college degree,Other,yes,yes,yes,Joe Biden,yes,post
+Sub0119,post_participant_0096,2020-11-07T19:38:41Z,mazerace-event,rep_first,FALSE,daily,56,Male,CA,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0121,post_participant_0098,2020-11-07T19:39:34Z,cloze-event,rep_first,FALSE,weekly,37,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0122,post_participant_0099,2020-11-07T19:39:39Z,mazerace-event,dem_first,FALSE,monthly,47,Female,CA,Less than high school,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0125,post_participant_0100,2020-11-07T19:40:31Z,maze-event,dem_first,FALSE,daily,32,Male,CA,2-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0126,post_participant_0101,2020-11-07T19:40:39Z,cloze-event,rep_first,FALSE,monthly,25,Male,TX,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0127,post_participant_0102,2020-11-07T19:41:32Z,spr-event,rep_first,FALSE,daily,38,Male,CA,4-year college degree,Independent,yes,yes,yes,I don't care,yes,post
+Sub0129,post_participant_0104,2020-11-07T19:42:50Z,event-mazerace,dem_first,FALSE,daily,43,Male,other,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0130,post_participant_0105,2020-11-07T19:44:07Z,cloze-event,rep_first,FALSE,monthly,58,Female,CA,Less than high school,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0134,post_participant_0109,2020-11-07T19:45:06Z,cloze-event,dem_first,FALSE,daily,NA,Female,other,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0137,post_participant_0110,2020-11-07T19:46:34Z,spr-event,dem_first,FALSE,daily,45,Female,TX,Less than high school,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0138,post_participant_0111,2020-11-07T19:48:13Z,cloze-event,rep_first,FALSE,daily,29,Male,MD,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0140,post_participant_0113,2020-11-07T19:49:34Z,mazerace-event,rep_first,FALSE,daily,24,Male,NJ,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0141,post_participant_0114,2020-11-07T19:50:32Z,event-maze,dem_first,FALSE,daily,44,Female,ME,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0145,post_participant_0117,2020-11-07T19:56:51Z,event-maze,rep_first,FALSE,daily,30,Female,PA,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0148,post_participant_0118,2020-11-07T19:58:08Z,cloze-event,dem_first,FALSE,daily,36,Male,IN,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0149,post_participant_0119,2020-11-07T19:58:23Z,event-cloze,rep_first,FALSE,weekly,46,Male,NV,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0152,post_participant_0121,2020-11-07T20:01:23Z,event-spr,dem_first,FALSE,daily,51,Male,FL,High school graduate,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0153,post_participant_0122,2020-11-07T20:01:50Z,mazerace-event,rep_first,FALSE,daily,52,Female,IL,4-year college degree,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub0154,post_participant_0123,2020-11-07T20:02:34Z,spr-event,rep_first,FALSE,daily,29,Non-binary,WA,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0160,post_participant_0127,2020-11-07T20:06:16Z,spr-event,dem_first,FALSE,daily,30,Female,CA,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0164,post_participant_0128,2020-11-07T20:07:46Z,event-cloze,dem_first,FALSE,weekly,28,Female,SC,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0165,post_participant_0129,2020-11-07T20:07:54Z,event-spr,dem_first,FALSE,daily,46,Male,OH,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub0171,post_participant_0133,2020-11-07T20:11:14Z,cloze-event,rep_first,FALSE,daily,26,Male,CA,High school graduate,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0174,post_participant_0135,2020-11-07T20:11:49Z,event-spr,rep_first,FALSE,daily,38,Female,NE,2-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0179,post_participant_0138,2020-11-07T20:13:27Z,spr-event,rep_first,FALSE,daily,44,Female,NM,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0183,post_participant_0139,2020-11-07T20:15:07Z,cloze-event,dem_first,FALSE,daily,33,Male,NY,Professional degree,Independent,yes,yes,yes,I don't care,yes,post
+Sub0185,post_participant_0140,2020-11-07T20:17:36Z,mazerace-event,dem_first,FALSE,weekly,36,Male,CA,Some college,Democrat,yes,yes,yes,Joe Biden,no,post
+Sub0186,post_participant_0141,2020-11-07T20:17:54Z,cloze-event,rep_first,FALSE,monthly,24,Male,TX,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0189,post_participant_0143,2020-11-07T20:20:42Z,event-maze,rep_first,FALSE,daily,25,Male,AZ,4-year college degree,None,yes,yes,yes,I don't care,yes,post
+Sub0192,post_participant_0144,2020-11-07T20:21:59Z,event-maze,rep_first,FALSE,daily,41,Female,FL,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0212,post_participant_0148,2020-11-07T20:31:26Z,cloze-event,rep_first,FALSE,daily,26,Male,OH,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0216,post_participant_0149,2020-11-07T20:32:38Z,event-mazerace,dem_first,FALSE,weekly,33,Male,KY,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0220,post_participant_0150,2020-11-07T20:36:21Z,mazerace-event,rep_first,FALSE,weekly,39,Male,NJ,4-year college degree,Independent,yes,yes,yes,I don't care,yes,post
+Sub0222,post_participant_0151,2020-11-07T20:38:11Z,maze-event,dem_first,FALSE,daily,35,Female,FL,Some college,Independent,yes,yes,yes,I'd rather not say,yes,post
+Sub0223,post_participant_0152,2020-11-07T20:38:56Z,spr-event,rep_first,FALSE,daily,69,Female,FL,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0224,post_participant_0153,2020-11-07T20:39:11Z,mazerace-event,rep_first,FALSE,daily,47,Female,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0226,post_participant_0154,2020-11-07T20:40:26Z,mazerace-event,rep_first,FALSE,daily,39,Male,MI,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0230,post_participant_0155,2020-11-07T20:41:48Z,mazerace-event,dem_first,FALSE,daily,25,Male,IL,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0238,post_participant_0157,2020-11-07T20:44:22Z,event-cloze,dem_first,FALSE,daily,26,Male,CA,High school graduate,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0240,post_participant_0158,2020-11-07T20:45:06Z,cloze-event,dem_first,FALSE,daily,38,Male,MD,2-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0241,post_participant_0159,2020-11-07T20:46:24Z,maze-event,rep_first,FALSE,daily,29,Male,NJ,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0250,post_participant_0163,2020-11-07T20:50:15Z,event-maze,dem_first,FALSE,daily,25,Female,MO,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0255,post_participant_0165,2020-11-07T20:50:36Z,cloze-event,dem_first,FALSE,daily,50,Female,MA,4-year college degree,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub0263,post_participant_0167,2020-11-07T20:55:04Z,cloze-event,dem_first,FALSE,monthly,25,Male,WI,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0268,post_participant_0169,2020-11-07T20:56:12Z,event-cloze,dem_first,FALSE,weekly,36,Female,CA,4-year college degree,Republican,no,yes,yes,Donald Trump,yes,post
+Sub0271,post_participant_0170,2020-11-07T20:57:03Z,cloze-event,dem_first,FALSE,daily,36,Male,GA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0278,post_participant_0173,2020-11-07T21:01:29Z,event-cloze,rep_first,FALSE,weekly,30,Female,other,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0283,post_participant_0176,2020-11-07T21:02:26Z,event-mazerace,rep_first,FALSE,weekly,64,Female,IL,4-year college degree,Democrat,yes,yes,yes,Donald Trump,yes,post
+Sub0285,post_participant_0177,2020-11-07T21:06:29Z,event-cloze,rep_first,FALSE,daily,24,Female,WA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0288,post_participant_0178,2020-11-07T21:08:17Z,event-cloze,rep_first,FALSE,daily,31,Female,CA,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0299,post_participant_0179,2020-11-07T21:15:15Z,event-mazerace,rep_first,FALSE,daily,30,Male,TX,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0301,post_participant_0180,2020-11-07T21:16:13Z,mazerace-event,dem_first,FALSE,weekly,44,Female,MD,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0305,post_participant_0182,2020-11-07T21:17:45Z,mazerace-event,rep_first,FALSE,daily,35,Female,TN,2-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0307,post_participant_0184,2020-11-07T21:19:42Z,cloze-event,rep_first,FALSE,daily,24,Male,TX,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0315,post_participant_0189,2020-11-07T21:24:04Z,cloze-event,rep_first,FALSE,weekly,24,Female,TX,Professional degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0319,post_participant_0190,2020-11-07T21:26:08Z,spr-event,rep_first,FALSE,daily,38,Male,OK,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0323,post_participant_0191,2020-11-07T21:27:34Z,mazerace-event,dem_first,FALSE,daily,45,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0325,post_participant_0192,2020-11-07T21:28:50Z,mazerace-event,dem_first,FALSE,weekly,25,Male,TX,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0327,post_participant_0194,2020-11-07T21:29:57Z,event-mazerace,rep_first,FALSE,daily,68,Male,CA,2-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0330,post_participant_0195,2020-11-07T21:30:43Z,mazerace-event,dem_first,FALSE,daily,27,Male,CA,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0333,post_participant_0197,2020-11-07T21:32:12Z,maze-event,dem_first,FALSE,daily,25,Female,TX,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0340,post_participant_0198,2020-11-07T21:39:37Z,spr-event,dem_first,FALSE,daily,25,Female,WA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0358,post_participant_0201,2020-11-07T21:46:52Z,cloze-event,dem_first,FALSE,daily,27,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0365,post_participant_0203,2020-11-07T21:49:52Z,maze-event,rep_first,FALSE,daily,25,Female,TX,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0366,post_participant_0204,2020-11-07T21:51:26Z,maze-event,dem_first,FALSE,daily,49,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0368,post_participant_0205,2020-11-07T21:53:02Z,mazerace-event,rep_first,FALSE,daily,37,Female,CA,Professional degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0386,post_participant_0208,2020-11-07T22:01:56Z,event-cloze,dem_first,FALSE,daily,46,Female,CA,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0393,post_participant_0209,2020-11-07T22:03:42Z,event-cloze,dem_first,FALSE,daily,25,Female,WA,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0394,post_participant_0210,2020-11-07T22:05:08Z,spr-event,rep_first,FALSE,monthly,33,Female,MN,Some college,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub0407,post_participant_0215,2020-11-07T22:13:25Z,event-mazerace,rep_first,FALSE,weekly,49,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0413,post_participant_0218,2020-11-07T22:16:28Z,event-spr,dem_first,FALSE,daily,62,Female,TN,Some college,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0414,post_participant_0219,2020-11-07T22:17:46Z,maze-event,dem_first,FALSE,weekly,25,Male,CA,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0416,post_participant_0220,2020-11-07T22:19:21Z,mazerace-event,dem_first,FALSE,weekly,35,Male,MI,Professional degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0418,post_participant_0221,2020-11-07T22:20:15Z,cloze-event,rep_first,FALSE,daily,37,Female,other,Professional degree,Democrat,no,yes,no,Kamala Harris,yes,post
+Sub0420,post_participant_0223,2020-11-07T22:23:59Z,mazerace-event,dem_first,FALSE,daily,25,Male,TX,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0428,post_participant_0228,2020-11-07T22:31:28Z,event-mazerace,rep_first,FALSE,weekly,43,Male,CA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0429,post_participant_0229,2020-11-07T22:32:03Z,mazerace-event,rep_first,FALSE,daily,33,Female,MA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0434,post_participant_0231,2020-11-07T22:33:44Z,event-cloze,dem_first,FALSE,daily,41,Male,DC,Some college,Independent,yes,yes,yes,I don't care,yes,post
+Sub0436,post_participant_0233,2020-11-07T22:35:01Z,event-cloze,dem_first,FALSE,daily,39,Male,MI,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0446,post_participant_0236,2020-11-07T22:41:11Z,maze-event,dem_first,FALSE,daily,36,Male,OH,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0471,post_participant_0244,2020-11-07T22:54:42Z,spr-event,dem_first,FALSE,daily,33,Male,TX,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0472,post_participant_0245,2020-11-07T22:55:39Z,event-cloze,rep_first,FALSE,weekly,36,Male,IN,Professional degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0473,post_participant_0246,2020-11-07T22:56:13Z,event-mazerace,dem_first,FALSE,daily,26,Female,FL,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0474,post_participant_0247,2020-11-07T22:56:51Z,event-maze,rep_first,FALSE,daily,27,Female,MA,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0478,post_participant_0250,2020-11-07T22:57:19Z,spr-event,dem_first,FALSE,daily,39,Male,PA,4-year college degree,Other,yes,yes,yes,Kamala Harris,yes,post
+Sub0479,post_participant_0251,2020-11-07T22:57:38Z,spr-event,dem_first,FALSE,daily,30,Male,OR,Some college,Independent,yes,yes,no,Mike Pence,yes,post
+Sub0484,post_participant_0253,2020-11-07T22:59:19Z,mazerace-event,dem_first,FALSE,weekly,27,Female,IN,Professional degree,Democrat,no,yes,yes,Kamala Harris,yes,post
+Sub0495,post_participant_0256,2020-11-07T23:04:02Z,maze-event,rep_first,FALSE,less than monthly,25,Male,TX,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0501,post_participant_0257,2020-11-07T23:08:52Z,cloze-event,rep_first,FALSE,daily,25,Male,CA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0506,post_participant_0258,2020-11-07T23:11:19Z,maze-event,dem_first,FALSE,daily,25,Male,CA,Some college,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub0507,post_participant_0259,2020-11-07T23:11:37Z,event-cloze,dem_first,FALSE,daily,37,Female,CT,4-year college degree,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub0508,post_participant_0260,2020-11-07T23:12:34Z,event-maze,rep_first,FALSE,daily,31,Male,MA,4-year college degree,Democrat,yes,yes,no,Kamala Harris,yes,post
+Sub0512,post_participant_0261,2020-11-07T23:15:13Z,mazerace-event,rep_first,FALSE,daily,35,Female,FL,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0520,post_participant_0266,2020-11-07T23:20:39Z,event-maze,rep_first,FALSE,daily,42,Female,PA,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0521,post_participant_0267,2020-11-07T23:20:59Z,cloze-event,rep_first,FALSE,weekly,27,Male,VA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,no,post
+Sub0524,post_participant_0269,2020-11-07T23:22:28Z,spr-event,dem_first,FALSE,daily,29,Male,IN,Professional degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0528,post_participant_0270,2020-11-07T23:26:59Z,spr-event,rep_first,FALSE,daily,34,Male,FL,High school graduate,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub0530,post_participant_0271,2020-11-07T23:29:29Z,mazerace-event,dem_first,FALSE,weekly,33,Male,other,Professional degree,Democrat,no,yes,no,Kamala Harris,no,post
+Sub0531,post_participant_0272,2020-11-07T23:29:41Z,spr-event,dem_first,FALSE,daily,62,Female,TX,Professional degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0533,post_participant_0273,2020-11-07T23:31:44Z,spr-event,rep_first,FALSE,monthly,27,Male,IN,Professional degree,Republican,no,yes,no,Joe Biden,yes,post
+Sub0543,post_participant_0274,2020-11-07T23:40:34Z,event-spr,rep_first,FALSE,daily,24,Female,IL,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub0544,post_participant_0275,2020-11-07T23:41:15Z,cloze-event,rep_first,FALSE,daily,56,Male,FL,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0546,post_participant_0276,2020-11-07T23:42:31Z,event-spr,dem_first,FALSE,daily,21,Female,CA,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0551,post_participant_0278,2020-11-07T23:46:53Z,event-cloze,dem_first,FALSE,weekly,58,Female,CA,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0552,post_participant_0279,2020-11-07T23:46:54Z,event-mazerace,rep_first,FALSE,daily,24,Female,WA,Professional degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0553,post_participant_0280,2020-11-07T23:47:33Z,event-cloze,dem_first,FALSE,daily,24,Male,TX,High school graduate,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0560,post_participant_0282,2020-11-07T23:50:07Z,spr-event,rep_first,FALSE,daily,41,Male,NY,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0575,post_participant_0285,2020-11-07T23:54:56Z,maze-event,dem_first,FALSE,daily,54,Male,CA,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0585,post_participant_0287,2020-11-08T00:03:59Z,event-mazerace,dem_first,FALSE,daily,29,Female,IL,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0587,post_participant_0288,2020-11-08T00:05:06Z,maze-event,rep_first,FALSE,daily,30,Female,MO,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0588,post_participant_0289,2020-11-08T00:05:17Z,mazerace-event,rep_first,FALSE,weekly,26,Female,NJ,Less than high school,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0591,post_participant_0291,2020-11-08T00:06:48Z,spr-event,rep_first,FALSE,daily,24,Female,WA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0593,post_participant_0292,2020-11-08T00:08:41Z,spr-event,dem_first,FALSE,weekly,29,Female,AK,Some college,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0604,post_participant_0296,2020-11-08T00:14:32Z,spr-event,dem_first,FALSE,weekly,44,Male,AL,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0609,post_participant_0297,2020-11-08T00:16:42Z,event-cloze,dem_first,FALSE,daily,31,Female,CA,Professional degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0614,post_participant_0298,2020-11-08T00:18:22Z,event-cloze,rep_first,FALSE,weekly,22,Female,PA,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0616,post_participant_0299,2020-11-08T00:19:02Z,spr-event,dem_first,FALSE,daily,25,Male,AK,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0617,post_participant_0300,2020-11-08T00:19:21Z,cloze-event,rep_first,FALSE,weekly,56,Male,CA,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0626,post_participant_0302,2020-11-08T00:26:07Z,event-maze,rep_first,FALSE,daily,43,Female,IL,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0629,post_participant_0303,2020-11-08T00:29:34Z,cloze-event,rep_first,FALSE,monthly,27,Male,VA,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0630,post_participant_0304,2020-11-08T00:30:44Z,event-spr,dem_first,FALSE,weekly,34,Male,AR,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0631,post_participant_0305,2020-11-08T00:31:26Z,mazerace-event,dem_first,FALSE,daily,24,Female,WA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0635,post_participant_0307,2020-11-08T00:34:55Z,mazerace-event,rep_first,FALSE,daily,33,Male,other,Professional degree,None,no,yes,no,Joe Biden,no,post
+Sub0638,post_participant_0308,2020-11-08T00:39:03Z,mazerace-event,rep_first,FALSE,daily,44,Female,CA,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0644,post_participant_0311,2020-11-08T00:42:33Z,mazerace-event,dem_first,FALSE,daily,29,Male,FL,2-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0647,post_participant_0312,2020-11-08T00:44:19Z,cloze-event,dem_first,FALSE,weekly,28,Male,VA,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0650,post_participant_0313,2020-11-08T00:44:46Z,maze-event,dem_first,FALSE,daily,44,Male,CA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0653,post_participant_0315,2020-11-08T00:47:04Z,mazerace-event,rep_first,FALSE,daily,21,Male,TX,2-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0659,post_participant_0318,2020-11-08T00:50:40Z,mazerace-event,dem_first,FALSE,daily,30,Male,CA,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0670,post_participant_0321,2020-11-08T00:58:05Z,event-cloze,dem_first,FALSE,monthly,32,Male,AZ,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0684,post_participant_0325,2020-11-08T01:07:07Z,maze-event,rep_first,FALSE,weekly,24,Male,TX,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0689,post_participant_0327,2020-11-08T01:12:49Z,spr-event,dem_first,FALSE,never,25,Male,CO,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0690,post_participant_0328,2020-11-08T01:13:01Z,maze-event,rep_first,FALSE,monthly,54,Male,CA,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0698,post_participant_0331,2020-11-08T01:16:21Z,mazerace-event,dem_first,FALSE,daily,59,Female,other,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0702,post_participant_0333,2020-11-08T01:22:50Z,cloze-event,rep_first,FALSE,weekly,58,Male,other,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0703,post_participant_0334,2020-11-08T01:22:57Z,maze-event,rep_first,FALSE,weekly,28,Male,CA,4-year college degree,Republican,yes,yes,yes,Joe Biden,no,post
+Sub0706,post_participant_0336,2020-11-08T01:24:32Z,mazerace-event,dem_first,FALSE,daily,57,Male,AZ,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0708,post_participant_0338,2020-11-08T01:25:14Z,cloze-event,rep_first,FALSE,weekly,44,Male,CA,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0711,post_participant_0339,2020-11-08T01:26:34Z,maze-event,rep_first,FALSE,weekly,52,Female,TX,4-year college degree,Democrat,yes,yes,yes,I'd rather not say,yes,post
+Sub0716,post_participant_0342,2020-11-08T01:30:02Z,event-mazerace,dem_first,FALSE,weekly,40,Male,VA,Professional degree,Democrat,yes,yes,yes,Mike Pence,no,post
+Sub0718,post_participant_0343,2020-11-08T01:32:26Z,maze-event,rep_first,FALSE,daily,61,Female,other,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0722,post_participant_0346,2020-11-08T01:35:31Z,event-maze,dem_first,FALSE,daily,61,Female,CA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0725,post_participant_0347,2020-11-08T01:37:38Z,event-maze,dem_first,FALSE,daily,43,Female,CT,Professional degree,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub0729,post_participant_0349,2020-11-08T01:39:07Z,cloze-event,rep_first,FALSE,never,45,Male,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0730,post_participant_0350,2020-11-08T01:39:15Z,maze-event,rep_first,FALSE,daily,59,Female,CA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0731,post_participant_0351,2020-11-08T01:39:16Z,mazerace-event,rep_first,FALSE,daily,49,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0733,post_participant_0352,2020-11-08T01:39:38Z,spr-event,rep_first,FALSE,weekly,34,Male,MD,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0734,post_participant_0353,2020-11-08T01:40:16Z,maze-event,dem_first,FALSE,daily,62,Male,CA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0736,post_participant_0355,2020-11-08T01:42:21Z,mazerace-event,rep_first,FALSE,daily,53,Male,CA,2-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0740,post_participant_0358,2020-11-08T01:43:01Z,event-mazerace,dem_first,FALSE,daily,32,Male,DC,Professional degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0742,post_participant_0359,2020-11-08T01:44:45Z,mazerace-event,dem_first,FALSE,daily,67,Male,FL,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0747,post_participant_0361,2020-11-08T01:46:28Z,cloze-event,rep_first,FALSE,daily,28,Male,VI,Doctorate,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0753,post_participant_0364,2020-11-08T01:51:26Z,event-cloze,rep_first,FALSE,daily,45,Female,GA,Professional degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0754,post_participant_0365,2020-11-08T01:52:15Z,spr-event,dem_first,FALSE,weekly,65,Female,NY,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0755,post_participant_0366,2020-11-08T01:53:10Z,mazerace-event,dem_first,FALSE,weekly,56,Male,OH,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0758,post_participant_0367,2020-11-08T01:57:46Z,event-maze,dem_first,FALSE,daily,36,Male,NJ,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub0761,post_participant_0368,2020-11-08T01:59:40Z,event-cloze,dem_first,FALSE,daily,20,Male,MD,Some college,Democrat,yes,yes,yes,Donald Trump,yes,post
+Sub0763,post_participant_0369,2020-11-08T02:01:53Z,mazerace-event,dem_first,FALSE,weekly,27,Female,CA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0766,post_participant_0371,2020-11-08T02:06:05Z,mazerace-event,dem_first,FALSE,daily,39,Female,FL,Professional degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0768,post_participant_0372,2020-11-08T02:07:29Z,event-spr,dem_first,FALSE,daily,58,Female,OK,High school graduate,Republican,yes,yes,yes,I don't care,no,post
+Sub0773,post_participant_0376,2020-11-08T02:09:43Z,cloze-event,dem_first,FALSE,less than monthly,25,Male,TN,4-year college degree,Democrat,no,yes,no,Mike Pence,yes,post
+Sub0774,post_participant_0377,2020-11-08T02:09:57Z,event-cloze,dem_first,FALSE,daily,41,Female,IL,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0775,post_participant_0378,2020-11-08T02:11:35Z,mazerace-event,rep_first,FALSE,weekly,24,Male,MO,4-year college degree,Republican,yes,yes,yes,Joe Biden,no,post
+Sub0777,post_participant_0379,2020-11-08T02:13:09Z,maze-event,dem_first,FALSE,daily,36,Male,HI,4-year college degree,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub0780,post_participant_0381,2020-11-08T02:16:38Z,spr-event,dem_first,FALSE,weekly,68,Male,AZ,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0781,post_participant_0382,2020-11-08T02:16:51Z,cloze-event,rep_first,FALSE,daily,24,Female,TX,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0787,post_participant_0384,2020-11-08T02:21:59Z,mazerace-event,rep_first,FALSE,weekly,33,Male,AL,2-year college degree,Republican,no,yes,no,Joe Biden,no,post
+Sub0791,post_participant_0386,2020-11-08T02:24:42Z,event-maze,rep_first,FALSE,daily,63,Female,NH,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0792,post_participant_0387,2020-11-08T02:24:58Z,mazerace-event,dem_first,FALSE,monthly,30,Male,CA,4-year college degree,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub0797,post_participant_0389,2020-11-08T02:27:28Z,maze-event,rep_first,FALSE,monthly,32,Female,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0798,post_participant_0390,2020-11-08T02:27:30Z,maze-event,dem_first,FALSE,daily,24,Female,WA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0801,post_participant_0393,2020-11-08T02:28:30Z,mazerace-event,dem_first,FALSE,daily,57,Female,NJ,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0804,post_participant_0395,2020-11-08T02:29:57Z,mazerace-event,rep_first,FALSE,daily,30,Female,WA,Professional degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0805,post_participant_0396,2020-11-08T02:30:55Z,cloze-event,dem_first,FALSE,daily,28,Male,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0806,post_participant_0397,2020-11-08T02:31:44Z,maze-event,dem_first,FALSE,daily,36,Male,NY,2-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0808,post_participant_0398,2020-11-08T02:33:12Z,cloze-event,rep_first,FALSE,monthly,29,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0810,post_participant_0400,2020-11-08T02:33:54Z,maze-event,dem_first,FALSE,weekly,32,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0811,post_participant_0402,2020-11-08T02:35:35Z,event-maze,rep_first,FALSE,daily,54,Female,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0815,post_participant_0405,2020-11-08T02:37:54Z,spr-event,dem_first,FALSE,weekly,41,Female,CA,Professional degree,Democrat,yes,yes,yes,Donald Trump,no,post
+Sub0817,post_participant_0407,2020-11-08T02:42:52Z,maze-event,dem_first,FALSE,daily,59,Female,MI,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0818,post_participant_0408,2020-11-08T02:43:11Z,maze-event,rep_first,FALSE,daily,59,Male,IL,Professional degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0819,post_participant_0409,2020-11-08T02:43:31Z,cloze-event,dem_first,FALSE,daily,36,Female,TX,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0820,post_participant_0410,2020-11-08T02:43:47Z,cloze-event,rep_first,FALSE,weekly,43,Male,CA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0821,post_participant_0411,2020-11-08T02:45:17Z,mazerace-event,rep_first,FALSE,daily,37,Female,TX,Some college,None,yes,yes,yes,I don't care,yes,post
+Sub0822,post_participant_0412,2020-11-08T02:46:15Z,mazerace-event,rep_first,FALSE,daily,28,Female,IA,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0824,post_participant_0414,2020-11-08T02:47:58Z,cloze-event,rep_first,FALSE,weekly,36,Male,IN,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0826,post_participant_0416,2020-11-08T02:49:38Z,event-maze,rep_first,FALSE,daily,30,Male,WA,2-year college degree,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub0829,post_participant_0419,2020-11-08T02:51:29Z,mazerace-event,dem_first,FALSE,daily,26,Female,IL,4-year college degree,Democrat,yes,yes,yes,I'd rather not say,yes,post
+Sub0830,post_participant_0420,2020-11-08T02:52:03Z,event-spr,dem_first,FALSE,daily,28,Female,GA,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0831,post_participant_0421,2020-11-08T02:53:16Z,event-maze,dem_first,FALSE,daily,27,Female,MO,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0832,post_participant_0422,2020-11-08T02:54:11Z,spr-event,dem_first,FALSE,weekly,32,Female,TX,2-year college degree,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub0839,post_participant_0425,2020-11-08T03:01:22Z,cloze-event,rep_first,FALSE,never,68,Female,NC,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0845,post_participant_0428,2020-11-08T03:06:48Z,cloze-event,dem_first,FALSE,daily,28,Male,AS,Professional degree,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub0848,post_participant_0429,2020-11-08T03:09:05Z,cloze-event,dem_first,FALSE,monthly,28,Male,IN,4-year college degree,Other,yes,yes,yes,Mike Pence,yes,post
+Sub0849,post_participant_0430,2020-11-08T03:10:11Z,event-cloze,dem_first,FALSE,daily,28,Female,IN,Less than high school,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0851,post_participant_0432,2020-11-08T03:10:56Z,spr-event,dem_first,FALSE,daily,33,Female,TX,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0856,post_participant_0435,2020-11-08T03:15:12Z,cloze-event,dem_first,FALSE,daily,43,Female,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0860,post_participant_0438,2020-11-08T03:15:59Z,event-spr,rep_first,FALSE,daily,44,Female,NC,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0861,post_participant_0439,2020-11-08T03:16:17Z,event-cloze,dem_first,FALSE,daily,43,Male,ID,High school graduate,Other,yes,yes,yes,Mike Pence,yes,post
+Sub0863,post_participant_0440,2020-11-08T03:16:38Z,cloze-event,rep_first,FALSE,weekly,28,Female,IN,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0865,post_participant_0443,2020-11-08T03:16:58Z,cloze-event,dem_first,FALSE,daily,55,Female,WV,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0867,post_participant_0444,2020-11-08T03:17:21Z,spr-event,dem_first,FALSE,daily,46,Female,MA,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0868,post_participant_0445,2020-11-08T03:17:39Z,maze-event,dem_first,FALSE,daily,45,Male,NC,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0869,post_participant_0446,2020-11-08T03:17:46Z,event-maze,dem_first,FALSE,daily,28,Male,WA,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0870,post_participant_0447,2020-11-08T03:17:51Z,event-spr,rep_first,FALSE,daily,65,Male,RI,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub0873,post_participant_0449,2020-11-08T03:18:10Z,maze-event,dem_first,FALSE,daily,70,Male,MD,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0874,post_participant_0450,2020-11-08T03:18:37Z,cloze-event,rep_first,FALSE,daily,26,Male,AZ,Some college,Other,yes,yes,yes,I'd rather not say,yes,post
+Sub0875,post_participant_0451,2020-11-08T03:18:51Z,spr-event,rep_first,FALSE,daily,46,Male,CT,Professional degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0877,post_participant_0452,2020-11-08T03:19:53Z,event-maze,rep_first,FALSE,daily,26,Female,other,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub0878,post_participant_0453,2020-11-08T03:20:19Z,spr-event,dem_first,FALSE,daily,28,Female,NY,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0879,post_participant_0454,2020-11-08T03:20:32Z,event-maze,rep_first,FALSE,daily,40,Male,NC,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0880,post_participant_0455,2020-11-08T03:20:48Z,spr-event,rep_first,FALSE,daily,26,Male,CT,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub0881,post_participant_0456,2020-11-08T03:20:54Z,cloze-event,rep_first,FALSE,daily,31,Female,GA,Some college,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub0882,post_participant_0457,2020-11-08T03:20:57Z,cloze-event,dem_first,FALSE,daily,45,Male,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0891,post_participant_0466,2020-11-08T03:25:14Z,cloze-event,dem_first,FALSE,daily,27,Male,VA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0892,post_participant_0467,2020-11-08T03:25:38Z,event-spr,dem_first,FALSE,monthly,32,Male,IN,High school graduate,Democrat,no,yes,no,Donald Trump,yes,post
+Sub0893,post_participant_0468,2020-11-08T03:26:02Z,mazerace-event,rep_first,FALSE,daily,28,Female,other,4-year college degree,Independent,no,yes,yes,I don't care,yes,post
+Sub0899,post_participant_0473,2020-11-08T03:28:22Z,event-cloze,rep_first,FALSE,weekly,32,Female,IN,High school graduate,Republican,no,yes,no,Mike Pence,yes,post
+Sub0903,post_participant_0476,2020-11-08T03:30:27Z,mazerace-event,rep_first,FALSE,weekly,45,Female,CA,Professional degree,Rather not say,yes,yes,yes,Donald Trump,yes,post
+Sub0904,post_participant_0477,2020-11-08T03:31:13Z,cloze-event,rep_first,FALSE,daily,30,Male,TN,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0905,post_participant_0478,2020-11-08T03:31:53Z,event-spr,dem_first,FALSE,weekly,35,Female,TX,High school graduate,Democrat,no,yes,no,Donald Trump,yes,post
+Sub0908,post_participant_0481,2020-11-08T03:34:14Z,maze-event,rep_first,FALSE,daily,24,Female,MA,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0910,post_participant_0483,2020-11-08T03:35:50Z,mazerace-event,dem_first,FALSE,daily,25,Male,DE,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0923,post_participant_0490,2020-11-08T03:41:01Z,event-spr,dem_first,FALSE,daily,29,Male,NY,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0924,post_participant_0491,2020-11-08T03:41:10Z,maze-event,dem_first,FALSE,daily,38,Male,FL,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0925,post_participant_0492,2020-11-08T03:41:28Z,cloze-event,rep_first,FALSE,weekly,28,Male,IN,Professional degree,Republican,no,yes,no,I don't care,no,post
+Sub0926,post_participant_0493,2020-11-08T03:44:27Z,cloze-event,rep_first,FALSE,daily,58,Female,NJ,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0927,post_participant_0494,2020-11-08T03:44:40Z,spr-event,dem_first,FALSE,daily,49,Female,NJ,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0928,post_participant_0495,2020-11-08T03:45:04Z,maze-event,rep_first,FALSE,daily,32,Male,TN,Less than high school,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub0931,post_participant_0497,2020-11-08T03:46:35Z,cloze-event,dem_first,FALSE,daily,30,Female,NY,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0934,post_participant_0500,2020-11-08T03:47:35Z,mazerace-event,dem_first,FALSE,daily,30,Female,IL,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub0937,post_participant_0502,2020-11-08T03:49:55Z,cloze-event,rep_first,FALSE,daily,35,Male,TN,2-year college degree,Independent,no,yes,no,Mike Pence,yes,post
+Sub0938,post_participant_0503,2020-11-08T03:50:06Z,spr-event,dem_first,FALSE,daily,27,Male,MA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0940,post_participant_0504,2020-11-08T03:50:38Z,event-maze,dem_first,FALSE,daily,42,Female,NC,Some college,Independent,yes,yes,yes,I'd rather not say,yes,post
+Sub0945,post_participant_0507,2020-11-08T03:52:21Z,event-spr,rep_first,FALSE,daily,21,Female,NY,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0946,post_participant_0508,2020-11-08T03:52:53Z,maze-event,dem_first,FALSE,daily,47,Female,OH,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0949,post_participant_0510,2020-11-08T03:53:38Z,event-cloze,dem_first,FALSE,daily,28,Female,IN,Professional degree,Rather not say,yes,yes,yes,I don't care,yes,post
+Sub0956,post_participant_0516,2020-11-08T03:56:07Z,spr-event,rep_first,FALSE,daily,58,Female,NJ,Some college,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub0957,post_participant_0517,2020-11-08T03:57:27Z,mazerace-event,rep_first,FALSE,daily,29,Female,CA,4-year college degree,Democrat,yes,yes,yes,Donald Trump,yes,post
+Sub0958,post_participant_0518,2020-11-08T03:57:31Z,cloze-event,rep_first,FALSE,weekly,50,Male,OH,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0961,post_participant_0520,2020-11-08T03:58:01Z,mazerace-event,dem_first,FALSE,daily,41,Male,MN,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub0963,post_participant_0521,2020-11-08T04:00:02Z,cloze-event,rep_first,FALSE,daily,46,Female,other,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0965,post_participant_0522,2020-11-08T04:00:53Z,spr-event,rep_first,FALSE,daily,56,Male,CA,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0967,post_participant_0523,2020-11-08T04:01:41Z,mazerace-event,rep_first,FALSE,daily,27,Male,AK,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0968,post_participant_0524,2020-11-08T04:01:42Z,event-maze,dem_first,FALSE,daily,42,Female,SC,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0971,post_participant_0525,2020-11-08T04:02:35Z,event-cloze,rep_first,FALSE,daily,64,Female,NC,2-year college degree,Democrat,yes,yes,yes,Donald Trump,yes,post
+Sub0972,post_participant_0526,2020-11-08T04:02:35Z,cloze-event,dem_first,FALSE,daily,28,Male,IN,4-year college degree,Independent,no,yes,no,I don't care,yes,post
+Sub0975,post_participant_0528,2020-11-08T04:06:36Z,event-cloze,rep_first,FALSE,weekly,25,Male,IL,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub0976,post_participant_0529,2020-11-08T04:06:57Z,event-maze,dem_first,FALSE,daily,28,Female,NY,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0978,post_participant_0531,2020-11-08T04:07:28Z,event-maze,rep_first,FALSE,daily,31,Male,TX,Professional degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub0980,post_participant_0532,2020-11-08T04:09:30Z,event-cloze,dem_first,FALSE,daily,35,Male,TX,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0982,post_participant_0533,2020-11-08T04:11:23Z,cloze-event,rep_first,FALSE,daily,28,Female,WA,4-year college degree,Democrat,yes,yes,yes,Donald Trump,yes,post
+Sub0985,post_participant_0535,2020-11-08T04:12:33Z,mazerace-event,rep_first,FALSE,daily,38,Female,NY,Doctorate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub0986,post_participant_0536,2020-11-08T04:13:22Z,event-cloze,dem_first,FALSE,daily,27,Male,TX,Some college,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub0987,post_participant_0537,2020-11-08T04:13:27Z,event-spr,rep_first,FALSE,weekly,48,Male,OH,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub0989,post_participant_0538,2020-11-08T04:14:37Z,event-cloze,dem_first,FALSE,daily,55,Male,other,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub0990,post_participant_0539,2020-11-08T04:16:21Z,event-cloze,rep_first,FALSE,daily,28,Rather not say,OR,Some college,Rather not say,yes,yes,yes,I don't care,yes,post
+Sub0992,post_participant_0540,2020-11-08T04:17:34Z,cloze-event,dem_first,FALSE,monthly,30,Female,FL,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1000,post_participant_0547,2020-11-08T04:24:07Z,event-mazerace,dem_first,FALSE,daily,32,Male,GA,Professional degree,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub1001,post_participant_0548,2020-11-08T04:24:15Z,cloze-event,rep_first,FALSE,daily,28,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1005,post_participant_0551,2020-11-08T04:25:25Z,cloze-event,dem_first,FALSE,daily,70,Female,WA,Some college,Independent,no,yes,yes,Donald Trump,yes,post
+Sub1006,post_participant_0552,2020-11-08T04:25:32Z,cloze-event,rep_first,FALSE,weekly,33,Male,TX,Professional degree,Democrat,yes,yes,yes,I'd rather not say,yes,post
+Sub1007,post_participant_0553,2020-11-08T04:26:20Z,event-cloze,rep_first,FALSE,daily,41,Female,other,High school graduate,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub1011,post_participant_0556,2020-11-08T04:27:30Z,spr-event,rep_first,FALSE,daily,51,Male,PA,Some college,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub1012,post_participant_0557,2020-11-08T04:28:25Z,cloze-event,rep_first,FALSE,daily,36,Male,CA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub1013,post_participant_0558,2020-11-08T04:29:27Z,spr-event,dem_first,FALSE,monthly,35,Male,TX,Professional degree,Democrat,no,yes,no,Joe Biden,yes,post
+Sub1014,post_participant_0559,2020-11-08T04:31:40Z,mazerace-event,dem_first,FALSE,daily,42,Female,other,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1016,post_participant_0561,2020-11-08T04:32:11Z,event-cloze,rep_first,FALSE,weekly,30,Other,MD,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub1018,post_participant_0563,2020-11-08T04:32:18Z,maze-event,rep_first,FALSE,weekly,34,Male,IN,Professional degree,Democrat,no,yes,yes,Joe Biden,yes,post
+Sub1020,post_participant_0565,2020-11-08T04:33:22Z,cloze-event,rep_first,FALSE,weekly,28,Female,IN,4-year college degree,Independent,no,yes,no,I don't care,yes,post
+Sub1023,post_participant_0566,2020-11-08T04:37:57Z,cloze-event,dem_first,FALSE,daily,30,Male,TN,Professional degree,Other,yes,yes,yes,Kamala Harris,yes,post
+Sub1025,post_participant_0567,2020-11-08T04:38:54Z,mazerace-event,rep_first,FALSE,daily,31,Female,LA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1026,post_participant_0568,2020-11-08T04:38:59Z,cloze-event,dem_first,FALSE,daily,44,Female,OR,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1029,post_participant_0570,2020-11-08T04:39:37Z,event-mazerace,rep_first,FALSE,monthly,39,Female,MD,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,no,post
+Sub1038,post_participant_0575,2020-11-08T04:42:25Z,event-mazerace,rep_first,FALSE,daily,29,Female,MN,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1042,post_participant_0578,2020-11-08T04:43:00Z,cloze-event,dem_first,FALSE,daily,47,Male,MO,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1044,post_participant_0579,2020-11-08T04:43:29Z,event-spr,dem_first,FALSE,daily,45,Female,IN,Some college,Independent,yes,yes,yes,I don't care,yes,post
+Sub1046,post_participant_0580,2020-11-08T04:43:44Z,event-cloze,dem_first,FALSE,weekly,21,Rather not say,CA,High school graduate,Rather not say,yes,yes,yes,Joe Biden,no,post
+Sub1050,post_participant_0581,2020-11-08T04:44:51Z,event-spr,rep_first,FALSE,daily,48,Female,PA,2-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1051,post_participant_0582,2020-11-08T04:44:59Z,mazerace-event,dem_first,FALSE,daily,26,Male,GA,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1052,post_participant_0583,2020-11-08T04:45:32Z,cloze-event,rep_first,FALSE,daily,36,Male,MA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1054,post_participant_0584,2020-11-08T04:46:07Z,event-spr,dem_first,FALSE,daily,49,Female,KY,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub1059,post_participant_0587,2020-11-08T04:47:55Z,maze-event,rep_first,FALSE,weekly,35,Male,GA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1062,post_participant_0588,2020-11-08T04:49:39Z,mazerace-event,rep_first,FALSE,daily,25,Female,NY,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1065,post_participant_0591,2020-11-08T04:49:47Z,cloze-event,rep_first,FALSE,daily,49,Female,NE,Professional degree,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub1066,post_participant_0592,2020-11-08T04:49:48Z,spr-event,dem_first,FALSE,daily,32,Male,IL,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1067,post_participant_0593,2020-11-08T04:49:58Z,maze-event,dem_first,FALSE,daily,32,Female,other,Some college,Independent,no,yes,no,Donald Trump,yes,post
+Sub1068,post_participant_0594,2020-11-08T04:51:11Z,event-cloze,rep_first,FALSE,daily,42,Female,PA,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1069,post_participant_0595,2020-11-08T04:52:03Z,event-cloze,dem_first,FALSE,daily,28,Female,other,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1071,post_participant_0597,2020-11-08T04:53:05Z,mazerace-event,dem_first,FALSE,daily,20,Male,NJ,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1074,post_participant_0598,2020-11-08T04:54:51Z,mazerace-event,rep_first,FALSE,daily,43,Male,TX,Professional degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1076,post_participant_0600,2020-11-08T04:56:59Z,maze-event,dem_first,FALSE,daily,29,Female,MA,Professional degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub1077,post_participant_0601,2020-11-08T04:57:42Z,event-maze,dem_first,FALSE,weekly,43,Male,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1079,post_participant_0602,2020-11-08T04:57:45Z,maze-event,rep_first,FALSE,weekly,35,Male,IN,Professional degree,Democrat,no,yes,no,Kamala Harris,yes,post
+Sub1078,post_participant_0603,2020-11-08T04:57:43Z,mazerace-event,rep_first,FALSE,weekly,26,Female,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1080,post_participant_0604,2020-11-08T04:57:56Z,maze-event,rep_first,FALSE,monthly,27,Female,TN,4-year college degree,Independent,no,yes,no,Donald Trump,yes,post
+Sub1081,post_participant_0605,2020-11-08T04:58:04Z,mazerace-event,rep_first,FALSE,monthly,25,Female,IN,Professional degree,Independent,no,yes,no,Kamala Harris,yes,post
+Sub1083,post_participant_0606,2020-11-08T04:59:41Z,event-cloze,dem_first,FALSE,daily,35,Female,OH,Professional degree,Independent,yes,yes,yes,I don't care,yes,post
+Sub1084,post_participant_0607,2020-11-08T05:00:03Z,event-spr,rep_first,FALSE,daily,38,Female,GA,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub1085,post_participant_0608,2020-11-08T05:00:07Z,maze-event,dem_first,FALSE,daily,30,Male,NH,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1092,post_participant_0611,2020-11-08T05:02:49Z,event-spr,dem_first,FALSE,daily,32,Male,AZ,4-year college degree,Independent,yes,yes,yes,I don't care,yes,post
+Sub1095,post_participant_0613,2020-11-08T05:03:52Z,event-mazerace,dem_first,FALSE,monthly,28,Male,CO,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub1098,post_participant_0614,2020-11-08T05:04:49Z,event-mazerace,dem_first,FALSE,weekly,65,Male,CA,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1106,post_participant_0618,2020-11-08T05:10:50Z,cloze-event,rep_first,FALSE,daily,42,Male,other,Professional degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub1127,post_participant_0622,2020-11-08T05:20:52Z,event-mazerace,dem_first,FALSE,daily,26,Female,NM,Some college,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub1128,post_participant_0623,2020-11-08T05:22:25Z,event-maze,dem_first,FALSE,weekly,39,Male,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1132,post_participant_0625,2020-11-08T05:26:11Z,event-mazerace,dem_first,FALSE,weekly,60,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1135,post_participant_0627,2020-11-08T05:32:18Z,event-mazerace,dem_first,FALSE,daily,28,Male,WA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub1136,post_participant_0628,2020-11-08T05:32:44Z,event-cloze,rep_first,FALSE,weekly,60,Male,OH,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1140,post_participant_0629,2020-11-08T05:38:46Z,event-mazerace,dem_first,FALSE,daily,24,Male,IL,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1144,post_participant_0630,2020-11-08T05:40:42Z,spr-event,rep_first,FALSE,daily,45,Female,MO,2-year college degree,None,yes,yes,yes,Donald Trump,yes,post
+Sub1146,post_participant_0632,2020-11-08T05:41:44Z,event-spr,rep_first,FALSE,daily,53,Female,NC,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1148,post_participant_0633,2020-11-08T05:43:28Z,mazerace-event,dem_first,FALSE,daily,20,Male,other,High school graduate,Democrat,no,yes,no,Joe Biden,yes,post
+Sub1152,post_participant_0634,2020-11-08T05:44:50Z,cloze-event,rep_first,FALSE,daily,46,Male,NJ,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1154,post_participant_0635,2020-11-08T05:45:40Z,event-mazerace,dem_first,FALSE,daily,28,Female,NY,Professional degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1155,post_participant_0636,2020-11-08T05:45:40Z,spr-event,rep_first,FALSE,daily,57,Female,MD,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1160,post_participant_0638,2020-11-08T05:47:26Z,cloze-event,dem_first,FALSE,weekly,42,Male,TX,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1169,post_participant_0639,2020-11-08T05:56:20Z,cloze-event,rep_first,FALSE,weekly,31,Female,VT,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1177,post_participant_0641,2020-11-08T06:04:34Z,cloze-event,rep_first,FALSE,weekly,65,Male,CA,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1180,post_participant_0643,2020-11-08T06:08:56Z,mazerace-event,rep_first,FALSE,daily,23,Non-binary,OH,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1183,post_participant_0645,2020-11-08T06:13:28Z,event-maze,rep_first,FALSE,daily,30,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1186,post_participant_0646,2020-11-08T06:21:39Z,spr-event,rep_first,FALSE,daily,42,Male,WA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1187,post_participant_0647,2020-11-08T06:23:36Z,cloze-event,dem_first,FALSE,weekly,48,Male,DC,Doctorate,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1196,post_participant_0648,2020-11-08T06:39:08Z,spr-event,dem_first,FALSE,monthly,25,Female,NJ,Professional degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub1198,post_participant_0650,2020-11-08T06:46:00Z,event-cloze,dem_first,FALSE,daily,24,Male,VA,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1206,post_participant_0653,2020-11-08T07:13:57Z,maze-event,dem_first,FALSE,daily,30,Male,DE,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1211,post_participant_0654,2020-11-08T07:49:59Z,cloze-event,rep_first,FALSE,weekly,34,Male,VA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1213,post_participant_0655,2020-11-08T08:34:17Z,spr-event,dem_first,FALSE,daily,46,Male,NC,4-year college degree,Independent,yes,yes,yes,I don't care,yes,post
+Sub1216,post_participant_0657,2020-11-08T13:16:29Z,event-spr,dem_first,FALSE,daily,39,Female,CA,High school graduate,Independent,yes,yes,yes,Donald Trump,no,post
+Sub1217,post_participant_0658,2020-11-08T13:24:13Z,cloze-event,dem_first,FALSE,daily,31,Male,MO,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1218,post_participant_0659,2020-11-08T13:27:25Z,cloze-event,rep_first,FALSE,daily,42,Male,NY,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub1222,post_participant_0663,2020-11-08T13:30:44Z,event-spr,rep_first,FALSE,daily,32,Male,FL,2-year college degree,Independent,yes,yes,yes,I don't care,yes,post
+Sub1223,post_participant_0664,2020-11-08T13:30:54Z,maze-event,dem_first,FALSE,daily,64,Female,MI,Less than high school,Republican,no,yes,yes,Donald Trump,yes,post
+Sub1224,post_participant_0665,2020-11-08T13:31:18Z,event-mazerace,dem_first,FALSE,daily,24,Male,NY,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub1225,post_participant_0666,2020-11-08T13:31:34Z,event-cloze,rep_first,FALSE,daily,34,Male,OH,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1227,post_participant_0668,2020-11-08T13:32:55Z,cloze-event,dem_first,FALSE,daily,38,Male,TX,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1228,post_participant_0669,2020-11-08T13:34:27Z,maze-event,dem_first,FALSE,weekly,46,Female,OH,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub1229,post_participant_0670,2020-11-08T13:36:23Z,cloze-event,dem_first,FALSE,daily,45,Male,MN,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1231,post_participant_0671,2020-11-08T13:36:46Z,maze-event,dem_first,FALSE,daily,31,Male,FL,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub1235,post_participant_0674,2020-11-08T13:40:41Z,maze-event,rep_first,FALSE,daily,61,Female,VA,4-year college degree,Democrat,yes,yes,yes,I'd rather not say,yes,post
+Sub1241,post_participant_0679,2020-11-08T13:44:18Z,maze-event,dem_first,FALSE,daily,67,Male,NY,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1242,post_participant_0680,2020-11-08T13:44:44Z,cloze-event,dem_first,FALSE,daily,25,Male,TX,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1249,post_participant_0681,2020-11-08T13:49:40Z,event-mazerace,dem_first,FALSE,weekly,25,Male,TX,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub1243,post_participant_0682,2020-11-08T13:45:43Z,spr-event,dem_first,FALSE,daily,63,Female,MS,2-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1256,post_participant_0687,2020-11-08T13:53:57Z,maze-event,rep_first,FALSE,weekly,25,Male,TX,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1264,post_participant_0690,2020-11-08T13:56:50Z,maze-event,rep_first,FALSE,daily,63,Female,TX,High school graduate,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub1269,post_participant_0693,2020-11-08T14:01:44Z,event-cloze,dem_first,FALSE,daily,30,Female,AL,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1271,post_participant_0694,2020-11-08T14:03:11Z,event-cloze,dem_first,FALSE,daily,25,Male,ID,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub1276,post_participant_0696,2020-11-08T14:05:36Z,cloze-event,dem_first,FALSE,daily,30,Female,ID,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub1280,post_participant_0698,2020-11-08T14:06:46Z,cloze-event,rep_first,FALSE,weekly,28,Male,NY,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub1282,post_participant_0700,2020-11-08T14:07:37Z,mazerace-event,dem_first,FALSE,daily,38,Female,WI,2-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1285,post_participant_0701,2020-11-08T14:09:12Z,event-spr,dem_first,FALSE,daily,49,Female,MA,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1293,post_participant_0706,2020-11-08T14:14:12Z,spr-event,rep_first,FALSE,daily,32,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1294,post_participant_0707,2020-11-08T14:14:48Z,maze-event,rep_first,FALSE,weekly,32,Male,MN,Professional degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub1295,post_participant_0708,2020-11-08T14:14:52Z,cloze-event,dem_first,FALSE,weekly,29,Male,IN,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1297,post_participant_0710,2020-11-08T14:17:23Z,event-cloze,dem_first,FALSE,weekly,41,Female,CA,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1299,post_participant_0711,2020-11-08T14:18:18Z,mazerace-event,rep_first,FALSE,weekly,25,Male,TX,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1302,post_participant_0713,2020-11-08T14:19:51Z,mazerace-event,rep_first,FALSE,daily,25,Female,TX,Professional degree,Republican,yes,yes,yes,I don't care,yes,post
+Sub1326,post_participant_0720,2020-11-08T14:26:11Z,event-maze,rep_first,FALSE,weekly,25,Female,TX,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub1328,post_participant_0721,2020-11-08T14:26:45Z,event-mazerace,rep_first,FALSE,daily,28,Male,IN,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1333,post_participant_0723,2020-11-08T14:28:07Z,cloze-event,dem_first,FALSE,daily,20,Male,IN,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1353,post_participant_0727,2020-11-08T14:36:02Z,mazerace-event,rep_first,FALSE,weekly,25,Male,TX,4-year college degree,Republican,no,yes,yes,Kamala Harris,yes,post
+Sub1362,post_participant_0731,2020-11-08T14:39:09Z,event-mazerace,dem_first,FALSE,daily,47,Male,MO,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1370,post_participant_0733,2020-11-08T14:41:28Z,mazerace-event,rep_first,FALSE,daily,38,Male,PA,Some college,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1393,post_participant_0738,2020-11-08T14:54:09Z,maze-event,dem_first,FALSE,daily,25,Female,TX,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1395,post_participant_0739,2020-11-08T14:55:21Z,spr-event,dem_first,FALSE,daily,25,Male,MI,Some college,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1396,post_participant_0740,2020-11-08T14:55:28Z,spr-event,dem_first,FALSE,daily,25,Male,TX,Professional degree,Republican,yes,yes,yes,I don't care,yes,post
+Sub1399,post_participant_0742,2020-11-08T14:57:41Z,spr-event,dem_first,FALSE,weekly,30,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1402,post_participant_0743,2020-11-08T14:59:34Z,maze-event,rep_first,FALSE,daily,25,Male,TX,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub1413,post_participant_0746,2020-11-08T15:05:59Z,event-mazerace,dem_first,FALSE,daily,25,Male,TX,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub1414,post_participant_0747,2020-11-08T15:06:37Z,event-cloze,dem_first,FALSE,daily,28,Male,AL,Some college,None,yes,yes,yes,Kamala Harris,yes,post
+Sub1418,post_participant_0749,2020-11-08T15:08:06Z,event-maze,rep_first,FALSE,weekly,41,Male,OR,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1419,post_participant_0750,2020-11-08T15:08:58Z,maze-event,rep_first,FALSE,daily,28,Female,CA,Some college,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub1433,post_participant_0753,2020-11-08T15:15:35Z,maze-event,rep_first,FALSE,daily,28,Male,TX,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1439,post_participant_0755,2020-11-08T15:18:21Z,event-spr,dem_first,FALSE,daily,28,Female,WI,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub1441,post_participant_0756,2020-11-08T15:19:24Z,event-cloze,rep_first,FALSE,weekly,64,Female,MO,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1444,post_participant_0757,2020-11-08T15:21:48Z,event-cloze,dem_first,FALSE,daily,23,Female,CA,High school graduate,Rather not say,yes,yes,yes,Mike Pence,yes,post
+Sub1452,post_participant_0758,2020-11-08T15:24:44Z,event-cloze,rep_first,FALSE,weekly,29,Female,AK,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub1476,post_participant_0764,2020-11-08T15:34:16Z,mazerace-event,rep_first,FALSE,daily,25,Male,IN,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1482,post_participant_0765,2020-11-08T15:38:00Z,event-cloze,dem_first,FALSE,daily,25,Male,TX,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1503,post_participant_0769,2020-11-08T15:45:49Z,cloze-event,dem_first,FALSE,daily,38,Female,NY,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1511,post_participant_0771,2020-11-08T15:49:59Z,event-maze,rep_first,FALSE,weekly,25,Female,TX,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1520,post_participant_0773,2020-11-08T15:53:53Z,spr-event,dem_first,FALSE,daily,53,Female,AZ,2-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1522,post_participant_0774,2020-11-08T15:55:42Z,cloze-event,rep_first,FALSE,daily,31,Male,VA,Professional degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub1562,post_participant_0779,2020-11-08T16:16:48Z,cloze-event,dem_first,FALSE,daily,32,Male,ME,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub1568,post_participant_0782,2020-11-08T16:21:41Z,cloze-event,rep_first,FALSE,weekly,27,Male,GA,High school graduate,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1580,post_participant_0788,2020-11-08T16:26:16Z,event-maze,rep_first,FALSE,weekly,45,Female,TX,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1608,post_participant_0793,2020-11-08T16:37:25Z,maze-event,dem_first,FALSE,daily,28,Male,VA,Professional degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub1614,post_participant_0795,2020-11-08T16:40:58Z,event-maze,rep_first,FALSE,daily,53,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1625,post_participant_0799,2020-11-08T16:45:57Z,event-mazerace,dem_first,FALSE,weekly,49,Female,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1628,post_participant_0800,2020-11-08T16:46:50Z,event-cloze,rep_first,FALSE,daily,53,Male,NV,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1640,post_participant_0802,2020-11-08T16:54:37Z,spr-event,dem_first,FALSE,daily,49,Male,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1644,post_participant_0803,2020-11-08T16:57:32Z,maze-event,dem_first,FALSE,weekly,28,Male,IL,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub1654,post_participant_0805,2020-11-08T17:04:41Z,mazerace-event,dem_first,FALSE,weekly,39,Male,PA,4-year college degree,Other,yes,yes,yes,I don't care,yes,post
+Sub1655,post_participant_0806,2020-11-08T17:04:55Z,mazerace-event,dem_first,FALSE,daily,40,Male,OH,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub1656,post_participant_0807,2020-11-08T17:04:57Z,maze-event,dem_first,FALSE,weekly,38,Female,MD,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1662,post_participant_0808,2020-11-08T17:06:27Z,event-cloze,dem_first,FALSE,daily,35,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1688,post_participant_0815,2020-11-08T17:21:49Z,event-cloze,dem_first,FALSE,daily,35,Male,TX,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1692,post_participant_0817,2020-11-08T17:22:28Z,cloze-event,rep_first,FALSE,daily,54,Female,WA,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1701,post_participant_0818,2020-11-08T17:28:51Z,event-maze,dem_first,FALSE,daily,24,Male,PA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1713,post_participant_0819,2020-11-08T17:34:39Z,spr-event,dem_first,FALSE,daily,26,Male,other,4-year college degree,Democrat,no,yes,no,Kamala Harris,yes,post
+Sub1715,post_participant_0820,2020-11-08T17:35:00Z,cloze-event,rep_first,FALSE,monthly,52,Male,CA,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub1725,post_participant_0823,2020-11-08T17:40:24Z,mazerace-event,dem_first,FALSE,daily,47,Female,KS,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1741,post_participant_0826,2020-11-08T17:46:06Z,cloze-event,rep_first,FALSE,daily,42,Female,FL,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1750,post_participant_0828,2020-11-08T17:50:13Z,maze-event,dem_first,FALSE,daily,50,Male,AZ,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1756,post_participant_0829,2020-11-08T17:51:49Z,maze-event,dem_first,FALSE,daily,34,Male,TN,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1761,post_participant_0830,2020-11-08T17:54:37Z,event-maze,dem_first,FALSE,daily,32,Female,MA,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1763,post_participant_0832,2020-11-08T17:56:10Z,maze-event,dem_first,FALSE,weekly,29,Male,GA,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1777,post_participant_0833,2020-11-08T18:04:40Z,cloze-event,dem_first,FALSE,monthly,45,Female,KY,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub1780,post_participant_0834,2020-11-08T18:05:15Z,mazerace-event,dem_first,FALSE,daily,58,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1792,post_participant_0836,2020-11-08T18:10:59Z,cloze-event,dem_first,FALSE,daily,56,Female,MT,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub1796,post_participant_0837,2020-11-08T18:12:07Z,event-mazerace,dem_first,FALSE,daily,53,Female,VA,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1799,post_participant_0838,2020-11-08T18:13:19Z,event-spr,dem_first,FALSE,daily,38,Male,other,Professional degree,Independent,no,yes,no,Kamala Harris,yes,post
+Sub1805,post_participant_0839,2020-11-08T18:18:51Z,spr-event,dem_first,FALSE,daily,30,Female,TX,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1833,post_participant_0845,2020-11-08T18:33:37Z,event-mazerace,dem_first,FALSE,daily,31,Male,OH,Doctorate,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub1835,post_participant_0846,2020-11-08T18:34:55Z,mazerace-event,rep_first,FALSE,daily,39,Male,CA,Some college,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub1838,post_participant_0847,2020-11-08T18:37:59Z,event-spr,rep_first,FALSE,daily,50,Female,GA,4-year college degree,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub1842,post_participant_0848,2020-11-08T18:39:51Z,event-mazerace,dem_first,FALSE,weekly,48,Male,NV,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1881,post_participant_0850,2020-11-08T19:06:09Z,cloze-event,dem_first,FALSE,daily,31,Male,IL,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1885,post_participant_0851,2020-11-08T19:08:47Z,mazerace-event,dem_first,FALSE,daily,23,Female,other,4-year college degree,Democrat,no,yes,no,Joe Biden,yes,post
+Sub1887,post_participant_0852,2020-11-08T19:09:08Z,event-spr,rep_first,FALSE,daily,32,Female,CA,Professional degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1895,post_participant_0853,2020-11-08T19:12:14Z,spr-event,rep_first,FALSE,weekly,24,Male,GA,4-year college degree,Democrat,yes,yes,yes,Donald Trump,yes,post
+Sub1911,post_participant_0855,2020-11-08T19:20:17Z,spr-event,rep_first,FALSE,daily,60,Female,GA,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1916,post_participant_0856,2020-11-08T19:21:52Z,cloze-event,rep_first,FALSE,daily,46,Male,FL,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub1933,post_participant_0858,2020-11-08T19:29:19Z,spr-event,rep_first,FALSE,daily,32,Male,NY,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1944,post_participant_0860,2020-11-08T19:35:11Z,event-cloze,rep_first,FALSE,weekly,24,Male,FL,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub1946,post_participant_0861,2020-11-08T19:36:53Z,event-cloze,rep_first,FALSE,weekly,27,Male,FL,High school graduate,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub1947,post_participant_0862,2020-11-08T19:36:58Z,maze-event,dem_first,FALSE,daily,32,Female,PA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1956,post_participant_0863,2020-11-08T19:43:47Z,spr-event,rep_first,FALSE,daily,30,Male,CA,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub1959,post_participant_0865,2020-11-08T19:45:09Z,maze-event,rep_first,FALSE,daily,69,Male,other,Professional degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub1970,post_participant_0868,2020-11-08T19:52:14Z,cloze-event,dem_first,FALSE,daily,35,Female,CA,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub1988,post_participant_0869,2020-11-08T19:59:05Z,event-cloze,dem_first,FALSE,daily,26,Male,CA,4-year college degree,Republican,yes,yes,yes,I don't care,yes,post
+Sub1990,post_participant_0870,2020-11-08T19:59:53Z,spr-event,rep_first,FALSE,weekly,26,Male,PA,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2021,post_participant_0873,2020-11-08T20:18:26Z,maze-event,rep_first,FALSE,daily,30,Male,NJ,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2038,post_participant_0874,2020-11-08T20:33:19Z,cloze-event,dem_first,FALSE,daily,19,Male,NY,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2046,post_participant_0875,2020-11-08T20:36:46Z,cloze-event,dem_first,FALSE,daily,38,Male,IN,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2065,post_participant_0877,2020-11-08T20:46:34Z,mazerace-event,rep_first,FALSE,daily,23,Male,UT,Some college,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub2072,post_participant_0878,2020-11-08T20:50:37Z,cloze-event,dem_first,FALSE,weekly,32,Male,FL,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub2075,post_participant_0879,2020-11-08T20:52:38Z,cloze-event,dem_first,FALSE,daily,37,Male,PA,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2079,post_participant_0880,2020-11-08T20:54:49Z,maze-event,rep_first,FALSE,daily,20,Male,CO,High school graduate,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub2137,post_participant_0887,2020-11-08T21:24:17Z,cloze-event,rep_first,FALSE,weekly,28,Male,GA,4-year college degree,Democrat,yes,yes,yes,Donald Trump,yes,post
+Sub2164,post_participant_0888,2020-11-08T21:35:41Z,spr-event,rep_first,FALSE,daily,38,Female,PA,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2185,post_participant_0890,2020-11-08T21:51:33Z,spr-event,dem_first,FALSE,daily,29,Female,other,Some college,Democrat,no,yes,no,Kamala Harris,yes,post
+Sub2222,post_participant_0891,2020-11-08T22:06:19Z,cloze-event,rep_first,FALSE,daily,32,Male,OH,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2235,post_participant_0892,2020-11-08T22:14:50Z,mazerace-event,rep_first,FALSE,daily,NA,Male,VA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2247,post_participant_0895,2020-11-08T22:27:03Z,spr-event,rep_first,FALSE,daily,30,Male,FL,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2252,post_participant_0896,2020-11-08T22:30:36Z,mazerace-event,rep_first,FALSE,daily,32,Male,AZ,4-year college degree,Independent,yes,yes,yes,I don't care,yes,post
+Sub2262,post_participant_0897,2020-11-08T22:36:17Z,event-cloze,rep_first,FALSE,daily,54,Female,GA,Some college,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2274,post_participant_0900,2020-11-08T22:40:23Z,mazerace-event,dem_first,FALSE,daily,33,Male,PA,Some college,Other,yes,yes,yes,Kamala Harris,yes,post
+Sub2284,post_participant_0901,2020-11-08T22:50:21Z,mazerace-event,dem_first,FALSE,daily,27,Male,CA,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2285,post_participant_0902,2020-11-08T22:50:42Z,event-cloze,dem_first,FALSE,daily,52,Female,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2294,post_participant_0903,2020-11-08T22:57:10Z,maze-event,dem_first,FALSE,daily,29,Female,NY,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2299,post_participant_0904,2020-11-08T23:03:59Z,event-maze,rep_first,FALSE,daily,51,Female,MO,Doctorate,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub2300,post_participant_0905,2020-11-08T23:05:00Z,event-cloze,dem_first,FALSE,weekly,31,Female,OK,Some college,Independent,yes,yes,yes,I don't care,no,post
+Sub2315,post_participant_0906,2020-11-08T23:19:40Z,event-spr,dem_first,FALSE,daily,56,Male,KS,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub2346,post_participant_0910,2020-11-08T23:42:42Z,event-spr,rep_first,FALSE,daily,45,Male,NJ,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub2354,post_participant_0912,2020-11-08T23:49:45Z,event-spr,dem_first,FALSE,daily,49,Female,ME,Some college,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2369,post_participant_0915,2020-11-08T23:56:04Z,mazerace-event,rep_first,FALSE,daily,45,Male,NJ,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2387,post_participant_0917,2020-11-09T00:03:20Z,mazerace-event,rep_first,FALSE,daily,57,Female,NV,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub2396,post_participant_0918,2020-11-09T00:06:19Z,spr-event,rep_first,FALSE,daily,49,Female,MI,Some college,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2401,post_participant_0919,2020-11-09T00:08:50Z,event-cloze,dem_first,FALSE,daily,45,Male,NJ,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2416,post_participant_0921,2020-11-09T00:14:38Z,event-mazerace,dem_first,FALSE,daily,44,Male,MD,Professional degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2425,post_participant_0922,2020-11-09T00:20:49Z,cloze-event,dem_first,FALSE,daily,45,Male,NJ,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub2427,post_participant_0923,2020-11-09T00:21:52Z,cloze-event,rep_first,FALSE,weekly,45,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2431,post_participant_0924,2020-11-09T00:26:47Z,event-maze,dem_first,FALSE,daily,59,Female,CA,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2433,post_participant_0925,2020-11-09T00:28:33Z,mazerace-event,dem_first,FALSE,daily,23,Female,NC,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2483,post_participant_0927,2020-11-09T00:51:28Z,mazerace-event,dem_first,FALSE,daily,52,Male,WA,4-year college degree,Democrat,no,yes,no,Joe Biden,yes,post
+Sub2486,post_participant_0928,2020-11-09T00:53:38Z,maze-event,rep_first,FALSE,daily,20,Female,NC,Some college,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub2488,post_participant_0930,2020-11-09T00:54:08Z,cloze-event,rep_first,FALSE,daily,34,Male,FL,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2490,post_participant_0931,2020-11-09T00:57:17Z,mazerace-event,dem_first,FALSE,daily,35,Female,CA,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2505,post_participant_0934,2020-11-09T01:10:34Z,mazerace-event,rep_first,FALSE,daily,27,Male,MI,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2510,post_participant_0937,2020-11-09T01:12:46Z,event-spr,rep_first,FALSE,daily,35,Female,MA,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2513,post_participant_0938,2020-11-09T01:15:20Z,maze-event,rep_first,FALSE,daily,41,Female,NJ,Some college,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub2514,post_participant_0939,2020-11-09T01:16:24Z,event-cloze,rep_first,FALSE,daily,29,Male,PA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2516,post_participant_0940,2020-11-09T01:17:42Z,event-cloze,rep_first,FALSE,daily,25,Male,other,4-year college degree,Other,no,yes,no,Mike Pence,yes,post
+Sub2523,post_participant_0942,2020-11-09T01:25:12Z,event-spr,rep_first,FALSE,daily,49,Female,PA,4-year college degree,Republican,yes,yes,yes,I don't care,yes,post
+Sub2525,post_participant_0943,2020-11-09T01:25:36Z,event-cloze,dem_first,FALSE,daily,35,Male,GA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2527,post_participant_0944,2020-11-09T01:25:49Z,spr-event,rep_first,FALSE,monthly,30,Male,WA,High school graduate,None,yes,yes,yes,Kamala Harris,no,post
+Sub2531,post_participant_0947,2020-11-09T01:33:38Z,maze-event,dem_first,FALSE,daily,27,Male,IL,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2532,post_participant_0948,2020-11-09T01:33:50Z,event-spr,dem_first,FALSE,daily,23,Female,VA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2534,post_participant_0950,2020-11-09T01:34:45Z,mazerace-event,dem_first,FALSE,weekly,53,Female,MA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2535,post_participant_0951,2020-11-09T01:35:03Z,mazerace-event,rep_first,FALSE,weekly,24,Male,TX,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2536,post_participant_0952,2020-11-09T01:36:16Z,mazerace-event,dem_first,FALSE,daily,24,Male,VA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub2537,post_participant_0953,2020-11-09T01:37:09Z,event-cloze,rep_first,FALSE,daily,40,Male,PA,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub2542,post_participant_0956,2020-11-09T01:39:34Z,spr-event,rep_first,FALSE,daily,37,Female,NY,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2543,post_participant_0957,2020-11-09T01:39:45Z,event-cloze,dem_first,FALSE,daily,57,Female,PA,4-year college degree,Rather not say,yes,yes,yes,Kamala Harris,yes,post
+Sub2545,post_participant_0958,2020-11-09T01:40:05Z,event-spr,rep_first,FALSE,daily,67,Male,WA,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2549,post_participant_0960,2020-11-09T01:43:47Z,mazerace-event,rep_first,FALSE,daily,31,Male,MI,4-year college degree,Independent,yes,yes,yes,I don't care,yes,post
+Sub2550,post_participant_0961,2020-11-09T01:49:21Z,cloze-event,rep_first,FALSE,daily,33,Female,PA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2551,post_participant_0962,2020-11-09T01:50:35Z,event-mazerace,dem_first,FALSE,daily,40,Female,MI,4-year college degree,None,yes,yes,yes,I don't care,yes,post
+Sub2555,post_participant_0963,2020-11-09T01:53:21Z,maze-event,rep_first,FALSE,weekly,24,Male,TX,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2557,post_participant_0964,2020-11-09T01:53:42Z,cloze-event,dem_first,FALSE,daily,38,Female,KY,2-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2562,post_participant_0966,2020-11-09T02:00:05Z,spr-event,dem_first,FALSE,daily,42,Male,CA,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2563,post_participant_0967,2020-11-09T02:00:19Z,mazerace-event,dem_first,FALSE,daily,23,Female,KY,Professional degree,Democrat,yes,yes,no,Joe Biden,yes,post
+Sub2564,post_participant_0968,2020-11-09T02:02:02Z,cloze-event,dem_first,FALSE,daily,36,Male,WI,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2567,post_participant_0970,2020-11-09T02:03:16Z,maze-event,rep_first,FALSE,monthly,46,Female,TX,High school graduate,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub2569,post_participant_0971,2020-11-09T02:06:17Z,mazerace-event,dem_first,FALSE,daily,38,Female,TX,4-year college degree,Republican,yes,yes,yes,I don't care,yes,post
+Sub2570,post_participant_0972,2020-11-09T02:07:42Z,mazerace-event,rep_first,FALSE,daily,28,Female,OH,4-year college degree,Independent,yes,yes,yes,I don't care,yes,post
+Sub2572,post_participant_0973,2020-11-09T02:08:02Z,maze-event,rep_first,FALSE,daily,25,Female,VA,2-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub2571,post_participant_0974,2020-11-09T02:07:59Z,cloze-event,dem_first,FALSE,monthly,32,Male,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2574,post_participant_0975,2020-11-09T02:09:01Z,event-spr,rep_first,FALSE,daily,44,Male,MI,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2575,post_participant_0976,2020-11-09T02:09:51Z,event-cloze,dem_first,FALSE,daily,19,Female,TX,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2577,post_participant_0977,2020-11-09T02:10:53Z,mazerace-event,dem_first,FALSE,weekly,40,Female,NY,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub2578,post_participant_0978,2020-11-09T02:11:14Z,maze-event,rep_first,FALSE,daily,34,Male,PA,High school graduate,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2581,post_participant_0979,2020-11-09T02:12:17Z,maze-event,dem_first,FALSE,daily,35,Female,CO,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub2584,post_participant_0981,2020-11-09T02:15:40Z,mazerace-event,dem_first,FALSE,daily,30,Female,IA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2586,post_participant_0982,2020-11-09T02:18:10Z,spr-event,rep_first,FALSE,daily,21,Male,TX,Less than high school,Other,yes,yes,yes,I don't care,yes,post
+Sub2593,post_participant_0983,2020-11-09T02:21:03Z,cloze-event,dem_first,FALSE,daily,44,Male,NY,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2594,post_participant_0984,2020-11-09T02:21:06Z,mazerace-event,dem_first,FALSE,daily,30,Male,GA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub2597,post_participant_0985,2020-11-09T02:21:52Z,event-mazerace,dem_first,FALSE,daily,52,Male,NJ,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2598,post_participant_0986,2020-11-09T02:22:05Z,event-cloze,dem_first,FALSE,daily,44,Male,HI,High school graduate,Other,yes,yes,yes,Joe Biden,yes,post
+Sub2603,post_participant_0988,2020-11-09T02:27:51Z,cloze-event,dem_first,FALSE,daily,NA,Male,NC,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2604,post_participant_0989,2020-11-09T02:28:07Z,spr-event,rep_first,FALSE,daily,26,Male,VA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub2605,post_participant_0990,2020-11-09T02:28:38Z,spr-event,dem_first,FALSE,daily,35,Male,MO,Professional degree,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub2608,post_participant_0991,2020-11-09T02:30:16Z,mazerace-event,dem_first,FALSE,daily,24,Male,TX,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2609,post_participant_0992,2020-11-09T02:32:56Z,cloze-event,dem_first,FALSE,monthly,50,Male,WA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2611,post_participant_0993,2020-11-09T02:34:50Z,event-cloze,rep_first,FALSE,daily,49,Male,TX,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2614,post_participant_0994,2020-11-09T02:36:46Z,event-maze,rep_first,FALSE,daily,31,Female,CO,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2616,post_participant_0995,2020-11-09T02:37:22Z,maze-event,rep_first,FALSE,daily,28,Male,CA,4-year college degree,Democrat,no,yes,no,Joe Biden,no,post
+Sub2617,post_participant_0996,2020-11-09T02:37:50Z,spr-event,dem_first,FALSE,monthly,45,Male,CT,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2621,post_participant_0998,2020-11-09T02:39:17Z,spr-event,dem_first,FALSE,daily,56,Female,CO,Professional degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub2624,post_participant_0999,2020-11-09T02:42:41Z,spr-event,dem_first,FALSE,daily,35,Male,TX,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2626,post_participant_1000,2020-11-09T02:42:50Z,event-maze,dem_first,FALSE,daily,NA,Male,other,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2630,post_participant_1003,2020-11-09T02:44:44Z,event-spr,rep_first,FALSE,daily,24,Female,MN,2-year college degree,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub2634,post_participant_1004,2020-11-09T02:45:48Z,mazerace-event,dem_first,FALSE,daily,25,Male,MD,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2635,post_participant_1005,2020-11-09T02:46:00Z,cloze-event,rep_first,FALSE,daily,33,Female,CT,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2637,post_participant_1007,2020-11-09T02:46:38Z,event-mazerace,dem_first,FALSE,daily,28,Male,IL,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2650,post_participant_1013,2020-11-09T02:57:13Z,event-mazerace,dem_first,FALSE,daily,46,Female,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2666,post_participant_1019,2020-11-09T03:08:18Z,spr-event,rep_first,FALSE,daily,41,Male,WI,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub2675,post_participant_1021,2020-11-09T03:13:07Z,event-maze,rep_first,FALSE,daily,26,Male,NC,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub2676,post_participant_1022,2020-11-09T03:13:10Z,maze-event,rep_first,FALSE,daily,27,Male,AZ,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2679,post_participant_1023,2020-11-09T03:14:13Z,event-maze,dem_first,FALSE,daily,39,Female,OR,Some college,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2681,post_participant_1024,2020-11-09T03:15:25Z,maze-event,rep_first,FALSE,daily,39,Female,IL,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2683,post_participant_1025,2020-11-09T03:16:30Z,maze-event,dem_first,FALSE,daily,36,Female,NY,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2687,post_participant_1027,2020-11-09T03:16:42Z,event-maze,dem_first,FALSE,daily,20,Female,OH,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2690,post_participant_1030,2020-11-09T03:17:10Z,spr-event,dem_first,FALSE,daily,29,Male,PA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2697,post_participant_1034,2020-11-09T03:18:45Z,maze-event,dem_first,FALSE,daily,30,Female,MA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2705,post_participant_1037,2020-11-09T03:21:18Z,maze-event,rep_first,FALSE,daily,27,Male,CA,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2707,post_participant_1038,2020-11-09T03:21:31Z,spr-event,dem_first,FALSE,monthly,29,Female,NC,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub2708,post_participant_1039,2020-11-09T03:21:31Z,spr-event,rep_first,FALSE,daily,33,Male,CO,Doctorate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2709,post_participant_1040,2020-11-09T03:21:40Z,mazerace-event,dem_first,FALSE,daily,25,Female,NJ,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2713,post_participant_1042,2020-11-09T03:22:59Z,spr-event,dem_first,FALSE,daily,34,Female,MA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2724,post_participant_1045,2020-11-09T03:28:30Z,event-maze,dem_first,FALSE,weekly,25,Male,UT,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2726,post_participant_1046,2020-11-09T03:28:59Z,spr-event,dem_first,FALSE,weekly,25,Male,NY,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2728,post_participant_1047,2020-11-09T03:31:27Z,event-spr,dem_first,FALSE,daily,43,Male,CT,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2741,post_participant_1049,2020-11-09T03:39:18Z,spr-event,dem_first,FALSE,daily,25,Female,CT,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2745,post_participant_1051,2020-11-09T03:40:16Z,mazerace-event,rep_first,FALSE,daily,51,Rather not say,AR,Less than high school,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2753,post_participant_1053,2020-11-09T03:44:35Z,event-cloze,dem_first,FALSE,weekly,45,Female,TX,High school graduate,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2754,post_participant_1054,2020-11-09T03:45:18Z,cloze-event,rep_first,FALSE,daily,22,Male,CO,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2756,post_participant_1055,2020-11-09T03:45:35Z,cloze-event,dem_first,FALSE,daily,28,Male,NY,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub2758,post_participant_1056,2020-11-09T03:46:08Z,event-spr,dem_first,FALSE,monthly,30,Male,CA,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2764,post_participant_1058,2020-11-09T03:47:29Z,event-cloze,rep_first,FALSE,daily,28,Male,AL,2-year college degree,Democrat,no,yes,no,Joe Biden,no,post
+Sub2768,post_participant_1060,2020-11-09T03:48:53Z,event-mazerace,rep_first,FALSE,daily,44,Female,OH,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2772,post_participant_1062,2020-11-09T03:50:40Z,spr-event,rep_first,FALSE,daily,39,Male,WV,Less than high school,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2790,post_participant_1064,2020-11-09T04:00:51Z,event-cloze,dem_first,FALSE,daily,31,Female,MI,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2791,post_participant_1065,2020-11-09T04:01:18Z,mazerace-event,rep_first,FALSE,daily,45,Female,IL,Some college,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub2793,post_participant_1066,2020-11-09T04:01:38Z,spr-event,rep_first,FALSE,daily,34,Female,PA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2794,post_participant_1067,2020-11-09T04:01:46Z,event-cloze,dem_first,FALSE,daily,39,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2806,post_participant_1072,2020-11-09T04:06:09Z,mazerace-event,dem_first,FALSE,daily,25,Male,TX,4-year college degree,Republican,yes,yes,yes,I don't care,yes,post
+Sub2807,post_participant_1073,2020-11-09T04:06:19Z,event-mazerace,dem_first,FALSE,daily,37,Male,TX,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2810,post_participant_1074,2020-11-09T04:08:13Z,event-maze,rep_first,FALSE,daily,32,Female,PA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2812,post_participant_1075,2020-11-09T04:10:17Z,maze-event,dem_first,FALSE,daily,37,Male,TX,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2813,post_participant_1076,2020-11-09T04:10:23Z,event-mazerace,dem_first,FALSE,daily,56,Male,IL,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2815,post_participant_1077,2020-11-09T04:10:42Z,maze-event,dem_first,FALSE,daily,38,Female,MO,2-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2818,post_participant_1079,2020-11-09T04:11:27Z,cloze-event,dem_first,FALSE,daily,31,Female,FL,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2820,post_participant_1080,2020-11-09T04:12:19Z,cloze-event,rep_first,FALSE,daily,31,Female,FL,Some college,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2825,post_participant_1082,2020-11-09T04:14:11Z,cloze-event,rep_first,FALSE,daily,26,Male,WI,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub2827,post_participant_1083,2020-11-09T04:15:08Z,spr-event,rep_first,FALSE,daily,35,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2832,post_participant_1085,2020-11-09T04:17:00Z,spr-event,rep_first,FALSE,weekly,37,Male,GA,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2834,post_participant_1086,2020-11-09T04:18:59Z,maze-event,rep_first,FALSE,daily,30,Male,NJ,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2843,post_participant_1087,2020-11-09T04:22:08Z,mazerace-event,dem_first,FALSE,daily,29,Male,MI,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2845,post_participant_1088,2020-11-09T04:23:46Z,event-maze,dem_first,FALSE,weekly,20,Female,NC,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2851,post_participant_1090,2020-11-09T04:26:27Z,cloze-event,dem_first,FALSE,daily,22,Female,NY,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub2853,post_participant_1092,2020-11-09T04:26:41Z,cloze-event,rep_first,FALSE,weekly,37,Male,GA,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2858,post_participant_1093,2020-11-09T04:29:44Z,event-spr,rep_first,FALSE,daily,45,Female,FL,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub2859,post_participant_1094,2020-11-09T04:29:52Z,mazerace-event,rep_first,FALSE,daily,29,Female,CA,Some college,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub2862,post_participant_1095,2020-11-09T04:31:04Z,mazerace-event,rep_first,FALSE,daily,38,Female,MD,2-year college degree,Democrat,yes,yes,yes,Donald Trump,yes,post
+Sub2863,post_participant_1096,2020-11-09T04:31:08Z,mazerace-event,dem_first,FALSE,daily,30,Male,IN,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2865,post_participant_1097,2020-11-09T04:35:48Z,event-spr,rep_first,FALSE,daily,48,Male,NC,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2867,post_participant_1098,2020-11-09T04:36:24Z,event-mazerace,rep_first,FALSE,daily,56,Female,CA,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2868,post_participant_1099,2020-11-09T04:37:04Z,event-mazerace,dem_first,FALSE,daily,22,Male,MI,Some college,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2870,post_participant_1101,2020-11-09T04:37:25Z,event-spr,dem_first,FALSE,daily,56,Male,NY,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2871,post_participant_1102,2020-11-09T04:38:45Z,event-cloze,rep_first,FALSE,daily,42,Female,PA,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2873,post_participant_1104,2020-11-09T04:40:08Z,mazerace-event,rep_first,FALSE,weekly,50,Male,CA,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub2874,post_participant_1105,2020-11-09T04:40:20Z,spr-event,dem_first,FALSE,weekly,47,Female,NJ,4-year college degree,None,yes,yes,yes,Joe Biden,yes,post
+Sub2877,post_participant_1107,2020-11-09T04:43:05Z,maze-event,rep_first,FALSE,monthly,23,Female,TN,4-year college degree,Democrat,yes,yes,no,Kamala Harris,yes,post
+Sub2878,post_participant_1108,2020-11-09T04:43:29Z,cloze-event,dem_first,FALSE,never,25,Male,CO,Professional degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2882,post_participant_1109,2020-11-09T04:43:46Z,spr-event,rep_first,FALSE,daily,29,Male,MD,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2890,post_participant_1111,2020-11-09T04:47:10Z,event-spr,rep_first,FALSE,daily,28,Female,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2893,post_participant_1113,2020-11-09T04:47:21Z,event-maze,dem_first,FALSE,weekly,27,Male,TN,2-year college degree,Independent,no,yes,no,Donald Trump,yes,post
+Sub2894,post_participant_1114,2020-11-09T04:47:24Z,event-spr,rep_first,FALSE,daily,22,Female,CA,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2899,post_participant_1117,2020-11-09T04:48:55Z,spr-event,rep_first,FALSE,daily,23,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2904,post_participant_1120,2020-11-09T04:50:24Z,event-maze,rep_first,FALSE,daily,32,Female,VA,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub2907,post_participant_1121,2020-11-09T04:53:28Z,event-spr,dem_first,FALSE,daily,64,Female,FL,Professional degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub2908,post_participant_1122,2020-11-09T04:53:51Z,mazerace-event,rep_first,FALSE,daily,56,Male,GA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2909,post_participant_1123,2020-11-09T04:53:58Z,mazerace-event,dem_first,FALSE,weekly,32,Male,GA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub2913,post_participant_1127,2020-11-09T04:55:15Z,event-maze,dem_first,FALSE,daily,23,Male,FL,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2916,post_participant_1129,2020-11-09T04:57:16Z,event-maze,rep_first,FALSE,daily,30,Male,TX,Professional degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub2917,post_participant_1130,2020-11-09T04:58:37Z,mazerace-event,rep_first,FALSE,daily,31,Female,KY,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2919,post_participant_1131,2020-11-09T04:59:59Z,cloze-event,dem_first,FALSE,daily,52,Female,ID,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2921,post_participant_1132,2020-11-09T05:00:01Z,mazerace-event,dem_first,FALSE,weekly,55,Male,NJ,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2920,post_participant_1133,2020-11-09T05:00:00Z,maze-event,dem_first,FALSE,weekly,50,Male,NJ,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2922,post_participant_1134,2020-11-09T05:00:03Z,maze-event,dem_first,FALSE,daily,24,Female,other,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2926,post_participant_1135,2020-11-09T05:02:59Z,event-maze,dem_first,FALSE,daily,31,Female,KY,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2932,post_participant_1137,2020-11-09T05:05:35Z,event-cloze,rep_first,FALSE,daily,46,Male,VA,Some college,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub2934,post_participant_1138,2020-11-09T05:06:08Z,event-spr,rep_first,FALSE,weekly,27,Male,SD,4-year college degree,Independent,no,yes,yes,I don't care,yes,post
+Sub2936,post_participant_1139,2020-11-09T05:06:45Z,spr-event,rep_first,FALSE,weekly,29,Male,FL,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub2938,post_participant_1141,2020-11-09T05:08:23Z,event-spr,rep_first,FALSE,weekly,28,Male,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2953,post_participant_1143,2020-11-09T05:18:05Z,cloze-event,dem_first,FALSE,daily,56,Female,CA,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub2955,post_participant_1144,2020-11-09T05:18:43Z,event-cloze,dem_first,FALSE,daily,35,Male,PA,High school graduate,None,yes,yes,yes,I'd rather not say,yes,post
+Sub2968,post_participant_1150,2020-11-09T05:31:28Z,maze-event,rep_first,FALSE,daily,52,Male,WA,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub2975,post_participant_1152,2020-11-09T05:36:31Z,mazerace-event,rep_first,FALSE,weekly,30,Female,CA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub2981,post_participant_1153,2020-11-09T05:39:08Z,event-spr,dem_first,FALSE,daily,41,Female,AL,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub2988,post_participant_1155,2020-11-09T05:43:37Z,mazerace-event,dem_first,FALSE,daily,38,Male,CA,4-year college degree,Democrat,yes,yes,yes,I don't care,yes,post
+Sub3011,post_participant_1157,2020-11-09T07:03:31Z,cloze-event,rep_first,FALSE,daily,36,Male,HI,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3012,post_participant_1158,2020-11-09T07:33:20Z,event-maze,dem_first,FALSE,weekly,39,Male,PA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3013,post_participant_1159,2020-11-09T08:22:56Z,cloze-event,rep_first,FALSE,daily,46,Male,GA,High school graduate,Independent,yes,yes,yes,I don't care,yes,post
+Sub3014,post_participant_1160,2020-11-09T10:40:52Z,cloze-event,rep_first,FALSE,daily,42,Male,OH,Some college,None,no,yes,yes,Donald Trump,yes,post
+Sub3016,post_participant_1162,2020-11-09T12:54:13Z,spr-event,dem_first,FALSE,daily,44,Female,MI,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3018,post_participant_1164,2020-11-09T13:07:18Z,maze-event,dem_first,FALSE,daily,61,Female,OH,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3019,post_participant_1165,2020-11-09T13:17:51Z,maze-event,dem_first,FALSE,daily,34,Female,GA,4-year college degree,Democrat,yes,yes,yes,I don't care,yes,post
+Sub3024,post_participant_1166,2020-11-09T13:37:36Z,spr-event,dem_first,FALSE,daily,28,Female,PA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3026,post_participant_1167,2020-11-09T13:39:17Z,mazerace-event,dem_first,FALSE,daily,35,Female,NY,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3029,post_participant_1168,2020-11-09T13:41:09Z,mazerace-event,rep_first,FALSE,daily,53,Male,TN,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3030,post_participant_1169,2020-11-09T13:41:53Z,event-spr,rep_first,FALSE,daily,54,Female,other,Some college,Independent,no,yes,yes,Kamala Harris,yes,post
+Sub3035,post_participant_1171,2020-11-09T13:44:26Z,event-mazerace,rep_first,FALSE,daily,27,Female,NC,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3037,post_participant_1172,2020-11-09T13:46:15Z,event-cloze,dem_first,FALSE,monthly,52,Male,PA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3038,post_participant_1173,2020-11-09T13:46:52Z,event-cloze,rep_first,FALSE,daily,35,Female,WA,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub3040,post_participant_1174,2020-11-09T13:51:02Z,mazerace-event,dem_first,FALSE,weekly,30,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3041,post_participant_1175,2020-11-09T13:52:19Z,event-maze,dem_first,FALSE,daily,32,Male,MD,Some college,Rather not say,yes,yes,yes,I'd rather not say,no,post
+Sub3044,post_participant_1176,2020-11-09T13:54:58Z,maze-event,dem_first,FALSE,weekly,44,Female,KY,2-year college degree,Independent,yes,yes,yes,Kamala Harris,no,post
+Sub3048,post_participant_1179,2020-11-09T13:57:27Z,maze-event,dem_first,FALSE,daily,49,Female,PA,Less than high school,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3049,post_participant_1180,2020-11-09T13:57:41Z,event-cloze,dem_first,FALSE,weekly,52,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3053,post_participant_1182,2020-11-09T13:59:02Z,maze-event,rep_first,FALSE,daily,43,Female,PA,High school graduate,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub3054,post_participant_1183,2020-11-09T13:59:48Z,spr-event,rep_first,FALSE,daily,32,Male,KY,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3055,post_participant_1184,2020-11-09T14:00:51Z,cloze-event,dem_first,FALSE,weekly,45,Male,WA,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub3056,post_participant_1185,2020-11-09T14:00:58Z,maze-event,dem_first,FALSE,daily,24,Male,TN,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3057,post_participant_1186,2020-11-09T14:01:17Z,event-maze,dem_first,FALSE,daily,36,Male,OH,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3061,post_participant_1189,2020-11-09T14:07:12Z,event-mazerace,rep_first,FALSE,daily,32,Female,TX,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3064,post_participant_1191,2020-11-09T14:08:57Z,maze-event,dem_first,FALSE,daily,56,Female,SC,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3067,post_participant_1192,2020-11-09T14:10:26Z,cloze-event,rep_first,FALSE,weekly,35,Male,IN,Professional degree,Democrat,no,yes,no,Kamala Harris,yes,post
+Sub3068,post_participant_1193,2020-11-09T14:10:51Z,maze-event,dem_first,FALSE,monthly,30,Male,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3070,post_participant_1194,2020-11-09T14:11:35Z,event-maze,dem_first,FALSE,daily,52,Female,MN,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3071,post_participant_1195,2020-11-09T14:12:28Z,event-spr,dem_first,FALSE,daily,28,Male,IN,Some college,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3072,post_participant_1196,2020-11-09T14:12:49Z,cloze-event,rep_first,FALSE,weekly,40,Male,other,4-year college degree,Democrat,no,yes,no,Joe Biden,yes,post
+Sub3075,post_participant_1197,2020-11-09T14:14:12Z,maze-event,rep_first,FALSE,daily,42,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3080,post_participant_1199,2020-11-09T14:16:08Z,event-cloze,rep_first,FALSE,weekly,35,Male,other,4-year college degree,Democrat,no,yes,no,Kamala Harris,yes,post
+Sub3084,post_participant_1201,2020-11-09T14:17:37Z,event-maze,rep_first,FALSE,daily,57,Male,IN,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3086,post_participant_1202,2020-11-09T14:18:37Z,cloze-event,rep_first,FALSE,daily,37,Male,TX,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub3097,post_participant_1205,2020-11-09T14:24:35Z,maze-event,rep_first,FALSE,daily,43,Female,FL,Some college,Other,yes,yes,yes,Kamala Harris,yes,post
+Sub3101,post_participant_1207,2020-11-09T14:26:59Z,maze-event,rep_first,FALSE,daily,50,Male,FL,Some college,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub3107,post_participant_1210,2020-11-09T14:28:04Z,cloze-event,rep_first,FALSE,daily,NA,Male,CA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub3111,post_participant_1211,2020-11-09T14:29:49Z,mazerace-event,rep_first,FALSE,daily,42,Male,MN,4-year college degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub3114,post_participant_1212,2020-11-09T14:31:30Z,mazerace-event,rep_first,FALSE,daily,28,Female,TX,2-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3124,post_participant_1215,2020-11-09T14:37:15Z,mazerace-event,dem_first,FALSE,daily,32,Male,IN,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3128,post_participant_1216,2020-11-09T14:38:13Z,spr-event,dem_first,FALSE,daily,39,Male,OH,Some college,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub3129,post_participant_1217,2020-11-09T14:38:38Z,event-maze,dem_first,FALSE,daily,23,Male,GA,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3132,post_participant_1218,2020-11-09T14:40:18Z,cloze-event,rep_first,FALSE,daily,41,Male,AL,4-year college degree,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub3135,post_participant_1220,2020-11-09T14:40:32Z,spr-event,dem_first,FALSE,daily,34,Male,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3136,post_participant_1221,2020-11-09T14:40:35Z,spr-event,dem_first,FALSE,daily,26,Female,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3142,post_participant_1224,2020-11-09T14:45:49Z,cloze-event,rep_first,FALSE,daily,30,Male,FL,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3144,post_participant_1225,2020-11-09T14:46:35Z,maze-event,dem_first,FALSE,daily,46,Male,TX,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3145,post_participant_1226,2020-11-09T14:46:40Z,maze-event,rep_first,FALSE,daily,40,Female,TN,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3148,post_participant_1228,2020-11-09T14:48:19Z,event-cloze,rep_first,FALSE,weekly,70,Male,TX,Professional degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub3150,post_participant_1229,2020-11-09T14:48:34Z,mazerace-event,dem_first,FALSE,daily,36,Female,SC,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3152,post_participant_1231,2020-11-09T14:49:35Z,mazerace-event,rep_first,FALSE,daily,36,Male,OR,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3154,post_participant_1232,2020-11-09T14:50:50Z,maze-event,rep_first,FALSE,daily,39,Female,CT,High school graduate,Other,yes,yes,yes,I don't care,yes,post
+Sub3158,post_participant_1235,2020-11-09T14:52:53Z,event-cloze,dem_first,FALSE,daily,30,Male,KY,4-year college degree,Independent,yes,yes,yes,I'd rather not say,yes,post
+Sub3160,post_participant_1236,2020-11-09T14:53:14Z,event-mazerace,rep_first,FALSE,less than monthly,32,Male,CA,Some college,None,yes,yes,yes,I don't care,yes,post
+Sub3166,post_participant_1237,2020-11-09T14:55:20Z,event-cloze,dem_first,FALSE,daily,31,Male,NY,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3169,post_participant_1238,2020-11-09T14:55:45Z,cloze-event,rep_first,FALSE,daily,32,Female,TX,High school graduate,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub3170,post_participant_1239,2020-11-09T14:56:57Z,spr-event,rep_first,FALSE,daily,59,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3172,post_participant_1240,2020-11-09T15:01:12Z,event-maze,rep_first,FALSE,weekly,33,Male,FL,4-year college degree,None,yes,yes,yes,I don't care,yes,post
+Sub3174,post_participant_1242,2020-11-09T15:04:23Z,event-spr,dem_first,FALSE,daily,64,Male,MA,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3179,post_participant_1243,2020-11-09T15:07:52Z,event-spr,dem_first,FALSE,monthly,30,Male,WA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3181,post_participant_1244,2020-11-09T15:08:41Z,event-spr,rep_first,FALSE,daily,38,Female,NY,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3182,post_participant_1245,2020-11-09T15:09:37Z,event-spr,rep_first,FALSE,daily,34,Female,VA,High school graduate,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub3183,post_participant_1246,2020-11-09T15:09:42Z,spr-event,rep_first,FALSE,daily,31,Female,MI,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3187,post_participant_1247,2020-11-09T15:11:33Z,event-maze,rep_first,FALSE,daily,49,Male,IL,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub3190,post_participant_1249,2020-11-09T15:15:25Z,event-maze,dem_first,FALSE,daily,26,Male,MD,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3194,post_participant_1252,2020-11-09T15:19:05Z,event-maze,rep_first,FALSE,daily,36,Female,MO,High school graduate,None,yes,yes,yes,Joe Biden,yes,post
+Sub3199,post_participant_1254,2020-11-09T15:21:35Z,event-spr,dem_first,FALSE,daily,46,Female,MN,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3203,post_participant_1255,2020-11-09T15:23:58Z,event-mazerace,dem_first,FALSE,weekly,38,Male,NE,High school graduate,None,no,yes,no,I don't care,yes,post
+Sub3206,post_participant_1257,2020-11-09T15:25:09Z,event-maze,dem_first,FALSE,daily,28,Male,SC,2-year college degree,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub3208,post_participant_1258,2020-11-09T15:25:48Z,mazerace-event,rep_first,FALSE,daily,39,Female,MT,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3210,post_participant_1259,2020-11-09T15:26:43Z,mazerace-event,rep_first,FALSE,daily,45,Male,MO,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3213,post_participant_1261,2020-11-09T15:28:14Z,event-spr,rep_first,FALSE,daily,59,Female,CO,4-year college degree,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub3217,post_participant_1262,2020-11-09T15:29:53Z,spr-event,dem_first,FALSE,daily,34,Male,OH,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3226,post_participant_1264,2020-11-09T15:35:49Z,maze-event,dem_first,FALSE,daily,31,Male,GA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3231,post_participant_1266,2020-11-09T15:39:38Z,event-maze,rep_first,FALSE,weekly,30,Male,PA,4-year college degree,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub3232,post_participant_1267,2020-11-09T15:39:44Z,cloze-event,dem_first,FALSE,daily,51,Male,GA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3239,post_participant_1268,2020-11-09T15:41:23Z,maze-event,rep_first,FALSE,daily,45,Male,MO,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3241,post_participant_1269,2020-11-09T15:43:05Z,maze-event,dem_first,FALSE,daily,37,Female,NY,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3243,post_participant_1270,2020-11-09T15:43:33Z,spr-event,dem_first,FALSE,daily,45,Female,MO,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3258,post_participant_1272,2020-11-09T15:51:02Z,maze-event,rep_first,FALSE,daily,30,Female,other,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3264,post_participant_1273,2020-11-09T15:55:30Z,spr-event,dem_first,FALSE,daily,35,Male,CA,High school graduate,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3265,post_participant_1274,2020-11-09T15:56:03Z,cloze-event,dem_first,FALSE,daily,54,Female,WA,2-year college degree,Democrat,no,yes,yes,Kamala Harris,yes,post
+Sub3267,post_participant_1275,2020-11-09T15:56:48Z,cloze-event,rep_first,FALSE,weekly,36,Female,CO,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3268,post_participant_1276,2020-11-09T15:56:52Z,event-mazerace,rep_first,FALSE,daily,25,Female,NY,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3280,post_participant_1280,2020-11-09T16:01:43Z,spr-event,dem_first,FALSE,daily,32,Male,other,High school graduate,Independent,no,yes,no,I don't care,yes,post
+Sub3282,post_participant_1281,2020-11-09T16:02:26Z,event-maze,dem_first,FALSE,daily,29,Male,NY,Some college,Independent,yes,yes,yes,I don't care,yes,post
+Sub3283,post_participant_1282,2020-11-09T16:02:32Z,event-mazerace,rep_first,FALSE,daily,33,Female,KY,2-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub3299,post_participant_1284,2020-11-09T16:12:38Z,event-mazerace,dem_first,FALSE,daily,36,Male,NV,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3302,post_participant_1285,2020-11-09T16:13:26Z,event-mazerace,rep_first,FALSE,daily,30,Female,NY,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3304,post_participant_1286,2020-11-09T16:14:11Z,event-cloze,rep_first,FALSE,daily,43,Female,VA,Less than high school,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3305,post_participant_1287,2020-11-09T16:14:18Z,mazerace-event,dem_first,FALSE,daily,48,Female,SC,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub3315,post_participant_1289,2020-11-09T16:21:38Z,spr-event,dem_first,FALSE,weekly,19,Male,NY,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3322,post_participant_1291,2020-11-09T16:26:13Z,event-cloze,dem_first,FALSE,daily,27,Male,NY,4-year college degree,Independent,no,yes,no,Joe Biden,yes,post
+Sub3325,post_participant_1293,2020-11-09T16:27:15Z,spr-event,rep_first,FALSE,daily,37,Female,NY,4-year college degree,Independent,yes,yes,yes,I'd rather not say,yes,post
+Sub3331,post_participant_1296,2020-11-09T16:33:32Z,maze-event,dem_first,FALSE,daily,28,Male,FL,High school graduate,Independent,yes,yes,yes,I don't care,yes,post
+Sub3335,post_participant_1298,2020-11-09T16:36:48Z,cloze-event,dem_first,FALSE,daily,43,Female,MI,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub3339,post_participant_1300,2020-11-09T16:37:23Z,event-spr,rep_first,FALSE,daily,33,Male,TX,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3348,post_participant_1304,2020-11-09T16:42:51Z,event-maze,dem_first,FALSE,daily,31,Male,TX,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3349,post_participant_1305,2020-11-09T16:43:04Z,mazerace-event,rep_first,FALSE,daily,25,Male,IL,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3350,post_participant_1306,2020-11-09T16:44:21Z,spr-event,dem_first,FALSE,daily,24,Male,WV,High school graduate,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3352,post_participant_1307,2020-11-09T16:45:09Z,spr-event,dem_first,FALSE,daily,47,Male,GA,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3353,post_participant_1308,2020-11-09T16:46:47Z,event-cloze,rep_first,FALSE,daily,41,Female,FL,High school graduate,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3355,post_participant_1309,2020-11-09T16:47:11Z,maze-event,rep_first,FALSE,daily,37,Male,MI,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3362,post_participant_1310,2020-11-09T16:53:30Z,spr-event,rep_first,FALSE,daily,32,Female,IL,2-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub3372,post_participant_1311,2020-11-09T16:57:50Z,event-spr,rep_first,FALSE,daily,33,Female,NY,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub3377,post_participant_1312,2020-11-09T16:59:26Z,event-mazerace,rep_first,FALSE,daily,33,Male,MN,4-year college degree,Other,yes,yes,yes,Joe Biden,yes,post
+Sub3378,post_participant_1313,2020-11-09T16:59:41Z,maze-event,dem_first,FALSE,daily,37,Male,OH,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3379,post_participant_1314,2020-11-09T16:59:59Z,event-maze,rep_first,FALSE,daily,22,Female,AZ,High school graduate,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3386,post_participant_1316,2020-11-09T17:02:36Z,maze-event,dem_first,FALSE,daily,38,Female,CT,Some college,Independent,no,yes,yes,Kamala Harris,yes,post
+Sub3389,post_participant_1318,2020-11-09T17:04:24Z,cloze-event,rep_first,FALSE,daily,57,Male,FL,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3397,post_participant_1321,2020-11-09T17:08:37Z,cloze-event,rep_first,FALSE,daily,50,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3398,post_participant_1322,2020-11-09T17:09:36Z,cloze-event,rep_first,FALSE,monthly,34,Male,CO,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub3402,post_participant_1323,2020-11-09T17:13:22Z,mazerace-event,dem_first,FALSE,weekly,29,Male,PA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3404,post_participant_1324,2020-11-09T17:13:55Z,maze-event,rep_first,FALSE,daily,42,Female,CA,4-year college degree,Independent,yes,yes,yes,I don't care,yes,post
+Sub3430,post_participant_1327,2020-11-09T17:23:45Z,event-maze,dem_first,FALSE,daily,38,Male,OH,High school graduate,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3432,post_participant_1328,2020-11-09T17:24:14Z,spr-event,rep_first,FALSE,daily,42,Male,LA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3437,post_participant_1330,2020-11-09T17:29:00Z,maze-event,dem_first,FALSE,daily,37,Male,NY,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3439,post_participant_1331,2020-11-09T17:30:54Z,event-cloze,rep_first,FALSE,daily,30,Male,NY,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3442,post_participant_1332,2020-11-09T17:32:43Z,event-cloze,rep_first,FALSE,daily,36,Female,FL,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3443,post_participant_1333,2020-11-09T17:32:50Z,event-cloze,dem_first,FALSE,daily,47,Male,TX,2-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3448,post_participant_1334,2020-11-09T17:35:22Z,event-mazerace,rep_first,FALSE,daily,29,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3451,post_participant_1336,2020-11-09T17:36:56Z,spr-event,rep_first,FALSE,daily,27,Female,WA,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3456,post_participant_1337,2020-11-09T17:38:54Z,spr-event,rep_first,FALSE,daily,44,Female,CA,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3457,post_participant_1338,2020-11-09T17:38:55Z,spr-event,dem_first,FALSE,daily,60,Male,MO,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3460,post_participant_1339,2020-11-09T17:40:06Z,cloze-event,rep_first,FALSE,weekly,30,Female,other,Professional degree,Democrat,no,yes,no,Kamala Harris,yes,post
+Sub3469,post_participant_1340,2020-11-09T17:44:04Z,event-mazerace,rep_first,FALSE,daily,32,Male,TX,2-year college degree,Other,yes,yes,yes,Joe Biden,yes,post
+Sub3470,post_participant_1341,2020-11-09T17:44:06Z,cloze-event,rep_first,FALSE,weekly,63,Male,OH,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3472,post_participant_1343,2020-11-09T17:44:11Z,cloze-event,rep_first,FALSE,daily,27,Male,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3473,post_participant_1344,2020-11-09T17:44:12Z,event-maze,dem_first,FALSE,daily,52,Male,VA,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3475,post_participant_1345,2020-11-09T17:44:21Z,cloze-event,rep_first,FALSE,daily,42,Male,SC,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3479,post_participant_1348,2020-11-09T17:47:33Z,mazerace-event,dem_first,FALSE,daily,32,Male,CO,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3490,post_participant_1351,2020-11-09T17:53:01Z,maze-event,dem_first,FALSE,daily,35,Female,GA,2-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub3492,post_participant_1352,2020-11-09T17:53:13Z,event-spr,rep_first,FALSE,daily,45,Male,VA,2-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3515,post_participant_1354,2020-11-09T18:06:33Z,maze-event,rep_first,FALSE,daily,43,Female,PA,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3516,post_participant_1355,2020-11-09T18:07:36Z,event-maze,dem_first,FALSE,monthly,25,Male,CA,Professional degree,Democrat,yes,yes,yes,I don't care,yes,post
+Sub3521,post_participant_1357,2020-11-09T18:09:11Z,event-maze,rep_first,FALSE,daily,34,Male,NE,Some college,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3523,post_participant_1358,2020-11-09T18:10:13Z,mazerace-event,dem_first,FALSE,daily,29,Male,IL,Some college,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub3526,post_participant_1359,2020-11-09T18:11:08Z,spr-event,dem_first,FALSE,daily,28,Male,FL,Some college,None,no,yes,yes,Kamala Harris,yes,post
+Sub3528,post_participant_1360,2020-11-09T18:11:44Z,maze-event,rep_first,FALSE,daily,30,Male,CT,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3529,post_participant_1361,2020-11-09T18:12:12Z,event-spr,dem_first,FALSE,daily,49,Male,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3535,post_participant_1363,2020-11-09T18:18:03Z,event-mazerace,dem_first,FALSE,daily,40,Male,NY,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3538,post_participant_1364,2020-11-09T18:19:11Z,event-maze,rep_first,FALSE,daily,39,Male,MN,2-year college degree,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub3541,post_participant_1365,2020-11-09T18:21:51Z,cloze-event,dem_first,FALSE,daily,67,Female,MN,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3543,post_participant_1366,2020-11-09T18:22:54Z,cloze-event,rep_first,FALSE,daily,26,Male,NV,Some college,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub3550,post_participant_1368,2020-11-09T18:26:54Z,mazerace-event,dem_first,FALSE,daily,48,Female,KY,Some college,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub3553,post_participant_1369,2020-11-09T18:29:29Z,event-spr,dem_first,FALSE,daily,54,Female,VA,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub3554,post_participant_1370,2020-11-09T18:30:31Z,event-cloze,rep_first,FALSE,daily,60,Male,WA,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub3558,post_participant_1371,2020-11-09T18:32:17Z,spr-event,dem_first,FALSE,weekly,54,Male,NY,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3576,post_participant_1374,2020-11-09T18:41:06Z,event-cloze,dem_first,FALSE,daily,34,Female,MA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3581,post_participant_1375,2020-11-09T18:42:33Z,maze-event,dem_first,FALSE,daily,22,Non-binary,OK,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3583,post_participant_1376,2020-11-09T18:42:51Z,event-maze,dem_first,FALSE,daily,32,Male,MO,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3595,post_participant_1380,2020-11-09T18:48:28Z,event-spr,dem_first,FALSE,daily,39,Male,MI,Professional degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub3600,post_participant_1381,2020-11-09T18:50:15Z,maze-event,rep_first,FALSE,weekly,30,Male,TN,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3602,post_participant_1382,2020-11-09T18:51:47Z,cloze-event,dem_first,FALSE,daily,34,Male,DC,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3605,post_participant_1383,2020-11-09T18:53:42Z,mazerace-event,rep_first,FALSE,daily,19,Male,AL,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3610,post_participant_1386,2020-11-09T18:57:31Z,cloze-event,rep_first,FALSE,daily,35,Male,other,Professional degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3618,post_participant_1387,2020-11-09T19:03:45Z,cloze-event,dem_first,FALSE,daily,55,Female,CA,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3624,post_participant_1389,2020-11-09T19:07:04Z,cloze-event,rep_first,FALSE,daily,33,Female,MI,4-year college degree,None,yes,yes,yes,Kamala Harris,yes,post
+Sub3629,post_participant_1392,2020-11-09T19:08:39Z,maze-event,dem_first,FALSE,daily,24,Male,CA,4-year college degree,Democrat,no,yes,no,Joe Biden,yes,post
+Sub3645,post_participant_1397,2020-11-09T19:20:38Z,cloze-event,rep_first,FALSE,daily,40,Male,MO,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3650,post_participant_1401,2020-11-09T19:23:21Z,maze-event,rep_first,FALSE,daily,36,Male,CO,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3655,post_participant_1403,2020-11-09T19:27:45Z,event-spr,dem_first,FALSE,weekly,33,Female,IN,4-year college degree,Democrat,no,yes,no,Kamala Harris,yes,post
+Sub3656,post_participant_1404,2020-11-09T19:28:58Z,maze-event,dem_first,FALSE,daily,31,Male,NJ,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,no,post
+Sub3668,post_participant_1405,2020-11-09T19:43:10Z,mazerace-event,rep_first,FALSE,daily,26,Female,AZ,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3669,post_participant_1406,2020-11-09T19:43:27Z,cloze-event,dem_first,FALSE,daily,64,Male,FL,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3672,post_participant_1407,2020-11-09T19:45:03Z,maze-event,rep_first,FALSE,weekly,31,Male,CA,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3674,post_participant_1408,2020-11-09T19:46:32Z,spr-event,dem_first,FALSE,daily,42,Female,PA,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3678,post_participant_1409,2020-11-09T19:49:20Z,maze-event,rep_first,FALSE,daily,41,Male,IL,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3687,post_participant_1411,2020-11-09T19:54:26Z,event-cloze,dem_first,FALSE,daily,25,Male,IN,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3697,post_participant_1413,2020-11-09T20:02:10Z,event-maze,dem_first,FALSE,weekly,42,Female,TN,High school graduate,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub3701,post_participant_1414,2020-11-09T20:04:49Z,cloze-event,dem_first,FALSE,daily,31,Female,AZ,4-year college degree,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub3707,post_participant_1415,2020-11-09T20:09:30Z,event-maze,rep_first,FALSE,daily,32,Male,FL,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub3713,post_participant_1416,2020-11-09T20:13:47Z,spr-event,rep_first,FALSE,daily,36,Female,TX,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3714,post_participant_1417,2020-11-09T20:13:59Z,event-cloze,dem_first,FALSE,daily,47,Female,KS,Professional degree,Other,yes,yes,yes,Joe Biden,yes,post
+Sub3731,post_participant_1418,2020-11-09T20:27:34Z,cloze-event,rep_first,FALSE,daily,33,Male,CA,Doctorate,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub3750,post_participant_1420,2020-11-09T20:35:23Z,event-spr,dem_first,FALSE,weekly,21,Male,other,High school graduate,Democrat,no,yes,no,Joe Biden,no,post
+Sub3757,post_participant_1422,2020-11-09T20:38:56Z,cloze-event,rep_first,FALSE,daily,40,Female,NY,4-year college degree,Republican,yes,yes,yes,Joe Biden,yes,post
+Sub3761,post_participant_1423,2020-11-09T20:40:23Z,mazerace-event,dem_first,FALSE,daily,43,Male,SC,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3777,post_participant_1424,2020-11-09T20:46:58Z,maze-event,dem_first,FALSE,daily,25,Male,FL,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3782,post_participant_1426,2020-11-09T20:49:29Z,mazerace-event,dem_first,FALSE,daily,44,Female,TX,Some college,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3784,post_participant_1427,2020-11-09T20:50:26Z,event-cloze,rep_first,FALSE,daily,55,Female,IL,Some college,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3797,post_participant_1428,2020-11-09T20:56:41Z,event-mazerace,dem_first,FALSE,daily,38,Male,MI,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3800,post_participant_1429,2020-11-09T20:58:10Z,spr-event,dem_first,FALSE,daily,30,Male,PA,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3812,post_participant_1430,2020-11-09T21:04:58Z,event-mazerace,dem_first,FALSE,daily,33,Female,NY,Some college,Democrat,yes,yes,yes,I don't care,yes,post
+Sub3827,post_participant_1433,2020-11-09T21:16:23Z,spr-event,rep_first,FALSE,daily,65,Male,FL,Professional degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub3828,post_participant_1434,2020-11-09T21:16:34Z,event-maze,dem_first,FALSE,daily,43,Female,PA,Professional degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3831,post_participant_1435,2020-11-09T21:17:02Z,maze-event,dem_first,FALSE,daily,56,Female,other,4-year college degree,Democrat,no,yes,no,Kamala Harris,yes,post
+Sub3838,post_participant_1436,2020-11-09T21:20:12Z,cloze-event,dem_first,FALSE,never,35,Male,TN,4-year college degree,Republican,no,yes,no,Kamala Harris,yes,post
+Sub3839,post_participant_1437,2020-11-09T21:20:22Z,event-mazerace,dem_first,FALSE,daily,31,Female,MD,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3851,post_participant_1438,2020-11-09T21:27:36Z,event-spr,rep_first,FALSE,daily,34,Male,IL,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3854,post_participant_1439,2020-11-09T21:29:15Z,maze-event,dem_first,FALSE,daily,30,Female,NJ,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3860,post_participant_1440,2020-11-09T21:36:07Z,spr-event,rep_first,FALSE,daily,30,Female,FL,2-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub3868,post_participant_1442,2020-11-09T21:45:52Z,spr-event,dem_first,FALSE,daily,66,Female,VA,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3879,post_participant_1445,2020-11-09T21:51:15Z,maze-event,rep_first,FALSE,daily,29,Male,AR,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3901,post_participant_1447,2020-11-09T22:01:46Z,maze-event,rep_first,FALSE,daily,37,Female,NY,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3908,post_participant_1448,2020-11-09T22:10:02Z,mazerace-event,dem_first,FALSE,weekly,30,Female,OK,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3913,post_participant_1450,2020-11-09T22:15:40Z,event-cloze,rep_first,FALSE,daily,32,Male,LA,High school graduate,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3921,post_participant_1451,2020-11-09T22:19:50Z,maze-event,rep_first,FALSE,daily,33,Male,CA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3922,post_participant_1452,2020-11-09T22:22:19Z,event-cloze,rep_first,FALSE,weekly,31,Male,FL,High school graduate,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3925,post_participant_1453,2020-11-09T22:26:43Z,cloze-event,dem_first,FALSE,weekly,54,Female,TX,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3931,post_participant_1455,2020-11-09T22:29:50Z,event-mazerace,rep_first,FALSE,daily,29,Male,PA,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3936,post_participant_1456,2020-11-09T22:33:33Z,maze-event,rep_first,FALSE,daily,27,Male,OR,High school graduate,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3937,post_participant_1457,2020-11-09T22:34:14Z,maze-event,rep_first,FALSE,daily,30,Male,GA,High school graduate,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub3941,post_participant_1458,2020-11-09T22:36:05Z,mazerace-event,dem_first,FALSE,weekly,32,Male,NY,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3947,post_participant_1459,2020-11-09T22:38:21Z,mazerace-event,dem_first,FALSE,daily,21,Male,TX,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub3961,post_participant_1460,2020-11-09T22:46:37Z,spr-event,rep_first,FALSE,daily,45,Male,FL,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub3985,post_participant_1462,2020-11-09T22:58:11Z,maze-event,rep_first,FALSE,daily,43,Female,MI,Some college,Independent,yes,yes,yes,Mike Pence,yes,post
+Sub4001,post_participant_1464,2020-11-09T23:07:54Z,event-maze,rep_first,FALSE,daily,71,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4011,post_participant_1467,2020-11-09T23:17:11Z,spr-event,rep_first,FALSE,monthly,35,Female,IN,4-year college degree,Independent,no,yes,no,Kamala Harris,yes,post
+Sub4015,post_participant_1468,2020-11-09T23:20:44Z,spr-event,dem_first,FALSE,daily,36,Male,KS,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4016,post_participant_1469,2020-11-09T23:21:45Z,cloze-event,dem_first,FALSE,daily,35,Male,other,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub4019,post_participant_1470,2020-11-09T23:25:03Z,event-spr,dem_first,FALSE,daily,34,Female,other,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4045,post_participant_1473,2020-11-09T23:41:01Z,mazerace-event,rep_first,FALSE,daily,30,Male,NC,High school graduate,Republican,yes,yes,yes,Mike Pence,yes,post
+Sub4065,post_participant_1476,2020-11-09T23:48:14Z,cloze-event,dem_first,FALSE,daily,37,Male,WI,Professional degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub4066,post_participant_1477,2020-11-09T23:48:21Z,event-mazerace,dem_first,FALSE,daily,25,Male,NY,Professional degree,Other,no,yes,no,I'd rather not say,yes,post
+Sub4070,post_participant_1478,2020-11-09T23:50:27Z,spr-event,dem_first,FALSE,daily,32,Female,MO,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub4072,post_participant_1479,2020-11-09T23:50:37Z,cloze-event,rep_first,FALSE,daily,28,Female,MD,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub4105,post_participant_1481,2020-11-10T00:06:30Z,spr-event,dem_first,FALSE,monthly,43,Male,NY,Professional degree,Independent,no,yes,yes,I don't care,yes,post
+Sub4134,post_participant_1483,2020-11-10T00:27:42Z,mazerace-event,dem_first,FALSE,weekly,30,Male,CO,4-year college degree,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub4138,post_participant_1484,2020-11-10T00:29:57Z,mazerace-event,dem_first,FALSE,weekly,28,Female,CO,4-year college degree,Independent,yes,yes,no,Donald Trump,yes,post
+Sub4143,post_participant_1485,2020-11-10T00:33:40Z,cloze-event,dem_first,FALSE,daily,35,Female,IA,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub4155,post_participant_1487,2020-11-10T00:40:04Z,event-maze,rep_first,FALSE,weekly,22,Male,CA,4-year college degree,Democrat,yes,yes,yes,I don't care,no,post
+Sub4159,post_participant_1489,2020-11-10T00:42:40Z,event-spr,rep_first,FALSE,daily,29,Female,OH,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4166,post_participant_1492,2020-11-10T00:46:20Z,event-mazerace,rep_first,FALSE,daily,45,Male,MO,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4179,post_participant_1493,2020-11-10T00:50:55Z,event-mazerace,rep_first,FALSE,daily,45,Male,MI,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub4194,post_participant_1494,2020-11-10T00:57:22Z,spr-event,rep_first,FALSE,daily,43,Female,TX,High school graduate,Independent,yes,yes,yes,Donald Trump,yes,post
+Sub4207,post_participant_1495,2020-11-10T01:04:06Z,event-mazerace,dem_first,FALSE,daily,25,Male,CA,Some college,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub4220,post_participant_1496,2020-11-10T01:17:40Z,mazerace-event,rep_first,FALSE,daily,38,Male,IN,Professional degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub4269,post_participant_1498,2020-11-10T01:38:37Z,mazerace-event,rep_first,FALSE,daily,36,Male,PA,4-year college degree,Democrat,yes,yes,yes,Donald Trump,yes,post
+Sub4296,post_participant_1506,2020-11-10T02:07:18Z,mazerace-event,rep_first,FALSE,daily,31,Male,NY,2-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub4297,post_participant_1507,2020-11-10T02:07:53Z,event-cloze,rep_first,FALSE,daily,26,Male,AL,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub4299,post_participant_1508,2020-11-10T02:08:43Z,mazerace-event,rep_first,FALSE,monthly,33,Male,IN,Some college,Republican,no,yes,no,Joe Biden,yes,post
+Sub4302,post_participant_1510,2020-11-10T02:10:26Z,mazerace-event,dem_first,FALSE,daily,42,Male,GA,2-year college degree,Independent,yes,yes,yes,I don't care,yes,post
+Sub4303,post_participant_1511,2020-11-10T02:10:49Z,spr-event,rep_first,FALSE,daily,24,Male,MI,Some college,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub4308,post_participant_1514,2020-11-10T02:16:27Z,cloze-event,rep_first,FALSE,daily,50,Female,OK,4-year college degree,Independent,yes,yes,yes,Kamala Harris,yes,post
+Sub4317,post_participant_1518,2020-11-10T02:23:26Z,mazerace-event,rep_first,FALSE,daily,29,Male,other,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4319,post_participant_1519,2020-11-10T02:23:45Z,cloze-event,rep_first,FALSE,weekly,25,Male,CT,High school graduate,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub4321,post_participant_1521,2020-11-10T02:25:10Z,event-maze,dem_first,FALSE,daily,35,Male,WA,Some college,None,yes,yes,no,Kamala Harris,yes,post
+Sub4325,post_participant_1523,2020-11-10T02:26:51Z,spr-event,dem_first,FALSE,weekly,44,Male,NY,Professional degree,Democrat,yes,yes,yes,I'd rather not say,yes,post
+Sub4326,post_participant_1524,2020-11-10T02:29:05Z,mazerace-event,rep_first,FALSE,daily,33,Female,WV,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4329,post_participant_1526,2020-11-10T02:35:58Z,cloze-event,rep_first,FALSE,monthly,27,Female,IN,Professional degree,Republican,yes,yes,yes,Kamala Harris,yes,post
+Sub4330,post_participant_1527,2020-11-10T02:36:58Z,maze-event,rep_first,FALSE,daily,33,Male,FL,High school graduate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4335,post_participant_1529,2020-11-10T02:43:04Z,cloze-event,rep_first,FALSE,daily,39,Female,KS,Professional degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub4337,post_participant_1530,2020-11-10T02:45:39Z,maze-event,dem_first,FALSE,daily,38,Female,MI,4-year college degree,Republican,yes,yes,yes,Donald Trump,yes,post
+Sub4339,post_participant_1531,2020-11-10T02:48:15Z,event-maze,rep_first,FALSE,daily,25,Rather not say,VA,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub4344,post_participant_1533,2020-11-10T02:51:09Z,spr-event,rep_first,FALSE,monthly,42,Male,FL,2-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub4345,post_participant_1534,2020-11-10T02:51:40Z,event-spr,dem_first,FALSE,daily,35,Female,NY,4-year college degree,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub4350,post_participant_1535,2020-11-10T02:56:14Z,maze-event,dem_first,FALSE,weekly,45,Male,PA,Some college,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4353,post_participant_1536,2020-11-10T02:57:40Z,maze-event,dem_first,FALSE,daily,37,Male,NY,Doctorate,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4356,post_participant_1537,2020-11-10T03:01:21Z,spr-event,dem_first,FALSE,daily,26,Female,TX,4-year college degree,Independent,yes,yes,yes,Joe Biden,yes,post
+Sub4372,post_participant_1541,2020-11-10T03:10:24Z,event-cloze,rep_first,FALSE,monthly,40,Female,TN,2-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4388,post_participant_1543,2020-11-10T03:21:59Z,cloze-event,dem_first,FALSE,daily,37,Female,CA,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4393,post_participant_1544,2020-11-10T03:23:35Z,event-spr,rep_first,FALSE,daily,25,Male,SC,High school graduate,None,yes,yes,yes,I'd rather not say,yes,post
+Sub4401,post_participant_1548,2020-11-10T03:27:23Z,event-maze,rep_first,FALSE,daily,61,Male,TX,Some college,Democrat,yes,yes,yes,Kamala Harris,yes,post
+Sub4403,post_participant_1549,2020-11-10T03:27:48Z,cloze-event,rep_first,FALSE,weekly,45,Male,IA,4-year college degree,Democrat,yes,yes,yes,Mike Pence,yes,post
+Sub4431,post_participant_1552,2020-11-10T03:40:08Z,event-spr,dem_first,FALSE,daily,36,Female,CT,4-year college degree,Democrat,yes,yes,yes,Mike Pence,no,post
+Sub4456,post_participant_1556,2020-11-10T03:52:38Z,mazerace-event,rep_first,FALSE,weekly,34,Female,FL,4-year college degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4535,post_participant_1561,2020-11-10T04:49:03Z,event-maze,rep_first,FALSE,weekly,39,Female,TX,Professional degree,Democrat,yes,yes,yes,Joe Biden,yes,post
+Sub4540,post_participant_1563,2020-11-10T08:27:42Z,event-mazerace,dem_first,FALSE,weekly,35,Male,other,Professional degree,Democrat,no,yes,no,Joe Biden,yes,post
+Sub4541,post_participant_1564,2020-11-10T13:23:09Z,event-mazerace,dem_first,FALSE,daily,39,Female,CT,4-year college degree,Independent,yes,yes,yes,I don't care,yes,post

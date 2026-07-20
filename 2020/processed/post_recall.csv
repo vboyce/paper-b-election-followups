@@ -1,0 +1,227 @@
+sid,condition,recall_response,batch
+Sub0022,event-mazerace,Kamala Harris,post
+Sub0025,event-maze,Kamala Harris,post
+Sub0040,event-maze,Writer is unsure,post
+Sub0041,event-maze,Kamala Harris,post
+Sub0047,event-spr,Writer is unsure,post
+Sub0052,event-mazerace,Kamala Harris,post
+Sub0053,event-maze,Kamala Harris,post
+Sub0056,event-mazerace,Mike Pence,post
+Sub0064,event-mazerace,Kamala Harris,post
+Sub0073,event-mazerace,I don't remember,post
+Sub0078,event-maze,Kamala Harris,post
+Sub0084,event-spr,Mike Pence,post
+Sub0089,event-mazerace,Mike Pence,post
+Sub0109,event-maze,Kamala Harris,post
+Sub0129,event-mazerace,Kamala Harris,post
+Sub0141,event-maze,Kamala Harris,post
+Sub0145,event-maze,Mike Pence,post
+Sub0152,event-spr,Kamala Harris,post
+Sub0165,event-spr,Kamala Harris,post
+Sub0174,event-spr,Kamala Harris,post
+Sub0189,event-maze,Writer is unsure,post
+Sub0192,event-maze,Mike Pence,post
+Sub0216,event-mazerace,Kamala Harris,post
+Sub0250,event-maze,Kamala Harris,post
+Sub0283,event-mazerace,Writer is unsure,post
+Sub0299,event-mazerace,Kamala Harris,post
+Sub0327,event-mazerace,Mike Pence,post
+Sub0407,event-mazerace,Kamala Harris,post
+Sub0413,event-spr,Mike Pence,post
+Sub0428,event-mazerace,Writer is unsure,post
+Sub0473,event-mazerace,Kamala Harris,post
+Sub0474,event-maze,Writer is unsure,post
+Sub0508,event-maze,Kamala Harris,post
+Sub0520,event-maze,Mike Pence,post
+Sub0543,event-spr,Kamala Harris,post
+Sub0546,event-spr,Writer is unsure,post
+Sub0552,event-mazerace,Mike Pence,post
+Sub0585,event-mazerace,Kamala Harris,post
+Sub0626,event-maze,Kamala Harris,post
+Sub0630,event-spr,Kamala Harris,post
+Sub0716,event-mazerace,Mike Pence,post
+Sub0722,event-maze,Kamala Harris,post
+Sub0725,event-maze,Writer is unsure,post
+Sub0740,event-mazerace,Kamala Harris,post
+Sub0758,event-maze,Writer is unsure,post
+Sub0768,event-spr,Mike Pence,post
+Sub0791,event-maze,Kamala Harris,post
+Sub0811,event-maze,Kamala Harris,post
+Sub0826,event-maze,I don't remember,post
+Sub0830,event-spr,Kamala Harris,post
+Sub0831,event-maze,Writer is unsure,post
+Sub0860,event-spr,Writer is unsure,post
+Sub0869,event-maze,Writer is unsure,post
+Sub0870,event-spr,Kamala Harris,post
+Sub0877,event-maze,Kamala Harris,post
+Sub0879,event-maze,Mike Pence,post
+Sub0892,event-spr,Kamala Harris,post
+Sub0905,event-spr,Kamala Harris,post
+Sub0923,event-spr,Kamala Harris,post
+Sub0940,event-maze,Kamala Harris,post
+Sub0945,event-spr,Writer is unsure,post
+Sub0968,event-maze,Kamala Harris,post
+Sub0976,event-maze,Writer is unsure,post
+Sub0978,event-maze,Writer is unsure,post
+Sub0987,event-spr,Writer is unsure,post
+Sub1000,event-mazerace,Kamala Harris,post
+Sub1029,event-mazerace,Kamala Harris,post
+Sub1038,event-mazerace,Kamala Harris,post
+Sub1044,event-spr,Kamala Harris,post
+Sub1050,event-spr,Kamala Harris,post
+Sub1054,event-spr,Writer is unsure,post
+Sub1077,event-maze,Kamala Harris,post
+Sub1084,event-spr,Writer is unsure,post
+Sub1092,event-spr,Mike Pence,post
+Sub1095,event-mazerace,Writer is unsure,post
+Sub1098,event-mazerace,Kamala Harris,post
+Sub1127,event-mazerace,Kamala Harris,post
+Sub1128,event-maze,Kamala Harris,post
+Sub1132,event-mazerace,Kamala Harris,post
+Sub1135,event-mazerace,Mike Pence,post
+Sub1140,event-mazerace,Kamala Harris,post
+Sub1146,event-spr,Writer is unsure,post
+Sub1154,event-mazerace,Mike Pence,post
+Sub1183,event-maze,Writer is unsure,post
+Sub1216,event-spr,Writer is unsure,post
+Sub1222,event-spr,Writer is unsure,post
+Sub1224,event-mazerace,Kamala Harris,post
+Sub1249,event-mazerace,Kamala Harris,post
+Sub1285,event-spr,Kamala Harris,post
+Sub1326,event-maze,Kamala Harris,post
+Sub1328,event-mazerace,Mike Pence,post
+Sub1362,event-mazerace,Kamala Harris,post
+Sub1413,event-mazerace,Kamala Harris,post
+Sub1418,event-maze,Writer is unsure,post
+Sub1439,event-spr,Mike Pence,post
+Sub1511,event-maze,Kamala Harris,post
+Sub1580,event-maze,Kamala Harris,post
+Sub1614,event-maze,Kamala Harris,post
+Sub1625,event-mazerace,Kamala Harris,post
+Sub1701,event-maze,Kamala Harris,post
+Sub1761,event-maze,Kamala Harris,post
+Sub1796,event-mazerace,Writer is unsure,post
+Sub1799,event-spr,Writer is unsure,post
+Sub1833,event-mazerace,Kamala Harris,post
+Sub1838,event-spr,Kamala Harris,post
+Sub1842,event-mazerace,Kamala Harris,post
+Sub1887,event-spr,Writer is unsure,post
+Sub2299,event-maze,Mike Pence,post
+Sub2315,event-spr,Mike Pence,post
+Sub2346,event-spr,Kamala Harris,post
+Sub2354,event-spr,Kamala Harris,post
+Sub2416,event-mazerace,Kamala Harris,post
+Sub2431,event-maze,Mike Pence,post
+Sub2510,event-spr,Mike Pence,post
+Sub2523,event-spr,Mike Pence,post
+Sub2532,event-spr,Writer is unsure,post
+Sub2545,event-spr,Kamala Harris,post
+Sub2551,event-mazerace,Mike Pence,post
+Sub2574,event-spr,Kamala Harris,post
+Sub2597,event-mazerace,Kamala Harris,post
+Sub2614,event-maze,Writer is unsure,post
+Sub2626,event-maze,Kamala Harris,post
+Sub2630,event-spr,Writer is unsure,post
+Sub2637,event-mazerace,Kamala Harris,post
+Sub2650,event-mazerace,Kamala Harris,post
+Sub2675,event-maze,Kamala Harris,post
+Sub2679,event-maze,Writer is unsure,post
+Sub2687,event-maze,Writer is unsure,post
+Sub2724,event-maze,Kamala Harris,post
+Sub2728,event-spr,Writer is unsure,post
+Sub2758,event-spr,Kamala Harris,post
+Sub2768,event-mazerace,Kamala Harris,post
+Sub2807,event-mazerace,Kamala Harris,post
+Sub2810,event-maze,Kamala Harris,post
+Sub2813,event-mazerace,Mike Pence,post
+Sub2845,event-maze,Writer is unsure,post
+Sub2858,event-spr,Kamala Harris,post
+Sub2865,event-spr,Kamala Harris,post
+Sub2867,event-mazerace,Kamala Harris,post
+Sub2868,event-mazerace,Kamala Harris,post
+Sub2870,event-spr,Writer is unsure,post
+Sub2890,event-spr,Kamala Harris,post
+Sub2893,event-maze,Mike Pence,post
+Sub2894,event-spr,Kamala Harris,post
+Sub2904,event-maze,Kamala Harris,post
+Sub2907,event-spr,Kamala Harris,post
+Sub2913,event-maze,Mike Pence,post
+Sub2916,event-maze,Kamala Harris,post
+Sub2926,event-maze,Kamala Harris,post
+Sub2934,event-spr,Mike Pence,post
+Sub2938,event-spr,Kamala Harris,post
+Sub2981,event-spr,Writer is unsure,post
+Sub3012,event-maze,Kamala Harris,post
+Sub3030,event-spr,Mike Pence,post
+Sub3035,event-mazerace,Mike Pence,post
+Sub3041,event-maze,Kamala Harris,post
+Sub3057,event-maze,Kamala Harris,post
+Sub3061,event-mazerace,Kamala Harris,post
+Sub3070,event-maze,Kamala Harris,post
+Sub3071,event-spr,Writer is unsure,post
+Sub3084,event-maze,Kamala Harris,post
+Sub3129,event-maze,I don't remember,post
+Sub3160,event-mazerace,Kamala Harris,post
+Sub3172,event-maze,Mike Pence,post
+Sub3174,event-spr,Writer is unsure,post
+Sub3179,event-spr,Mike Pence,post
+Sub3181,event-spr,Kamala Harris,post
+Sub3182,event-spr,Kamala Harris,post
+Sub3187,event-maze,Kamala Harris,post
+Sub3190,event-maze,Writer is unsure,post
+Sub3194,event-maze,Writer is unsure,post
+Sub3199,event-spr,Kamala Harris,post
+Sub3203,event-mazerace,Mike Pence,post
+Sub3206,event-maze,Kamala Harris,post
+Sub3213,event-spr,Kamala Harris,post
+Sub3231,event-maze,Mike Pence,post
+Sub3268,event-mazerace,Mike Pence,post
+Sub3282,event-maze,Mike Pence,post
+Sub3283,event-mazerace,Kamala Harris,post
+Sub3299,event-mazerace,Kamala Harris,post
+Sub3302,event-mazerace,Kamala Harris,post
+Sub3339,event-spr,Writer is unsure,post
+Sub3348,event-maze,Writer is unsure,post
+Sub3372,event-spr,Kamala Harris,post
+Sub3377,event-mazerace,Kamala Harris,post
+Sub3379,event-maze,Writer is unsure,post
+Sub3430,event-maze,Kamala Harris,post
+Sub3448,event-mazerace,Mike Pence,post
+Sub3469,event-mazerace,Kamala Harris,post
+Sub3473,event-maze,Kamala Harris,post
+Sub3492,event-spr,Kamala Harris,post
+Sub3516,event-maze,Mike Pence,post
+Sub3521,event-maze,Kamala Harris,post
+Sub3529,event-spr,Kamala Harris,post
+Sub3535,event-mazerace,Kamala Harris,post
+Sub3538,event-maze,Writer is unsure,post
+Sub3553,event-spr,Kamala Harris,post
+Sub3583,event-maze,I don't remember,post
+Sub3595,event-spr,Writer is unsure,post
+Sub3655,event-spr,I don't remember,post
+Sub3697,event-maze,Kamala Harris,post
+Sub3707,event-maze,I don't remember,post
+Sub3750,event-spr,I don't remember,post
+Sub3797,event-mazerace,Kamala Harris,post
+Sub3812,event-mazerace,Kamala Harris,post
+Sub3828,event-maze,Kamala Harris,post
+Sub3839,event-mazerace,Mike Pence,post
+Sub3851,event-spr,Writer is unsure,post
+Sub3931,event-mazerace,Kamala Harris,post
+Sub4001,event-maze,Writer is unsure,post
+Sub4019,event-spr,Writer is unsure,post
+Sub4066,event-mazerace,Kamala Harris,post
+Sub4155,event-maze,Writer is unsure,post
+Sub4159,event-spr,Kamala Harris,post
+Sub4166,event-mazerace,Kamala Harris,post
+Sub4179,event-mazerace,Kamala Harris,post
+Sub4207,event-mazerace,I don't remember,post
+Sub4321,event-maze,Kamala Harris,post
+Sub4339,event-maze,Writer is unsure,post
+Sub4345,event-spr,Mike Pence,post
+Sub4393,event-spr,Writer is unsure,post
+Sub4401,event-maze,Kamala Harris,post
+Sub4431,event-spr,I don't remember,post
+Sub4535,event-maze,Writer is unsure,post
+Sub4540,event-mazerace,Kamala Harris,post
+Sub4541,event-mazerace,Mike Pence,post

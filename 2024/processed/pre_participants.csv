@@ -1,0 +1,1282 @@
+workerid,condition,age,news,intro,state,gender,prefer,citizen,english,education,residence,political_aff,age_bin,batch
+2681,event-maze,22,Daily,NA,FL,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,18-24,pre
+1598,maze-event,32,NA,NA,KY,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,25-34,pre
+1799,cloze-event,52,NA,NA,IA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,45-54,pre
+1692,cloze-event,54,NA,NA,OR,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2523,spr-event,56,Daily,NA,FL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2859,event-cloze,68,Daily,NA,FL,Male,I'd rather not say,Yes,Yes,Some college,Yes,Independent,≥65,pre
+2284,event-maze,55,Monthly,NA,VA,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+1943,cloze-event,25,NA,NA,PA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,25-34,pre
+1876,cloze-event,60,NA,NA,FL,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,55-64,pre
+2690,spr-event,69,Daily,NA,NC,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+2024,cloze-event,42,NA,NA,MN,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+2706,event-cloze,59,Daily,NA,TX,NA,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2416,event-cloze,58,Daily,NA,NM,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+2348,maze-event,33,Daily,NA,CA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2644,cloze-event,63,Daily,NA,MS,Non-binary,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+1899,maze-event,32,NA,NA,FL,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,25-34,pre
+2968,event-cloze,58,Daily,NA,CA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2601,maze-event,34,Daily,NA,NJ,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2411,event-maze,77,Daily,NA,NC,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+2445,spr-event,25,Daily,NA,MO,Male,I don't care,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2100,cloze-event,38,NA,NA,MI,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+2012,event-spr,55,NA,NA,NV,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+2945,event-maze,74,Daily,NA,MO,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+1856,cloze-event,29,NA,NA,CA,Male,Kamala Harris,Yes,No,4-year college degree,Yes,Democrat,25-34,pre
+2764,cloze-event,24,Weekly,NA,FL,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,18-24,pre
+2573,maze-event,69,Daily,NA,WI,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,≥65,pre
+1767,event-spr,35,NA,NA,VA,Other,Kamala Harris,Yes,No,4-year college degree,Yes,Independent,35-44,pre
+2915,event-cloze,59,Daily,NA,TX,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2254,event-spr,69,NA,NA,NM,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,≥65,pre
+2375,event-cloze,36,Daily,NA,DE,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2324,event-maze,57,Daily,NA,FL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+1964,maze-event,51,NA,NA,OH,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,45-54,pre
+1476,spr-event,31,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2026,event-spr,40,NA,NA,PA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2894,cloze-event,59,NA,NA,OH,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2726,spr-event,69,Daily,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+1613,spr-event,33,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2625,cloze-event,76,Daily,NA,MI,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2112,cloze-event,41,NA,NA,TX,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+2462,event-spr,63,Daily,NA,IN,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2052,spr-event,37,NA,NA,GA,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+2359,event-maze,72,Daily,NA,KY,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,≥65,pre
+1545,spr-event,61,NA,NA,WY,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+2853,event-spr,18,Daily,NA,RI,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+2948,event-spr,82,Daily,NA,CA,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,≥65,pre
+1516,cloze-event,31,NA,NA,GA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2285,spr-event,43,Daily,NA,MO,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,35-44,pre
+1397,event-cloze,28,NA,NA,MA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,25-34,pre
+2643,maze-event,67,Daily,NA,FL,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,≥65,pre
+1671,event-spr,37,NA,NA,MN,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,35-44,pre
+2064,spr-event,52,NA,NA,TX,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,45-54,pre
+2820,cloze-event,67,Daily,NA,OK,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+2570,cloze-event,60,Daily,NA,IN,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2394,cloze-event,46,Weekly,NA,MI,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,45-54,pre
+2529,maze-event,62,Daily,NA,NY,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+1921,event-maze,67,NA,NA,FL,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,≥65,pre
+2223,cloze-event,55,NA,NA,NH,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2736,event-cloze,24,Daily,NA,IL,Non-binary,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+2806,cloze-event,73,Daily,NA,WA,Female,I'd rather not say,Yes,Yes,4-year college degree,Yes,Independent,≥65,pre
+1797,spr-event,32,NA,NA,OH,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,25-34,pre
+2067,spr-event,25,NA,NA,VA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2782,cloze-event,20,Daily,NA,IL,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+1460,spr-event,29,NA,NA,DC,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,25-34,pre
+1617,cloze-event,59,NA,NA,WV,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2327,maze-event,45,Daily,NA,IN,Male,I'd rather not say,Yes,Yes,2-year college degree,Yes,Independent,45-54,pre
+1574,cloze-event,43,NA,NA,TN,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+1834,maze-event,38,NA,NA,NY,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,35-44,pre
+1769,spr-event,64,NA,NA,AZ,Male,Donald Trump,Yes,Yes,Doctorate,Yes,Republican,55-64,pre
+1811,event-spr,69,NA,NA,DC,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2097,event-cloze,52,NA,NA,OH,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+1708,spr-event,35,NA,NA,IL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2839,spr-event,56,Daily,NA,NH,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+1503,spr-event,53,NA,NA,MA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+1764,cloze-event,37,NA,NA,OR,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+2742,spr-event,65,Daily,NA,DE,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+1531,maze-event,39,NA,NA,CA,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,35-44,pre
+1873,event-spr,26,NA,NA,OK,Female,I don't care,Yes,Yes,Professional degree,Yes,Republican,25-34,pre
+2887,spr-event,55,Daily,NA,CO,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+2339,event-cloze,50,Daily,NA,AL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2440,maze-event,41,Daily,NA,IN,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,35-44,pre
+1519,spr-event,34,NA,NA,VA,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,25-34,pre
+2140,cloze-event,54,NA,NA,MI,Male,Kamala Harris,No,Yes,Some college,Yes,Democrat,45-54,pre
+2746,cloze-event,64,Daily,NA,TX,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2408,event-spr,22,Weekly,NA,FL,Female,Kamala Harris,Yes,Yes,Less than high school,Yes,Independent,18-24,pre
+2452,event-spr,52,Daily,NA,GA,Male,I don't care,Yes,Yes,4-year college degree,Yes,None,45-54,pre
+2035,cloze-event,39,NA,NA,NH,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2536,cloze-event,53,Daily,NA,AL,Female,I'd rather not say,Yes,Yes,Some college,Yes,Independent,45-54,pre
+2099,spr-event,28,NA,NA,MI,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+2436,event-spr,57,Daily,NA,MA,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+1894,spr-event,22,NA,NA,WA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+2778,maze-event,58,Daily,NA,IL,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+1604,event-cloze,61,NA,NA,FL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2386,spr-event,22,Weekly,NA,NE,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,18-24,pre
+1654,spr-event,38,NA,NA,TX,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+2380,event-cloze,25,Weekly,NA,FL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2298,event-spr,62,Daily,NA,NM,Non-binary,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+1622,event-cloze,44,NA,NA,FL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+1522,event-cloze,25,NA,NA,NY,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1466,event-maze,55,NA,NA,TX,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2850,spr-event,67,Daily,NA,ID,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+1591,maze-event,42,NA,NA,MN,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,35-44,pre
+2980,event-maze,62,Weekly,NA,SC,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2316,cloze-event,47,Daily,NA,NC,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2186,event-cloze,55,NA,NA,IL,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+2653,cloze-event,66,Daily,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,≥65,pre
+2937,event-maze,55,Daily,NA,KS,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,55-64,pre
+1772,spr-event,48,NA,NA,OH,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,45-54,pre
+2291,event-cloze,45,Daily,NA,NE,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2060,spr-event,33,NA,NA,CT,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,25-34,pre
+2263,spr-event,30,Daily,NA,VA,Female,I'd rather not say,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1590,cloze-event,38,NA,NA,NA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1759,maze-event,26,NA,NA,OH,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2787,cloze-event,57,Daily,NA,CO,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+1634,spr-event,62,NA,NA,DE,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+1687,cloze-event,37,NA,NA,ME,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,35-44,pre
+1961,maze-event,52,NA,NA,CA,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+1662,event-cloze,47,NA,NA,OH,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+1679,maze-event,29,NA,NA,NA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1918,maze-event,33,NA,NA,CA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,25-34,pre
+1935,event-spr,33,NA,NA,UT,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,25-34,pre
+2716,cloze-event,63,Daily,NA,TN,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2588,maze-event,22,Daily,NA,ME,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,18-24,pre
+2720,cloze-event,67,Less than monthly,NA,OH,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,≥65,pre
+2054,maze-event,50,NA,NA,CO,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,45-54,pre
+2522,maze-event,60,Daily,NA,OH,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+2929,spr-event,23,Daily,NA,FL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1518,spr-event,66,NA,NA,MA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,≥65,pre
+1411,spr-event,32,NA,NA,WI,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,25-34,pre
+2193,maze-event,65,NA,NA,NC,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+1946,spr-event,55,NA,NA,PA,Other,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2101,spr-event,43,NA,NA,OR,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1775,event-maze,25,NA,NA,CA,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,25-34,pre
+1488,event-cloze,24,NA,NA,GA,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,18-24,pre
+2414,event-spr,40,Daily,NA,FL,Female,Kamala Harris,Yes,No,Some college,Yes,Independent,35-44,pre
+2381,event-spr,24,Never,NA,CA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1773,cloze-event,50,NA,NA,IN,Female,I'd rather not say,Yes,Yes,Some college,Yes,Independent,45-54,pre
+2472,cloze-event,55,Daily,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2153,spr-event,30,NA,NA,OK,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1499,event-cloze,47,NA,NA,CA,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,45-54,pre
+1616,maze-event,24,NA,NA,CA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,18-24,pre
+2589,spr-event,24,Daily,NA,IN,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+1975,cloze-event,70,NA,NA,MD,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+1743,maze-event,26,Daily,NA,DE,Male,Donald Trump,Yes,Yes,Professional degree,Yes,NA,25-34,pre
+1966,event-spr,62,NA,NA,WA,NA,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2646,cloze-event,24,Weekly,NA,NY,Male,I don't care,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1641,spr-event,33,NA,NA,WI,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,25-34,pre
+1536,maze-event,25,NA,NA,IL,Female,I don't care,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1609,event-cloze,41,NA,NA,FL,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+2858,spr-event,58,Daily,NA,VA,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,55-64,pre
+2124,cloze-event,51,NA,NA,NV,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,45-54,pre
+2526,spr-event,64,Daily,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+1527,event-cloze,27,NA,NA,NY,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2918,spr-event,65,Daily,NA,CT,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,≥65,pre
+1420,maze-event,33,NA,NA,NC,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+2299,event-maze,37,Weekly,NA,CA,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,35-44,pre
+2943,event-maze,18,Weekly,NA,PA,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+1496,cloze-event,50,NA,NA,NJ,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,45-54,pre
+2235,maze-event,58,NA,NA,CA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+2335,event-maze,46,Daily,NA,CO,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2592,spr-event,35,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,None,35-44,pre
+2184,cloze-event,46,NA,NA,IN,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+1814,cloze-event,66,NA,NA,TX,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,≥65,pre
+2114,spr-event,77,NA,NA,MI,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2409,spr-event,45,Daily,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2273,maze-event,49,Daily,NA,AL,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+2289,event-cloze,21,Less than monthly,NA,VA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+2218,event-maze,36,NA,NA,AL,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+1433,event-cloze,24,NA,NA,OK,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+2608,cloze-event,36,Daily,NA,TX,Female,I don't care,Yes,Yes,Some college,Yes,Independent,35-44,pre
+2179,maze-event,42,Daily,NA,MD,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,NA,35-44,pre
+1976,cloze-event,38,NA,NA,CA,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,35-44,pre
+2672,spr-event,59,Daily,NA,ID,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+2814,event-maze,57,Daily,NA,NY,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+1729,cloze-event,41,NA,NA,IL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2231,event-spr,60,NA,NA,TX,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+1747,event-cloze,59,NA,NA,NH,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1670,spr-event,42,NA,NA,AR,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1973,spr-event,60,NA,NA,MO,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2959,cloze-event,18,Weekly,NA,OH,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,18-24,pre
+1432,cloze-event,25,NA,NA,ID,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+2936,cloze-event,68,Daily,NA,AR,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+2182,event-spr,62,NA,NA,CA,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+2568,cloze-event,20,Weekly,NA,CA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,18-24,pre
+1725,cloze-event,39,NA,NA,TX,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+1889,cloze-event,63,NA,NA,PA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2376,event-spr,50,Daily,NA,CO,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2559,maze-event,70,Daily,NA,NJ,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+1442,spr-event,44,NA,NA,IN,Female,Kamala Harris,Yes,Yes,Doctorate,Yes,Democrat,35-44,pre
+1923,event-cloze,30,NA,NA,VA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2267,spr-event,63,Daily,NA,AZ,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1398,spr-event,37,NA,NA,GA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+1602,spr-event,72,NA,NA,NY,Male,Kamala Harris,Yes,Yes,Doctorate,Yes,Independent,≥65,pre
+1650,cloze-event,39,NA,NA,NV,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+1580,spr-event,27,NA,NA,IL,Male,I don't care,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1471,event-spr,24,NA,NA,IL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+2241,event-spr,50,NA,NA,WA,Male,I don't care,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+1737,cloze-event,36,NA,NA,PA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2066,cloze-event,30,NA,NA,FL,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,25-34,pre
+2135,cloze-event,73,NA,NA,MI,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+1487,cloze-event,38,NA,NA,CT,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1510,spr-event,61,NA,NA,MI,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2978,event-cloze,72,Daily,NA,VA,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+1821,cloze-event,26,NA,NA,IN,Non-binary,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2650,maze-event,76,Weekly,NA,FL,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+1829,event-maze,33,NA,NA,NY,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,25-34,pre
+2584,event-spr,32,Daily,NA,PA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2572,maze-event,51,Daily,NA,TX,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2431,spr-event,32,Daily,NA,FL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1788,maze-event,42,NA,NA,FL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2131,event-spr,39,NA,NA,FL,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,35-44,pre
+1843,event-cloze,34,NA,NA,CA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1395,spr-event,42,NA,NA,GA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Republican,35-44,pre
+2661,cloze-event,59,Weekly,NA,IL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+1538,event-maze,49,NA,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+1830,spr-event,51,NA,NA,MA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+1649,event-spr,24,NA,NA,TX,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,18-24,pre
+2886,maze-event,55,Daily,NA,TX,Female,I'd rather not say,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2836,event-cloze,72,Weekly,NA,OK,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,≥65,pre
+2971,spr-event,56,Never,NA,TX,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+1438,spr-event,43,NA,NA,CA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,35-44,pre
+1978,event-maze,26,NA,NA,OR,Male,I don't care,Yes,Yes,2-year college degree,Yes,None,25-34,pre
+1782,event-spr,52,NA,NA,MI,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,45-54,pre
+2207,maze-event,36,NA,NA,VA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+1916,spr-event,56,NA,NA,NY,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+1853,spr-event,51,NA,NA,FL,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,45-54,pre
+1577,cloze-event,33,NA,NA,OH,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,25-34,pre
+2794,event-spr,76,Daily,NA,MO,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+1444,spr-event,38,NA,NA,TX,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,35-44,pre
+1878,cloze-event,23,NA,NA,NY,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1509,event-cloze,38,NA,NA,AL,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+2830,cloze-event,57,Daily,NA,FL,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,NA,55-64,pre
+2507,event-spr,37,Weekly,NA,LA,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,35-44,pre
+2314,event-maze,50,Daily,NA,CT,Female,I don't care,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+1659,event-spr,22,NA,NA,MI,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+1541,event-cloze,43,NA,NA,MN,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+2895,event-spr,60,Daily,NA,MI,Female,Kamala Harris,Yes,Yes,Some college,Yes,None,55-64,pre
+1825,maze-event,64,NA,NA,TX,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+2967,event-spr,56,Daily,NA,TX,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2921,event-cloze,68,Daily,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+1683,maze-event,30,NA,NA,MD,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2550,event-spr,27,Daily,NA,ME,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,25-34,pre
+2567,cloze-event,37,Daily,NA,SC,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2835,event-cloze,61,Daily,NA,TX,Male,I don't care,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+2174,spr-event,54,NA,NA,WA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2461,event-spr,34,Daily,NA,PA,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,25-34,pre
+2125,cloze-event,32,NA,NA,FL,Male,I don't care,Yes,Yes,Less than high school,Yes,None,25-34,pre
+2310,event-maze,32,Daily,NA,OR,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2079,maze-event,35,NA,NA,FL,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+2599,event-cloze,59,Daily,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2206,maze-event,70,NA,NA,MD,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+1677,maze-event,23,NA,NA,PA,Non-binary,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,18-24,pre
+2941,spr-event,69,Daily,NA,NV,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,≥65,pre
+1885,spr-event,59,NA,NA,CA,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,55-64,pre
+2163,cloze-event,50,NA,NA,TN,Male,I don't care,Yes,Yes,Some college,Yes,Independent,45-54,pre
+1732,spr-event,44,NA,NA,CA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2252,cloze-event,23,NA,NA,FL,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,18-24,pre
+2755,event-cloze,20,Daily,NA,LA,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,18-24,pre
+2317,spr-event,52,Less than monthly,NA,CA,Female,I'd rather not say,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+1890,event-cloze,36,NA,NA,KS,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2239,cloze-event,29,NA,NA,IN,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,25-34,pre
+2043,cloze-event,38,NA,NA,MA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2793,maze-event,63,Daily,NA,PA,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+1982,cloze-event,45,NA,NA,WI,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2938,spr-event,45,Daily,NA,CA,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,45-54,pre
+2374,event-cloze,61,Daily,NA,NJ,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,55-64,pre
+2313,event-spr,35,Daily,NA,TX,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,35-44,pre
+2115,event-spr,52,NA,NA,FL,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+2228,event-spr,79,NA,NA,OH,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,≥65,pre
+1535,event-maze,61,NA,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2809,spr-event,66,Monthly,NA,TX,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2455,maze-event,22,Daily,NA,NY,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+1451,event-spr,28,NA,NA,TX,Male,I'd rather not say,Yes,Yes,High school graduate,Yes,Democrat,25-34,pre
+2088,event-spr,68,NA,NA,CT,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,≥65,pre
+2831,cloze-event,56,Daily,NA,MO,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+1560,cloze-event,61,NA,NA,NA,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+1639,event-spr,55,NA,NA,PA,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+2340,event-cloze,66,Daily,NA,NC,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2707,spr-event,55,Daily,NA,FL,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+2639,maze-event,63,Daily,NA,CA,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+1514,spr-event,36,NA,NA,CA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+2013,event-spr,33,NA,NA,OH,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,25-34,pre
+2866,maze-event,59,Daily,NA,FL,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+2460,event-cloze,48,Daily,NA,IA,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Republican,45-54,pre
+1771,event-cloze,54,NA,NA,NY,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2775,spr-event,56,Daily,NA,IL,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+1470,spr-event,71,NA,NA,OH,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+2004,spr-event,42,NA,NA,DE,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2139,event-cloze,19,NA,NA,IN,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,18-24,pre
+2896,spr-event,24,Daily,NA,AZ,Female,I don't care,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+2350,maze-event,29,Daily,NA,NJ,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2544,maze-event,58,Daily,NA,GA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+1561,event-cloze,54,NA,NA,WI,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2047,event-cloze,64,NA,NA,CO,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2667,cloze-event,74,Daily,NA,IN,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+1403,event-spr,41,NA,NA,PA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,35-44,pre
+2117,cloze-event,56,NA,NA,MA,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2022,spr-event,36,NA,NA,IN,Male,Kamala Harris,Yes,Yes,Less than high school,Yes,Democrat,35-44,pre
+2821,cloze-event,62,Daily,NA,GA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1505,maze-event,36,NA,NA,TX,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+2160,event-maze,30,NA,NA,NC,Non-binary,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+2607,spr-event,73,Daily,NA,IL,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2712,event-maze,61,Daily,NA,ME,Female,Kamala Harris,Yes,Yes,Doctorate,Yes,Democrat,55-64,pre
+1781,event-cloze,28,NA,NA,OH,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+2377,event-maze,38,Weekly,NA,FL,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,35-44,pre
+2236,spr-event,62,NA,NA,FL,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2011,cloze-event,33,NA,NA,NJ,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2304,spr-event,46,Daily,NA,DE,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+1524,spr-event,36,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2741,cloze-event,23,Daily,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+2082,cloze-event,50,NA,NA,TX,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,45-54,pre
+2825,spr-event,56,Daily,NA,NY,Male,Kamala Harris,Yes,No,4-year college degree,Yes,Democrat,55-64,pre
+1576,event-spr,39,NA,NA,VA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+1956,maze-event,53,NA,NA,CA,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,45-54,pre
+1872,cloze-event,32,NA,NA,CA,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,25-34,pre
+2579,cloze-event,51,Daily,NA,SC,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,45-54,pre
+2315,spr-event,64,Daily,NA,DC,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,55-64,pre
+2525,maze-event,27,Daily,NA,PA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2923,event-maze,66,Daily,NA,GA,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+2057,cloze-event,42,NA,NA,FL,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+2296,cloze-event,48,Less than monthly,NA,OK,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,45-54,pre
+2345,event-cloze,31,Daily,NA,UT,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1637,maze-event,46,NA,NA,LA,Female,I don't care,Yes,Yes,Professional degree,Yes,Independent,45-54,pre
+2410,spr-event,52,Weekly,NA,CA,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,45-54,pre
+2185,spr-event,30,NA,NA,TN,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2032,cloze-event,73,NA,NA,HI,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,≥65,pre
+1959,cloze-event,81,NA,NA,NY,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2095,event-cloze,37,NA,NA,NC,Female,Donald Trump,Yes,No,Professional degree,Yes,Republican,35-44,pre
+2038,cloze-event,35,NA,NA,TX,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+1735,spr-event,31,NA,NA,TX,Female,I don't care,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1688,event-maze,31,NA,NA,TX,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,25-34,pre
+1414,cloze-event,24,NA,NA,FL,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,18-24,pre
+1926,event-maze,48,NA,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2469,event-spr,51,Daily,NA,IN,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+1450,spr-event,22,NA,NA,VA,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,18-24,pre
+1701,spr-event,67,NA,NA,IL,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2693,event-spr,23,Daily,NA,TX,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,18-24,pre
+1796,event-maze,33,NA,NA,TX,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1513,event-maze,73,NA,NA,NJ,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2714,spr-event,62,Daily,NA,WA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,55-64,pre
+2740,spr-event,20,Weekly,NA,PA,Rather not say,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,18-24,pre
+2164,event-cloze,49,NA,NA,CA,Female,Kamala Harris,Yes,No,4-year college degree,Yes,Independent,45-54,pre
+1922,spr-event,45,NA,NA,TN,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,45-54,pre
+1754,cloze-event,26,NA,NA,NY,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,25-34,pre
+2700,cloze-event,23,Monthly,NA,ID,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,18-24,pre
+2356,event-spr,26,Weekly,NA,UT,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,25-34,pre
+2272,cloze-event,36,Weekly,NA,FL,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,35-44,pre
+1578,cloze-event,56,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+1726,cloze-event,59,NA,NA,PA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2611,event-maze,55,Daily,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2456,cloze-event,20,Daily,NA,MI,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,18-24,pre
+2008,maze-event,49,NA,NA,AZ,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,45-54,pre
+1664,spr-event,44,NA,NA,VA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+1469,event-spr,35,NA,NA,ID,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+1554,spr-event,64,NA,NA,NA,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+2281,cloze-event,60,Daily,NA,CA,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+1508,spr-event,46,NA,NA,NC,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2466,event-spr,69,Daily,NA,VA,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,≥65,pre
+2780,cloze-event,57,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2878,cloze-event,77,Daily,NA,KY,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,≥65,pre
+2664,spr-event,33,Daily,NA,OR,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2649,cloze-event,23,Daily,NA,MA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1904,cloze-event,36,NA,NA,FL,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+1792,spr-event,55,NA,NA,NC,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2852,event-maze,57,Daily,NA,TX,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1908,event-maze,57,NA,NA,MI,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+1987,maze-event,64,NA,NA,FL,Female,Kamala Harris,Yes,No,Professional degree,Yes,Democrat,55-64,pre
+2891,event-spr,73,Daily,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+2511,event-spr,46,Daily,NA,GA,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,45-54,pre
+2120,spr-event,71,NA,NA,IL,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,≥65,pre
+2257,spr-event,53,Daily,NA,MS,Male,Donald Trump,Yes,Yes,Less than high school,Yes,Republican,45-54,pre
+2699,spr-event,20,Daily,NA,GA,Male,Kamala Harris,Yes,Yes,Less than high school,Yes,Independent,18-24,pre
+1563,cloze-event,26,NA,NA,MD,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,25-34,pre
+2631,maze-event,63,Daily,NA,FL,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2430,spr-event,31,Less than monthly,NA,FL,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1699,cloze-event,66,NA,NA,TX,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+2832,spr-event,61,Daily,NA,KY,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+2253,maze-event,61,NA,NA,CA,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+2519,cloze-event,49,Daily,NA,NJ,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,45-54,pre
+1971,cloze-event,49,NA,NA,TN,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2248,spr-event,62,NA,NA,NJ,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2192,cloze-event,69,NA,NA,NY,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+1950,cloze-event,38,NA,NA,IL,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+1911,spr-event,47,NA,NA,SC,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+2397,event-cloze,58,Daily,NA,NY,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+2932,cloze-event,59,Daily,NA,MD,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+1492,event-maze,36,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1768,event-cloze,44,NA,NA,KS,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+2628,event-spr,28,Daily,NA,TN,Female,I'd rather not say,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1401,event-maze,36,NA,NA,KY,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+1756,spr-event,52,NA,NA,CA,Male,Kamala Harris,Yes,No,4-year college degree,Yes,Independent,45-54,pre
+1931,cloze-event,32,NA,NA,MI,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,25-34,pre
+2014,event-cloze,53,NA,NA,FL,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,45-54,pre
+2021,cloze-event,43,NA,NA,PA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2912,spr-event,76,Daily,NA,WA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+1575,spr-event,56,NA,NA,KS,Female,Kamala Harris,Yes,Yes,Doctorate,Yes,Democrat,55-64,pre
+2384,event-spr,68,NA,NA,TN,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,≥65,pre
+1675,maze-event,40,NA,NA,MI,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2954,spr-event,58,Daily,NA,ID,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+2337,spr-event,60,Daily,NA,UT,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2432,event-cloze,34,Daily,NA,NY,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2576,spr-event,24,Daily,NA,NC,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+2200,event-maze,38,NA,NA,MA,Male,Donald Trump,No,Yes,Less than high school,Yes,Independent,35-44,pre
+2025,cloze-event,52,NA,NA,TN,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+2800,maze-event,58,Daily,NA,OH,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2605,cloze-event,23,Daily,NA,NY,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+2733,cloze-event,62,Monthly,NA,KS,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+2739,cloze-event,59,Daily,NA,NA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+1629,event-spr,40,NA,NA,FL,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,35-44,pre
+1556,maze-event,32,NA,NA,MI,Female,I don't care,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2361,spr-event,55,Daily,NA,VA,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+2933,cloze-event,67,Daily,NA,TX,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,≥65,pre
+2874,cloze-event,58,Daily,NA,NJ,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+2704,cloze-event,18,Daily,NA,VT,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,18-24,pre
+2558,spr-event,42,Daily,NA,OH,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,35-44,pre
+2085,event-cloze,55,NA,NA,GA,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+1681,event-spr,62,NA,NA,GA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+2319,maze-event,46,Daily,NA,TX,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,45-54,pre
+2427,maze-event,58,Daily,NA,TN,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+1644,cloze-event,45,NA,NA,CA,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,45-54,pre
+1481,event-cloze,36,NA,NA,LA,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,35-44,pre
+2209,spr-event,34,NA,NA,CA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2564,event-cloze,66,Daily,NA,CO,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+1600,cloze-event,33,NA,NA,OH,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2065,cloze-event,35,NA,NA,MI,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+2300,spr-event,59,Daily,NA,AR,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1408,cloze-event,53,NA,NA,IL,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,45-54,pre
+2028,cloze-event,42,NA,NA,UT,Male,I don't care,Yes,Yes,Professional degree,Yes,Independent,35-44,pre
+1881,event-spr,41,NA,NA,MD,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2905,event-maze,58,Daily,NA,FL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1915,event-spr,41,NA,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2501,cloze-event,54,Daily,NA,NA,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+2382,maze-event,22,Daily,NA,WV,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,18-24,pre
+2539,event-maze,57,Daily,NA,KS,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2799,cloze-event,61,Daily,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2760,cloze-event,23,Weekly,NA,NY,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+1583,cloze-event,24,NA,NA,SC,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,18-24,pre
+1972,spr-event,35,NA,NA,VT,Non-binary,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,35-44,pre
+2271,maze-event,52,Daily,NA,NC,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+2730,event-spr,69,Daily,NA,AL,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,≥65,pre
+1977,event-spr,46,NA,NA,RI,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2911,event-spr,61,Daily,NA,CO,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,55-64,pre
+2784,cloze-event,59,Daily,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1846,spr-event,47,NA,NA,IN,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,45-54,pre
+1770,cloze-event,32,NA,NA,AL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1606,maze-event,43,NA,NA,MI,Male,Kamala Harris,Yes,Yes,Doctorate,Yes,Independent,35-44,pre
+1653,spr-event,37,NA,NA,TX,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,35-44,pre
+1475,event-cloze,42,NA,NA,GA,Female,I don't care,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2686,event-spr,74,Daily,NA,TX,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,≥65,pre
+1947,event-maze,52,NA,NA,IL,Male,I'd rather not say,Yes,Yes,2-year college degree,Yes,Independent,45-54,pre
+2718,maze-event,18,Daily,NA,FL,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,18-24,pre
+1682,event-cloze,37,NA,NA,TX,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2944,event-cloze,61,Daily,NA,TN,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+1543,spr-event,23,NA,NA,NY,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+1778,event-spr,26,NA,NA,FL,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,25-34,pre
+2666,spr-event,62,Daily,NA,FL,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+2187,cloze-event,59,NA,NA,PA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+1753,event-cloze,55,NA,NA,FL,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+2590,event-cloze,23,NA,NA,UT,Female,I'd rather not say,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+2279,cloze-event,51,Weekly,NA,MO,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,45-54,pre
+2946,event-spr,23,Daily,NA,IL,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1529,event-spr,28,NA,NA,MD,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,25-34,pre
+2485,cloze-event,33,Weekly,NA,ID,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,25-34,pre
+2804,event-spr,61,Daily,NA,IA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2215,event-cloze,33,NA,NA,CA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,25-34,pre
+1581,maze-event,26,NA,NA,TN,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2510,event-cloze,67,Daily,NA,FL,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+1436,cloze-event,25,NA,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2512,maze-event,33,Daily,NA,PA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2092,cloze-event,54,NA,NA,TX,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,45-54,pre
+1447,spr-event,46,NA,NA,TX,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,45-54,pre
+1805,cloze-event,35,NA,NA,LA,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Republican,35-44,pre
+2133,cloze-event,36,NA,NA,MO,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,35-44,pre
+2702,spr-event,57,Daily,NA,MI,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+1955,cloze-event,49,NA,NA,WI,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+1676,cloze-event,30,NA,NA,CA,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,25-34,pre
+1638,maze-event,68,NA,NA,CA,Male,I don't care,Yes,Yes,Some college,Yes,Independent,≥65,pre
+1456,event-maze,56,NA,NA,TX,Female,I'd rather not say,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2282,spr-event,37,Daily,NA,NV,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+2046,spr-event,77,NA,NA,GA,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Other,≥65,pre
+2677,spr-event,23,Weekly,NA,LA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+1480,event-maze,25,NA,NA,WA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1979,event-maze,37,NA,NA,GA,Female,I don't care,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+2098,cloze-event,61,NA,NA,NJ,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,55-64,pre
+2301,spr-event,58,Daily,NA,NY,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+2613,maze-event,71,Daily,NA,IL,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+1861,cloze-event,39,NA,NA,FL,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+2104,event-cloze,66,NA,NA,MO,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,≥65,pre
+1627,event-spr,63,NA,NA,FL,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+2779,maze-event,65,Daily,NA,NC,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,≥65,pre
+2219,event-spr,25,NA,NA,MS,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,25-34,pre
+2076,spr-event,36,NA,NA,CO,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+2363,maze-event,45,Daily,NA,TX,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2851,spr-event,58,Daily,NA,CT,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+2953,cloze-event,24,Daily,NA,TX,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,18-24,pre
+2471,maze-event,61,Daily,NA,VA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1981,spr-event,66,NA,NA,TX,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,≥65,pre
+1443,event-cloze,37,NA,NA,ME,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2581,spr-event,23,Weekly,NA,KS,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,18-24,pre
+2816,event-spr,23,Weekly,NA,KY,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,18-24,pre
+1785,spr-event,56,NA,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2421,spr-event,52,Daily,NA,MA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+1565,cloze-event,46,NA,NA,CA,Female,Kamala Harris,Yes,Yes,Doctorate,Yes,Independent,45-54,pre
+2620,cloze-event,23,Daily,NA,CT,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+2658,event-maze,23,Daily,NA,CO,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+2108,maze-event,50,NA,NA,NY,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,45-54,pre
+1698,spr-event,67,NA,NA,PA,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,≥65,pre
+2927,cloze-event,71,Daily,NA,IL,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+2540,cloze-event,48,Daily,NA,LA,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,45-54,pre
+1393,event-cloze,24,NA,NA,SC,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+2906,spr-event,57,Weekly,NA,FL,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2405,spr-event,55,Daily,NA,FL,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+1624,event-spr,57,NA,NA,MA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2373,event-maze,69,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+2724,cloze-event,23,Daily,NA,FL,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,18-24,pre
+2221,spr-event,52,NA,NA,MD,Male,Donald Trump,Yes,No,High school graduate,Yes,Independent,45-54,pre
+2250,event-spr,34,NA,NA,ID,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1949,cloze-event,64,NA,NA,AR,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,55-64,pre
+1945,cloze-event,49,NA,NA,MA,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,45-54,pre
+1614,event-spr,25,NA,NA,NY,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2837,event-cloze,66,Daily,NA,NM,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,≥65,pre
+2776,event-cloze,19,Weekly,NA,OH,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,18-24,pre
+2056,cloze-event,73,NA,NA,PA,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Democrat,≥65,pre
+2738,event-spr,59,Daily,NA,RI,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+1693,event-maze,48,NA,NA,CA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,45-54,pre
+2451,spr-event,67,Daily,NA,KY,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,≥65,pre
+2005,cloze-event,36,NA,NA,OK,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+1652,spr-event,33,NA,NA,SC,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,25-34,pre
+2018,event-cloze,48,NA,NA,AZ,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2555,spr-event,58,Daily,NA,OH,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+1991,event-spr,43,NA,NA,SC,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+2467,maze-event,60,Daily,NA,NC,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,55-64,pre
+1482,event-spr,29,NA,NA,FL,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,25-34,pre
+2731,event-cloze,79,Daily,NA,TN,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,≥65,pre
+2582,event-spr,64,Daily,NA,NA,Non-binary,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2195,cloze-event,68,NA,NA,AZ,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,≥65,pre
+1851,spr-event,40,NA,NA,MI,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Republican,35-44,pre
+2843,cloze-event,72,Daily,NA,GA,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+2465,event-cloze,48,Daily,NA,PA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,45-54,pre
+1472,event-maze,36,NA,NA,NC,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,35-44,pre
+2903,event-cloze,24,Daily,NA,MO,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,18-24,pre
+2548,maze-event,55,Daily,NA,MI,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+1464,spr-event,24,NA,NA,NJ,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+2719,event-maze,67,Daily,NA,NC,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+2879,event-cloze,20,Weekly,NA,NY,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,18-24,pre
+1455,spr-event,59,NA,NA,NY,Male,I don't care,Yes,Yes,Professional degree,No,Independent,55-64,pre
+2422,event-spr,48,Weekly,NA,OK,Male,I don't care,Yes,Yes,High school graduate,Yes,Independent,45-54,pre
+2262,event-maze,48,Daily,NA,NA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,45-54,pre
+2181,cloze-event,33,NA,NA,TN,Male,NA,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2940,event-cloze,24,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+2834,spr-event,75,Weekly,NA,IA,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,≥65,pre
+2566,event-cloze,59,Daily,NA,MA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+1705,spr-event,63,Daily,NA,AZ,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,NA,55-64,pre
+1845,event-spr,32,NA,NA,IL,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1942,event-maze,29,NA,NA,MN,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2407,cloze-event,69,Daily,NA,IN,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,≥65,pre
+2892,spr-event,63,Daily,NA,NY,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2493,cloze-event,30,Daily,NA,NE,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,25-34,pre
+1800,cloze-event,59,NA,NA,CO,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2390,cloze-event,55,Daily,NA,NY,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+1621,event-cloze,73,NA,NA,FL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+2930,cloze-event,65,Daily,NA,AL,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+1745,event-spr,29,NA,NA,MD,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,25-34,pre
+1826,cloze-event,39,NA,NA,NH,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+2109,maze-event,27,NA,NA,TN,Female,I don't care,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2278,event-cloze,33,Weekly,NA,MN,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2156,cloze-event,40,NA,NA,OR,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2513,cloze-event,37,Daily,NA,TX,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+1528,spr-event,44,NA,NA,NJ,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+1791,spr-event,39,NA,NA,MO,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+2864,event-spr,62,Daily,NA,GA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,55-64,pre
+2323,spr-event,19,Daily,NA,UT,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,18-24,pre
+1859,event-cloze,48,NA,NA,FL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2640,cloze-event,24,Daily,NA,NY,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+2517,event-spr,76,Daily,NA,OH,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+1731,maze-event,63,NA,NA,NC,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2861,maze-event,61,Daily,NA,NY,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+1874,event-cloze,19,NA,NA,NY,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,18-24,pre
+2952,spr-event,22,Daily,NA,WA,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,18-24,pre
+1998,maze-event,54,NA,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2330,cloze-event,50,Daily,NA,NC,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,45-54,pre
+1952,spr-event,38,NA,NA,MN,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,35-44,pre
+1672,spr-event,41,NA,NA,NJ,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2871,event-spr,65,Daily,NA,WI,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,≥65,pre
+1592,spr-event,22,NA,NA,PA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+1869,event-spr,74,NA,NA,NY,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,≥65,pre
+2495,cloze-event,26,Daily,NA,FL,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,25-34,pre
+2388,spr-event,49,Weekly,NA,WV,Female,I don't care,Yes,Yes,Professional degree,Yes,Independent,45-54,pre
+2907,cloze-event,56,Daily,NA,OH,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2947,event-spr,63,Daily,NA,NH,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2637,event-cloze,55,Daily,NA,OH,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2458,spr-event,22,Weekly,NA,CO,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,18-24,pre
+2928,cloze-event,66,Daily,NA,TX,Female,I don't care,Yes,Yes,4-year college degree,Yes,Independent,≥65,pre
+1721,event-maze,20,NA,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+2623,event-maze,55,Daily,NA,NA,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+2305,spr-event,38,Daily,NA,CA,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,35-44,pre
+2229,spr-event,40,NA,NA,CA,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+2503,spr-event,46,Daily,NA,SC,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+2593,cloze-event,66,Weekly,NA,CA,Female,Donald Trump,Yes,No,Professional degree,Yes,Independent,≥65,pre
+1467,spr-event,67,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,≥65,pre
+2652,event-cloze,24,Daily,NA,TX,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,18-24,pre
+2880,cloze-event,61,Daily,NA,CT,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1839,event-cloze,22,NA,NA,CA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,18-24,pre
+2505,event-cloze,46,Daily,NA,PA,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+1780,cloze-event,24,NA,NA,AZ,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,18-24,pre
+2788,cloze-event,58,Daily,NA,NA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2365,event-cloze,29,Daily,NA,TX,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,25-34,pre
+2818,event-spr,56,Daily,NA,VA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,55-64,pre
+2792,event-cloze,63,Daily,NA,WI,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2561,event-cloze,52,Daily,NA,IN,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2244,cloze-event,61,NA,NA,WA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2614,spr-event,50,Daily,NA,OH,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,45-54,pre
+2683,event-cloze,66,Daily,NA,MI,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,≥65,pre
+1500,cloze-event,38,NA,NA,MD,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Other,35-44,pre
+2216,maze-event,61,NA,NA,SC,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2798,event-maze,55,Daily,NA,WA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2691,event-maze,60,Daily,NA,MI,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+1867,cloze-event,47,NA,NA,NY,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,45-54,pre
+2169,event-cloze,50,NA,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+1808,event-cloze,34,NA,NA,MS,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,25-34,pre
+1965,spr-event,54,NA,NA,PA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+2143,event-cloze,73,NA,NA,CA,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+1405,event-cloze,31,NA,NA,NY,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,25-34,pre
+2765,cloze-event,63,Daily,NA,OK,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2083,event-cloze,43,NA,NA,IL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+1418,event-spr,33,NA,NA,NY,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1766,cloze-event,26,NA,NA,CA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,25-34,pre
+1996,spr-event,38,NA,NA,IA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+1526,cloze-event,28,NA,NA,OR,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2627,cloze-event,55,Weekly,NA,OH,Female,I'd rather not say,Yes,Yes,Some college,Yes,Independent,55-64,pre
+2211,cloze-event,34,NA,NA,MS,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+1448,spr-event,45,NA,NA,WI,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+2857,spr-event,19,Weekly,NA,VA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,18-24,pre
+2711,maze-event,20,Weekly,NA,FL,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,18-24,pre
+2920,event-spr,61,Daily,NA,MA,Male,Kamala Harris,Yes,Yes,Doctorate,Yes,Independent,55-64,pre
+1762,cloze-event,54,NA,NA,FL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+1875,event-spr,34,NA,NA,KY,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2654,maze-event,20,Monthly,NA,CA,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,18-24,pre
+2212,spr-event,35,NA,NA,TX,Male,I'd rather not say,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2844,event-cloze,57,Daily,NA,MA,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2269,spr-event,61,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+1562,spr-event,50,NA,NA,TX,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Republican,45-54,pre
+1905,event-spr,57,NA,NA,IA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2188,cloze-event,50,NA,NA,GA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2715,spr-event,65,Daily,NA,AZ,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,≥65,pre
+2508,spr-event,69,Daily,NA,FL,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+1765,maze-event,27,NA,NA,UT,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,25-34,pre
+2441,spr-event,69,Daily,NA,MA,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,≥65,pre
+1636,cloze-event,32,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2230,spr-event,52,NA,NA,MA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2951,event-cloze,23,Daily,NA,AZ,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1903,cloze-event,24,NA,NA,NC,Non-binary,Donald Trump,Yes,Yes,Some college,Yes,Republican,18-24,pre
+2552,event-spr,51,Daily,NA,MI,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,45-54,pre
+2527,cloze-event,65,Daily,NA,TN,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+1939,cloze-event,52,NA,NA,WA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+1494,cloze-event,63,NA,NA,OH,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+2751,spr-event,57,Daily,NA,MI,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2268,maze-event,43,Weekly,NA,VA,Male,I don't care,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1925,event-cloze,53,NA,NA,IL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2189,event-cloze,33,NA,NA,MI,Female,I don't care,Yes,No,High school graduate,Yes,Democrat,25-34,pre
+2258,cloze-event,46,Daily,NA,CA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,NA,45-54,pre
+2214,cloze-event,24,NA,NA,VA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,18-24,pre
+2925,spr-event,56,Daily,NA,GA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+1419,event-spr,55,NA,NA,MD,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2142,cloze-event,41,NA,NA,AZ,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,35-44,pre
+2860,spr-event,59,Daily,NA,MI,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2479,maze-event,28,Daily,NA,CA,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,25-34,pre
+1832,cloze-event,56,NA,NA,FL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2882,event-cloze,62,Daily,NA,GA,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+2352,event-maze,43,Daily,NA,NA,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,35-44,pre
+2194,cloze-event,56,NA,NA,NA,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,55-64,pre
+1940,event-cloze,37,NA,NA,TN,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+1730,spr-event,42,NA,NA,PA,Rather not say,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,35-44,pre
+1532,spr-event,48,NA,NA,TX,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2152,spr-event,39,NA,NA,OH,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,35-44,pre
+2499,cloze-event,53,Daily,NA,NH,Female,I don't care,Yes,Yes,Some college,Yes,Independent,45-54,pre
+2044,maze-event,65,NA,NA,SC,NA,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,≥65,pre
+2333,cloze-event,51,Daily,NA,LA,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,45-54,pre
+2220,spr-event,29,NA,NA,AR,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,25-34,pre
+1749,event-maze,46,NA,NA,NC,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+1696,maze-event,42,NA,NA,FL,Male,Donald Trump,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+2913,maze-event,68,Daily,NA,IL,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,≥65,pre
+1489,cloze-event,52,NA,NA,LA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,45-54,pre
+2264,spr-event,60,Daily,NA,CA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,55-64,pre
+2399,event-spr,56,Daily,NA,FL,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+1774,spr-event,36,NA,NA,IN,Non-binary,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+2116,event-maze,22,NA,NA,PA,Non-binary,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+2138,event-cloze,34,NA,NA,MA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1623,cloze-event,30,NA,NA,CO,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+2090,maze-event,449,NA,NA,TX,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,NA,pre
+1465,spr-event,58,NA,NA,FL,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+2728,maze-event,71,Daily,NA,KY,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,≥65,pre
+2476,maze-event,51,Daily,NA,PA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+1423,cloze-event,39,NA,NA,FL,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,35-44,pre
+2785,maze-event,65,Daily,NA,OH,Male,I'd rather not say,Yes,Yes,4-year college degree,Yes,Independent,≥65,pre
+1595,cloze-event,32,NA,NA,FL,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1468,event-spr,24,NA,NA,AR,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+2073,event-cloze,64,NA,NA,FL,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+1757,event-spr,29,NA,NA,NC,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,25-34,pre
+2029,spr-event,58,NA,NA,MD,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+1712,spr-event,44,NA,NA,MD,Male,Kamala Harris,Yes,No,Professional degree,Yes,Independent,35-44,pre
+2102,event-cloze,41,NA,NA,WI,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2500,maze-event,29,Daily,NA,GU,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,25-34,pre
+2965,event-spr,60,Daily,NA,IL,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2815,event-cloze,58,Daily,NA,TX,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+1493,spr-event,55,NA,NA,AL,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+1901,spr-event,53,NA,NA,CT,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2668,event-spr,71,Daily,NA,MA,Male,Kamala Harris,Yes,No,Professional degree,Yes,Democrat,≥65,pre
+1728,event-spr,44,NA,NA,MI,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,35-44,pre
+2547,maze-event,24,Monthly,NA,NJ,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+1582,event-spr,56,NA,NA,OH,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+1430,cloze-event,34,NA,NA,IL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1534,event-cloze,18,NA,NA,TX,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+2059,event-spr,37,NA,NA,MA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1957,cloze-event,55,NA,NA,FL,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+1625,cloze-event,62,NA,NA,TX,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+2344,event-maze,61,Daily,NA,TX,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+2343,event-cloze,43,Daily,NA,NC,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+1549,cloze-event,65,NA,NA,WA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+1417,spr-event,35,NA,NA,AL,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,35-44,pre
+1801,spr-event,33,NA,NA,LA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,25-34,pre
+1396,maze-event,35,NA,NA,MI,Male,I don't care,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+1798,event-cloze,43,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2565,spr-event,25,Daily,NA,TX,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+1789,spr-event,51,NA,NA,KS,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,45-54,pre
+2168,event-cloze,21,NA,NA,MO,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+1907,spr-event,66,NA,NA,NC,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+2710,cloze-event,71,Daily,NA,NC,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2129,event-spr,36,NA,NA,FL,Female,I'd rather not say,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2632,cloze-event,20,Daily,NA,OK,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+1589,spr-event,47,NA,NA,SD,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,45-54,pre
+1823,cloze-event,33,NA,NA,SC,Female,I don't care,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+2149,event-spr,32,NA,NA,CO,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2354,event-cloze,39,Daily,NA,NY,Female,NA,Yes,No,Professional degree,Yes,NA,35-44,pre
+2790,maze-event,57,Weekly,NA,VA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,55-64,pre
+2749,spr-event,64,Daily,NA,SC,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+2885,cloze-event,66,Daily,NA,KY,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+1806,cloze-event,21,NA,NA,IL,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+2865,cloze-event,23,Daily,NA,MO,Non-binary,Kamala Harris,Yes,Yes,Some college,Yes,Other,18-24,pre
+1457,spr-event,35,NA,NA,CA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,35-44,pre
+1571,maze-event,25,NA,NA,IN,Non-binary,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1573,maze-event,21,NA,NA,VI,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,18-24,pre
+1685,spr-event,28,NA,NA,CA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,25-34,pre
+2170,spr-event,50,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2862,spr-event,63,Daily,NA,FL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2669,cloze-event,56,Daily,NA,TX,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+2077,maze-event,52,NA,NA,MO,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+1967,maze-event,24,NA,NA,KY,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,18-24,pre
+1822,event-spr,44,NA,NA,CA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1559,maze-event,34,NA,NA,AR,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2701,cloze-event,58,Daily,NA,NC,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+2111,cloze-event,44,NA,NA,OH,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,35-44,pre
+2678,maze-event,77,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+2245,cloze-event,50,NA,NA,PA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2489,spr-event,77,Daily,NA,WI,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+2694,maze-event,24,Daily,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+1498,maze-event,29,NA,NA,NY,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,25-34,pre
+1599,cloze-event,35,NA,NA,CA,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,35-44,pre
+2247,maze-event,61,NA,NA,PA,Female,Kamala Harris,Yes,Yes,Doctorate,Yes,Democrat,55-64,pre
+2331,event-spr,47,Daily,NA,CA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+2648,maze-event,66,Daily,NA,FL,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,≥65,pre
+1795,maze-event,38,NA,NA,NH,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,35-44,pre
+2587,event-maze,72,Daily,NA,CO,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+2898,cloze-event,61,Daily,NA,AR,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+1458,spr-event,60,NA,NA,FL,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2656,cloze-event,50,Daily,NA,CA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2803,cloze-event,24,Weekly,NA,FL,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+2049,spr-event,43,NA,NA,FL,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,35-44,pre
+1611,spr-event,39,NA,NA,MI,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2516,cloze-event,41,Daily,NA,KS,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,35-44,pre
+1710,event-spr,26,Daily,NA,IL,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,NA,25-34,pre
+2795,event-maze,62,Daily,NA,NV,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,55-64,pre
+2868,event-spr,67,Daily,NA,NY,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+2130,spr-event,18,NA,NA,CA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+2017,cloze-event,62,NA,NA,GA,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+1569,event-maze,55,NA,NA,CA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2019,event-cloze,65,NA,NA,CO,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+1415,maze-event,30,NA,NA,NJ,Male,Donald Trump,Yes,Yes,Less than high school,Yes,Republican,25-34,pre
+1988,spr-event,26,NA,NA,NC,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1733,event-cloze,51,NA,NA,WI,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,45-54,pre
+2651,spr-event,61,Daily,NA,AL,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+2610,cloze-event,49,Daily,NA,CA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2459,event-cloze,55,Daily,NA,MI,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2031,maze-event,42,NA,NA,AZ,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+1426,spr-event,28,NA,NA,IL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1820,cloze-event,34,NA,NA,OH,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1661,cloze-event,59,NA,NA,OR,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+2811,maze-event,61,Daily,NA,AZ,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+2464,event-cloze,60,Daily,NA,AZ,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Democrat,55-64,pre
+2086,maze-event,19,NA,NA,WI,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,18-24,pre
+2960,event-spr,23,Daily,NA,TN,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+2744,event-cloze,60,Daily,NA,TX,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+1744,event-cloze,19,NA,NA,GA,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,18-24,pre
+1868,event-spr,57,NA,NA,MI,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+1640,cloze-event,26,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2326,event-spr,49,Daily,NA,IN,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,45-54,pre
+2961,event-maze,19,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,18-24,pre
+2307,cloze-event,35,Daily,NA,FL,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,35-44,pre
+1902,spr-event,34,NA,NA,CA,Male,Kamala Harris,Yes,No,4-year college degree,Yes,Democrat,25-34,pre
+1914,spr-event,34,NA,NA,NY,Male,Kamala Harris,Yes,Yes,Some college,Yes,Republican,25-34,pre
+2002,event-cloze,57,NA,NA,TN,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+1697,event-spr,33,NA,NA,IL,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,25-34,pre
+2106,event-spr,22,NA,NA,KS,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,18-24,pre
+1557,spr-event,38,NA,NA,KS,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+1995,event-maze,31,NA,NA,TX,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2924,cloze-event,68,Weekly,NA,NC,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,≥65,pre
+1615,spr-event,31,NA,NA,NH,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,25-34,pre
+2488,cloze-event,64,Daily,NA,IA,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+1793,maze-event,36,NA,NA,WI,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1815,spr-event,26,NA,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2606,maze-event,59,Daily,NA,NJ,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+1540,cloze-event,29,NA,NA,IN,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1452,maze-event,20,NA,NA,IL,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,18-24,pre
+1669,maze-event,52,NA,NA,NA,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,None,45-54,pre
+2080,spr-event,45,NA,NA,TX,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,45-54,pre
+1716,event-spr,67,NA,NA,NA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+1409,cloze-event,26,NA,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2585,event-spr,55,Daily,NA,CO,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,55-64,pre
+2400,cloze-event,36,Daily,NA,GA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+2854,cloze-event,66,Daily,NA,VA,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,≥65,pre
+2061,event-cloze,58,NA,NA,CA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+2520,cloze-event,56,Daily,NA,AK,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+1603,event-spr,32,NA,NA,MN,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2368,maze-event,52,Weekly,NA,KS,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,45-54,pre
+2845,event-cloze,58,Daily,NA,WI,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+1704,spr-event,49,NA,NA,IL,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,45-54,pre
+1809,event-cloze,28,NA,NA,MO,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1462,cloze-event,30,NA,NA,NY,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,25-34,pre
+2444,event-spr,26,Weekly,NA,IL,Female,I don't care,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1700,spr-event,38,NA,NA,CA,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+2636,maze-event,40,Daily,NA,MD,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+1655,spr-event,62,NA,NA,TX,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1689,event-spr,49,NA,NA,NJ,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,45-54,pre
+1667,maze-event,35,NA,NA,TX,Male,I don't care,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2276,event-spr,49,Daily,NA,WA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+1727,cloze-event,41,NA,NA,IN,Female,Kamala Harris,Yes,No,2-year college degree,Yes,Democrat,35-44,pre
+2286,cloze-event,41,Daily,NA,VT,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2833,cloze-event,56,Daily,NA,OR,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2166,cloze-event,45,NA,NA,TN,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+2713,maze-event,24,Daily,NA,WA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,18-24,pre
+2009,event-spr,50,NA,NA,GA,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,45-54,pre
+2708,cloze-event,67,Daily,NA,KS,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+1741,event-spr,31,NA,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1441,cloze-event,45,NA,NA,NM,Female,I don't care,Yes,Yes,Some college,Yes,Independent,45-54,pre
+2328,maze-event,65,Daily,NA,CA,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,≥65,pre
+1739,maze-event,37,NA,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2295,spr-event,47,Daily,NA,NA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+1937,event-spr,39,NA,NA,CO,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2824,spr-event,57,Daily,NA,TN,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1643,event-spr,73,NA,NA,AR,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,≥65,pre
+2322,spr-event,22,Daily,NA,OH,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+1802,maze-event,46,NA,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+1919,maze-event,49,NA,NA,TX,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,45-54,pre
+2870,event-cloze,22,Daily,NA,NY,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+2789,spr-event,29,Daily,NA,PA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2309,spr-event,51,Daily,NA,TX,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,45-54,pre
+1601,spr-event,50,NA,NA,MN,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+1862,cloze-event,23,NA,NA,NY,Female,I don't care,Yes,Yes,2-year college degree,Yes,Independent,18-24,pre
+2234,spr-event,32,NA,NA,CO,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1787,cloze-event,46,NA,NA,MA,Female,I'd rather not say,Yes,Yes,Professional degree,Yes,Independent,45-54,pre
+1512,spr-event,21,NA,NA,NC,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,18-24,pre
+2334,event-cloze,21,Daily,NA,MN,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,18-24,pre
+1954,event-maze,36,NA,NA,MS,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,35-44,pre
+1786,event-spr,40,NA,NA,MD,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+2808,spr-event,23,Daily,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1706,maze-event,57,NA,NA,PA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+2735,spr-event,58,Daily,NA,FL,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,55-64,pre
+2534,cloze-event,58,Daily,NA,AZ,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2151,spr-event,70,NA,NA,LA,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+1777,event-maze,28,NA,NA,TX,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,25-34,pre
+2822,cloze-event,63,Daily,NA,PA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+1836,event-cloze,53,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+1844,event-spr,70,NA,NA,MA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+1944,cloze-event,48,NA,NA,TN,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,45-54,pre
+2696,cloze-event,59,Daily,NA,FL,Male,NA,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1445,maze-event,56,NA,NA,TX,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2533,cloze-event,58,Daily,NA,MI,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+2786,event-cloze,65,Weekly,NA,AZ,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+1929,cloze-event,67,NA,NA,GA,NA,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,≥65,pre
+2208,spr-event,19,NA,NA,MN,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,18-24,pre
+2372,cloze-event,30,Daily,NA,NA,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,25-34,pre
+2412,cloze-event,68,Daily,NA,LA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+1584,event-cloze,47,NA,NA,FL,Male,I don't care,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2261,event-spr,35,Weekly,NA,TX,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,35-44,pre
+1858,maze-event,40,NA,NA,FL,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,35-44,pre
+1399,spr-event,31,NA,NA,SC,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1539,event-cloze,58,NA,NA,OH,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+1750,spr-event,43,NA,NA,NJ,Female,I don't care,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1707,cloze-event,35,NA,NA,NJ,Male,I don't care,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1490,maze-event,40,NA,NA,AL,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+2577,event-cloze,19,Daily,NA,MN,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,18-24,pre
+2781,spr-event,18,Daily,NA,MA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+2199,spr-event,78,NA,NA,NC,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+2931,spr-event,64,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,55-64,pre
+1631,maze-event,27,NA,NA,WA,Non-binary,Kamala Harris,Yes,Yes,Less than high school,Yes,Democrat,25-34,pre
+2398,spr-event,39,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+1674,event-maze,61,NA,NA,KY,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2393,event-cloze,23,Daily,NA,GA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+1807,spr-event,39,NA,NA,TN,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1520,maze-event,20,NA,NA,TX,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,18-24,pre
+1552,spr-event,21,NA,NA,ME,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,18-24,pre
+1847,maze-event,37,NA,NA,FL,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+2198,event-maze,30,Daily,NA,CO,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1863,maze-event,30,NA,NA,NJ,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1722,spr-event,65,NA,NA,NY,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2159,maze-event,50,NA,NA,NY,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+2205,cloze-event,34,NA,NA,TX,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2819,maze-event,59,Daily,NA,NC,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+2812,event-cloze,61,Daily,NA,UT,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+1734,spr-event,36,NA,NA,WA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+2902,spr-event,61,Daily,NA,NC,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2574,maze-event,42,Daily,NA,ID,Female,I'd rather not say,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2320,event-spr,21,Daily,NA,WI,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,18-24,pre
+2972,maze-event,67,Daily,NA,FL,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+1740,cloze-event,31,NA,NA,OH,Non-binary,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1551,cloze-event,73,NA,NA,IL,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,≥65,pre
+2709,maze-event,65,Daily,NA,OH,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+2600,maze-event,38,Daily,NA,NM,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1389,spr-event,24,NA,NA,TX,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,18-24,pre
+2027,event-spr,55,NA,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2846,event-spr,72,Daily,NA,RI,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+1413,spr-event,52,NA,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2006,cloze-event,57,Daily,NA,MN,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,NA,55-64,pre
+2457,event-cloze,55,Daily,NA,AL,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2509,cloze-event,44,Weekly,NA,CT,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2007,cloze-event,36,NA,NA,IL,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,35-44,pre
+2132,event-maze,44,NA,NA,SD,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+2722,maze-event,62,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2973,spr-event,69,Daily,NA,GA,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,≥65,pre
+2312,cloze-event,51,Daily,NA,VA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+1831,spr-event,22,NA,NA,CT,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+2766,cloze-event,59,Daily,NA,OH,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2161,event-maze,64,NA,NA,OR,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+1837,cloze-event,40,NA,NA,FL,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+1909,spr-event,30,NA,NA,MS,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1400,event-cloze,18,NA,NA,WA,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,18-24,pre
+2612,maze-event,64,Daily,NA,OH,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+2311,spr-event,30,Daily,NA,CA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Republican,25-34,pre
+2976,spr-event,55,Daily,NA,OK,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+1691,cloze-event,24,NA,NA,PA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,18-24,pre
+1633,maze-event,30,NA,NA,KS,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2762,spr-event,58,Daily,NA,FL,Male,Kamala Harris,Yes,Yes,NA,Yes,Independent,55-64,pre
+1446,cloze-event,21,NA,NA,NA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,18-24,pre
+1666,cloze-event,44,NA,NA,ID,Non-binary,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+1784,event-maze,30,NA,NA,PA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1607,maze-event,28,NA,NA,OR,Rather not say,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,25-34,pre
+1866,cloze-event,41,NA,NA,OH,Male,I don't care,Yes,Yes,High school graduate,Yes,Republican,35-44,pre
+1647,spr-event,74,NA,NA,WA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,≥65,pre
+2122,cloze-event,40,NA,NA,UT,Male,Kamala Harris,Yes,Yes,Doctorate,Yes,Democrat,35-44,pre
+2201,spr-event,28,NA,NA,CA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1953,event-cloze,41,NA,NA,MO,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,35-44,pre
+1818,maze-event,36,NA,NA,TX,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,35-44,pre
+1486,spr-event,40,NA,NA,MA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1718,cloze-event,28,NA,NA,MN,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,25-34,pre
+2642,cloze-event,43,Daily,NA,TX,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+2849,cloze-event,64,Daily,NA,NY,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+2840,cloze-event,24,Daily,NA,MO,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,18-24,pre
+1833,event-spr,29,NA,NA,NY,Male,Donald Trump,Yes,No,Some college,Yes,Republican,25-34,pre
+1813,spr-event,36,NA,NA,AZ,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,35-44,pre
+2827,maze-event,65,Daily,NA,IL,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,≥65,pre
+1391,event-maze,63,NA,NA,MA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+1628,event-spr,70,NA,NA,TN,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,≥65,pre
+1421,cloze-event,32,NA,NA,WA,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,25-34,pre
+2332,event-cloze,51,Daily,NA,FL,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+1992,spr-event,27,NA,NA,NH,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1989,spr-event,26,NA,NA,PA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2042,spr-event,46,NA,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+1897,event-maze,25,NA,NA,CA,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,25-34,pre
+2692,maze-event,68,Daily,NA,MI,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Independent,≥65,pre
+2597,event-maze,68,Daily,NA,MA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+2424,event-maze,63,Daily,NA,WI,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,55-64,pre
+2867,event-spr,55,Daily,NA,OH,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2370,event-maze,29,Daily,NA,IL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2979,event-spr,67,Daily,NA,FL,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+1879,spr-event,64,NA,NA,NY,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2754,spr-event,61,Daily,NA,FL,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+2438,cloze-event,72,Daily,NA,FL,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,≥65,pre
+2863,maze-event,58,Weekly,NA,AR,Female,Donald Trump,Yes,Yes,High school graduate,Yes,None,55-64,pre
+1709,cloze-event,26,NA,NA,VI,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,25-34,pre
+2406,spr-event,25,Daily,NA,MA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,25-34,pre
+1819,cloze-event,44,NA,NA,IL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+1642,cloze-event,37,NA,NA,CO,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,None,35-44,pre
+2068,cloze-event,49,NA,NA,NJ,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,45-54,pre
+1422,maze-event,50,NA,NA,DC,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+2483,maze-event,45,Weekly,NA,IL,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,45-54,pre
+2180,spr-event,30,NA,NA,FL,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,25-34,pre
+2433,spr-event,29,Daily,NA,UT,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1558,spr-event,66,NA,NA,WI,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+2687,event-spr,63,Daily,NA,NY,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+2232,cloze-event,59,NA,NA,CO,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2413,cloze-event,51,Daily,NA,NA,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,45-54,pre
+1835,spr-event,43,Daily,NA,CA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,NA,35-44,pre
+1711,cloze-event,61,NA,NA,WA,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,55-64,pre
+2470,event-cloze,71,Daily,NA,GA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,≥65,pre
+2415,event-spr,36,Daily,NA,FL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+2838,cloze-event,23,Weekly,NA,NY,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+2498,cloze-event,34,Daily,NA,FL,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,25-34,pre
+1668,event-cloze,31,NA,NA,UT,Male,I'd rather not say,Yes,Yes,Some college,Yes,Independent,25-34,pre
+2635,event-cloze,64,Daily,NA,IL,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2698,spr-event,18,Weekly,NA,CA,Female,I don't care,Yes,Yes,Some college,Yes,Independent,18-24,pre
+2150,event-cloze,50,NA,NA,TX,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,45-54,pre
+1857,event-maze,46,NA,NA,GA,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,45-54,pre
+2586,maze-event,23,Weekly,NA,MN,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+2037,spr-event,39,NA,NA,MA,Male,I don't care,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+1548,cloze-event,44,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+1392,cloze-event,24,NA,NA,NA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+2096,maze-event,53,NA,NA,WA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2091,event-spr,36,NA,NA,AL,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,35-44,pre
+2758,maze-event,23,Weekly,NA,TX,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+2674,spr-event,71,Daily,NA,WI,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,≥65,pre
+2759,cloze-event,67,Daily,NA,NY,NA,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2395,event-cloze,48,Daily,NA,NY,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,45-54,pre
+1783,event-maze,40,NA,NA,NY,Female,I don't care,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2325,spr-event,27,Daily,NA,NY,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2541,maze-event,45,Daily,NA,IL,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2575,cloze-event,50,Weekly,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+1491,maze-event,44,NA,NA,FL,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+2172,spr-event,66,NA,NA,AL,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+2093,event-maze,68,NA,NA,LA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+2203,spr-event,69,NA,NA,PA,Male,Kamala Harris,Yes,Yes,Doctorate,Yes,Democrat,≥65,pre
+2618,event-cloze,65,Weekly,NA,SC,Female,I'd rather not say,Yes,Yes,High school graduate,Yes,Republican,≥65,pre
+2956,spr-event,24,Weekly,NA,MO,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1746,cloze-event,34,NA,NA,OK,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1985,spr-event,52,NA,NA,MD,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+1958,event-maze,48,NA,NA,TN,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+2463,spr-event,72,Daily,NA,OH,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,≥65,pre
+2256,event-spr,47,NA,NA,PA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,45-54,pre
+2226,event-cloze,30,NA,NA,FL,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+2549,spr-event,21,Less than monthly,NA,NY,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,18-24,pre
+2020,cloze-event,65,NA,NA,PA,Female,Kamala Harris,Yes,Yes,Doctorate,Yes,Democrat,≥65,pre
+2723,event-spr,62,Daily,NA,FL,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+2480,event-cloze,75,Daily,NA,NY,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,≥65,pre
+2807,cloze-event,60,Daily,NA,NA,Male,Kamala Harris,Yes,Yes,NA,Yes,Independent,55-64,pre
+2290,spr-event,21,Daily,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+1542,maze-event,52,NA,NA,NE,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2148,event-spr,57,NA,NA,FL,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+1932,event-cloze,39,NA,NA,NA,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+1887,event-spr,31,NA,NA,KS,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,25-34,pre
+1416,event-spr,51,NA,NA,DC,Male,I don't care,Yes,Yes,High school graduate,Yes,Independent,45-54,pre
+2103,spr-event,50,NA,NA,NC,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+2224,event-cloze,61,NA,NA,KY,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+1497,spr-event,30,NA,NA,CA,Non-binary,I'd rather not say,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+2899,spr-event,85,Daily,NA,KY,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+2453,event-cloze,48,Daily,NA,AL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+1390,maze-event,22,NA,NA,TX,Male,I don't care,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+2191,maze-event,22,NA,NA,OK,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+2265,cloze-event,64,Daily,NA,NC,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+1564,event-spr,55,NA,NA,WI,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+2434,cloze-event,26,Daily,NA,GA,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,25-34,pre
+1440,spr-event,52,NA,NA,MO,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+2075,cloze-event,33,NA,NA,NJ,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2663,spr-event,82,Daily,NA,NA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+2769,spr-event,64,Daily,NA,IN,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2659,cloze-event,63,Daily,NA,WY,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2679,cloze-event,56,Daily,NA,KY,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+2914,event-spr,58,Less than monthly,NA,NC,Female,Kamala Harris,Yes,No,Some college,Yes,Independent,55-64,pre
+2890,spr-event,62,Daily,NA,MN,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+1648,spr-event,45,NA,NA,MD,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2655,event-spr,56,Daily,NA,NE,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+1963,event-spr,39,NA,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2671,maze-event,56,Daily,NA,OH,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+1660,spr-event,32,NA,NA,MO,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,25-34,pre
+2491,spr-event,55,Daily,NA,MI,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+2238,maze-event,49,NA,NA,CA,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,45-54,pre
+2081,cloze-event,42,NA,NA,NH,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2260,spr-event,61,Daily,NA,FL,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+1970,spr-event,66,NA,NA,AZ,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,≥65,pre
+1986,maze-event,37,NA,NA,FL,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+1437,spr-event,32,NA,NA,MO,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,25-34,pre
+2308,event-cloze,55,Daily,NA,NC,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+2418,spr-event,32,Daily,NA,CA,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,25-34,pre
+2873,event-spr,63,Daily,NA,AL,Female,Kamala Harris,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2062,maze-event,66,NA,NA,CA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+2768,event-spr,59,Daily,NA,KY,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2417,cloze-event,27,Daily,NA,LA,Non-binary,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,25-34,pre
+1896,event-maze,64,NA,NA,IL,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1883,event-cloze,40,NA,NA,PA,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,35-44,pre
+2810,spr-event,60,Daily,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+1917,spr-event,58,NA,NA,MO,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+1511,maze-event,59,NA,NA,AR,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1461,maze-event,46,NA,NA,MO,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2053,spr-event,26,NA,NA,IA,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,25-34,pre
+1720,cloze-event,70,NA,NA,GA,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,≥65,pre
+2545,spr-event,45,Daily,NA,GA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+1738,spr-event,38,NA,NA,IL,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,35-44,pre
+2750,spr-event,65,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,≥65,pre
+2560,event-maze,60,Daily,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+2603,event-maze,19,Daily,NA,IN,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+1980,cloze-event,66,NA,NA,OH,Male,Donald Trump,Yes,Yes,Doctorate,Yes,Republican,≥65,pre
+2622,spr-event,60,Daily,NA,ME,NA,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+1544,event-spr,70,NA,NA,CT,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,≥65,pre
+2420,cloze-event,26,Daily,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1723,spr-event,22,NA,NA,NY,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+2030,event-maze,37,NA,NA,CA,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,35-44,pre
+1663,event-maze,19,NA,NA,LA,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Other,18-24,pre
+2478,spr-event,45,Daily,NA,NC,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,45-54,pre
+1485,event-cloze,32,NA,NA,TX,Male,I don't care,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+1546,spr-event,43,NA,NA,VA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2805,maze-event,23,Weekly,NA,CA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,18-24,pre
+1402,maze-event,36,NA,NA,IL,Male,I don't care,Yes,Yes,Professional degree,Yes,Independent,35-44,pre
+2982,cloze-event,58,Daily,NA,AZ,Male,Kamala Harris,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2113,maze-event,55,NA,NA,CA,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+1515,event-maze,53,NA,NA,NY,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,45-54,pre
+1938,spr-event,49,NA,NA,FL,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,45-54,pre
+1605,spr-event,66,NA,NA,RI,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,≥65,pre
+1997,event-spr,77,NA,NA,NY,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+2147,maze-event,37,NA,NA,MI,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,35-44,pre
+2732,cloze-event,58,Daily,NA,MA,Male,Kamala Harris,Yes,No,Some college,Yes,Democrat,55-64,pre
+1755,cloze-event,47,NA,NA,VA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+1453,spr-event,27,NA,NA,FL,Male,I don't care,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1570,cloze-event,31,NA,NA,VA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1547,spr-event,28,NA,NA,CA,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,25-34,pre
+2675,spr-event,58,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,55-64,pre
+1900,maze-event,47,NA,NA,GA,Male,I don't care,Yes,Yes,Professional degree,Yes,Independent,45-54,pre
+1850,spr-event,25,NA,NA,CA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1525,cloze-event,56,NA,NA,TX,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+1990,spr-event,27,NA,NA,NJ,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1761,cloze-event,35,NA,NA,TX,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+2171,maze-event,46,NA,NA,TX,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,45-54,pre
+2919,event-maze,61,Daily,NA,PA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+1523,event-spr,46,NA,NA,NJ,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+2144,event-maze,65,NA,NA,FL,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,≥65,pre
+1686,event-maze,24,NA,NA,CA,Female,I don't care,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1930,cloze-event,38,NA,NA,NY,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+1855,cloze-event,35,NA,NA,MD,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+2773,spr-event,20,Daily,NA,AL,Female,I don't care,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+2266,cloze-event,36,Daily,NA,VA,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,35-44,pre
+1695,cloze-event,28,NA,NA,OH,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1827,cloze-event,36,NA,NA,LA,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+2338,cloze-event,44,Daily,NA,CA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+2227,event-maze,62,NA,NA,PA,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+1657,event-maze,31,NA,NA,OH,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,25-34,pre
+1968,cloze-event,63,NA,NA,FL,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+1860,maze-event,56,NA,NA,FL,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+2595,cloze-event,61,Daily,NA,IL,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+2783,spr-event,58,Daily,NA,WV,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,55-64,pre
+2757,spr-event,55,Daily,NA,SC,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+1586,event-cloze,31,NA,NA,IN,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,25-34,pre
+1993,maze-event,23,NA,NA,MI,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,18-24,pre
+2562,spr-event,60,Daily,NA,CA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,55-64,pre
+1871,maze-event,37,Daily,NA,FL,Female,Donald Trump,Yes,Yes,Some college,Yes,NA,35-44,pre
+2734,maze-event,58,Daily,NA,LA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+2251,spr-event,23,NA,NA,IN,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+1517,maze-event,51,NA,NA,PA,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2426,event-maze,34,Daily,NA,NC,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,25-34,pre
+2641,event-spr,43,Daily,NA,IN,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+2950,cloze-event,20,Daily,NA,NC,Female,I don't care,Yes,Yes,Some college,Yes,Independent,18-24,pre
+2071,event-maze,67,NA,NA,MT,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,≥65,pre
+1428,event-spr,31,NA,NA,CA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,25-34,pre
+2439,maze-event,28,Weekly,NA,CA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2292,event-cloze,29,Daily,NA,TX,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,25-34,pre
+2855,event-cloze,20,Less than monthly,NA,ID,Female,Donald Trump,Yes,Yes,Less than high school,Yes,Independent,18-24,pre
+1999,spr-event,57,NA,NA,CA,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2003,maze-event,68,NA,NA,CO,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,≥65,pre
+2302,cloze-event,44,Daily,NA,TX,Female,I don't care,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2514,event-spr,56,Weekly,NA,CA,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+2869,spr-event,57,Daily,NA,NH,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+1934,maze-event,24,NA,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+2072,event-spr,26,NA,NA,UT,Female,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,25-34,pre
+2402,cloze-event,28,Daily,NA,AR,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1435,event-maze,59,NA,NA,VA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+2162,event-spr,54,NA,NA,FL,Female,I'd rather not say,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2055,spr-event,53,NA,NA,CA,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,45-54,pre
+1719,spr-event,48,NA,NA,IL,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,45-54,pre
+1473,spr-event,32,NA,NA,MN,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1521,event-cloze,38,NA,NA,LA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Independent,35-44,pre
+1763,maze-event,44,NA,NA,DE,Female,I don't care,Yes,Yes,Some college,Yes,Independent,35-44,pre
+2955,spr-event,65,Daily,NA,IN,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+2752,maze-event,23,Daily,NA,UT,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,18-24,pre
+2796,spr-event,66,Daily,NA,OK,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,≥65,pre
+1406,event-spr,31,NA,NA,MN,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,None,25-34,pre
+2378,cloze-event,24,Daily,NA,MO,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+2237,cloze-event,54,NA,NA,FL,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,45-54,pre
+2917,event-maze,65,Daily,NA,IN,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,≥65,pre
+1610,event-cloze,32,NA,NA,FL,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+1748,cloze-event,67,NA,NA,GA,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,≥65,pre
+2535,cloze-event,39,Daily,NA,MI,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1478,event-spr,33,NA,NA,OH,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,25-34,pre
+2023,maze-event,60,NA,NA,OH,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+2270,event-cloze,60,Daily,NA,AL,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+1533,event-cloze,28,NA,NA,TX,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,25-34,pre
+1587,event-spr,27,NA,NA,FL,Male,I don't care,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2454,cloze-event,66,Weekly,NA,MI,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,≥65,pre
+2401,cloze-event,26,Daily,NA,FL,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2616,cloze-event,56,Daily,NA,UT,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+1898,event-cloze,27,NA,NA,TX,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,25-34,pre
+2939,cloze-event,63,Daily,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,55-64,pre
+2856,cloze-event,62,Weekly,NA,MS,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2243,spr-event,40,NA,NA,OR,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,35-44,pre
+2351,spr-event,35,Daily,NA,TX,Female,I'd rather not say,Yes,Yes,High school graduate,Yes,Independent,35-44,pre
+2249,spr-event,40,NA,NA,AL,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,35-44,pre
+2349,event-maze,36,Daily,NA,NC,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,35-44,pre
+1684,event-cloze,60,NA,NA,CO,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,55-64,pre
+1933,event-cloze,53,NA,NA,MA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+1892,maze-event,47,NA,NA,TN,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,45-54,pre
+2342,spr-event,62,Daily,NA,NY,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2051,event-maze,52,NA,NA,TX,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+1579,event-maze,29,NA,NA,NC,Non-binary,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,25-34,pre
+2158,event-cloze,36,NA,NA,GA,Female,I don't care,Yes,Yes,Some college,Yes,Independent,35-44,pre
+1760,event-maze,37,NA,NA,MA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,35-44,pre
+1948,maze-event,69,NA,NA,CA,Male,Donald Trump,Yes,Yes,Some college,Yes,Independent,≥65,pre
+2602,event-spr,57,Daily,NA,MO,Male,Kamala Harris,Yes,No,2-year college degree,Yes,Democrat,55-64,pre
+1776,event-maze,21,NA,NA,NY,Male,I don't care,Yes,Yes,Some college,Yes,Independent,18-24,pre
+2966,maze-event,62,Weekly,NA,MN,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2957,event-spr,71,Daily,NA,FL,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,≥65,pre
+1936,cloze-event,29,NA,NA,KS,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1502,cloze-event,36,NA,NA,VA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,35-44,pre
+1882,spr-event,54,NA,NA,CA,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,45-54,pre
+1841,spr-event,30,NA,NA,DE,Male,Donald Trump,Yes,Yes,Professional degree,Yes,Independent,25-34,pre
+2157,cloze-event,49,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2680,cloze-event,23,Daily,NA,FL,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,18-24,pre
+1594,event-cloze,65,NA,NA,CA,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+2294,spr-event,49,Daily,NA,NY,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,45-54,pre
+2045,event-maze,51,NA,NA,IL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+1555,spr-event,46,NA,NA,KY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,45-54,pre
+2554,spr-event,55,Weekly,NA,AR,Female,Donald Trump,Yes,Yes,Some college,Yes,None,55-64,pre
+1673,event-cloze,41,NA,NA,WA,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,35-44,pre
+1484,spr-event,30,NA,NA,MT,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,25-34,pre
+1828,cloze-event,29,NA,NA,NY,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1804,cloze-event,59,NA,NA,KY,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,55-64,pre
+2177,spr-event,43,NA,NA,TN,Male,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,35-44,pre
+2791,cloze-event,71,Daily,NA,OH,Female,I'd rather not say,Yes,Yes,2-year college degree,Yes,Rather not say,≥65,pre
+2591,cloze-event,78,Daily,NA,TX,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+2657,spr-event,22,Daily,NA,MI,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,18-24,pre
+2934,cloze-event,57,Daily,NA,TN,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,55-64,pre
+2385,maze-event,36,Daily,NA,VA,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,35-44,pre
+2521,cloze-event,70,Daily,NA,AR,Female,Donald Trump,Yes,Yes,Some college,Yes,Independent,≥65,pre
+2058,cloze-event,34,NA,NA,MO,Male,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,25-34,pre
+2379,event-spr,41,Weekly,NA,UT,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,35-44,pre
+2127,event-cloze,40,NA,NA,NY,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,35-44,pre
+2306,cloze-event,31,Daily,NA,TN,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,25-34,pre
+1824,spr-event,28,NA,NA,VA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+2688,spr-event,56,Daily,NA,TX,Female,Donald Trump,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2190,maze-event,29,NA,NA,FL,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+1724,cloze-event,29,NA,NA,TX,Male,I don't care,Yes,Yes,4-year college degree,Yes,Independent,25-34,pre
+2259,event-cloze,60,Weekly,NA,CA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+1910,spr-event,24,NA,NA,NY,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1888,maze-event,28,NA,NA,TX,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Republican,25-34,pre
+2633,maze-event,23,Daily,NA,IN,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,18-24,pre
+2551,event-spr,71,Daily,NA,FL,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,≥65,pre
+2303,spr-event,55,Daily,NA,CA,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Independent,55-64,pre
+2145,cloze-event,75,NA,NA,NA,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,≥65,pre
+1632,cloze-event,40,NA,NA,CA,Female,Donald Trump,Yes,Yes,High school graduate,Yes,None,35-44,pre
+2922,cloze-event,65,Daily,NA,AL,Male,Donald Trump,Yes,Yes,NA,Yes,Republican,≥65,pre
+2204,spr-event,41,NA,NA,UT,Female,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2676,event-cloze,60,Daily,NA,NY,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Republican,55-64,pre
+2801,maze-event,56,Daily,NA,FL,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Democrat,55-64,pre
+2321,event-spr,69,Daily,NA,OH,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,≥65,pre
+1927,maze-event,69,NA,NA,IN,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+2506,cloze-event,59,Daily,NA,CA,Female,Donald Trump,Yes,Yes,2-year college degree,Yes,Republican,55-64,pre
+2167,event-maze,54,NA,NA,FL,Female,Donald Trump,Yes,No,4-year college degree,Yes,Republican,45-54,pre
+1969,cloze-event,62,NA,NA,TX,Female,Kamala Harris,Yes,Yes,Some college,Yes,Democrat,55-64,pre
+2087,event-spr,22,NA,NA,IL,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,18-24,pre
+1425,spr-event,22,NA,NA,NJ,Female,I'd rather not say,Yes,Yes,4-year college degree,Yes,Other,18-24,pre
+2040,event-spr,49,NA,NA,NY,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+2277,spr-event,48,Weekly,NA,IN,Female,Donald Trump,Yes,Yes,High school graduate,Yes,Republican,45-54,pre
+2178,event-cloze,71,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+2515,cloze-event,38,Daily,NA,TN,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+1928,event-maze,23,NA,NA,NA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1960,event-spr,58,NA,NA,PA,Male,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,55-64,pre
+1920,event-spr,28,NA,NA,CA,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,25-34,pre
+1404,event-cloze,45,NA,NA,FL,Male,I don't care,Yes,Yes,High school graduate,Yes,Independent,45-54,pre
+2634,maze-event,66,Daily,NA,FL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Democrat,≥65,pre
+2041,cloze-event,70,NA,NA,AL,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,≥65,pre
+2123,maze-event,55,NA,NA,CO,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Democrat,55-64,pre
+1924,cloze-event,58,NA,NA,AL,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,55-64,pre
+2569,event-cloze,32,Daily,NA,NC,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,25-34,pre
+1893,maze-event,23,NA,NA,PA,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,18-24,pre
+2753,event-maze,21,Weekly,NA,CT,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,18-24,pre
+2118,maze-event,26,NA,NA,GA,Male,Kamala Harris,Yes,Yes,Some college,Yes,Independent,25-34,pre
+2329,cloze-event,29,Weekly,NA,AZ,Male,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,25-34,pre
+1794,spr-event,23,NA,NA,TN,Male,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,18-24,pre
+1886,spr-event,47,NA,NA,MO,Other,I don't care,Yes,Yes,Some college,Yes,Independent,45-54,pre
+2530,spr-event,47,Daily,NA,FL,Female,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,45-54,pre
+2196,event-cloze,32,NA,NA,VA,Male,Kamala Harris,Yes,Yes,2-year college degree,Yes,Independent,25-34,pre
+1479,spr-event,46,NA,NA,WA,Female,Kamala Harris,Yes,Yes,4-year college degree,Yes,Independent,45-54,pre
+1439,spr-event,39,NA,NA,MA,Male,Donald Trump,Yes,Yes,4-year college degree,Yes,Independent,35-44,pre
+2615,cloze-event,25,Weekly,NA,NY,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Independent,25-34,pre
+2949,spr-event,68,Daily,NA,MA,Male,Donald Trump,Yes,Yes,Some college,Yes,Republican,≥65,pre
+2481,spr-event,27,Weekly,NA,CO,Non-binary,Kamala Harris,Yes,Yes,Professional degree,Yes,Independent,25-34,pre
+2255,event-spr,51,NA,NA,TX,Female,Donald Trump,Yes,Yes,Some college,Yes,Republican,45-54,pre
+2748,maze-event,67,Daily,NA,MI,Female,Kamala Harris,Yes,Yes,High school graduate,Yes,Democrat,≥65,pre
