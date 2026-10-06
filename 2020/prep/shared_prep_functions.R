@@ -38,15 +38,15 @@ RT_MIN_MS <- 180
 RT_MAX_MS <- 10000
 
 # Distinct pseudonymous participant IDs (2nd comma-separated field) seen
-# anywhere in a raw log, comment lines excluded. Used to pass one round's
+# anywhere in a raw log. Used to pass one round's
 # full set of IDs into another round's `process_round()` call for the
 # `flag_ip_in_pre_round` candidate flag - deliberately the full raw set,
 # not the "kept after exclusions" set, mirroring how the worker-based
 # cross-round exclusion uses every pre-election MTurk assignment.
 read_participant_ids <- function(raw_log_path) {
   lines <- read_lines(raw_log_path)
-  data_rows <- lines[!str_starts(lines, "#")]
-  fields <- str_match(data_rows, "^[^,]*,([^,]*),")
+  fields <- str_match(lines, "^[^,]*,([^,]*),")
+  if (anyNA(fields[, 2])) stop("Raw log rows without a participant_id field in ", raw_log_path)
   unique(fields[, 2])
 }
 
@@ -381,13 +381,18 @@ report_exclusions <- function(sessions, round_name) {
 
 # Processes one round's raw log end to end and returns a named list of
 # tidy tibbles keyed by `session_id`. `round_name` is "pre" or "post".
+# `submissions_path` is the round's raw/*_ibex_submissions.csv (one row per
+# submission, carrying Ibex's design number).
 # `mturk_linkage` is ../raw/mturk_session_linkage.csv (all rounds; filtered
 # here). `previous_round_participant_ids` is the set of IP pseudonyms seen
 # in the pre-election raw log (pass it for post; empty for pre).
-process_round <- function(raw_log_path, stimuli_path, stimuli_mazerace_path,
+process_round <- function(raw_log_path, submissions_path, stimuli_path, stimuli_mazerace_path,
                           round_name, has_aware_question, mturk_linkage,
                           previous_round_participant_ids = character(0)) {
   lines <- read_lines(raw_log_path)
+  design_number <- read_csv(submissions_path,
+    col_types = cols(time = col_character(), participant_id = col_character(), design_number = col_integer())
+  )
 
   # --- Session-level fields (one row per session each) ---
   code <- extract_field(lines, ",code,", c(1, 2, 8), c("time", "participant_id", "code"))
@@ -422,11 +427,14 @@ process_round <- function(raw_log_path, stimuli_path, stimuli_mazerace_path,
   }
 
   session_fields <- list(
-    condition, display_order, vp, news, age, gender, state, education,
+    design_number, condition, display_order, vp, news, age, gender, state, education,
     political_affiliation, citizen, native, resident, election_pref, event, aware
   )
   walk(session_fields, \(df) assert_one_row_per_session(df, paste(names(df)[3], "field")))
   assert_one_row_per_session(code, "code")
+  if (nrow(design_number) != nrow(code) || nrow(anti_join(code, design_number, by = session_keys)) > 0) {
+    stop("The submissions file and the raw log's code rows don't cover the same sessions")
+  }
 
   # --- Task data (several rows per session) ---
   recall <- extract_field(lines, ",recall,", c(1, 2, 9), c("time", "participant_id", "recall_response")) |>

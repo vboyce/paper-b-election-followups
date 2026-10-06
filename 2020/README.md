@@ -3,11 +3,19 @@
 ## Layout
 
 - `raw/` - de-identified raw data.
-  - `pre_election_results.txt` / `post_election_results.txt`: the original
-    Ibex result logs with the MD5 IP-hash column replaced by a pseudonymous
-    `participant_id` (see `prep/deidentify_raw_logs.R`). The mapping is
-    shared across both files, so the same IP hash has the same pseudonym in
-    both.
+  - `{pre,post}_election_ibex_rows.csv.gz`: every data row of the original
+    Ibex result logs, in order, as headerless comma-separated lines, with
+    the MD5 IP-hash column replaced by a pseudonymous `participant_id`
+    (see `prep/deidentify_raw_logs.R`). The mapping is shared across both
+    files, so the same IP hash has the same pseudonym in both. The logs'
+    comment lines are not kept: they only repeat the column descriptions
+    below before every block. The exceptions are the per-submission design
+    number, kept in the submissions file, the "Results on <date>" line,
+    which repeats column 1, and the browser user-agent, which is dropped.
+  - `{pre,post}_election_ibex_submissions.csv`: one row per submission
+    (`time`, `participant_id`, `design_number`). `design_number` is Ibex's
+    counter for assigning lists/conditions ("Design number was non-random
+    = N" in the original log). It is not unique across sessions.
   - `mturk_session_linkage.csv`: one row per Ibex session linking it to its
     MTurk assignment, with the MTurk WorkerId replaced by a `worker`
     pseudonym (shared across rounds). Built outside this repo by
@@ -26,13 +34,44 @@
 - `processed/` - gzipped CSVs, one set per round (`pre_*`, `post_*`), all
   keyed by `session_id`:
   - `sessions`: one row per Ibex session (all sessions, nothing dropped),
-    with demographics, condition, pseudonyms, MTurk/HIT info, per-session
+    with demographics, condition, Ibex design number, pseudonyms, MTurk/HIT info, per-session
     RT and accuracy summaries, and all exclusion columns (below).
   - `expectations`, `cloze`, `recall`, `comprehension`, `maze`, `spr`:
     task data for every session.
 
 To regenerate `processed/` from `raw/`, run (from `prep/`):
 `Rscript prep_pre_election.R && Rscript prep_post_election.R && Rscript validate_against_original.R`
+
+## Ibex row format (`raw/*_ibex_rows.csv.gz`)
+
+Every row starts with the same 7 columns:
+
+| Col | Content |
+|---|---|
+| 1 | Time results were received (Unix epoch seconds; one value per submission) |
+| 2 | `participant_id` (pseudonym replacing Ibex's MD5 hash of the IP address) |
+| 3 | Controller name |
+| 4 | Item number |
+| 5 | Element number |
+| 6 | Type |
+| 7 | Group |
+
+The remaining columns depend on the controller (column 3) and the number of
+fields, which together always identify the layout (checked in
+`prep/deidentify_raw_logs.R`; Ibex URL-encodes commas inside fields):
+
+| Controller | Fields | Columns 8+ | Rows (pre / post) |
+|---|---|---|---|
+| `Maze` | 15 | 8 word number, 9 word, 10 alternative (distractor), 11 word on (0=left, 1=right), 12 correct, 13 reading time to first answer, 14 sentence, 15 total time to correct answer | 161,564 / 174,353 |
+| `DashedSentence` | 12 | 8 word number, 9 word, 10 reading time, 11 newline?, 12 sentence (or sentence MD5) | 109,379 / 92,564 |
+| `DashedSentence` | 8 | 8 sentence (or sentence MD5): one row per sentence shown, no word RTs | 18,592 / 18,172 |
+| `Question` | 11 | 8 question (NULL if none), 9 answer, 10 whether the answer was correct (NULL if N/A), 11 time taken to answer | 46,017 / 49,361 |
+| `Form` | 9 | 8 field name, 9 field value | 14,906 / 14,499 |
+| `Slider` | 9 | 8 field name, 9 field value | 13,944 / 13,629 |
+
+All 12-field `DashedSentence` rows (the SPR word RTs) and all `Maze` rows
+appear in `processed/*_spr` and `processed/*_maze`. The 8-field
+`DashedSentence` rows carry no RTs and aren't used by the prep.
 
 ## Exclusions
 

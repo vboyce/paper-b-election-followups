@@ -13,13 +13,14 @@ mturk_linkage <- read_csv("../raw/mturk_session_linkage.csv",
 )
 
 result <- process_round(
-  raw_log_path = "../raw/post_election_results.txt",
+  raw_log_path = "../raw/post_election_ibex_rows.csv.gz",
+  submissions_path = "../raw/post_election_ibex_submissions.csv",
   stimuli_path = "../raw/stimuli.tsv",
   stimuli_mazerace_path = "../raw/stimuli_mazerace.tsv",
   round_name = "post",
   has_aware_question = TRUE,
   mturk_linkage = mturk_linkage,
-  previous_round_participant_ids = read_participant_ids("../raw/pre_election_results.txt")
+  previous_round_participant_ids = read_participant_ids("../raw/pre_election_ibex_rows.csv.gz")
 )
 
 iwalk(result, \(df, name) {

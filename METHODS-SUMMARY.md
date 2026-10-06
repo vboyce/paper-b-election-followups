@@ -35,7 +35,7 @@ Internal reference document. **This is not paper prose.** It exists so the resea
   - All `.py` and `.sh` scripts. Credential lines were filtered out on display, and none contained a key: `grep` for `AKIA` and secret-key patterns found nothing.
   - **Aggregate facts were computed** from `create_HIT_log.txt` (Python) and `mturk_HIT_results.tsv` (R/tidyverse). The scripts printed only counts, ranges and quantiles, never IDs. They lived in the session scratchpad and are not saved in any repo.
   - Line counts only for `assignments-to-be-rejected*.txt`.
-- **2020 raw Ibex logs.** `paper-b/2020/raw/{pre,post}_election_results.txt`, used for computed session counts, condition counts and items-per-session counts (`grep`/`awk`).
+- **2020 raw Ibex logs.** `paper-b/2020/raw/{pre,post}_election_ibex_rows.csv.gz` (these numbers were first computed from the full logs with comment lines, `*_election_results.txt`, replaced on 2026-10-06 by these files, whose data rows are byte-identical), used for computed session counts, condition counts and items-per-session counts (`grep`/`awk`).
 - **paper-b 2020 prep.** `paper-b/README.md`, `paper-b/2020/README.md` and all of `paper-b/2020/prep/*.R`, except `deidentify_raw_logs.R`, which was not read.
 - **MadamePresident clone.** Git commit messages only, for the pre-election HIT script and the `items.js` history, plus one non-secret diff of the post-election `items.js` (commit `096ff70`).
 - **2024 experiment code.** `2024-mmepr24/experiment/src/` files `experiment.js`, `custom_helper.js`, `instructions.js`, `cloze_stim.js` and `comp_q.js` (all fully), plus the head of `maze_stim.js` and targeted greps of `maze.js` and `spr.js`. Also `experiment/notes.md`.
@@ -164,10 +164,10 @@ These come from the HIT scripts as they now exist in `private/2020-mturk/`.
 
 | Round | Source | First | Last |
 |---|---|---|---|
-| Pre | Ibex result-receipt timestamps (epoch → UTC) **(computed)** `paper-b/2020/raw/pre_election_results.txt` | 2020-10-30 14:22 UTC (10:22 EDT) | 2020-11-03 21:57 UTC (16:57 EST, election day) |
+| Pre | Ibex result-receipt timestamps (epoch → UTC) **(computed)** `paper-b/2020/raw/pre_election_ibex_rows.csv.gz` | 2020-10-30 14:22 UTC (10:22 EDT) | 2020-11-03 21:57 UTC (16:57 EST, election day) |
 | Pre | MTurk SubmitTime **(computed)** `private/…/pre-election-round/mturk_HIT_results.tsv` | 2020-10-30 10:29 EDT | 2020-11-03 16:57 EST, excluding 7 stray post-round rows (open questions) |
 | Pre | `get_mturk_info.py` retrieval window | 2020-10-30 10:00 (UTC−4) | 2020-11-02 16:40 (UTC−5) (`private/…/pre-election-round/get_mturk_info.py:25-30`) |
-| Post | Ibex timestamps **(computed)** `paper-b/2020/raw/post_election_results.txt` | 2020-11-07 18:24 UTC (13:24 EST) | 2020-11-10 15:14 UTC (10:14 EST) |
+| Post | Ibex timestamps **(computed)** `paper-b/2020/raw/post_election_ibex_rows.csv.gz` | 2020-11-07 18:24 UTC (13:24 EST) | 2020-11-10 15:14 UTC (10:14 EST) |
 | Post | MTurk SubmitTime **(computed)** | 2020-11-07 13:25 EST | 2020-11-10 08:23 EST |
 | Post | `get_mturk_info.py` window | 2020-11-07 13:00 (UTC−5) | 2020-11-10 13:00 (UTC−5) (`private/…/post-election-round-1/get_mturk_info.py:22-27`) |
 
@@ -179,7 +179,7 @@ The pre-processing scripts convert Ibex times with `tz = "UTC"` (`2020-madame-vi
   - Looked in: `items.js` (the condition weights cite an external Google Sheet that is not in the repo; `items.js:17-19`), the `.org` analyses, the talks and the HIT scripts.
   - The closest thing is a pilot power calculation: `power.t.test(delta = 0.17074/0.6378, power = 0.8)` gives n ≈ 220 per group (`2020-madame-vice-president/pilot-02/data-analysis/power-analysis.Rmd:110-114`; output `power-analysis.md:958-965`). What this n was meant to apply to is not stated.
   - The commit message "to make sure we finish in time" (`MP-git fdf4509`) implies a deadline (inferred: election day).
-- **Raw Ibex sessions:** pre **4,648**, post **4,543** (computed as unique time + participant-hash pairs of `,code,` rows in `paper-b/2020/raw/*_election_results.txt`). This matches the originals' per-condition totals (`…/post-election-round-1/data/data-analysis/data-analysis.md:188-197` gives 4,543) and `paper-b/2020/README.md:93-96`.
+- **Raw Ibex sessions:** pre **4,648**, post **4,543** (computed as unique time + participant-hash pairs of `,code,` rows in `paper-b/2020/raw/*_election_ibex_rows.csv.gz`). This matches the originals' per-condition totals (`…/post-election-round-1/data/data-analysis/data-analysis.md:188-197` gives 4,543) and `paper-b/2020/README.md:93-96`.
 - **MTurk assignments** **(computed)** (`mturk_HIT_results.tsv`, each round):
   - Pre: 4,699 assignments, 925 distinct HITs with ≥1 assignment, **2,350 distinct workers**.
   - Post: 5,047 assignments in 5,047 HITs, **1,457 distinct workers**.
@@ -198,7 +198,7 @@ There are eight between-participant conditions, each a task order × task: `cloz
 
 - **Assignment.** Each participant is assigned client-side by `Math.random()` drawing from a 102-slot array with weights 12 : 6 : 8 : 8 : 12 : 16 : 16 : 24, in the order above (`items.js:17-54`). The weights are said to match proportions in an external Google Sheet (`items.js:17-19`), which is not in the repo.
 - **Earlier design.** The shared event-expectation component used a uniform 1-of-8 draw instead (`event-expectation-component-ibex/experiment_script/items.js` vs the pre-round `items.js`, diff lines 18-28; also `pipelines-and-code-review.Rmd:70-72`).
-- **Observed raw sessions per condition** **(computed)** (`paper-b/2020/raw/*_election_results.txt`):
+- **Observed raw sessions per condition** **(computed)** (`paper-b/2020/raw/*_election_ibex_rows.csv.gz`):
 
   | Round | cloze-event | event-cloze | event-maze | event-mazerace | event-spr | maze-event | mazerace-event | spr-event |
   |---|---|---|---|---|---|---|---|---|
@@ -220,7 +220,7 @@ There are eight between-participant conditions, each a task order × task: `cloz
 
 - **Pronoun pairs.** For SPR and Maze, each trial is the context sentence plus two different critical sentences (i ≠ j). There are five pronoun combinations, he-he, he-she, she-he, she-she and they-they (`hh, hs, sh, ss, tt`), so 12 × 11 × 5 = 660 items per task (`items.js:259-314`; count inferred from the loops).
 - **Mazerace.** Each trial is the context sentence plus one race sentence with four adjective variants: black, white, Black, White (`items.js:321-351`).
-- **One critical item per participant.** All critical items carry Ibex group `1` (e.g. `[["maze", 1], …]`), and the sequence includes `setcounter` (`items.js:83`, `247`, `300-310`, `346-349`). In the data, every session has exactly **one** cloze, maze, SPR or mazerace item **(computed)**: all 962 / 1,173 / 1,377 / 1,136 pre sessions and 870 / 1,234 / 1,167 / 1,272 post sessions with that task have exactly one item number. That item is presumably chosen by Ibex's Latin-square counter rather than at random (inferred from Ibex group semantics; not verified in Ibex source). The log header reads "Design number was non-random = 3" (`paper-b/2020/raw/pre_election_results.txt`, comment header).
+- **One critical item per participant.** All critical items carry Ibex group `1` (e.g. `[["maze", 1], …]`), and the sequence includes `setcounter` (`items.js:83`, `247`, `300-310`, `346-349`). In the data, every session has exactly **one** cloze, maze, SPR or mazerace item **(computed)**: all 962 / 1,173 / 1,377 / 1,136 pre sessions and 870 / 1,234 / 1,167 / 1,272 post sessions with that task have exactly one item number. That item is presumably chosen by Ibex's Latin-square counter rather than at random (inferred from Ibex group semantics; not verified in Ibex source). The log header reads "Design number was non-random = 3" (`paper-b/2020/raw/pre_election_ibex_rows.csv.gz`, comment header).
 
 ## 1.3 Materials
 
@@ -299,7 +299,7 @@ There are eight between-participant conditions, each a task order × task: `cloz
 ### Post-election-only awareness question
 
 - **Wording.** "Are you aware that major news outlets have officially projected that the Biden-Harris ticket has defeated the Trump-Pence ticket?" A yes/no question placed in the questionnaire block (`2020-madame-vice-president/post-election-round-1/ibex/items.js:398`).
-- **Coverage.** All 4,543 raw post sessions answered it: 4,303 "yes" and 240 "no" **(computed)** (`paper-b/2020/raw/post_election_results.txt`).
+- **Coverage.** All 4,543 raw post sessions answered it: 4,303 "yes" and 240 "no" **(computed)** (`paper-b/2020/raw/post_election_ibex_rows.csv.gz`).
 - **Timing.** The line was committed to git at 2020-11-08 09:48 EST (`MP-git 096ff70`), after collection began (11-07 13:14 EST). Since all sessions, including the first one (11-07 18:24 UTC), contain the question, it was live from the start and the commit came later (inferred from data plus git).
 
 ### Consent and completion
