@@ -1,3 +1,6 @@
 .Rhistory
 .RData
 .Rproj.user/
+
+# Private planning correspondence (emails, Drive notes); never commit
+planning-records/

@@ -42,3 +42,12 @@ repo.
   comparable to each other is a separate follow-up step.
 - Any actual analysis - this repo currently only takes raw data to
   cleaned, per-task tables.
+
+## License
+
+- Code (`*.R` and other scripts): MIT, see `LICENSE`.
+- Data (everything under `*/raw/` and `*/processed/`): CC BY 4.0, see
+  `LICENSE-DATA`.
+
+The data are de-identified: no IP addresses, MTurk WorkerIds or Prolific
+IDs. See each study's README for how they were removed.
