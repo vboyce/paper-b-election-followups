@@ -3,10 +3,14 @@
 ## Layout
 
 - `raw/` - raw data as exported from the experiment: `mme_pre_election-trials.csv`
-  / `mme_post_election-trials.csv` (jsPsych/proliferate trial exports - checked
-  directly, these only carry the small internal `workerid` integer, no real
-  Prolific IDs) and the exported stimulus metadata CSVs (`exported_cloze_stim.csv`,
-  `exported_comp_q.csv`, `exported_maze_stim.csv`).
+  / `mme_post_election-trials.csv` (jsPsych/proliferate trial exports, which
+  carry only the small internal `workerid` integer, not Prolific IDs) and the
+  exported stimulus metadata CSVs (`exported_cloze_stim.csv`,
+  `exported_comp_q.csv`, `exported_maze_stim.csv`). The two trial exports
+  differ from the originals in one way: three participants typed their
+  Prolific ID into a cloze response box, and `prep/redact_raw_free_text.R`
+  replaces those with `REDACTED_PROLIFIC_ID` (one-time step, kept for
+  provenance; everything else in the files is byte-for-byte identical).
 - `prep/` - `shared_prep_functions.R` holds all the parsing/cleaning logic,
   used identically by `prep_pre_election.R` and `prep_post_election.R`.
 - `processed/` - tidy, per-wave CSVs written by the prep scripts:
