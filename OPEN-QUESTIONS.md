@@ -81,31 +81,35 @@ answered, **closed** = answered (keep the entry, note how).
   email): Jacob Hoover Vigly, Socolof, Michaelov, Titus von der Malsburg,
   Roger Levy.
 
-## 3. Why were 2 pre / 6 post 2024 participants excluded as duplicates? — partial
+## 3. Why were 2 pre / 6 post 2024 participants excluded as duplicates? — closed (reproduced; not pursuing further)
 
-- **Background:** the original 2024 pipeline removed people who took part
-  under two different Prolific accounts, using real Prolific IDs
-  (`data/prolific_export_*.csv`, `data/mme_*-workerids.csv`). Those files
-  were never in the public repo, and Veronica doesn't have them.
-- **Known (2026-10-06):** comparing the original public
-  `2024-mmepr24/data/processed/{pre,post}_participants.csv` with
-  `paper-b/2024/processed/` by internal `workerid` shows exactly which
-  sessions the dedup removed: pre `1916, 2483`; post
-  `3621, 3776, 3990, 4121, 4184, 4308`. Our sets are strict supersets of the
-  original's. So the original exclusion can be *reproduced*.
-- **Unknown:** which account each one duplicated, so we can't check that
-  the original dedup was correct or complete.
-- **Who might know:** Jacob Hoover Vigly (Prolific files).
+- **Background:** the original 2024 pipeline used a private file linking
+  each proliferate `workerid` to a Prolific ID (never in the public repo;
+  Veronica doesn't have it). Besides same-`workerid` duplicate surveys, it
+  removed `workerid`s linked to more than one Prolific ID and `workerid`s
+  whose Prolific ID was linked to more than one `workerid` (in practice,
+  one Prolific account starting the study more than once).
+- **Resolved (2026-10-06):** the original's processed participant tables
+  are exactly ours minus pre `1916, 2483` and post
+  `3621, 3776, 3990, 4121, 4184, 4308`. These are now the
+  `excl_original_prolific_dedup` column, and `2024/prep/
+  validate_against_original.R` reproduces the original's counts exactly.
+- **Not knowable without the private file:** which rule caught each one.
+- **Decision (Veronica, 2026-10-06):** trust Prolific's controls that the
+  post-election wave excluded pre-election participants and that there is
+  about one response per person. So neither the per-case reasons nor
+  cross-wave overlap (which nothing in the data can detect, because
+  `workerid`s are wave-specific) will be followed up.
 
-## 4. Prolific `Submission id` column in the public mmepr24 repo — open (decision)
+## 4. Prolific `Submission id` column in the public mmepr24 repo — not pursuing (decision 2026-10-06)
 
 - The original public `2024-mmepr24` processed participant files include
   genuine Prolific submission IDs next to demographics. This needs a
   decision before any data release: scrub them going forward and/or rewrite
   that repo's history. `paper-b/` doesn't contain them.
-- **Whose call:** Veronica, possibly with Jacob as owner of the public repo.
+- **Decision (Veronica, 2026-10-06):** leave the `mmepr24` repo as it is.
 
-## 5. Prolific IDs typed into 2024 cloze responses — closed for `paper-b/`; open for the public `mmepr24` repo
+## 5. Prolific IDs typed into 2024 cloze responses — closed for `paper-b/`; not pursuing for `mmepr24` (decision 2026-10-06)
 
 - Found 2026-10-06 by scanning all `paper-b/2024` CSVs for 24-hex-character
   strings (the Prolific ID format). Three cloze `response` values were
@@ -113,13 +117,13 @@ answered, **closed** = answered (keep the entry, note how).
 - **Fixed in `paper-b/` (2026-10-06):** `2024/prep/redact_raw_free_text.R`
   replaces them with `REDACTED_PROLIFIC_ID` in `raw/` (byte sizes drop by
   exactly 4 bytes per ID, so nothing else changed). Regenerating
-  `processed/` changed only those 3 cloze cells, which are still scored
-  `OTHER`. Git history was rewritten with `git filter-repo` before the repo
+  `processed/` changed only those 3 cloze cells, which are still coded
+  `other`. Git history was rewritten with `git filter-repo` before the repo
   got a remote, so no commit contains them.
 - **Still public:** the same raw trial files
   (`data/mme_{pre,post}_election-trials.csv`) are in the public GitHub repo
-  `vboyce/mmepr24`, so the 3 IDs are public there. Fixing that means
-  rewriting that repo's history (see also #4).
+  `vboyce/mmepr24`, so the 3 IDs are public there. Decision (Veronica,
+  2026-10-06): leave that repo as it is (see also #4).
 - Other identifier scans (2026-10-06, all `paper-b/` raw + processed files,
   including gzipped): no MTurk-WorkerId-shaped strings (`A` + 12–14
   uppercase/digits), no email addresses, no phone numbers. Long digit strings

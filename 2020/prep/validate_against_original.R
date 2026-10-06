@@ -8,8 +8,8 @@
 #   2020-madame-vice-president/pre-election-round/pre-election-round-data/data-analysis/data-analysis.md:189-198
 #   2020-madame-vice-president/post-election-round-1/data/data-analysis/data-analysis.md:188-197
 #
-# `excl_original_replication` must reproduce them exactly. The column
-# analyses should use, `excl_original_rule`, is printed alongside so the
+# `excl_task_original_replication` must reproduce them exactly. The column
+# analyses should use, `excl_task_original`, is printed alongside so the
 # effect of this pipeline's corrections (see ../README.md) is visible.
 
 library(tidyverse)
@@ -42,8 +42,8 @@ for (r in names(original_total_sessions)) {
 comparison <- sessions |>
   group_by(round, condition) |>
   summarise(
-    replication_kept = sum(!excl_original_replication),
-    corrected_rule_kept = sum(!excl_original_rule),
+    replication_kept = sum(!excl_task_original_replication),
+    corrected_rule_kept = sum(!excl_task_original),
     .groups = "drop"
   ) |>
   full_join(original_kept, by = c("round", "condition")) |>
@@ -61,6 +61,6 @@ print(
 mismatches <- comparison |> filter(is.na(replication_kept) | replication_kept != original_kept)
 if (nrow(mismatches) > 0) {
   print(mismatches)
-  stop("excl_original_replication does not reproduce the original per-condition counts")
+  stop("excl_task_original_replication does not reproduce the original per-condition counts")
 }
-message("OK: excl_original_replication reproduces the original per-condition kept counts exactly.")
+message("OK: excl_task_original_replication reproduces the original per-condition kept counts exactly.")

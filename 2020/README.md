@@ -31,13 +31,16 @@
     by `prep_pre_election.R` and `prep_post_election.R`.
   - `validate_against_original.R`: checks the output against the original
     analysis's published per-condition counts and stops on any mismatch.
-- `processed/` - gzipped CSVs, one set per round (`pre_*`, `post_*`), all
-  keyed by `session_id`:
+- `processed/` - gzipped CSVs, one set per round (`pre_*`, `post_*`), in
+  the common framework shared with 2024 (core columns first; see
+  `../DATA.md`), all keyed by `session_id` (`2020-pre-0001`, ...):
   - `sessions`: one row per Ibex session (all sessions, nothing dropped),
-    with demographics, condition, Ibex design number, pseudonyms, MTurk/HIT info, per-session
-    RT and accuracy summaries, and all exclusion columns (below).
-  - `expectations`, `cloze`, `recall`, `comprehension`, `maze`, `spr`:
-    task data for every session.
+    with demographics, condition, Ibex design number, pseudonyms, MTurk/HIT
+    info, per-session RT and accuracy summaries, and all exclusion columns
+    (below).
+  - `expectations`, `cloze`, `reading` (Maze, mazerace and SPR words,
+    critical and practice), `comprehension`, `recall`: task data for every
+    session.
 
 To regenerate `processed/` from `raw/`, run (from `prep/`):
 `Rscript prep_pre_election.R && Rscript prep_post_election.R && Rscript validate_against_original.R`
@@ -70,7 +73,7 @@ fields, which together always identify the layout (checked in
 | `Slider` | 9 | 8 field name, 9 field value | 13,944 / 13,629 |
 
 All 12-field `DashedSentence` rows (the SPR word RTs) and all `Maze` rows
-appear in `processed/*_spr` and `processed/*_maze`. The 8-field
+appear in `processed/*_reading`. The 8-field
 `DashedSentence` rows carry no RTs and aren't used by the prep.
 
 ## Exclusions
@@ -78,12 +81,12 @@ appear in `processed/*_spr` and `processed/*_maze`. The 8-field
 Nothing is dropped during prep. Each criterion is a TRUE/FALSE column on
 the `sessions` table (never NA: a criterion that can't apply, e.g. a Maze
 criterion for an SPR participant, is FALSE). An analysis picks its sample
-by filtering, e.g. `filter(!excl_original_rule)`, and robustness checks
+by filtering, e.g. `filter(!excl_task_original)`, and robustness checks
 add `flag_*` columns on top.
 
 ### Applied in the original analysis (`excl_*`)
 
-`excl_original_rule` is the union of these. It is the default analysis
+`excl_task_original` is the union of these. It is the default analysis
 sample, i.e. the original criteria with the corrections listed under
 "Deviations from the original".
 
@@ -97,7 +100,7 @@ sample, i.e. the original criteria with the corrections listed under
 | `excl_maze_rt_too_fast` / `_too_slow` | any Maze word RT ≤ 180 ms / ≥ 10000 ms (practice and mazerace included) |
 | `excl_no_slider_movement` | all three event-expectation sliders left at 0 |
 
-`excl_original_replication` reproduces the original analysis's exclusion
+`excl_task_original_replication` reproduces the original analysis's exclusion
 exactly, including its linkage method and quirks. It exists only so that
 `validate_against_original.R` can check this pipeline against the
 original counts. Don't use it for analysis.
@@ -105,7 +108,7 @@ original counts. Don't use it for analysis.
 ### Candidate criteria, not applied in the original (`flag_*`)
 
 For robustness checks. Counts are sessions flagged among those *kept*
-under `excl_original_rule` (pre: 1605 kept, post: 585 kept), from the
+under `excl_task_original` (pre: 1605 kept, post: 585 kept), from the
 current `processed/` output.
 
 | column | criterion | pre | post |
@@ -149,10 +152,10 @@ workers who had taken part pre-election.
 
 `validate_against_original.R` compares kept counts per round × condition
 with the "not excluded" column of the original `data-analysis.md` tables.
-`excl_original_replication` matches all 16 cells exactly (pre 1607, post
+`excl_task_original_replication` matches all 16 cells exactly (pre 1607, post
 589). The script stops if any cell differs.
 
-| | original kept | `excl_original_replication` | `excl_original_rule` |
+| | original kept | `excl_task_original_replication` | `excl_task_original` |
 |---|---|---|---|
 | pre-election | 1607 | 1607 | 1605 |
 | post-election | 589 | 589 | 585 |
@@ -163,10 +166,25 @@ kept by both versions. SPR, Maze, recall and expectation rows were
 identical. Cloze gained 13 (pre) and 15 (post) rows, all blank responses
 that the old version dropped.
 
+## Fixes on 2026-10-06 (common-framework rebuild)
+
+- `asked_about_vp` was always FALSE: readr guessed the raw `true`/`false`
+  values as logical, so the comparison with the string `"true"` never
+  matched. It now splits as in the raw log (pre 2,321 VP / 2,327 president;
+  post 2,260 / 2,283), and `expectation_target` relies on it. Nothing else
+  used it.
+- Cloze responses had Ibex's `%2C` comma encoding left in; now decoded.
+- Cloze is coded with the shared classifier (`cloze_code`); the original
+  2020 coding is kept as `cloze_code_original`.
+- The exclusion columns `excl_original_rule` / `excl_original_replication`
+  are now `excl_task_original` / `excl_task_original_replication` (values
+  unchanged); `excl_expectations_original*` are copies, since the original
+  applied one rule to everything.
+
 ## Deviations from the original
 
-Each of these is reflected in `excl_original_rule` but not in
-`excl_original_replication`.
+Each of these is reflected in `excl_task_original` but not in
+`excl_task_original_replication`.
 
 1. **MTurk linkage.** The original matched sessions to MTurk on survey code
    plus submission time rounded to the nearest 2 hours. That misses
@@ -187,7 +205,7 @@ Each of these is reflected in `excl_original_rule` but not in
    criteria. Here missing RTs are ignored (`spr_n_missing_rt` counts them)
    and the criteria are applied to the remaining words.
 4. **Blank cloze responses** are kept in the cloze table (with
-   `cloze_pronoun` = NA) rather than dropped.
+   `cloze_code` = `blank`) rather than dropped.
 
 ## Not yet done
 
@@ -195,4 +213,3 @@ Each of these is reflected in `excl_original_rule` but not in
   key in the stimulus files).
 - The original's `bot_screening` form is not used: every session has the
   same value, so it carries no information.
-- No harmonized schema with the 2024 study yet.

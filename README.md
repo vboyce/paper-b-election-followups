@@ -18,35 +18,43 @@ cross-study comparison - see each study's own README for specifics.
 - `2024/` - mmepr24 pre-election and post-election waves (maze + SPR +
   cloze + event-expectation), Prolific.
 
-Both follow the same layout: `raw/` (de-identified/checked-safe raw data),
-`prep/` (a `shared_prep_functions.R` used identically by both rounds/waves
-of that study, plus thin per-round/wave driver scripts), `processed/`
-(the tidy per-task CSVs the drivers produce). See each study's `README.md`
-for what's fixed relative to the original pipeline, what limitations
-remain, and a validation comparison against the original pipeline's
-output. 2020 now reproduces the original's exclusion counts exactly (via a
-pseudonymous MTurk linkage built outside this repo) and keeps every session
-with all applied and candidate exclusion criteria as columns. 2024's
-original cross-Prolific-account dedup is still not reproducible here, since
-it depended on real Prolific IDs that are deliberately not part of this
-repo.
+Both follow the same layout: `raw/` (de-identified raw data), `prep/` (a
+`shared_prep_functions.R` used identically by both rounds/waves of that
+study, plus thin per-round/wave driver scripts and a validation script),
+`processed/` (the tables the drivers produce). Both studies' processed
+tables share one schema, and `combined/` stacks them:
+
+- `OVERVIEW.md` - what the two experiments were, the data at a glance, what
+  was planned at the time, and the decisions left for a forward analysis
+  plan.
+- `DATA.md` - the common data framework: tables, core columns, how to
+  regenerate everything.
+- `METHODS-SUMMARY.md` - sourced methods detail for both studies.
+- `OPEN-QUESTIONS.md` - unknowns that only co-authors could answer, and
+  what has been checked.
+- `shared/common_schema.R` - core column definitions, schema checks, and
+  the shared cloze coder.
+- `combined/` - both studies' core columns stacked
+  (`combine_studies.R`).
+
+Every session is kept, with exclusion criteria as columns. Each study's
+validation script reproduces its original pipeline's counts exactly (2020
+via a pseudonymous MTurk linkage built outside this repo; 2024 via the
+`workerid`s the original's Prolific-based duplicate check removed); see
+each study's `README.md`.
 
 ## What's not here (yet)
 
 - The 2020 pilots (pilot-01/02/03) and the informal 2020 gender-pro-maze
   pilot - background/exploratory data, out of scope for now.
-- A harmonized schema *across* 2020 and 2024 (e.g. a shared column naming
-  convention for "RT at the target pronoun" regardless of study/task).
-  Both studies are now internally consistent (pre vs post use identical
-  logic within each study), but making the two studies' outputs
-  comparable to each other is a separate follow-up step.
-- Any actual analysis - this repo currently only takes raw data to
-  cleaned, per-task tables.
+- Any actual analysis, including the analysis-stage choices (RT windows,
+  residualization, which exclusions to apply) that the processed data
+  deliberately leave open.
 
 ## License
 
 - Code (`*.R` and other scripts): MIT, see `LICENSE`.
-- Data (everything under `*/raw/` and `*/processed/`): CC BY 4.0, see
+- Data (everything under `*/raw/`, `*/processed/` and `combined/`): CC BY 4.0, see
   `LICENSE-DATA`.
 
 The data are de-identified: no IP addresses, MTurk WorkerIds or Prolific

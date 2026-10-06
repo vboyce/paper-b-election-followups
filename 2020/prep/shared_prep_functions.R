@@ -34,6 +34,8 @@
 
 library(tidyverse)
 
+source("../../shared/common_schema.R")
+
 RT_MIN_MS <- 180
 RT_MAX_MS <- 10000
 
@@ -148,6 +150,9 @@ build_stimulus_lookup <- function(stimuli_path, stimuli_mazerace_path) {
   mazerace_stims <- read_tsv(stimuli_mazerace_path, show_col_types = FALSE) |>
     rename(sen_context = Context, sen1 = Sentence) |>
     mutate(
+      # One item per distinct race sentence frame (several spreadsheet rows
+      # share a frame, differing only in distractor alternatives).
+      race_item = as.character(match(sen1, unique(sen1))),
       sens = paste(sen_context, sen1, sep = " "),
       words = str_split(sens, pattern = " ")
     ) |>
@@ -166,7 +171,7 @@ build_stimulus_lookup <- function(stimuli_path, stimuli_mazerace_path) {
       sens = str_replace(sens, fixed(raceadj_placeholder), raceadj)
     ) |>
     select(
-      sen_context, sen1, ContextAlternatives, SentenceAlternatives,
+      sen_context, sen1, race_item, ContextAlternatives, SentenceAlternatives,
       sens, raceadj_pos, raceadj
     ) |>
     ungroup() |>
@@ -398,8 +403,12 @@ process_round <- function(raw_log_path, submissions_path, stimuli_path, stimuli_
   code <- extract_field(lines, ",code,", c(1, 2, 8), c("time", "participant_id", "code"))
   condition <- extract_field(lines, ",condition,", c(1, 2, 8), c("time", "participant_id", "condition"))
   display_order <- extract_field(lines, ",event_expectation_display_order,", c(1, 2, 8), c("time", "participant_id", "display_order"))
-  vp <- extract_field(lines, ",event_expectation_vice,", c(1, 2, 8), c("time", "participant_id", "asked_about_vp")) |>
-    mutate(asked_about_vp = asked_about_vp == "true")
+  # Read as character: readr would otherwise guess "true"/"false" as
+  # logical, and the comparison below would always be FALSE.
+  vp <- extract_field(lines, ",event_expectation_vice,", c(1, 2, 8), c("time", "participant_id", "asked_about_vp"),
+                      character_cols = 8) |>
+    mutate(asked_about_vp = case_when(asked_about_vp == "true" ~ TRUE, asked_about_vp == "false" ~ FALSE))
+  if (anyNA(vp$asked_about_vp)) stop("event_expectation_vice values other than true/false")
   news <- extract_field(lines, ",news,", c(1, 2, 9), c("time", "participant_id", "news_consumption"))
   age <- extract_field(lines, ",age,", c(1, 2, 9), c("time", "participant_id", "age"))
   gender <- extract_field(lines, ",Please select your gender.,", c(1, 2, 9), c("time", "participant_id", "gender"))
@@ -541,7 +550,7 @@ process_round <- function(raw_log_path, submissions_path, stimuli_path, stimuli_
     ) |>
     select(-candidate_1_value, -candidate_2_value, -someone_else_value) |>
     arrange(time, participant_id) |>
-    mutate(session_id = sprintf("%s_%04d", round_name, row_number())) |>
+    mutate(session_id = sprintf("2020-%s-%04d", round_name, row_number())) |>
     add_repeat_ranks() |>
     add_exclusion_columns(round_name, previous_round_participant_ids) |>
     add_original_replication_column()
@@ -552,32 +561,169 @@ process_round <- function(raw_log_path, submissions_path, stimuli_path, stimuli_
   }
   report_exclusions(sessions, round_name)
 
-  # --- Outputs: everything keyed by session_id, no raw keys ---
-  ids <- sessions |> select(time, participant_id, session_id, condition)
+  build_common_tables(sessions, cloze, recall, comprehension, spr, maze, stimuli_path, round_name)
+}
+
+# Ibex URL-encodes commas (%2C) and newlines (%0A) inside free-text fields;
+# no other encodings occur in these logs.
+decode_ibex_text <- function(x) {
+  x |> str_replace_all("%2C", ",") |> str_replace_all("%0A", " ")
+}
+
+pronoun_type_names <- c(masculine = "he", feminine = "she", `singular they` = "they")
+
+# Turns the round's parsed tables into the common-framework tables (see
+# ../../shared/common_schema.R and ../../DATA.md), keyed by session_id.
+build_common_tables <- function(sessions, cloze, recall, comprehension, spr, maze, stimuli_path, round_name) {
+  sessions <- sessions |>
+    mutate(
+      study = "2020",
+      task = str_remove(condition, "-?event-?"),
+      task_order = if_else(str_starts(condition, "event"), "event_first", "task_first"),
+      expectation_target = if_else(asked_about_vp, "vice_president", "president"),
+      age = as.integer(age),
+      us_citizen = citizen == "yes", us_resident = resident == "yes", native_english = native == "yes",
+      expect_prob_dem = candidate_prob_dem, expect_prob_rep = candidate_prob_rep,
+      expect_prob_other = candidate_prob_someone_else,
+      comprehension_n = as.integer(!is.na(comprehension_correct)),
+      comprehension_n_correct = as.integer(coalesce(comprehension_correct, FALSE)),
+      # The original 2020 analysis dropped excluded participants from every
+      # analysis, so one rule covers both the task and the expectations.
+      excl_task_original = excl_original_rule,
+      excl_task_original_replication = excl_original_replication,
+      excl_expectations_original = excl_original_rule,
+      excl_expectations_original_replication = excl_original_replication
+    ) |>
+    select(-excl_original_rule, -excl_original_replication)
+
+  ids <- sessions |> select(time, participant_id, study, round, session_id)
   with_ids <- function(df) {
     out <- df |> inner_join(ids, by = session_keys, relationship = "many-to-one")
     if (nrow(out) != nrow(df)) stop("Attaching session_id dropped rows")
-    out |> select(session_id, condition, everything(), -time, -participant_id)
+    out |> select(study, round, session_id, everything(), -time, -participant_id)
   }
 
+  # Long event expectations: dem/rep candidates depend on which office the
+  # session was asked about.
+  expectations <- sessions |>
+    filter(!is.na(candidate_value_dem)) |>
+    select(study, round, session_id, expectation_target,
+           dem = candidate_value_dem, rep = candidate_value_rep, other = candidate_value_someone_else) |>
+    pivot_longer(c(dem, rep, other), names_to = "candidate_party", values_to = "slider_value") |>
+    mutate(
+      slider_value = as.double(slider_value),
+      candidate_name = case_when(
+        candidate_party == "other" ~ "someone else",
+        expectation_target == "vice_president" & candidate_party == "dem" ~ "Kamala Harris",
+        expectation_target == "vice_president" & candidate_party == "rep" ~ "Mike Pence",
+        candidate_party == "dem" ~ "Joe Biden",
+        candidate_party == "rep" ~ "Donald Trump"
+      ),
+      .by = session_id, probability = slider_value / sum(slider_value)
+    ) |>
+    # All sliders at 0 (no movement): probability undefined, not NaN.
+    mutate(probability = if_else(is.nan(probability), NA_real_, probability))
+
+  # Cloze item k is row k of stimuli.tsv; the prompt is the context plus the
+  # critical sentence up to the pronoun slot (as in items.js:243-245).
+  cloze_prompts <- read_tsv(stimuli_path, n_max = 12, show_col_types = FALSE, name_repair = "unique_quiet") |>
+    transmute(
+      cloze_item = as.character(row_number()),
+      prompt = str_trim(paste(Context, str_remove(Sentence, "[a-z]+\\|[a-z]+\\|[a-z]+.+$")))
+    )
+  cloze <- cloze |>
+    mutate(cloze_item = as.character(cloze_item), response = decode_ibex_text(cloze_response)) |>
+    left_join(cloze_prompts, by = "cloze_item", relationship = "many-to-one") |>
+    rename(cloze_code_original = cloze_pronoun) |>
+    select(-cloze_response)
+  if (anyNA(cloze$prompt)) stop("Cloze items without a prompt")
+  cloze <- bind_cols(cloze, code_cloze_response(
+    cloze$response,
+    female_names = "harris|kamala",
+    male_names = "pence",
+    other_names = "biden|trump",
+    them_not_referential = str_detect(cloze$prompt, "one of\\s*$")
+  )) |>
+    with_ids()
+
+  # Reading: SPR and Maze/mazerace words, critical and practice trials.
+  word_count <- \(x) str_count(x, "\\S+")
+  reading <- bind_rows(
+    spr |> transmute(
+      time, participant_id, task = "spr", is_practice = spr_type == "spr-practice",
+      sen1_item = sen1_number, sen2_item = sen2_number, pro1_type, pro2_type,
+      race_adjective = NA_character_, raceadj_pos = NA_integer_,
+      word_index = as.integer(spr_word_no), word = spr_word, rt = as.double(spr_word_rt),
+      maze_correct = NA, maze_distractor = NA_character_, maze_correct_side = NA_character_,
+      maze_time_to_correct = NA_real_, sen_context, sen1, pro1_pos, pro2_pos
+    ),
+    maze |> transmute(
+      time, participant_id,
+      task = if_else(maze_type == "mazerace", "mazerace", "maze"),
+      is_practice = maze_type == "maze-practice",
+      sen1_item = coalesce(sen1_number, race_item), sen2_item = sen2_number, pro1_type, pro2_type,
+      race_adjective = raceadj, raceadj_pos = as.integer(raceadj_pos),
+      word_index = as.integer(maze_word_no), word = maze_word, rt = as.double(maze_word_rt),
+      maze_correct = case_when(maze_word_correct == "yes" ~ TRUE, maze_word_correct == "no" ~ FALSE),
+      maze_distractor,
+      maze_correct_side = case_when(maze_word_location == 0 ~ "left", maze_word_location == 1 ~ "right"),
+      maze_time_to_correct = as.double(maze_word_time_to_correct),
+      sen_context, sen1, pro1_pos, pro2_pos
+    )
+  ) |>
+    mutate(
+      pro1_type = unname(pronoun_type_names[pro1_type]),
+      pro2_type = unname(pronoun_type_names[pro2_type]),
+      n_context = word_count(sen_context), n_sen1 = word_count(sen1),
+      sentence_index = as.integer(case_when(
+        is_practice ~ NA,
+        word_index <= n_context ~ 0,
+        word_index <= n_context + n_sen1 ~ 1,
+        .default = 2
+      )),
+      word_index_in_sentence = as.integer(case_when(
+        is_practice ~ NA,
+        sentence_index == 0 ~ word_index,
+        sentence_index == 1 ~ word_index - n_context,
+        .default = word_index - n_context - n_sen1
+      )),
+      is_pro1 = !is_practice & coalesce(word_index == pro1_pos, FALSE),
+      is_pro2 = !is_practice & coalesce(word_index == pro2_pos, FALSE),
+      is_race_adjective = !is_practice & coalesce(word_index == raceadj_pos, FALSE)
+    ) |>
+    select(-n_context, -n_sen1, -sen_context, -sen1, -pro1_pos, -pro2_pos, -raceadj_pos) |>
+    with_ids()
+  if (anyNA(reading$maze_correct[reading$task != "spr"])) stop("Unexpected Maze correct codes")
+  if (anyNA(reading$maze_correct_side[reading$task != "spr"])) stop("Unexpected Maze word-location codes")
+  # Every critical gender trial has one pronoun-1 and one pronoun-2 word,
+  # and every mazerace trial one race adjective.
+  per_trial <- reading |>
+    filter(!is_practice) |>
+    summarize(.by = c(session_id, task), n_pro1 = sum(is_pro1), n_pro2 = sum(is_pro2), n_race = sum(is_race_adjective))
+  if (any(per_trial$task != "mazerace" & (per_trial$n_pro1 != 1 | per_trial$n_pro2 != 1)) ||
+      any(per_trial$task == "mazerace" & per_trial$n_race != 1)) {
+    stop("Critical reading trials without exactly one critical word")
+  }
+  pronoun_words <- reading |> filter(is_pro1 | is_pro2) |> pull(word) |> str_remove_all("[[:punct:]]") |> tolower()
+  if (!all(pronoun_words %in% c("he", "she", "they", "his", "her", "their", "him", "them"))) {
+    stop("Words flagged as pronouns that aren't pronouns")
+  }
+
+  comprehension <- comprehension |>
+    rename(task = question_task) |>
+    mutate(question = decode_ibex_text(question), answer = decode_ibex_text(answer)) |>
+    with_ids()
+  recall <- with_ids(recall)
+
+  sessions <- sessions |>
+    select(study, round, session_id, participant_id, worker, submission_time, everything(), -time)
+
   list(
-    sessions = sessions |>
-      select(session_id, round, participant_id, worker, submission_time, everything(), -time),
-    expectations = sessions |>
-      filter(!is.na(candidate_prob_dem)) |>
-      select(session_id, condition, starts_with("candidate_")),
-    cloze = with_ids(cloze),
-    recall = with_ids(recall),
-    comprehension = with_ids(comprehension),
-    maze = with_ids(maze |> select(
-      time, participant_id, maze_item_no, maze_type, maze_word_no, maze_word, maze_distractor,
-      maze_word_location, maze_word_correct, maze_word_rt, maze_word_time_to_correct,
-      sen_context, sen1, pro1_type, pro1, pro1_pos, pro2_type, pro2, pro2_pos,
-      raceadj, raceadj_pos
-    )),
-    spr = with_ids(spr |> select(
-      time, participant_id, spr_item_no, spr_type, spr_word_no, spr_word, spr_word_rt,
-      sen_context, sen1, pro1_type, pro1, pro1_pos, pro2_type, pro2, pro2_pos
-    ))
+    sessions = check_core_schema(sessions, "sessions"),
+    expectations = check_core_schema(expectations, "expectations"),
+    cloze = check_core_schema(cloze, "cloze"),
+    reading = check_core_schema(reading, "reading"),
+    comprehension = check_core_schema(comprehension, "comprehension"),
+    recall = check_core_schema(recall, "recall")
   )
 }
