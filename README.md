@@ -23,10 +23,13 @@ Both follow the same layout: `raw/` (de-identified/checked-safe raw data),
 of that study, plus thin per-round/wave driver scripts), `processed/`
 (the tidy per-task CSVs the drivers produce). See each study's `README.md`
 for what's fixed relative to the original pipeline, what limitations
-remain (mainly: neither study's original cross-submission dedup is fully
-reproducible here, since it depended on real MTurk/Prolific IDs that are
-deliberately not part of this repo), and a validation comparison against
-the original pipeline's output.
+remain, and a validation comparison against the original pipeline's
+output. 2020 now reproduces the original's exclusion counts exactly (via a
+pseudonymous MTurk linkage built outside this repo) and keeps every session
+with all applied and candidate exclusion criteria as columns. 2024's
+original cross-Prolific-account dedup is still not reproducible here, since
+it depended on real Prolific IDs that are deliberately not part of this
+repo.
 
 ## What's not here (yet)
 

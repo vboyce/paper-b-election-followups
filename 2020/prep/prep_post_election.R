@@ -2,27 +2,26 @@
 # Run with working directory set to this file's directory
 # (2020/prep/) - all paths below are relative to it.
 #
-# Note: the original pipeline excluded participants who also took part in
-# the pre-election round using the real MTurk WorkerId, which isn't
-# available here. As a proxy, we exclude anyone whose pseudonymous
-# participant ID (built from a mapping shared across both rounds' raw
-# logs - see deidentify_raw_logs.R) also appears anywhere in the
-# pre-election round's raw log. This only catches repeats from the same
-# computer/IP, not the same MTurk account from a different one - see the
-# message() emitted by process_round() and STATUS.md for the full picture.
+# The pre-election round's IP pseudonyms are passed in only for the
+# candidate flag `flag_ip_in_pre_round`; the applied cross-round exclusion
+# (`excl_worker_in_pre_round`) uses MTurk workers, via the linkage file.
 
 source("shared_prep_functions.R")
 
-pre_election_participant_ids <- read_participant_ids("../raw/pre_election_results.txt")
+mturk_linkage <- read_csv("../raw/mturk_session_linkage.csv",
+  col_types = cols(time = col_character()), show_col_types = FALSE
+)
 
 result <- process_round(
   raw_log_path = "../raw/post_election_results.txt",
   stimuli_path = "../raw/stimuli.tsv",
   stimuli_mazerace_path = "../raw/stimuli_mazerace.tsv",
+  round_name = "post",
   has_aware_question = TRUE,
-  previous_round_participant_ids = pre_election_participant_ids
+  mturk_linkage = mturk_linkage,
+  previous_round_participant_ids = read_participant_ids("../raw/pre_election_results.txt")
 )
 
 iwalk(result, \(df, name) {
-  write_csv(df |> mutate(batch = "post"), paste0("../processed/post_", name, ".csv"))
+  write_csv(df, paste0("../processed/post_", name, ".csv.gz"))
 })

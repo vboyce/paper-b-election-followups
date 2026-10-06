@@ -5,34 +5,32 @@
 # and RT thresholds - see prep_pre_election.R / prep_post_election.R for
 # the thin per-round drivers.
 #
+# Design: nothing is dropped here. Every Ibex session is kept, and every
+# exclusion criterion - the ones the original analysis applied and further
+# candidate criteria for robustness checks - is recorded as a column of
+# the `sessions` table. Analyses choose an exclusion set by filtering on
+# those columns. See ../README.md ("Exclusions") for the full list.
+#
 # Differences from the original MadameVicePresident pre-processing.R this
 # is derived from:
-#  - No dependency on mturk_HIT_results.tsv (not part of this repo - see
-#    STATUS.md), so the real MTurk WorkerId is never available. The
-#    original post-election script's cross-round exclusion
-#    (WorkerIdInPreviousRound) can't be reproduced exactly. Instead,
-#    `process_round()` takes an optional `previous_round_participant_ids`
-#    argument: the pseudonymous participant IDs are built from a mapping
-#    shared across both rounds' raw logs (see deidentify_raw_logs.R), so
-#    the same underlying IP hash gets the same ID in both files, and a
-#    ID showing up in both rounds is used as a proxy for the same person
-#    doing both. This is not equivalent to the original WorkerId check -
-#    it only catches repeats from the same computer/IP, not someone using
-#    a different one under the same MTurk account - so it's expected to
-#    catch fewer repeats than the original. This is reported via
-#    `message()` rather than silently assumed complete.
-#  - The per-row participant identifier is a pseudonymous ID
-#    (participant_NNNN) substituted for the raw log's MD5 IP hash before
-#    this repo was created - see deidentify_raw_logs.R. It plays the same
-#    structural role the MD5 hash played in the original script (grouping
-#    a participant's own rows together, and detecting repeat submissions
-#    within or across rounds).
-#  - Exclusion is tracked with a human-readable `excl_reason` rather than a
-#    single overwritten boolean, and every exclusion step reports the
-#    number of participants/trials it removes via `message()`.
-#  - Output is a set of tidy, per-task tables (participants/expectations/
-#    cloze/recall/maze/spr/mazerace) rather than one wide table joined on
-#    `code` - this matches the per-task-table shape used for the 2024 data.
+#  - Participant identifiers are pseudonymous. `participant_id`
+#    (participant_NNNN) replaces the raw log's MD5 IP hash (see
+#    deidentify_raw_logs.R); `worker` (worker_NNNN) replaces the MTurk
+#    WorkerId and comes from ../raw/mturk_session_linkage.csv, built outside
+#    this repo by private/2020-mturk/build_mturk_linkage.R. Both pseudonyms
+#    are shared across rounds.
+#  - Sessions are linked to MTurk by survey code + a time window rather than
+#    the original's code + 2-hour-rounded time (which missed sessions that
+#    straddled a rounding boundary). The original linkage is carried along
+#    as `worker_original_method` so the original exclusion counts can be
+#    reproduced exactly (see validate_against_original.R).
+#  - The original's "worker took part in the pre-election round" check used
+#    a pre-election MTurk file that also contained 7 post-election
+#    assignments; `excl_worker_in_pre_round` uses the corrected list.
+#  - Output is a set of tidy tables (sessions/expectations/cloze/recall/
+#    comprehension/maze/spr) keyed by `session_id`, rather than one wide
+#    table joined on `code` - this matches the per-task-table shape used
+#    for the 2024 data.
 
 library(tidyverse)
 
@@ -42,10 +40,9 @@ RT_MAX_MS <- 10000
 # Distinct pseudonymous participant IDs (2nd comma-separated field) seen
 # anywhere in a raw log, comment lines excluded. Used to pass one round's
 # full set of IDs into another round's `process_round()` call for the
-# cross-round repeat check - this is deliberately the full raw set, not
-# the "kept after exclusions" set, matching how the original pipeline's
-# WorkerIdInPreviousRound check looked at the full previous round's MTurk
-# records, not just its post-exclusion survivors.
+# `flag_ip_in_pre_round` candidate flag - deliberately the full raw set,
+# not the "kept after exclusions" set, mirroring how the worker-based
+# cross-round exclusion uses every pre-election MTurk assignment.
 read_participant_ids <- function(raw_log_path) {
   lines <- read_lines(raw_log_path)
   data_rows <- lines[!str_starts(lines, "#")]
@@ -60,7 +57,10 @@ read_participant_ids <- function(raw_log_path) {
 # every field extraction goes through it instead of repeating a
 # grep-then-parse-then-rename block per field (as the original script did
 # ~20 times).
-extract_field <- function(lines, pattern, col_indices, col_names) {
+# `character_cols` (1-indexed raw-log column numbers) are read as
+# character instead of being type-guessed, for columns that need explicit
+# handling of non-numeric values.
+extract_field <- function(lines, pattern, col_indices, col_names, character_cols = integer(0)) {
   matched <- lines[str_detect(lines, pattern)]
   if (length(matched) == 0) {
     stop("No lines in the raw log matched pattern: ", pattern)
@@ -72,12 +72,20 @@ extract_field <- function(lines, pattern, col_indices, col_names) {
   # then makes every left_join() on `time` below fail with a type
   # mismatch. Timestamps are cast to numeric explicitly where needed
   # (see submission_time below).
+  forced_character <- set_names(
+    rep(list(col_character()), length(character_cols) + 1),
+    paste0("X", c(1, character_cols))
+  )
   parsed <- read_csv(
     I(matched),
     col_names = FALSE,
-    col_types = cols(X1 = col_character(), .default = col_guess()),
+    col_types = do.call(cols, c(forced_character, list(.default = col_guess()))),
     show_col_types = FALSE
   )
+  if (nrow(problems(parsed)) > 0) {
+    stop("Parsing problems reading raw-log rows matching '", pattern, "':\n",
+         paste(capture.output(print(problems(parsed))), collapse = "\n"))
+  }
   out <- parsed[col_indices]
   names(out) <- col_names
   out
@@ -206,20 +214,182 @@ classify_cloze_response <- function(response) {
   out
 }
 
-# Processes one round's raw log end to end. `has_aware_question` selects
-# whether to parse the post-election-only "are you aware the race was
-# called" question. `previous_round_participant_ids` is the set of
-# pseudonymous participant IDs seen in an earlier round (pass the
-# pre-election round's IDs when processing post-election) - anyone
-# appearing in both is excluded as a same-IP cross-round repeat; leave at
-# the default (empty) for the first round processed, since there's no
-# earlier round to check against. Returns a named list of tidy tibbles,
-# one per task, ready to be written out by the calling driver script.
+
+# Time points used by candidate exclusion flags (all UTC).
+# Election day: 2020-11-03 00:00 US Eastern (EST, UTC-5).
+ELECTION_DAY_START_UTC <- as.POSIXct("2020-11-03 05:00:00", tz = "UTC")
+# Major networks/AP projected Biden-Harris the winners on 2020-11-07 at
+# about 11:25 US Eastern (EST, UTC-5).
+RACE_CALLED_UTC <- as.POSIXct("2020-11-07 16:25:00", tz = "UTC")
+MAZE_ACCURACY_THRESHOLD <- 0.8
+
+session_keys <- c("time", "participant_id")
+
+# Converts a raw RT column read as character to numeric, mapping Ibex's
+# literal "None" to NA and failing on any other non-numeric value.
+parse_rt_allowing_none <- function(rt) {
+  rt[rt == "None"] <- NA_character_
+  parsed <- parse_double(rt)
+  if (nrow(problems(parsed)) > 0) stop("Non-numeric RT values other than 'None' in the raw log")
+  parsed
+}
+
+# Fails loudly if a per-session table has more than one row for a session.
+assert_one_row_per_session <- function(df, what) {
+  if (anyDuplicated(df[, session_keys])) {
+    stop(what, ": more than one row for some session (time, participant_id)")
+  }
+  df
+}
+
+# Answer key for the comprehension questions, from the stimulus files.
+# Question text is unique per item, so it is used as the join key.
+build_comprehension_key <- function(stimuli_path, stimuli_mazerace_path) {
+  key <- bind_rows(
+    read_tsv(stimuli_path, n_max = 12, show_col_types = FALSE) |> select(Question, Answer),
+    read_tsv(stimuli_mazerace_path, show_col_types = FALSE) |> select(Question, Answer)
+  ) |>
+    distinct() |>
+    rename(question = Question, correct_answer = Answer)
+  if (anyDuplicated(key$question)) stop("Comprehension question text is not unique in the stimulus files")
+  key
+}
+
+# Session-level reading-time and accuracy summaries.
+# `*_min_rt`/`*_max_rt` reproduce the original criterion exactly, so they
+# are taken over every SPR/Maze word the participant saw, practice and
+# (for Maze) the mazerace item included. The proportion and accuracy
+# measures use experimental items only (no practice). Missing ("None")
+# SPR RTs are ignored; `spr_n_missing_rt` records how many there were.
+summarise_rt_measures <- function(spr, maze) {
+  spr_summary <- spr |>
+    group_by(time, participant_id) |>
+    summarise(
+      spr_n_missing_rt = sum(is.na(spr_word_rt)),
+      spr_n_valid_rt = sum(!is.na(spr_word_rt)),
+      spr_min_rt = min(spr_word_rt, na.rm = TRUE),
+      spr_max_rt = max(spr_word_rt, na.rm = TRUE),
+      spr_prop_rt_out_of_range = mean(
+        (spr_word_rt <= RT_MIN_MS | spr_word_rt >= RT_MAX_MS)[spr_type == "spr"],
+        na.rm = TRUE
+      ),
+      .groups = "drop"
+    )
+  if (any(spr_summary$spr_n_valid_rt == 0)) stop("A session has SPR rows but no valid SPR RT")
+  if (anyNA(maze$maze_word_rt)) stop("Missing Maze RTs - not expected in this data")
+  maze_summary <- maze |>
+    group_by(time, participant_id) |>
+    summarise(
+      maze_min_rt = min(maze_word_rt),
+      maze_max_rt = max(maze_word_rt),
+      maze_prop_rt_out_of_range = mean(
+        (maze_word_rt <= RT_MIN_MS | maze_word_rt >= RT_MAX_MS)[maze_type != "maze-practice"]
+      ),
+      maze_accuracy = mean((maze_word_correct == "yes")[maze_type != "maze-practice"]),
+      .groups = "drop"
+    )
+  list(spr = spr_summary, maze = maze_summary)
+}
+
+# Within-round repeat structure: how many sessions share this session's IP
+# pseudonym / MTurk worker, and where this session falls in time among
+# them (rank 1 = first). Rank is by Ibex receipt time.
+add_repeat_ranks <- function(sessions) {
+  sessions |>
+    arrange(submission_time) |>
+    group_by(participant_id) |>
+    mutate(ip_n_sessions_round = n(), ip_session_rank_round = row_number()) |>
+    group_by(worker) |>
+    mutate(
+      worker_n_sessions_round = if_else(is.na(worker), NA_integer_, n()),
+      worker_session_rank_round = if_else(is.na(worker), NA_integer_, row_number())
+    ) |>
+    group_by(worker_original_method) |>
+    mutate(worker_original_method_session_rank_round = if_else(
+      is.na(worker_original_method), NA_integer_, row_number()
+    )) |>
+    ungroup()
+}
+
+# Exclusion columns. `excl_*` are the criteria the original analysis
+# applied; `excl_original_rule` is their union. `flag_*` are further
+# candidate criteria that the original did not apply, for robustness
+# checks. Every column is TRUE/FALSE with no NA: a criterion that cannot
+# be evaluated for a session (e.g. no SPR task) is FALSE.
+add_exclusion_columns <- function(sessions, round_name, previous_round_participant_ids) {
+  sessions |>
+    mutate(
+      # --- applied in the original analysis ---
+      excl_not_native = native != "yes",
+      excl_repeat_ip = ip_session_rank_round > 1,
+      excl_repeat_worker = coalesce(worker_session_rank_round > 1, FALSE),
+      excl_worker_in_pre_round = worker_in_pre_round,
+      excl_spr_rt_too_fast = coalesce(spr_min_rt <= RT_MIN_MS, FALSE),
+      excl_spr_rt_too_slow = coalesce(spr_max_rt >= RT_MAX_MS, FALSE),
+      excl_maze_rt_too_fast = coalesce(maze_min_rt <= RT_MIN_MS, FALSE),
+      excl_maze_rt_too_slow = coalesce(maze_max_rt >= RT_MAX_MS, FALSE),
+      excl_no_slider_movement = candidate_value_dem == 0 &
+        candidate_value_rep == 0 & candidate_value_someone_else == 0,
+      excl_original_rule = excl_not_native | excl_repeat_ip | excl_repeat_worker |
+        excl_worker_in_pre_round | excl_spr_rt_too_fast | excl_spr_rt_too_slow |
+        excl_maze_rt_too_fast | excl_maze_rt_too_slow | excl_no_slider_movement,
+
+      # --- candidate criteria, not applied in the original analysis ---
+      flag_not_linked_to_mturk = !linked_to_mturk,
+      flag_code_submitted_by_multiple_workers = code_submitted_by_multiple_workers,
+      flag_worker_did_multiple_assignments = coalesce(worker_n_assignments_round > 1, FALSE),
+      flag_ip_had_multiple_sessions = ip_n_sessions_round > 1,
+      flag_ip_in_pre_round = participant_id %in% previous_round_participant_ids,
+      flag_not_us_resident = resident != "yes",
+      flag_not_us_citizen = citizen != "yes",
+      flag_comprehension_wrong = coalesce(!comprehension_correct, FALSE),
+      flag_maze_accuracy_low = coalesce(maze_accuracy < MAZE_ACCURACY_THRESHOLD, FALSE),
+      flag_pre_on_or_after_election_day = round_name == "pre" & submission_time >= ELECTION_DAY_START_UTC,
+      flag_post_before_race_called = round_name == "post" & submission_time < RACE_CALLED_UTC,
+      flag_post_unaware_race_called = round_name == "post" & coalesce(aware != "yes", FALSE)
+    )
+}
+
+# Reproduces the original analysis's exclusion exactly, using the
+# original MTurk linkage and the uncorrected pre-election worker list.
+# Only used to validate this pipeline against the original's published
+# counts (validate_against_original.R) - analyses should use
+# `excl_original_rule`.
+add_original_replication_column <- function(sessions) {
+  sessions |>
+    mutate(excl_original_replication =
+      excl_not_native | excl_repeat_ip |
+        coalesce(worker_original_method_session_rank_round > 1, FALSE) |
+        worker_in_pre_round_original_method |
+        # The original took min()/max() without na.rm, so a session with
+        # any missing SPR RT got NA and escaped both SPR RT criteria.
+        (coalesce(spr_n_missing_rt, 0) == 0 & (excl_spr_rt_too_fast | excl_spr_rt_too_slow)) |
+        excl_maze_rt_too_fast | excl_maze_rt_too_slow | excl_no_slider_movement)
+}
+
+report_exclusions <- function(sessions, round_name) {
+  counts <- sessions |>
+    summarise(across(c(starts_with("excl_"), starts_with("flag_")), sum)) |>
+    pivot_longer(everything(), names_to = "column", values_to = "n_sessions")
+  message(
+    "process_round (", round_name, "): ", nrow(sessions), " sessions; ",
+    sum(!sessions$excl_original_rule), " kept under excl_original_rule. ",
+    "Sessions flagged per column (columns overlap):"
+  )
+  pwalk(counts, \(column, n_sessions) message("  - ", column, ": ", n_sessions))
+}
+
+# Processes one round's raw log end to end and returns a named list of
+# tidy tibbles keyed by `session_id`. `round_name` is "pre" or "post".
+# `mturk_linkage` is ../raw/mturk_session_linkage.csv (all rounds; filtered
+# here). `previous_round_participant_ids` is the set of IP pseudonyms seen
+# in the pre-election raw log (pass it for post; empty for pre).
 process_round <- function(raw_log_path, stimuli_path, stimuli_mazerace_path,
-                           has_aware_question,
-                           previous_round_participant_ids = character(0)) {
+                          round_name, has_aware_question, mturk_linkage,
+                          previous_round_participant_ids = character(0)) {
   lines <- read_lines(raw_log_path)
 
+  # --- Session-level fields (one row per session each) ---
   code <- extract_field(lines, ",code,", c(1, 2, 8), c("time", "participant_id", "code"))
   condition <- extract_field(lines, ",condition,", c(1, 2, 8), c("time", "participant_id", "condition"))
   display_order <- extract_field(lines, ",event_expectation_display_order,", c(1, 2, 8), c("time", "participant_id", "display_order"))
@@ -235,37 +405,8 @@ process_round <- function(raw_log_path, stimuli_path, stimuli_mazerace_path,
   native <- extract_field(lines, "native speaker of English\\?", c(1, 2, 9), c("time", "participant_id", "native"))
   resident <- extract_field(lines, "reside in the United States\\?", c(1, 2, 9), c("time", "participant_id", "resident"))
   election_pref <- extract_field(lines, "<i>prefer</i>", c(1, 2, 9), c("time", "participant_id", "election_pref"))
-  recall <- extract_field(lines, ",recall,", c(1, 2, 9), c("time", "participant_id", "recall_response"))
-  cloze <- extract_field(lines, ",cloze,", c(1, 2, 4, 9), c("time", "participant_id", "cloze_item", "cloze_response"))
-
   event <- extract_field(lines, ",event,", c(1, 2, 8, 9), c("time", "participant_id", "field", "value")) |>
     pivot_wider(names_from = field, values_from = value)
-
-  spr <- extract_field(
-    lines, ",0,spr(-practice)?,", c(1, 2, 4, 8, 9, 10, 12),
-    c("time", "participant_id", "spr_item_no", "spr_word_no", "spr_word", "spr_word_rt", "spr_sens")
-  ) |>
-    mutate(
-      spr_sens = str_replace_all(spr_sens, "%2C", ","),
-      spr_sens = str_replace_all(spr_sens, "%0A%0A", " "),
-      spr_word = str_replace_all(spr_word, "%2C", ",")
-    )
-
-  maze <- extract_field(
-    lines, "0,maze(-practice|race)?,", c(1, 2, 4, 8, 9, 10, 11, 12, 13, 14, 15),
-    c(
-      "time", "participant_id", "maze_item_no", "maze_word_no", "maze_word",
-      "maze_distractor", "maze_word_location", "maze_word_correct",
-      "maze_word_rt", "maze_sens", "maze_word_time_to_correct"
-    )
-  ) |>
-    mutate(
-      maze_word_no = maze_word_no + 1, # align word count with spr
-      maze_sens = str_replace_all(maze_sens, "%2C", ","),
-      maze_word = str_replace_all(maze_word, "%2C", ","),
-      maze_distractor = str_replace_all(maze_distractor, "%2C", ",")
-    )
-
   aware <- if (has_aware_question) {
     extract_field(
       lines,
@@ -280,30 +421,105 @@ process_round <- function(raw_log_path, stimuli_path, stimuli_mazerace_path,
     tibble(time = character(), participant_id = character(), aware = character())
   }
 
-  d <- code |>
-    left_join(condition, by = c("time", "participant_id")) |>
-    left_join(display_order, by = c("time", "participant_id")) |>
-    left_join(vp, by = c("time", "participant_id")) |>
-    left_join(news, by = c("time", "participant_id")) |>
-    left_join(age, by = c("time", "participant_id")) |>
-    left_join(gender, by = c("time", "participant_id")) |>
-    left_join(state, by = c("time", "participant_id")) |>
-    left_join(education, by = c("time", "participant_id")) |>
-    left_join(political_affiliation, by = c("time", "participant_id")) |>
-    left_join(citizen, by = c("time", "participant_id")) |>
-    left_join(native, by = c("time", "participant_id")) |>
-    left_join(aware, by = c("time", "participant_id")) |>
-    left_join(resident, by = c("time", "participant_id")) |>
-    left_join(event, by = c("time", "participant_id")) |>
-    left_join(election_pref, by = c("time", "participant_id")) |>
-    left_join(cloze, by = c("time", "participant_id")) |>
-    left_join(recall, by = c("time", "participant_id")) |>
-    left_join(spr, by = c("time", "participant_id")) |>
-    left_join(maze, by = c("time", "participant_id"))
+  session_fields <- list(
+    condition, display_order, vp, news, age, gender, state, education,
+    political_affiliation, citizen, native, resident, election_pref, event, aware
+  )
+  walk(session_fields, \(df) assert_one_row_per_session(df, paste(names(df)[3], "field")))
+  assert_one_row_per_session(code, "code")
 
-  if (!has_aware_question) d$aware <- NA_character_
+  # --- Task data (several rows per session) ---
+  recall <- extract_field(lines, ",recall,", c(1, 2, 9), c("time", "participant_id", "recall_response")) |>
+    assert_one_row_per_session("recall")
+  cloze <- extract_field(lines, ",cloze,", c(1, 2, 4, 9), c("time", "participant_id", "cloze_item", "cloze_response")) |>
+    mutate(cloze_pronoun = classify_cloze_response(cloze_response))
 
-  d <- d |>
+  comprehension_key <- build_comprehension_key(stimuli_path, stimuli_mazerace_path)
+  comprehension <- extract_field(
+    lines, ",Question,[0-9]+,1,(spr|maze|mazerace),", c(1, 2, 6, 8, 9, 11),
+    c("time", "participant_id", "question_task", "question", "answer", "question_rt")
+  ) |>
+    left_join(comprehension_key, by = "question", relationship = "many-to-one") |>
+    mutate(correct = answer == correct_answer) |>
+    assert_one_row_per_session("comprehension")
+  if (anyNA(comprehension$correct_answer)) stop("Some comprehension questions are not in the stimulus answer key")
+
+  lookup <- build_stimulus_lookup(stimuli_path, stimuli_mazerace_path)
+
+  spr <- extract_field(
+    lines, ",0,spr(-practice)?,", c(1, 2, 4, 6, 8, 9, 10, 12),
+    c("time", "participant_id", "spr_item_no", "spr_type", "spr_word_no", "spr_word", "spr_word_rt", "spr_sens"),
+    character_cols = 10
+  ) |>
+    mutate(
+      # Ibex occasionally logs the RT of a sentence-final word as "None"
+      # (7 sessions pre, 1 post). Treat it as missing; anything else
+      # non-numeric is unexpected.
+      spr_word_rt = parse_rt_allowing_none(spr_word_rt),
+      spr_sens = str_replace_all(spr_sens, "%2C", ","),
+      spr_sens = str_replace_all(spr_sens, "%0A%0A", " "),
+      spr_word = str_replace_all(spr_word, "%2C", ",")
+    ) |>
+    left_join(lookup$stims, by = c("spr_sens" = "sens"), relationship = "many-to-one")
+
+  maze <- extract_field(
+    lines, "0,maze(-practice|race)?,", c(1, 2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15),
+    c(
+      "time", "participant_id", "maze_item_no", "maze_type", "maze_word_no", "maze_word",
+      "maze_distractor", "maze_word_location", "maze_word_correct",
+      "maze_word_rt", "maze_sens", "maze_word_time_to_correct"
+    )
+  ) |>
+    mutate(
+      maze_word_no = maze_word_no + 1, # align word count with spr
+      maze_sens = str_replace_all(maze_sens, "%2C", ","),
+      maze_word = str_replace_all(maze_word, "%2C", ","),
+      maze_distractor = str_replace_all(maze_distractor, "%2C", ",")
+    ) |>
+    left_join(lookup$stims, by = c("maze_sens" = "sens"), relationship = "many-to-one") |>
+    left_join(lookup$mazerace_stims, by = c("maze_sens" = "sens"), relationship = "many-to-one") |>
+    mutate(
+      sen_context = coalesce(sen_context.x, sen_context.y),
+      sen1 = coalesce(sen1.x, sen1.y)
+    ) |>
+    select(-ends_with(".x"), -ends_with(".y"), -ContextAlternatives, -SentenceAlternatives)
+
+  stopifnot(
+    "Experimental SPR rows did not all match a stimulus" =
+      !anyNA(spr$sen1[spr$spr_type == "spr"]),
+    "Experimental Maze rows did not all match a stimulus" =
+      !anyNA(maze$sen1[maze$maze_type != "maze-practice"])
+  )
+
+  # Every task row must belong to a session that has a code row.
+  for (task in list(spr = spr, maze = maze, cloze = cloze, recall = recall, comprehension = comprehension)) {
+    orphan <- anti_join(distinct(task, time, participant_id), code, by = session_keys)
+    if (nrow(orphan) > 0) stop(nrow(orphan), " task-row sessions have no code row")
+  }
+
+  rt_measures <- summarise_rt_measures(spr, maze)
+
+  # --- MTurk linkage ---
+  linkage <- mturk_linkage |>
+    filter(round == round_name) |>
+    mutate(time = as.character(time)) |>
+    select(-round)
+  if (nrow(linkage) != nrow(code)) {
+    stop("MTurk linkage has ", nrow(linkage), " rows for ", round_name, " but the raw log has ", nrow(code), " sessions")
+  }
+
+  # --- Assemble the sessions table ---
+  sessions <- reduce(session_fields, \(acc, df) left_join(acc, df, by = session_keys), .init = code) |>
+    left_join(recall, by = session_keys) |>
+    left_join(comprehension |> select(time, participant_id, comprehension_correct = correct), by = session_keys) |>
+    left_join(rt_measures$spr, by = session_keys) |>
+    left_join(rt_measures$maze, by = session_keys) |>
+    left_join(linkage, by = session_keys, relationship = "one-to-one")
+  if (nrow(sessions) != nrow(code)) stop("Building the sessions table changed the number of sessions")
+  if (anyNA(sessions$linked_to_mturk)) stop("Some sessions have no row in the MTurk linkage file")
+  if (!has_aware_question) sessions$aware <- NA_character_
+
+  sessions <- sessions |>
     mutate(
       candidate_value_dem = ifelse(display_order == "dem_first", candidate_1_value, candidate_2_value),
       candidate_value_rep = ifelse(display_order == "dem_first", candidate_2_value, candidate_1_value),
@@ -311,173 +527,49 @@ process_round <- function(raw_log_path, stimuli_path, stimuli_mazerace_path,
       candidate_value_sum = candidate_value_dem + candidate_value_rep + candidate_value_someone_else,
       candidate_prob_dem = candidate_value_dem / candidate_value_sum,
       candidate_prob_rep = candidate_value_rep / candidate_value_sum,
-      candidate_prob_someone_else = candidate_value_someone_else / candidate_value_sum
-    ) |>
-    select(-candidate_1_value, -candidate_2_value, -someone_else_value)
-
-  d$cloze_pronoun <- classify_cloze_response(d$cloze_response)
-
-  lookup <- build_stimulus_lookup(stimuli_path, stimuli_mazerace_path)
-  d <- d |>
-    unite(col = "sens", remove = FALSE, na.rm = TRUE, spr_sens, maze_sens) |>
-    left_join(lookup$stims, by = "sens") |>
-    left_join(lookup$mazerace_stims, by = "sens") |>
-    unite(col = "sen1", na.rm = TRUE, sen1.x, sen1.y) |>
-    unite(col = "sen_context", na.rm = TRUE, sen_context.x, sen_context.y) |>
-    mutate(
-      sen_context = ifelse(sen_context == "", NA, sen_context),
-      sen1 = ifelse(sen1 == "", NA, sen1)
-    )
-
-  d <- d |>
-    mutate(
+      candidate_prob_someone_else = candidate_value_someone_else / candidate_value_sum,
       submission_time = as.POSIXct(as.numeric(time), origin = "1970-01-01", tz = "UTC"),
-      sid_long = paste(time, participant_id, sep = "_")
+      round = round_name
     ) |>
-    select(-time)
+    select(-candidate_1_value, -candidate_2_value, -someone_else_value) |>
+    arrange(time, participant_id) |>
+    mutate(session_id = sprintf("%s_%04d", round_name, row_number())) |>
+    add_repeat_ranks() |>
+    add_exclusion_columns(round_name, previous_round_participant_ids) |>
+    add_original_replication_column()
 
-  subs <- levels(as.factor(d$sid_long))
-  d <- d |>
-    mutate(
-      sid = match(sid_long, subs),
-      sid = sprintf(paste0("Sub%0", max(nchar(sid)), "d"), sid)
-    )
+  exclusion_columns <- sessions |> select(starts_with("excl_"), starts_with("flag_"))
+  if (anyNA(exclusion_columns)) {
+    stop("NA in exclusion columns: ", toString(names(exclusion_columns)[colSums(is.na(exclusion_columns)) > 0]))
+  }
+  report_exclusions(sessions, round_name)
 
-  if (length(previous_round_participant_ids) > 0) {
-    message(
-      "process_round: excluding same-IP repeats against ",
-      length(previous_round_participant_ids), " participant IDs from the ",
-      "earlier round. This catches the same computer/IP being used in ",
-      "both rounds, but - unlike the original pipeline's WorkerId-based ",
-      "check, which isn't reproducible here (see STATUS.md) - it will ",
-      "miss someone who used a different IP/browser under the same MTurk ",
-      "account across rounds."
-    )
+  # --- Outputs: everything keyed by session_id, no raw keys ---
+  ids <- sessions |> select(time, participant_id, session_id, condition)
+  with_ids <- function(df) {
+    out <- df |> inner_join(ids, by = session_keys, relationship = "many-to-one")
+    if (nrow(out) != nrow(df)) stop("Attaching session_id dropped rows")
+    out |> select(session_id, condition, everything(), -time, -participant_id)
   }
 
-  # Repeat submissions within THIS round: since `participant_id` is a
-  # 1:1 relabeling of the raw log's IP hash (see deidentify_raw_logs.R),
-  # grouping by it reproduces the original repeat.md5 check exactly.
-  repeats <- d |>
-    distinct(sid_long, .keep_all = TRUE) |>
-    group_by(participant_id) |>
-    mutate(repeat_participant_id = submission_time > first(submission_time)) |>
-    ungroup() |>
-    select(sid_long, repeat_participant_id)
-
-  d <- d |>
-    left_join(repeats, by = "sid_long") |>
-    group_by(sid) |>
-    mutate(
-      spr_max_rt = max(spr_word_rt),
-      maze_max_rt = max(maze_word_rt),
-      spr_min_rt = min(spr_word_rt),
-      maze_min_rt = min(maze_word_rt)
-    ) |>
-    ungroup() |>
-    mutate(
-      excl_not_native = !is.na(native) & native != "yes",
-      excl_repeat_participant = coalesce(repeat_participant_id, FALSE),
-      excl_participated_in_previous_round = participant_id %in% previous_round_participant_ids,
-      excl_spr_rt_too_slow = !is.na(spr_max_rt) & spr_max_rt >= RT_MAX_MS,
-      excl_spr_rt_too_fast = !is.na(spr_min_rt) & spr_min_rt <= RT_MIN_MS,
-      excl_maze_rt_too_slow = !is.na(maze_max_rt) & maze_max_rt >= RT_MAX_MS,
-      excl_maze_rt_too_fast = !is.na(maze_min_rt) & maze_min_rt <= RT_MIN_MS,
-      excl_no_slider_movement = candidate_value_dem == 0 &
-        candidate_value_rep == 0 & candidate_value_someone_else == 0
-    )
-
-  # Build a human-readable excl_reason (e.g. "not_native;spr_rt_too_slow")
-  # from the boolean flags above, one row at a time - done as a matrix
-  # + apply() rather than a vectorized c()-index, since the flags are
-  # per-row and need to stay aligned within a row, not concatenated
-  # across rows.
-  reason_labels <- c(
-    "not_native", "repeat_participant", "participated_in_previous_round",
-    "spr_rt_too_slow", "spr_rt_too_fast",
-    "maze_rt_too_slow", "maze_rt_too_fast", "no_slider_movement"
-  )
-  reason_flags <- d |>
-    select(
-      excl_not_native, excl_repeat_participant, excl_participated_in_previous_round,
-      excl_spr_rt_too_slow, excl_spr_rt_too_fast, excl_maze_rt_too_slow,
-      excl_maze_rt_too_fast, excl_no_slider_movement
-    ) |>
-    as.matrix()
-  d$excl_reason <- apply(reason_flags, 1, function(row) {
-    matched <- reason_labels[row]
-    if (length(matched) == 0) NA_character_ else paste(matched, collapse = ";")
-  })
-  d$excl <- !is.na(d$excl_reason)
-
-  d <- d |>
-    select(
-      -spr_max_rt, -maze_max_rt, -spr_min_rt, -maze_min_rt, -repeat_participant_id,
-      -excl_not_native, -excl_repeat_participant, -excl_participated_in_previous_round,
-      -excl_spr_rt_too_slow, -excl_spr_rt_too_fast, -excl_maze_rt_too_slow,
-      -excl_maze_rt_too_fast, -excl_no_slider_movement
-    )
-
-  n_participants <- n_distinct(d$sid)
-  n_excluded <- n_distinct(d$sid[d$excl])
-  message(
-    "process_round: ", n_participants, " participants total, ",
-    n_excluded, " excluded (", round(100 * n_excluded / n_participants, 1), "%). ",
-    "Breakdown (participants can match more than one reason):"
-  )
-  d |>
-    distinct(sid, excl_reason) |>
-    filter(!is.na(excl_reason)) |>
-    separate_rows(excl_reason, sep = ";") |>
-    count(excl_reason) |>
-    pwalk(\(excl_reason, n) message("  - ", excl_reason, ": ", n))
-
-  d <- d |> filter(!excl)
-
-  participants <- d |>
-    distinct(
-      sid, participant_id, submission_time, condition, display_order,
-      asked_about_vp, news_consumption, age, gender, state, education,
-      political_affiliation, citizen, native, resident, election_pref, aware
-    )
-
-  expectations <- d |>
-    filter(!is.na(candidate_prob_dem)) |>
-    distinct(
-      sid, candidate_value_dem, candidate_value_rep, candidate_value_someone_else,
-      candidate_prob_dem, candidate_prob_rep, candidate_prob_someone_else
-    )
-
-  cloze_out <- d |>
-    filter(!is.na(cloze_response)) |>
-    distinct(sid, condition, cloze_item, cloze_response, cloze_pronoun)
-
-  recall_out <- d |>
-    filter(!is.na(recall_response)) |>
-    distinct(sid, condition, recall_response)
-
-  maze_out <- d |>
-    filter(!is.na(maze_word)) |>
-    select(
-      sid, condition, maze_item_no, maze_word_no, maze_word, maze_distractor,
+  list(
+    sessions = sessions |>
+      select(session_id, round, participant_id, worker, submission_time, everything(), -time),
+    expectations = sessions |>
+      filter(!is.na(candidate_prob_dem)) |>
+      select(session_id, condition, starts_with("candidate_")),
+    cloze = with_ids(cloze),
+    recall = with_ids(recall),
+    comprehension = with_ids(comprehension),
+    maze = with_ids(maze |> select(
+      time, participant_id, maze_item_no, maze_type, maze_word_no, maze_word, maze_distractor,
       maze_word_location, maze_word_correct, maze_word_rt, maze_word_time_to_correct,
       sen_context, sen1, pro1_type, pro1, pro1_pos, pro2_type, pro2, pro2_pos,
       raceadj, raceadj_pos
-    )
-
-  spr_out <- d |>
-    filter(!is.na(spr_word)) |>
-    select(
-      sid, condition, spr_item_no, spr_word_no, spr_word, spr_word_rt,
+    )),
+    spr = with_ids(spr |> select(
+      time, participant_id, spr_item_no, spr_type, spr_word_no, spr_word, spr_word_rt,
       sen_context, sen1, pro1_type, pro1, pro1_pos, pro2_type, pro2, pro2_pos
-    )
-
-  list(
-    participants = participants,
-    expectations = expectations,
-    cloze = cloze_out,
-    recall = recall_out,
-    maze = maze_out,
-    spr = spr_out
+    ))
   )
 }
