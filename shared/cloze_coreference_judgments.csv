@@ -1,0 +1,104 @@
+study,cloze_item,response,coref_she,coref_he,coref_they,coref_hedge,coref_other_she,coref_other_he,coref_other_they,coref_other_hedge,note
+2020,1,He is Donald Trump,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,"'he' is Donald Trump, not the vice president"
+2020,1,the Vice-President's vote will give the majority to his or her party.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,1,the Vice-president's vote will give the majority to his or her party.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,1,the vice president breaks the tie with his or her vote.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,1,the vice president chooses their party's side,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,2,"the vice president will act as president, if the president cannot perform his duties.",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,'his' is the president
+2020,2,she is president,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,2,"and the president is unable to fulfill his duty as president of the United States of America, the vice-president will take his place.",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,'his' is the president
+2020,2,he would become president.,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,2,he or she will need to step in and act as the President.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,2,their good and bad qualities should be considered almost as much as those of the president,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,2,he may be very busy shoukld the president take ill.,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,2,they could be elevated to president quite easily,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,2,he will become president.,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,2,she must be prepare to lead if the worst were to happen to the president.,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,2,she would become the president.,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,2,he or she will play a pivotal role.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,2,it might become necessary for them to act if the president is unable to.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,2,he or she will be extremely important.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,3,"As a historian who has taught and written about the Constitution for over 40 years, however, I know that one thing is certain. President Trump’s term will end at noon on Jan. 20, 2021. At that same instant, either he will begin a second term, or the country will have a new chief executive.  The framers of the Constitution did not establish a specific day that presidential terms end, but they were very clear that the president “shall hold his Office during the Term of four Years.” Not four years and a day. Not three years and 364 days. Four years.",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,pasted text (news article); 'he' is Trump
+2020,3,him or her.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,4,they meet with many world leaders.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,4,she will do for Biden.,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,4,"Two vice presidents, George Clinton and John C. Calhoun, held the office under two different presidents. Of the 14 vice presidents who fulfilled their ambition by achieving the presidency, eight succeeded to the office on the death of a president, and four of these were later elected president.",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,pasted text (encyclopedia); 'their' is past vice presidents
+2020,4,they will be preoccupied with foreign relations while the president secures their position back home.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,first 'they' is the vice president; 'their' is the president
+2020,4,we can expect that they will be meeting with many leaders both domestically and at home.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,4,they will be very busy meeting with foreign leaders.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,4,he or she will be extremely busy.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,5,his or her family.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,5,their family members.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,6,"WHETHER OR NOT THE VIC PRESIDENT GIVES MANY SPEECHES DURING THE FIRST MONTHS AT THIS TERM STARTING IN JANUARY 2021, A IS THAT SHE WILL BE CLOSELY SCRUTINIZED BY THE MEDIA",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,copied another item's stimulus sentence
+2020,6,his safety and the ability to take over if the president becomes incapacitated.,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,'his' is the vice president
+2020,7,he will be the president,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,ambiguous: 'he' may be the president
+2020,7,they will decide a split senate vote.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,8,them to get to work right away for the American people.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,'them' most plausibly the vice president
+2020,8,"Donald Trump is sworn in as president of the United States ... 20, 2021, with the start of a new term – for him, or someone else. ... With so much unclear about the upcoming presidential election, it's nice to know that there is one absolute ... However, they were emphatic that the president would serve for a .",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,"pasted text (news article); 'him' is Trump, 'they' others"
+2020,8,her to communication the desires of the President.,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,8,him or her to be very busy.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,9,"President Trump and Democratic nominee Joe Biden have wrapped their second and final debate of the 2020 campaign. The debate covered the novel coronavirus and the federal government’s response; national security, the election and China; American families, poverty and federal relief; immigration; race in America; and climate change. The final question to each candidate was on what they would say at a 2021 inauguration to Americans who did not vote for them.",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,pasted text (news article); 'their' is Trump and Biden
+2020,9,will face scrutiny by the media when they eventually make numerous appearances in fulfilling their obligations to the American people.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,9,he will make himself known as the race for president culminates,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,'he' most plausibly the vice president
+2020,10,the president himself will.,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,'himself' is the president
+2020,10,they will support the President as the face of the United States.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,10,people will vote for their candidate,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,'their' is voters
+2020,10,he/she will accompany the President.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,10,they will support the president.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,10,she will give a speech when they win the election.,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,'they' is the winning ticket
+2020,10,he/she will give a speech eventually.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,10,he or she will make some sort of public announcement.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,10,he or she will at some point,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,10,they will be involved with Congress and transition.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,10,he or she will be very busy.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,11,they will do everything they can to help the american people,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,11,it is expected that he/she will face many obstacles,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,12,they were emphatic that the president would serve for a defined period.,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,pasted text; 'they' are others
+2020,12,"Worst for Trump, he's now behind in the count in states he needs to win — so it ... If the election comes down to Pennsylvania, we would have the scenario for Bush v. ... And given the unexpectedly tight race, Pennsylvania's 20 electoral votes may be",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,pasted text (news article); 'he' is Trump
+2020,12,they will need to rise up to meet that challenge alongside the president.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2020,12,then the vice president takes over until the president is able to take up his or her duties again.,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,'his or her' is the president
+2020,12,he or she will become extremely important.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2020,12,he or she will have to act decisively.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,1,They will do is throw a massive pizza party,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,1,"The next U.S. president, sworn in January 2025, will likely focus on addressing major challenges such as economic recovery, healthcare reform, and climate change. They will also need to manage foreign relations and work to unite a polarized nation. Early in their term, they will appoint a new cabinet, set legislative priorities, and begin shaping their administration's long-term vision.",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,pasted or generated essay
+2024,1,the new president will do is introduce themselves to staff,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,1,he or she will do is send billions of dollars to fund the genocide in Palestine.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,1,the new president will likely do is meet with their key advisors to discuss immediate policy priorities and challenges facing the nation.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,1,the president will do is appoint her/his cabinet.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,2,their plan to improve the country.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,2,the whole country to come together and forget their political differences and work towards prosperity.,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,'their' is the country's people
+2024,2,how much he/she will do for the country.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,2,"That depends on who is elected. If Donald Trump is elected, he will ddiscuss immigration and the economy. If Harris is elected, she will discuss the new taxes that she plans to implement.",TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,"conditional: 'he' if Trump is elected, 'she' if Harris is"
+2024,3,his family and the vice president and his family.,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,first 'his' is the president; second is the vice president
+2024,3,serve their country.,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,'their' is the Secret Service
+2024,3,his family and vice president,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,3,and keep him or her safe,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,3,ensure that he/she is secured and safe from threats.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,4,"The next US president will be sworn into office in January 2025. The entire world will be watching the president when they deliver their inaugural speech, outlining their vision for the future and setting the tone for their administration.",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,"repeats the prompt, then a generated-sounding continuation"
+2024,4,"The next US president will be sworn into office in January 2025. The entire world will be watching the president when they outline their vision for domestic and international policies, addressing key issues such as climate change, economic recovery, and geopolitical tensions, which will significantly impact global stability and cooperation",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,"repeats the prompt, then a generated-sounding continuation"
+2024,4,he or she is sworn in.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,4,he/she accepts the honor,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,5,"he has made, but we do have confidence that he will keep them.",FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,5,they made during the election to the American people.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,5,he or she spoke about while campaigning.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,5,they will improve the nation's economy.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,8,they will serve the country for the next four years.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,8,she will hold Donald Trump accountable for his crimes.,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,"'his' is Trump, not the president"
+2024,8,"they will be responsible for the nation, making important decisions and executing policies they believe will make the country a better place.",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,8,they will lead the country and respresent the citizens for the next 4 years.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,8,they will be in charge of the nation.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,8,he/she will uphold all virtues that will reflect on our nation.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,8,they will take on the necessary roles to lead our country.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,8,"he/she is a part of the Executive branch that is separate from the legislative, and judicial branches.",FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,8,he/she will be the leader of the United States of America.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,9,the most daunting is to unify Americans in support of their government.,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,'their' is Americans
+2024,10,waiting to drive him or her to the White House after the swearing in ceremony.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,11,he or she lives.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,11,he decides to allow them to.,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,'them' is the press
+2024,11,"they go, covering every major decision, public appearance, and policy announcement to keep the nation informed.",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,11,he or she goes.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,11,he/she goes and whatever they do leading up to their time at inaugoration,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,'he/she' and 'they'/'their' both the president
+2024,11,he/she goes under a microscope in order to see how this person helps the country after this important election.,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,
+2024,11,he goes and they will report on everything he does.,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,'they' is the press
+2024,12,that they will arrive safely at the White House.,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,
+2024,10,Kamala with Donald running after it crying says the election was stolen from him again,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,"'him' is Trump, who lost in this completion"

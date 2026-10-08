@@ -224,14 +224,23 @@ process_wave <- function(trials_path, cloze_stim_path, comp_q_path, maze_stim_pa
     left_join(stim$cloze_stim, join_by(item)) |>
     rename(prompt = partial, cloze_item = item)
   if (anyNA(cloze$prompt)) stop("Cloze items without a prompt in the stimulus file")
+  settings <- cloze_coding_settings[["2024"]]
   cloze <- cloze |>
     bind_cols(code_cloze_response(
       cloze$response,
-      female_names = "harris|kamala",
-      male_names = "trump|donald",
-      other_names = NA,
-      them_not_referential = str_detect(cloze$prompt, "one of\\s*$")
+      female_names = settings$female_names,
+      male_names = settings$male_names,
+      other_names = settings$other_names,
+      them_not_referential = str_detect(cloze$prompt, "one of\\s*$"),
+      target_office = settings$target_office
     )) |>
+    bind_cols(flag_cloze_nonsense(cloze$response, cloze$prompt, study = "2024", cloze$cloze_item,
+                                  judgments = read_cloze_single_word_judgments(),
+                                  pasted_text = read_cloze_pasted_text())) |>
+    (\(df) bind_cols(df, code_cloze_coreference(df$response, study = "2024", df$cloze_item,
+                                                reference_columns = df, target_office = settings$target_office,
+                                                judgments = read_cloze_coreference_judgments(),
+                                                them_not_referential = str_detect(df$prompt, "one of\\s*$"))))() |>
     mutate(
       cloze_code_original = classify_cloze_response_original(response),
       cloze_code_original = if_else(

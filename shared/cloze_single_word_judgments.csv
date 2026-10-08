@@ -1,0 +1,142 @@
+study,cloze_item,word,n_responses,sensible,reason_if_not
+2020,1,april,1,FALSE,unrelated to the sentence
+2020,1,joe,1,TRUE,
+2020,1,president,1,TRUE,
+2020,1,tie,1,FALSE,cannot continue 'then ...'
+2020,2,america,1,FALSE,cannot continue the sentence
+2020,2,congrass,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,2,daily,1,FALSE,cannot continue the sentence
+2020,2,election,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,2,maybe,1,FALSE,cannot continue the sentence
+2020,2,nothing,1,FALSE,cannot continue the sentence
+2020,2,presidency,1,FALSE,cannot continue the sentence
+2020,2,president,2,TRUE,
+2020,2,presidential,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,2,taken,1,FALSE,cannot continue the sentence
+2020,2,th,1,FALSE,fragment
+2020,3,america,2,TRUE,
+2020,3,anyone,1,TRUE,
+2020,3,candidates,1,TRUE,
+2020,3,congrass,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,3,drumb,1,TRUE,
+2020,3,good,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,3,government,1,TRUE,
+2020,3,her,6,TRUE,
+2020,3,him,6,TRUE,
+2020,3,missile,1,FALSE,unrelated to the sentence
+2020,3,people,1,TRUE,
+2020,3,presidents,1,TRUE,
+2020,3,presitent,1,TRUE,
+2020,3,them,7,TRUE,
+2020,3,trump,1,TRUE,
+2020,3,vicepresident,1,TRUE,
+2020,3,war,1,FALSE,unrelated to the sentence
+2020,3,work,1,FALSE,cannot continue 'responsibility for ...'
+2020,4,election,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,4,follow,1,FALSE,cannot continue the sentence
+2020,4,government,1,FALSE,cannot continue the sentence
+2020,4,june,1,TRUE,
+2020,4,march,1,TRUE,
+2020,5,family,1,TRUE,
+2020,5,international,1,FALSE,cannot continue 'the vice president and ...'
+2020,5,national,1,FALSE,cannot continue 'the vice president and ...'
+2020,5,precident,1,TRUE,
+2020,5,president,44,TRUE,
+2020,5,presidential,3,FALSE,word recurs as a one-word answer across many unrelated items
+2020,5,primeminister,1,TRUE,
+2020,5,trumph,1,TRUE,
+2020,6,aircraft,1,FALSE,cannot continue 'guarantee ...'
+2020,6,arrival,1,TRUE,
+2020,6,congrass,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,6,dot,1,FALSE,unrelated to the sentence
+2020,6,during,1,FALSE,cannot continue 'guarantee ...'
+2020,6,election,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,6,good,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,6,him,1,TRUE,
+2020,6,nice,1,FALSE,cannot continue 'guarantee ...'
+2020,6,president,2,TRUE,
+2020,6,presidential,1,TRUE,
+2020,6,safett,1,TRUE,
+2020,6,safety,16,TRUE,
+2020,6,security,3,TRUE,
+2020,6,trump,1,TRUE,
+2020,7,biden,1,TRUE,
+2020,7,continues,1,FALSE,cannot continue the sentence
+2020,7,election,5,FALSE,word recurs as a one-word answer across many unrelated items
+2020,7,he,1,TRUE,
+2020,7,presidency,1,FALSE,cannot continue the sentence
+2020,7,safety,1,FALSE,unrelated to the sentence
+2020,7,service,1,FALSE,unrelated to the sentence
+2020,7,she,1,TRUE,
+2020,7,us,1,TRUE,
+2020,7,year,1,FALSE,cannot continue the sentence
+2020,8,agreements,1,TRUE,
+2020,8,anything,1,TRUE,
+2020,8,change,1,TRUE,
+2020,8,election,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,8,good,4,TRUE,
+2020,8,her,1,TRUE,
+2020,8,maybe,1,FALSE,cannot continue 'we can expect ...'
+2020,8,meet,1,FALSE,cannot continue 'we can expect ...'
+2020,8,ms,1,TRUE,
+2020,8,nothing,2,TRUE,
+2020,8,pasta,1,FALSE,answer to the bot-screening question
+2020,8,presidential,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,8,proud,1,FALSE,cannot continue 'we can expect ...'
+2020,8,republics,1,FALSE,unrelated to the sentence
+2020,8,soon,1,FALSE,cannot continue 'we can expect ...'
+2020,8,success,1,TRUE,
+2020,9,april,1,FALSE,cannot continue 'but surely ...'
+2020,9,fine,1,FALSE,cannot continue 'but surely ...'
+2020,9,good,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,9,hilary,1,FALSE,unrelated to the sentence
+2020,9,how,1,FALSE,cannot continue 'but surely ...'
+2020,9,joe,1,TRUE,
+2020,9,not,2,TRUE,
+2020,9,participate,1,FALSE,cannot continue 'but surely ...'
+2020,9,president,2,TRUE,
+2020,9,results,1,TRUE,
+2020,9,voted,1,FALSE,cannot continue 'but surely ...'
+2020,9,will,1,FALSE,cannot continue 'but surely ...'
+2020,10,congrass,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,10,good,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,10,may2021,1,FALSE,cannot continue 'it is likely that ...'
+2020,10,president,1,TRUE,
+2020,10,real,1,FALSE,cannot continue 'it is likely that ...'
+2020,10,true,1,FALSE,cannot continue 'it is likely that ...'
+2020,11,badly,1,FALSE,cannot continue 'but ...'
+2020,11,biden,1,TRUE,
+2020,11,congrass,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,11,did,1,FALSE,cannot continue 'but ...'
+2020,11,exact,1,FALSE,cannot continue 'but ...'
+2020,11,good,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,11,her,1,TRUE,
+2020,11,like,1,FALSE,cannot continue 'but ...'
+2020,11,president,1,TRUE,
+2020,12,biden,1,TRUE,
+2020,12,congrass,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,12,good,1,FALSE,word recurs as a one-word answer across many unrelated items
+2020,12,none,1,FALSE,cannot continue 'then ...'
+2020,12,nothing,1,TRUE,
+2020,12,president,1,TRUE,
+2020,12,year,1,FALSE,cannot continue 'then ...'
+2024,2,democracy,1,TRUE,
+2024,2,peace,1,TRUE,
+2024,2,power,1,TRUE,
+2024,2,racism,1,TRUE,
+2024,2,unity,1,TRUE,
+2024,3,celebrate,1,FALSE,cannot continue 'the president and ...'
+2024,3,vicepresident,1,TRUE,
+2024,3,vp,1,TRUE,
+2024,9,crime,1,TRUE,
+2024,9,economy,1,TRUE,
+2024,9,immigration,1,TRUE,
+2024,9,many,2,TRUE,
+2024,9,them,1,TRUE,
+2024,10,armored,1,TRUE,
+2024,10,black,2,TRUE,
+2024,10,happy,1,FALSE,cannot describe a motorcade
+2024,10,large,3,TRUE,
+2024,10,long,3,TRUE,
+2024,10,presidental,1,TRUE,
+2024,12,safety,10,TRUE,

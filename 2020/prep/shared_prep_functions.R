@@ -637,13 +637,22 @@ build_common_tables <- function(sessions, cloze, recall, comprehension, spr, maz
     rename(cloze_code_original = cloze_pronoun) |>
     select(-cloze_response)
   if (anyNA(cloze$prompt)) stop("Cloze items without a prompt")
+  settings <- cloze_coding_settings[["2020"]]
   cloze <- bind_cols(cloze, code_cloze_response(
     cloze$response,
-    female_names = "harris|kamala",
-    male_names = "pence",
-    other_names = "biden|trump",
-    them_not_referential = str_detect(cloze$prompt, "one of\\s*$")
+    female_names = settings$female_names,
+    male_names = settings$male_names,
+    other_names = settings$other_names,
+    them_not_referential = str_detect(cloze$prompt, "one of\\s*$"),
+    target_office = settings$target_office
   )) |>
+    bind_cols(flag_cloze_nonsense(cloze$response, cloze$prompt, study = "2020", cloze$cloze_item,
+                                  judgments = read_cloze_single_word_judgments(),
+                                  pasted_text = read_cloze_pasted_text())) |>
+    (\(df) bind_cols(df, code_cloze_coreference(df$response, study = "2020", df$cloze_item,
+                                                reference_columns = df, target_office = settings$target_office,
+                                                judgments = read_cloze_coreference_judgments(),
+                                                them_not_referential = str_detect(df$prompt, "one of\\s*$"))))() |>
     with_ids()
 
   # Reading: SPR and Maze/mazerace words, critical and practice trials.

@@ -101,13 +101,25 @@ Biden/Trump, 2024 sessions Harris/Trump.
 | `prompt` | The text shown before the blank |
 | `response` | The completion as typed (Ibex comma encoding decoded) |
 | `cloze_code` | Shared coding of the **first** referring expression in the completion (see below) |
-| `has_she`, `has_he`, `has_they`, `has_hedge`, `has_female_candidate_name`, `has_male_candidate_name`, `has_other_candidate_name`, `has_generic_np` | Whether each kind of reference appears anywhere in the completion |
+| `has_she`, `has_he`, `has_they`, `has_hedge`, `has_female_candidate_name`, `has_male_candidate_name`, `has_other_candidate_name`, `has_target_office_np`, `has_other_office_np`, `has_generic_np` | Whether each kind of reference appears anywhere in the completion (categories as for `cloze_code`, below) |
+| `coref_she`, `coref_he`, `coref_they`, `coref_hedge` | Whether a pronoun of that kind in the completion refers to the holder of the **target office**, the office the item is about (2020: the vice president; 2024: the president). `has_*` = the pronoun appears at all (see below) |
+| `coref_other_she`, `coref_other_he`, `coref_other_they`, `coref_other_hedge` | Whether a pronoun of that kind refers to the holder of the **other office** (2020: the president, as in "if the president cannot perform *his* duties"; 2024: the vice president) |
+| `first_coref_pronoun` | Which kind of pronoun referring to the target office-holder comes first: `she`, `he`, `they`, `hedged`, or `none`. A hedge ("his or her") counts as one hedge, not as "his" and "her" |
+| `cloze_nonsense` | The completion is obvious nonsense (see below) |
+| `cloze_nonsense_reason` | Why: `blank`, `filler_or_number`, `pasted_id`, `copied_context`, `pasted_text` or `single_word`; NA if not flagged |
 
 `cloze_code` values: `she`, `he`, `they`, `hedged` ("he or she", "s/he",
 "his or her"…), `female_candidate_name` (Harris), `male_candidate_name`
 (2020: Pence; 2024: Trump), `other_candidate_name` (2020 only: Biden or
-Trump, who held the other office), `generic_np` ("the president", "the new
-vice president"…), `other` (no reference found), `blank`.
+Trump, candidates for the other office), `target_office_np` (a noun phrase
+for the office the item is about; 2020: "the vice president", "the next
+VP"; 2024: "the president", "the new president"), `other_office_np` (the
+other office; 2020: "the president"; 2024: "the vice president"),
+`generic_np` ("the winner", "the candidate": neither office), `other` (no
+reference found), `blank`. Office nouns count after a determiner ("the",
+"next", "our", "US"…) or at the very start of the completion ("vice
+president" after "…protect the president and"), not as a bare predicate
+("will become president").
 
 The shared coder is `code_cloze_response()` in `shared/common_schema.R`.
 Each study also keeps its original coding as `cloze_code_original`. The two
@@ -123,6 +135,46 @@ mostly agree; the main differences are:
   response instead of the prompt, so it never applied, and about 31 such
   completions were coded as singular *they*. The shared coder handles this
   correctly.
+
+`coref_*` is set by `code_cloze_coreference()` in `shared/common_schema.R`.
+A completion is coded by rule when it is simple: exactly one pronoun kind,
+no name of a candidate for the other office, not both candidates' names, no
+mention of the other office, and, for *they*, no other group of people it
+could refer to ("the people", "Congress"...). Then that pronoun refers to the
+office-holder. A hand check of 65 rule-coded completions found one error
+("…claim the election was stolen from him", where *him* is Trump as the
+loser). Every other completion with a pronoun (about 100) is coded by hand
+in `shared/cloze_coreference_judgments.csv`, keyed by study, item and exact
+response, with a note on non-obvious cases. Examples coded as not referring
+to the office-holder: "the vice president will act as president if the
+president cannot perform *his* duties" (2020), "…wherever he goes and
+*they* will report" (*they* = the press). The prep stops if a completion
+needing a hand judgment has none. Pasted text among them is flagged by
+`cloze_nonsense` (reason `pasted_text`).
+
+`cloze_nonsense` is set by `flag_cloze_nonsense()` in
+`shared/common_schema.R`, identically for both studies:
+- `blank`: nothing typed.
+- `filler_or_number`: only "yes", "no", "ok", "idk" or similar, or only
+  digits (e.g. "1", "34", which recur across many 2020 items).
+- `pasted_id`: the participant's Prolific ID (redacted in this repo).
+- `copied_context`: a word-for-word piece of the context sentence, at least
+  two words, e.g. "next presidential", "January 20, 2021".
+- `pasted_text`: pasted text, judged by hand in `shared/cloze_pasted_text.csv`
+  (news articles, encyclopedia text, an ad, another item's stimulus, and
+  essays that repeat the prompt before continuing). Found by reviewing every
+  completion of 15+ words or containing "..."; the file also lists 6
+  polished, generated-sounding completions that are *not* flagged
+  (`pasted` = FALSE), for review.
+- `single_word`: one word judged not to be a sensible continuation of that
+  item ("aircraft" after "…well-equipped to guarantee"). Judgments are by
+  hand, in `shared/cloze_single_word_judgments.csv` (one row per study x item
+  x word, with a reason for each "not sensible"). Sensible single words,
+  including pronouns and names, are not flagged. The prep stops if a
+  single-word completion has no judgment.
+
+Short off-topic completions that are neither copied nor pasted ("winning
+moment") are not flagged.
 
 ### `reading` (one row per word, Maze/mazerace/SPR, critical and practice trials)
 
