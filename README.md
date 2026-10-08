@@ -45,6 +45,8 @@ each study's `README.md`.
 
 ## What's not here (yet)
 
+Open work items are listed in `TODO.md`.
+
 - The 2020 pilots (pilot-01/02/03) and the informal 2020 gender-pro-maze
   pilot - background/exploratory data, out of scope for now.
 - Any actual analysis, including the analysis-stage choices (RT windows,
