@@ -23,8 +23,8 @@ library(tibble)
 library(here)
 
 round_levels <- c("pre", "post")
-set_levels <- c("main", "comprehension", "strict_timing", "high_attention", "no_us_exclusion", "task_first",
-                "original")
+set_levels <- c("main", "comprehension", "strict_timing", "high_attention", "no_us_exclusion",
+                "all_pronoun_clozes", "task_first", "original")
 
 default_analysis_settings <- list(
   # RT window (ms): what counts as "too fast" / "too slow".
@@ -125,6 +125,8 @@ load_analysis_data <- function(settings = default_analysis_settings) {
            excl_participant_without_us = if_any(all_of(setdiff(participant_steps, "step_4_not_us"))),
            excl_main = if_any(all_of(step_cols)),
            excl_main_without_us = if_any(all_of(setdiff(step_cols, "step_4_not_us"))),
+           excl_main_without_nonsense = if_any(all_of(setdiff(step_cols, "step_8_cloze_nonsense"))),
+           has_target_pronoun = session_id %in% filter(cloze, first_coref_pronoun != "none")$session_id,
            sliders_all_zero = is.na(expect_prob_dem),
            comprehension_correct = comprehension_n > 0 & comprehension_n_correct == comprehension_n,
            any_word_outside_window = is_reading & session_id %in% outside_window_sessions$session_id)
@@ -136,6 +138,9 @@ load_analysis_data <- function(settings = default_analysis_settings) {
     high_attention = filter(sessions, !excl_main, !is_reading | comprehension_correct, !any_word_outside_window,
                             !sliders_all_zero),
     no_us_exclusion = filter(sessions, !excl_main_without_us),
+    # Main, plus cloze sessions dropped only as nonsense whose completion has
+    # a pronoun referring to the office-holder (robustness, decided 2026-10-08).
+    all_pronoun_clozes = filter(sessions, !excl_main_without_nonsense, !step_8_cloze_nonsense | has_target_pronoun),
     task_first = filter(sessions, !excl_main, task_order == "task_first"),
     original = filter(sessions, !excl_task_original)
   ) |>

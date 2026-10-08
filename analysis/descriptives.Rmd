@@ -9,7 +9,7 @@ output:
 params:
   # Which session set the main figures use. One of the sets defined in the
   # "Session sets" section: "main", "comprehension", "strict_timing",
-  # "high_attention", "no_us_exclusion", "task_first", "original". The robustness section
+  # "high_attention", "no_us_exclusion", "all_pronoun_clozes", "task_first", "original". The robustness section
   # shows all of them.
   main_set: "main"
   # RT window (ms): the word-level filter for the RT plots, and what counts
@@ -400,6 +400,10 @@ All figures draw on one of these sets of sessions. The main figures use
   and, for every task, dropping sessions whose event sliders were all left
   at 0 (in main, those sessions keep their task data).
 - **no_us_exclusion**: main without step 4 (citizenship/residence).
+- **all_pronoun_clozes**: main, plus cloze sessions dropped only as nonsense
+  (step 8) whose completion has a pronoun referring to the office-holder.
+  Checks that the nonsense judgments (pasted, generated-sounding or garbled
+  text) don't drive the pronoun results; it differs from main only for cloze.
 - **task_first**: main, restricted to sessions that did the critical task
   before the event sliders.
 - **original**: each study's original pipeline rules
