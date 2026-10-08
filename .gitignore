@@ -4,3 +4,12 @@
 
 # Private planning correspondence (emails, Drive notes); never commit
 planning-records/
+
+# Model fits and cluster job logs (large / machine-specific)
+analysis/models/fits/
+analysis/models/cluster/logs/
+
+# Python environment for shared/cloze_review/
+.venv/
+__pycache__/
+.pytest_cache/

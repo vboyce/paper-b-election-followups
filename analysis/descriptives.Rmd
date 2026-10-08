@@ -1,0 +1,1204 @@
+---
+title: "2020 & 2024 election studies: data, exclusions and descriptive results"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+params:
+  # Which session set the main figures use. One of the sets defined in the
+  # "Session sets" section: "main", "comprehension", "strict_timing",
+  # "high_attention", "no_us_exclusion", "task_first", "original". The robustness section
+  # shows all of them.
+  main_set: "main"
+  # RT window (ms): the word-level filter for the RT plots, and what counts
+  # as "too fast" / "too slow" in the exclusions.
+  rt_min: 180
+  rt_max: 5000
+  # Default exclusion: drop reading sessions with more than this many
+  # critical-trial words under rt_min.
+  max_words_too_fast: 2
+  # Default exclusion: drop Maze/mazerace sessions whose proportion of
+  # critical-trial words chosen correctly on the first try is below this.
+  maze_accuracy_min: 0.8
+  # RT plots: keep only Maze words chosen correctly on the first try.
+  maze_correct_only: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE,
+                      fig.width = 8, fig.height = 4)
+library(tidyverse)
+library(here)
+library(knitr)
+library(kableExtra)
+
+theme_set(theme_bw())
+dodge <- position_dodge(width = .2)
+
+# One colour per level, used in every figure.
+pronoun_colors <- c(she = "#D95F02", he = "#1B9E77", they = "#7570B3")
+pronoun_scale <- scale_color_manual(values = pronoun_colors, breaks = names(pronoun_colors))
+# Recall answers use the matching pronoun colours (female candidate = she, ...).
+recall_colors <- c("Kamala Harris" = "#D95F02", "Mike Pence" = "#1B9E77", "Donald Trump" = "#1B9E77",
+                   "Writer is unsure" = "#7570B3", "I don't remember" = "grey60")
+# Data loading, exclusions and session sets, shared with analysis/models/.
+source(here("analysis", "analysis_data.R"))
+stopifnot(params$main_set %in% set_levels)
+
+# Points are means, error bars bootstrapped 95% CIs, lines connect means.
+line_with_errorbars <- function(dodge = position_dodge(width = .2)) {
+  list(
+    stat_summary(fun.data = "mean_cl_boot", geom = "pointrange", position = dodge),
+    stat_summary(fun = "mean", geom = "line", position = dodge)
+  )
+}
+
+show_table <- function(df, caption = NULL) {
+  kable(df, caption = caption, format.args = list(big.mark = ",")) |>
+    kable_styling(bootstrap_options = c("striped", "condensed"), full_width = FALSE)
+}
+```
+
+This document is generated from the processed data in this repo
+(`combined/` plus each study's `processed/` tables; see `DATA.md`). The main
+figures use the **`r params$main_set`** session set (defined under
+*Session sets*), a word-level RT window of
+**`r params$rt_min`–`r params$rt_max` ms**, and Maze correct-first-try only =
+**`r params$maze_correct_only`**. These are `params` in the YAML header, so
+the same document can be re-rendered under other choices:
+
+```
+rmarkdown::render("analysis/descriptives.Rmd", params = list(main_set = "comprehension"))
+```
+
+
+```{r load}
+analysis_data <- load_analysis_data(list(
+  rt_min = params$rt_min, rt_max = params$rt_max,
+  max_words_too_fast = params$max_words_too_fast, maze_accuracy_min = params$maze_accuracy_min
+))
+sessions <- analysis_data$sessions
+cloze <- analysis_data$cloze
+reading <- analysis_data$reading
+critical_words <- analysis_data$critical_words
+recall <- analysis_data$recall
+step_cols <- analysis_data$step_cols
+participant_steps <- analysis_data$participant_steps
+session_sets <- analysis_data$session_sets
+expectation_sets <- analysis_data$expectation_sets
+kept_sessions <- session_sets[[params$main_set]]
+```
+
+# Data
+
+Two between-participant experiments around the 2020 (Harris for vice
+president) and 2024 (Harris for president) US elections. Each session gives
+event-expectation sliders plus **one** critical trial of one task (cloze,
+A-Maze, SPR, or the 2020-only mazerace control), in a random order, before
+(pre) or after (post) the election. `OVERVIEW.md` has the design side by
+side; `METHODS-SUMMARY.md` has sourced detail.
+
+```{r sessions-table}
+sessions |>
+  count(study, task, round) |>
+  pivot_wider(names_from = round, values_from = n) |>
+  show_table("All sessions (before exclusions) by study, task and round")
+```
+
+# Exclusions
+
+## Default exclusions
+
+Decided 2026-10-07 (from the candidate counts further down). Applied
+identically to both studies, in this order; each column counts sessions
+newly removed by that step.
+
+Participant-wide (all tasks and the event sliders):
+
+1. **Incomplete**: 2024 runs without the end-of-study survey (2020 Ibex
+   logs only contain submitted sessions).
+2. **Repeat participant**: 2020: same IP pseudonym or MTurk worker as an
+   earlier session in the round, or the worker took part pre-election
+   (`excl_repeat_ip`, `excl_repeat_worker`, `excl_worker_in_pre_round`);
+   2024: same `workerid` submitted twice, or removed by the original's
+   Prolific-ID check.
+3. **Not a native English speaker** (self-report).
+4. **Not a US citizen or not a US resident** (self-report). The original
+   2020 pipeline did not apply this; 2024's did.
+
+Reading tasks only (Maze, SPR, mazerace), counted over the critical
+trial: the context sentence and both critical sentences (the practice item
+is not used).
+
+5. **No critical trial**: a few 2024 reading sessions never completed the
+   critical trial (all already excluded by the original pipeline).
+6. **More than `r params$max_words_too_fast` words too fast** (RT under
+   `r params$rt_min` ms).
+7. **Maze accuracy below `r params$maze_accuracy_min`** (Maze and
+   mazerace): proportion of words chosen correctly on the first try.
+
+Cloze only:
+
+8. **Nonsense completion** (`cloze_nonsense`; see `DATA.md`): blank, only
+   "yes"/"no"/a number, a pasted ID, text copied from the context
+   sentence, or a single word that doesn't continue the sentence.
+
+Event expectations: every step above applies to the sliders too,
+including the task-quality steps 5–8. A session that failed its task's
+quality check is treated as an inattentive or not-good-faith participant,
+so their slider answers are dropped along with their task data (2020
+sessions failing these checks put far more on "someone else"). In
+addition, sessions with **all sliders at 0** have undefined probabilities
+and are left out of the expectation figures; their task data is kept.
+
+**Bots** have no direct signal: 2020's bot-screening question had the same
+value in every session, and 2024 had none. Steps 6 and 7 are the proxies
+for reading tasks, and step 8 for cloze.
+
+```{r default-exclusions}
+# The steps themselves are defined in analysis/analysis_data.R.
+# Sequential: count each session at the first step that removes it.
+first_step <- sessions |>
+  select(study, round, task, session_id, all_of(step_cols)) |>
+  pivot_longer(all_of(step_cols), names_to = "step", values_to = "flag") |>
+  filter(flag) |>
+  slice_min(step, by = session_id) |>
+  count(study, round, task, step) |>
+  pivot_wider(names_from = step, values_from = n, values_fill = 0)
+sequential <- sessions |>
+  count(study, round, task, name = "all_sessions") |>
+  left_join(first_step, by = c("study", "round", "task")) |>
+  left_join(count(filter(sessions, !excl_main), study, round, task, name = "kept"),
+            by = c("study", "round", "task")) |>
+  mutate(across(where(is.numeric), \(x) coalesce(x, 0L)))
+for (step in setdiff(step_cols, names(sequential))) sequential[[step]] <- 0L
+sequential <- select(sequential, study, task, round, all_sessions, all_of(step_cols), kept)
+stopifnot(all(sequential$all_sessions - rowSums(select(sequential, all_of(step_cols))) == sequential$kept))
+sequential |>
+  mutate(round = factor(round, levels = round_levels)) |>
+  arrange(study, task, round) |>
+  show_table("Default exclusions, applied in order (sessions removed at each step)")
+```
+
+## Comprehension accuracy
+
+One comprehension question followed each critical Maze, SPR and mazerace
+trial. The 2020 code defines a question for each critical sentence, but
+the logs hold exactly one per session, and in every 2020 Maze/SPR session
+it is the question about **sentence 1** (checked against the stimulus
+file). Neither 2020 pipeline used the answers; 2024's required a correct
+answer for Maze and SPR. Here it is a robustness set, not a default
+exclusion.
+
+```{r comprehension}
+comprehension_sessions <- sessions |>
+  filter(is_reading, !excl_main)
+comprehension_sessions |>
+  group_by(study, task, round) |>
+  summarize(n = n(), no_answer = sum(comprehension_n == 0),
+            prop_correct = round(mean(comprehension_correct), 2), .groups = "drop") |>
+  pivot_wider(names_from = round, values_from = c(n, no_answer, prop_correct)) |>
+  show_table("Comprehension accuracy (sessions kept by the default exclusions; no answer counts as incorrect)")
+```
+
+```{r comprehension-by-condition, fig.height = 3.5}
+comprehension_sessions |>
+  filter(task %in% c("maze", "spr")) |>
+  inner_join(distinct(critical_words, session_id, pro1_type), by = "session_id", relationship = "one-to-one") |>
+  ggplot(aes(x = round, y = as.numeric(comprehension_correct), color = pro1_type, group = pro1_type)) +
+  line_with_errorbars(dodge) +
+  facet_wrap(~ paste(study, task), nrow = 1) +
+  pronoun_scale +
+  labs(x = NULL, y = "Proportion correct", color = "Pronoun 1",
+       title = "Comprehension accuracy by condition (default exclusions)")+
+  coord_cartesian(ylim=c(0,1))+geom_hline(aes(yintercept=.5),lty="dashed")
+```
+
+## Maze accuracy
+
+Each session's accuracy is the proportion of its critical-trial Maze words
+chosen correctly on the first try. Chance is 0.5. Shown for
+sessions that pass the participant-wide steps (1–4), before the
+reading-task steps.
+
+```{r maze-accuracy-hist, fig.height = 3.5}
+sessions |>
+  filter(is_maze, !excl_participant, !step_5_no_critical_trial) |>
+  ggplot(aes(x = maze_accuracy)) +
+  geom_histogram(binwidth = .05, boundary = 0) +
+  geom_vline(xintercept = params$maze_accuracy_min, linetype = "dashed") +
+  facet_grid(round ~ paste(study, task), scales = "free_y") +
+  labs(x = "Proportion of words correct on the first try", y = "Sessions",
+       title = "Per-session Maze accuracy (dashed line = default threshold)")
+```
+
+## RT plausibility
+
+How many of each session's critical-trial words fall outside
+`r params$rt_min`–`r params$rt_max` ms? Is it close to all-or-nothing per
+session, or are there many borderline sessions with a few out-of-window
+words? A critical trial has about 70 words in 2020 Maze and SPR, 36 in
+mazerace, and about 49 in 2024. Shown for
+sessions that pass the participant-wide steps (1–4).
+
+```{r rt-window-distribution-data}
+rt_direction_counts <- sessions |>
+  filter(is_reading, !excl_participant, !step_5_no_critical_trial) |>
+  select(study, round, task, session_id, words, too_fast = n_too_fast, too_slow = n_too_slow) |>
+  pivot_longer(c(too_fast, too_slow), names_to = "direction", values_to = "n_words") |>
+  mutate(direction = recode(direction,
+                            too_fast = paste0("too fast (< ", params$rt_min, " ms)"),
+                            too_slow = paste0("too slow (> ", params$rt_max, " ms)")),
+         prop_words = n_words / words,
+         panel = paste(study, task))
+count_bins <- c("0", "1", "2", "3–5", "6–10", "11–20", "> 20")
+rt_direction_counts <- rt_direction_counts |>
+  mutate(n_words_bin = cut(n_words, breaks = c(-Inf, 0, 1, 2, 5, 10, 20, Inf), labels = count_bins))
+stopifnot(!anyNA(rt_direction_counts$n_words_bin))
+```
+
+```{r rt-window-count-bins, fig.height = 5, fig.width = 10}
+ggplot(rt_direction_counts, aes(x = round, fill = n_words_bin)) +
+  geom_bar(position = "fill") +
+  facet_grid(direction ~ panel) +
+  scale_fill_viridis_d(option = "magma", direction = -1, end = .9) +
+  labs(x = NULL, y = "Proportion of sessions", fill = "Words outside\nthe window",
+       title = "Sessions by number of words outside the RT window")
+```
+
+The same counts as a proportion of each session's words, for sessions with
+at least one such word (the bar chart above shows how many have none):
+
+```{r rt-window-prop-hist, fig.height = 7, fig.width = 10}
+ggplot(filter(rt_direction_counts, n_words > 0), aes(x = prop_words, fill = round)) +
+  geom_histogram(binwidth = .05, boundary = 0, position = "identity", alpha = .5) +
+  facet_grid(panel ~ direction, scales = "free_y") +
+  scale_fill_brewer(palette = "Dark2") +
+  labs(x = "Proportion of the session's words", y = "Sessions", fill = NULL,
+       title = "Sessions with at least one word outside the RT window")
+```
+
+**2020 data quality.** Before any exclusions, 2020 has many sessions that
+click through fast: Maze accuracy near chance (0.5) with very short
+first-click RTs, and SPR words read in under `r params$rt_min` ms. These
+are much more common post-election. This looks like fast clicking, not a
+processing artefact: errors are equally common for left and right answers,
+and the same pattern holds on the practice item. The repeat-participant
+step removes most of these sessions; steps 6 and 7 remove the near-chance
+and fast-clicking group that remains. Fast clicking is close to
+all-or-nothing in 2020 Maze, but 2020 SPR has a borderline group with a
+few fast words, which is where the step 6 cutoff matters.
+
+## Candidate exclusion criteria: how many each would remove
+
+The counts the default was chosen from: how many sessions each candidate
+criterion would flag on its own. The base is sessions that pass steps 1–3
+(complete, not a repeat participant, native English speaker); every count
+is out of that base. Measures are over the critical trial (no practice).
+
+```{r candidate-criteria}
+# One logical column per criterion; NA where it doesn't apply to the task.
+reading_only <- function(is_reading, flag) if_else(is_reading, flag, NA)
+maze_only <- function(is_maze, flag) if_else(is_maze, flag, NA)
+cloze_only <- function(task, flag) if_else(task == "cloze", flag, NA)
+criteria <- sessions |>
+  filter(!step_1_incomplete, !step_2_repeat, !step_3_not_native) |>
+  mutate(
+    no_trial = step_5_no_critical_trial,
+    not_us = step_4_not_us,
+    sliders_all_zero = sliders_all_zero,
+    comprehension_wrong = reading_only(is_reading, !comprehension_correct),
+    any_too_fast = reading_only(is_reading, no_trial | n_too_fast > 0),
+    over_2_too_fast = reading_only(is_reading, no_trial | n_too_fast > 2),
+    over_10pct_too_fast = reading_only(is_reading, no_trial | n_too_fast / words > .1),
+    any_too_slow = reading_only(is_reading, no_trial | n_too_slow > 0),
+    over_2_too_slow = reading_only(is_reading, no_trial | n_too_slow > 2),
+    maze_accuracy_low = maze_only(is_maze, no_trial | !coalesce(maze_accuracy >= params$maze_accuracy_min, FALSE)),
+    cloze_nonsense = cloze_only(task, step_8_cloze_nonsense)
+  )
+criterion_cols <- c("not_us", "sliders_all_zero", "comprehension_wrong", "any_too_fast", "over_2_too_fast",
+                    "over_10pct_too_fast", "any_too_slow", "over_2_too_slow", "maze_accuracy_low",
+                    "cloze_nonsense")
+stopifnot(!anyNA(criteria$not_us), !anyNA(criteria$sliders_all_zero),
+          # Every reading session has a value for every reading criterion.
+          !anyNA(filter(criteria, is_reading)$any_too_fast))
+
+criteria |>
+  pivot_longer(all_of(criterion_cols), names_to = "criterion", values_to = "flagged") |>
+  filter(!is.na(flagged)) |>
+  group_by(criterion, study, task, round) |>
+  summarize(cell = sprintf("%d (%.0f%%)", sum(flagged), 100 * mean(flagged)), .groups = "drop") |>
+  mutate(criterion = factor(criterion, levels = criterion_cols),
+         column = paste(study, task, round)) |>
+  arrange(study, task, round) |>
+  select(-study, -task, -round) |>
+  pivot_wider(names_from = column, values_from = cell, values_fill = "–") |>
+  arrange(criterion) |>
+  show_table(paste0("Sessions flagged by each criterion on its own, n (% of base). ",
+                    "RT window ", params$rt_min, "–", params$rt_max, " ms; Maze accuracy threshold ",
+                    params$maze_accuracy_min, "; – = does not apply"))
+
+criteria |>
+  count(study, task, round, name = "base") |>
+  pivot_wider(names_from = round, values_from = base) |>
+  show_table("Base sessions (complete, not a repeat, native English speaker)")
+```
+
+Do the reading-task criteria pick out the same sessions? For each reading
+session, how many of these four it fails: comprehension wrong, more than 2
+words too fast, more than 2 words too slow, Maze accuracy low (Maze and
+mazerace only, so SPR sessions can fail at most three).
+
+```{r criteria-overlap, fig.height = 4, fig.width = 10}
+overlap_cols <- c("comprehension_wrong", "over_2_too_fast", "over_2_too_slow", "maze_accuracy_low")
+criteria_overlap <- criteria |>
+  filter(is_reading) |>
+  mutate(n_failed = rowSums(across(all_of(overlap_cols)), na.rm = TRUE),
+         panel = paste(study, task))
+ggplot(criteria_overlap, aes(x = round, fill = factor(n_failed))) +
+  geom_bar(position = "fill") +
+  facet_wrap(~panel, nrow = 1) +
+  scale_fill_viridis_d(option = "magma", direction = -1, end = .9) +
+  labs(x = NULL, y = "Proportion of base sessions", fill = "Criteria\nfailed",
+       title = "Reading sessions: number of the four criteria failed")
+```
+
+The most common combinations of failed criteria (reading sessions,
+pooled over rounds):
+
+```{r criteria-combinations}
+criteria_overlap |>
+  filter(n_failed > 0) |>
+  mutate(combination = pmap_chr(across(all_of(overlap_cols)), \(...) {
+    flags <- c(...)
+    paste(overlap_cols[coalesce(flags, FALSE)], collapse = " + ")
+  })) |>
+  count(study, task, combination) |>
+  left_join(count(criteria_overlap, study, task, name = "base"), by = c("study", "task")) |>
+  mutate(prop_of_base = round(n / base, 2)) |>
+  select(-base) |>
+  arrange(study, task, desc(n)) |>
+  slice_head(n = 5, by = c(study, task)) |>
+  show_table("Top 5 combinations of failed criteria per study and task (prop_of_base: share of that study x task's base sessions)")
+```
+
+# Session sets
+
+All figures draw on one of these sets of sessions. The main figures use
+**`r params$main_set`**; the robustness section compares all of them.
+
+- **main**: the default exclusions above.
+- **comprehension**: main, plus a correct comprehension answer (reading
+  tasks).
+- **strict_timing**: main, plus no word at all outside
+  `r params$rt_min`–`r params$rt_max` ms in the critical trial (reading
+  tasks).
+- **high_attention**: the strictest set, for participants paying the most
+  attention: main, plus comprehension *and* strict_timing (reading tasks),
+  and, for every task, dropping sessions whose event sliders were all left
+  at 0 (in main, those sessions keep their task data).
+- **no_us_exclusion**: main without step 4 (citizenship/residence).
+- **task_first**: main, restricted to sessions that did the critical task
+  before the event sliders.
+- **original**: each study's original pipeline rules
+  (`excl_task_original`; `excl_expectations_original` for the sliders).
+
+Cloze sessions are the same in main, comprehension and strict_timing; in
+high_attention they differ from main only by the slider rule.
+The event-expectation figures use the same sets (minus sessions with all
+sliders at 0), except original, which uses each study's original slider
+rule (`excl_expectations_original`).
+
+```{r session-sets}
+# The sets themselves are defined in analysis/analysis_data.R.
+imap(session_sets, \(ids, set) count(filter(sessions, session_id %in% ids), study, round, task) |>
+       mutate(set = set)) |>
+  list_rbind() |>
+  mutate(set = factor(set, levels = set_levels)) |>
+  pivot_wider(names_from = set, values_from = n, values_fill = 0) |>
+  arrange(study, task, round) |>
+  show_table("Sessions in each set (task data), by study, task and round")
+```
+
+# Event expectations
+
+Each participant moved three sliders (Democratic candidate, Republican
+candidate, someone else); probabilities are each slider divided by their
+sum. In 2020, a random half were asked about the vice presidency
+(Harris vs. Pence) and half about the presidency (Biden vs. Trump).
+The same exclusions apply as for the task data, so sessions that failed
+their task's quality check (inattentive or not-good-faith participants)
+are left out; see *Default exclusions*. Sessions with all sliders at 0 have
+no probabilities and are left out too.
+
+Grey symbols are what forecasters and betting markets said at the time
+(`analysis/external_expectations.csv`, which records each value's source,
+time window and how it was extracted): the point is the mean over the
+round's collection window and the bar the range. In 2020 the
+vice-presidency question has the same answer as the presidency question
+(Harris is vice president exactly when Biden wins), so the same reference
+values apply to both. After the election there are no forecasts; the
+markets still gave Trump 6–12% after the 2020 race was called, while the
+2024 market had already resolved for Trump before the post wave.
+
+```{r expectations, fig.height = 3.5, fig.width = 9}
+expectation_plot_data <- sessions |>
+  filter(session_id %in% expectation_sets[[params$main_set]]) |>
+  mutate(target = recode(expectation_target, vice_president = "vice president"),
+         panel = paste(study, target))
+external_expectations <- read_csv(here("analysis", "external_expectations.csv"),
+                                  col_types = cols(study = col_character())) |>
+  mutate(round = factor(round, levels = round_levels),
+         # Drop the parenthesized list of markets from the legend label.
+         source = str_remove(source, " \\(.*\\)"))
+stopifnot(all(external_expectations$study %in% c("2020", "2024")),
+          !anyNA(external_expectations$round),
+          with(external_expectations, all(p_dem_low <= p_dem & p_dem <= p_dem_high)))
+ggplot(expectation_plot_data, aes(x = round, y = expect_prob_dem, color = target, group = target)) +
+  line_with_errorbars(dodge) +
+  geom_pointrange(data = external_expectations,
+                  mapping = aes(x = round, y = p_dem, ymin = p_dem_low, ymax = p_dem_high, shape = source),
+                  inherit.aes = FALSE, color = "grey45", position = position_nudge(x = .25)) +
+  facet_wrap(~study) +
+  scale_color_brewer(palette = "Dark2") +
+  scale_shape_manual(values = c(17, 15, 18)) +
+  coord_cartesian(ylim = c(0, 1)) +
+  labs(x = NULL, y = "P(Democratic candidate wins)", color = "Participants asked about", shape = "At the time",
+       title = "Expected probability that the Democratic candidate wins")
+```
+
+```{r expectations-dist, fig.height = 3.5}
+ggplot(expectation_plot_data, aes(x = expect_prob_dem, fill = round)) +
+  geom_histogram(binwidth = .05, position = "identity", alpha = .5) +
+  facet_wrap(~panel, scales = "free_y", nrow = 1) +
+  scale_fill_brewer(palette = "Dark2") +
+  labs(x = "P(Democratic candidate wins)", y = "Sessions", fill = NULL)
+```
+
+National polling averages at the time (538; vote shares, not
+probabilities, so not plotted): 2020 pre, Biden 52.1% vs. Trump 43.0%
+(Oct 30) and 51.8% vs. 43.4% (Nov 3); 2024 pre, Harris 47.9% vs. Trump 46.8%
+(Oct 31). Sources: archived `presidential_poll_averages_2020.csv` and
+`presidential_general_averages.csv` from projects.fivethirtyeight.com
+(Wayback Machine).
+
+# Cloze completions
+
+Each session contributes one completion, so proportions are over
+sessions. Two views (columns described in `DATA.md`):
+
+- **First target pronoun**: among completions with at least one pronoun
+  referring to the target office-holder (2020: the vice president; 2024:
+  the president), which kind comes first (`first_coref_pronoun`).
+- **References anywhere**: the share of completions containing each kind of
+  reference, anywhere in the completion; one completion can count in
+  several categories.
+
+```{r cloze, fig.height = 4}
+cloze_levels <- c("she", "he", "they", "hedged", "female_candidate_name", "male_candidate_name",
+                  "other_candidate_name", "target_office_np", "other_office_np", "generic_np", "other", "blank")
+pronoun_codes <- c("she", "he", "they", "hedged")
+pronoun_code_scale <- scale_color_manual(values = c(pronoun_colors, hedged = "grey40"),
+                                         breaks = c(names(pronoun_colors), "hedged"))
+
+# One row per session x code: 1 if the session's completion has that code.
+code_indicators <- function(cloze_df, code_column) {
+  cloze_df |>
+    mutate(code = factor(.data[[code_column]], levels = cloze_levels)) |>
+    select(study, round, session_id, code) |>
+    mutate(present = 1) |>
+    complete(nesting(study, round, session_id), code, fill = list(present = 0))
+}
+# Completions with a target-office pronoun only: 1 if it is the first one.
+first_pronoun_indicators <- function(cloze_df) {
+  cloze_df |>
+    filter(first_coref_pronoun != "none") |>
+    mutate(code = factor(first_coref_pronoun, levels = pronoun_codes)) |>
+    select(study, round, session_id, code) |>
+    mutate(present = 1) |>
+    complete(nesting(study, round, session_id), code, fill = list(present = 0))
+}
+cloze_kept <- filter(cloze, session_id %in% kept_sessions)
+stopifnot(!anyNA(factor(cloze_kept$cloze_code, levels = cloze_levels)),
+          all(cloze_kept$first_coref_pronoun %in% c(pronoun_codes, "none")))
+first_pronouns <- first_pronoun_indicators(cloze_kept)
+stopifnot(all(count(first_pronouns, session_id)$n == length(pronoun_codes)))
+
+cloze_kept |>
+  summarize(completions = n(), with_target_pronoun = sum(first_coref_pronoun != "none"), .by = c(study, round)) |>
+  arrange(study, round) |>
+  show_table("Completions with at least one pronoun referring to the target office-holder")
+
+ggplot(first_pronouns, aes(x = round, y = present, color = code, group = code)) +
+  line_with_errorbars(dodge) +
+  facet_wrap(~study) +
+  pronoun_code_scale +
+  labs(x = NULL, y = "Proportion of completions with a target pronoun", color = "First target pronoun",
+       title = "Cloze: first pronoun referring to the target office-holder")
+```
+
+```{r cloze-anywhere, fig.height = 4}
+# Each kind of reference, anywhere in the completion (repeats allowed).
+reference_columns <- c(
+  "she (target)" = "coref_she", "he (target)" = "coref_he", "they (target)" = "coref_they",
+  "hedged (target)" = "coref_hedge",
+  "Harris" = "has_female_candidate_name", "male candidate (target office)" = "has_male_candidate_name",
+  "target office NP" = "has_target_office_np",
+  "other-office candidate (2020: Biden, Trump)" = "has_other_candidate_name",
+  "other office NP" = "has_other_office_np", "pronoun for other office-holder" = "any_coref_other",
+  "generic NP (winner, candidate)" = "has_generic_np"
+)
+references_anywhere <- cloze_kept |>
+  mutate(any_coref_other = coref_other_she | coref_other_he | coref_other_they | coref_other_hedge) |>
+  select(study, round, session_id, all_of(reference_columns)) |>
+  pivot_longer(-c(study, round, session_id), names_to = "reference", values_to = "present") |>
+  mutate(reference = factor(reference, levels = names(reference_columns)), present = as.numeric(present))
+stopifnot(!anyNA(references_anywhere$present))
+
+ggplot(filter(references_anywhere, str_detect(reference, "\\(target\\)$")),
+       aes(x = round, y = present, color = str_remove(reference, " \\(target\\)"),
+           group = reference)) +
+  line_with_errorbars(dodge) +
+  facet_wrap(~study) +
+  pronoun_code_scale +
+  labs(x = NULL, y = "Proportion of completions", color = "Pronoun",
+       title = "Cloze: completions containing a pronoun for the target office-holder")
+ggplot(filter(references_anywhere, !str_detect(reference, "\\(target\\)$")),
+       aes(x = round, y = present, color = reference, group = reference)) +
+  line_with_errorbars(dodge) +
+  facet_wrap(~study) +
+  scale_color_brewer(palette = "Dark2") +
+  labs(x = NULL, y = "Proportion of completions", color = NULL,
+       title = "Cloze: completions containing other references")
+```
+
+The first referring expression of any kind (`cloze_code`), for reference:
+
+```{r cloze-table}
+cloze_kept |>
+  count(study, round, cloze_code) |>
+  pivot_wider(names_from = c(study, round), values_from = n, values_fill = 0) |>
+  show_table("Cloze completion counts (first reference)")
+```
+
+## Original vs. shared cloze coding
+
+Each study's original pipeline coded the completions its own way
+(`cloze_code_original`). The shared code (`cloze_code`) applies one rule to
+both: **the first referring expression in the completion**. The table maps
+each original label to the shared category it corresponds to, then counts
+how often the two agree.
+
+How the originals differ from the shared rule:
+
+- **Name vs. pronoun precedence.** When a completion has both, 2020's
+  original took the name, 2024's took the pronoun; the shared code takes
+  whichever comes first.
+- **Office noun phrases.** 2020's original had no category for "the vice
+  president will…" (it was `none`); 2024 called it `ambiguous NP`. The
+  shared code splits these by office: `target_office_np` (the office the
+  item is about), `other_office_np` (the other office) and `generic_np`
+  ("the winner").
+- **Hedges.** 2020's original `both` and 2024's `hedged` correspond to the
+  shared `hedged`.
+- **2024 "them" bug.** The 2024 original meant to skip "them" when it refers
+  back to the plural in item 9's prompt ("…many challenges, and one of"),
+  but tested the response instead of the prompt, so those completions were
+  coded as singular *they*.
+
+```{r cloze-original-mapping}
+original_to_shared <- tribble(
+  ~study, ~cloze_code_original, ~original_as_shared,
+  "2020", "female", "she",
+  "2020", "male", "he",
+  "2020", "neutral", "they",
+  "2020", "both", "hedged",
+  "2020", "harris", "female_candidate_name",
+  "2020", "pence", "male_candidate_name",
+  "2020", "biden", "other_candidate_name",
+  "2020", "trump", "other_candidate_name",
+  "2020", "none", "other",
+  "2024", "pronoun female", "she",
+  "2024", "pronoun male", "he",
+  "2024", "pronoun neutral", "they",
+  "2024", "hedged", "hedged",
+  "2024", "Harris", "female_candidate_name",
+  "2024", "Trump", "male_candidate_name",
+  "2024", "ambiguous NP", "target_office_np",
+  "2024", "OTHER", "other"
+)
+cloze_original <- map(c("2020", "2024"), \(s) read_study(s, "cloze") |> mutate(study = s)) |>
+  list_rbind() |>
+  select(study, session_id, cloze_item, prompt, response, cloze_code_original, cloze_code) |>
+  # Blank completions have no original code; both codings agree they are blank.
+  left_join(original_to_shared, by = c("study", "cloze_code_original"), relationship = "many-to-one") |>
+  mutate(original_as_shared = if_else(is.na(cloze_code_original), "blank", original_as_shared),
+         round = factor(str_extract(session_id, "pre|post"), levels = round_levels))
+stopifnot(!anyNA(cloze_original$original_as_shared),
+          setequal(cloze_original$session_id, cloze$session_id))
+cloze_original <- filter(cloze_original, session_id %in% kept_sessions)
+
+cloze_original |>
+  count(study, original = cloze_code_original, shared = cloze_code,
+        agree = original_as_shared == cloze_code) |>
+  arrange(study, agree, desc(n)) |>
+  show_table("Original vs. shared coding (kept sessions); agree = the original label maps to the shared category")
+```
+
+Examples of each kind of disagreement (up to 3 random completions per
+cell; the end of the prompt is shown for context):
+
+```{r cloze-disagreement-examples}
+set.seed(2020)
+cloze_original |>
+  filter(original_as_shared != cloze_code) |>
+  group_by(study, cloze_code_original, cloze_code) |>
+  slice_sample(n = 3) |>
+  ungroup() |>
+  transmute(study, original = cloze_code_original, shared = cloze_code, item = cloze_item,
+            prompt_end = paste0("…", str_sub(prompt, -40)), response) |>
+  arrange(study, original, shared) |>
+  show_table("Disagreements between original and shared cloze coding")
+```
+
+What the choice does to the pronoun proportions:
+
+```{r cloze-coding-comparison, fig.height = 4}
+bind_rows(
+  shared = code_indicators(cloze_original, "cloze_code"),
+  original = code_indicators(cloze_original, "original_as_shared"),
+  .id = "coding"
+) |>
+  filter(code %in% pronoun_codes) |>
+  ggplot(aes(x = round, y = present, color = code, linetype = coding,
+             group = interaction(code, coding))) +
+  line_with_errorbars(position_dodge(width = .3)) +
+  facet_wrap(~study) +
+  pronoun_code_scale +
+  labs(x = NULL, y = "Proportion of completions", color = "First reference", linetype = "Coding",
+       title = "Cloze pronoun proportions under the original and the shared coding")
+```
+
+# Reading times
+
+```{r reading-prep}
+critical <- critical_words |>
+  filter(session_id %in% kept_sessions)
+# Missing RTs (2020 SPR logged a few as None) count as outside the window.
+in_window <- coalesce(critical$rt >= params$rt_min & critical$rt <= params$rt_max, FALSE)
+maze_ok <- !params$maze_correct_only | critical$task == "spr" | coalesce(critical$maze_correct, FALSE)
+critical |>
+  mutate(removed = !(in_window & maze_ok)) |>
+  group_by(study, task) |>
+  summarize(words = n(), prop_removed = round(mean(removed), 3), .groups = "drop") |>
+  show_table("Critical-trial words removed by the RT window / Maze accuracy filter")
+critical_rt <- critical[in_window & maze_ok, ]
+```
+
+RTs are plotted on a log scale, so means and CIs are computed on log RT
+(geometric means), which down-weights long RTs.
+
+```{r rt-helpers}
+# The log10 transform applies before stat_summary, so means are geometric means.
+log_ms_axis <- scale_y_log10(name = "RT (ms, geometric mean)")
+
+# Words in the given critical sentence, positioned relative to its pronoun.
+relative_to_pronoun <- function(df, sentence, pronoun_flag) {
+  pronoun_position <- df |>
+    filter(sentence_index == sentence, .data[[pronoun_flag]]) |>
+    select(session_id, pronoun_word = word_index_in_sentence)
+  df |>
+    filter(sentence_index == sentence) |>
+    inner_join(pronoun_position, by = "session_id", relationship = "many-to-one") |>
+    mutate(position = word_index_in_sentence - pronoun_word)
+}
+
+# Sentences differ in length and pronoun position, so far-out positions come
+# from only some items. Keep positions present in at least half the sessions
+# of each study x task.
+well_covered_positions <- function(df) {
+  df |>
+    group_by(study, task) |>
+    mutate(sessions = n_distinct(session_id)) |>
+    group_by(study, task, position) |>
+    filter(n_distinct(session_id) >= sessions / 2) |>
+    ungroup() |>
+    select(-sessions)
+}
+
+# Region words, relative to the pronoun: Maze, the pronoun itself; SPR, the
+# pronoun and the next three words (spillover), each kept as its own word
+# (not averaged) so the spillover positions can be compared.
+region_positions <- list(maze = 0, spr = 0:3)
+region_words <- function(df) {
+  stopifnot(all(df$task %in% names(region_positions)))
+  df |>
+    filter(map2_lgl(task, position, \(tk, pos) pos %in% region_positions[[tk]])) |>
+    mutate(word = factor(if_else(position == 0, "pronoun", paste0("pronoun +", position)),
+                         levels = c("pronoun", paste0("pronoun +", 1:3))))
+}
+
+pronoun_2_pairs <- function(df) {
+  mutate(df, pair = if_else(pro1_type == pro2_type, "match", "mismatch"))
+}
+
+reading_tasks <- c("maze", "spr")
+s1 <- critical_rt |>
+  filter(task %in% reading_tasks) |>
+  relative_to_pronoun(1, "is_pro1")
+s2 <- critical_rt |>
+  filter(task %in% reading_tasks) |>
+  relative_to_pronoun(2, "is_pro2") |>
+  pronoun_2_pairs()
+```
+
+## Time courses
+
+Whole critical sentences, aligned on the pronoun (0), in the
+**`r params$main_set`** set. Positions
+are kept if at least half the sessions of that study and task have them.
+Pronoun 2 either matches pronoun 1 (he-he, she-she, they-they) or switches
+gender (he-she, she-he).
+
+```{r time-course-functions}
+plot_time_course_1 <- function(df, title) {
+  ggplot(well_covered_positions(df), aes(x = position, y = rt, color = pro1_type, group = pro1_type)) +
+    line_with_errorbars(dodge) +
+    geom_vline(xintercept = 0, color = "grey70") +
+    facet_grid(paste(study, task) ~ round, scales = "free") +
+    pronoun_scale +
+    log_ms_axis +
+    labs(x = "Word position relative to pronoun 1", color = "Pronoun 1", title = title)
+}
+plot_time_course_2 <- function(df, title) {
+  ggplot(well_covered_positions(df),
+         aes(x = position, y = rt, color = pro2_type, linetype = pair, group = interaction(pro2_type, pair))) +
+    line_with_errorbars(dodge) +
+    geom_vline(xintercept = 0, color = "grey70") +
+    facet_grid(paste(study, task) ~ round, scales = "free") +
+    pronoun_scale +
+    log_ms_axis +
+    labs(x = "Word position relative to pronoun 2", color = "Pronoun 2", linetype = "Pronoun pair",
+         title = title)
+}
+```
+
+```{r time-course-1, fig.height = 8, fig.width = 11}
+plot_time_course_1(s1, paste0("Sentence 1 (", params$main_set, " set)"))
+```
+
+```{r time-course-2, fig.height = 8, fig.width = 11}
+plot_time_course_2(s2, paste0("Sentence 2 (", params$main_set, " set)"))
+```
+
+## Analysis region
+
+Maze: RT at the pronoun. SPR: the pronoun and each of the next three words
+(spillover), shown separately. Values are per word, after the RT window
+(and, for Maze, the first-try accuracy filter).
+
+```{r region-data}
+region_1 <- region_words(s1)
+region_2 <- region_words(s2)
+```
+
+```{r rt-pronoun-1-maze, fig.height = 3.5, fig.width = 6}
+ggplot(filter(region_1, task == "maze"), aes(x = round, y = rt, color = pro1_type, group = pro1_type)) +
+  line_with_errorbars(dodge) +
+  facet_wrap(~study, scales = "free_y") +
+  pronoun_scale +
+  log_ms_axis +
+  labs(x = NULL, color = "Pronoun 1", title = "Maze: RT at pronoun 1")
+```
+
+```{r rt-pronoun-1-spr, fig.height = 5, fig.width = 10}
+ggplot(filter(region_1, task == "spr"), aes(x = round, y = rt, color = pro1_type, group = pro1_type)) +
+  line_with_errorbars(dodge) +
+  facet_grid(study ~ word, scales = "free_y") +
+  pronoun_scale +
+  log_ms_axis +
+  labs(x = NULL, color = "Pronoun 1", title = "SPR: RT at pronoun 1 and the next three words")
+```
+
+```{r rt-pronoun-2-maze, fig.height = 3.5, fig.width = 6}
+ggplot(filter(region_2, task == "maze"), aes(x = round, y = rt, color = pro2_type,
+                                             linetype = pair, group = interaction(pro2_type, pair))) +
+  line_with_errorbars(dodge) +
+  facet_wrap(~study, scales = "free_y") +
+  pronoun_scale +
+  log_ms_axis +
+  labs(x = NULL, color = "Pronoun 2", linetype = "Pronoun pair", title = "Maze: RT at pronoun 2")
+```
+
+```{r rt-pronoun-2-spr, fig.height = 5, fig.width = 10}
+ggplot(filter(region_2, task == "spr"), aes(x = round, y = rt, color = pro2_type,
+                                            linetype = pair, group = interaction(pro2_type, pair))) +
+  line_with_errorbars(dodge) +
+  facet_grid(study ~ word, scales = "free_y") +
+  pronoun_scale +
+  log_ms_axis +
+  labs(x = NULL, color = "Pronoun 2", linetype = "Pronoun pair",
+       title = "SPR: RT at pronoun 2 and the next three words")
+```
+
+## Maze accuracy at the pronoun
+
+Proportion of sessions choosing the pronoun correctly on the first try
+(all words, no RT window), in the **`r params$main_set`** set.
+
+```{r maze-pronoun-accuracy, fig.height = 3.5, fig.width = 10}
+maze_pronoun_words <- critical_words |>
+  filter(task == "maze", is_pro1 | is_pro2) |>
+  pronoun_2_pairs() |>
+  mutate(pronoun = if_else(is_pro1, "pronoun 1", "pronoun 2"),
+         pronoun_type = if_else(is_pro1, pro1_type, pro2_type),
+         # Pronoun 1 is preceded only by sentence 1, so the pair is irrelevant there.
+         pair = if_else(is_pro1, "(sentence 1)", pair))
+ggplot(filter(maze_pronoun_words, session_id %in% kept_sessions), aes(x = round, y = as.numeric(maze_correct), color = pronoun_type,
+                                  linetype = pair, group = interaction(pronoun_type, pair))) +
+  line_with_errorbars(dodge) +
+  facet_wrap(~ paste(study, pronoun), nrow = 1) +
+  pronoun_scale +
+  labs(x = NULL, y = "Proportion correct on first try", color = "Pronoun", linetype = "Pronoun pair",
+       title = "Maze: accuracy on the pronoun")
+```
+
+## Mazerace (2020 only)
+
+The context sentence is followed by "The vice president will be (a)
+black/white/Black/White (person) …".
+
+```{r mazerace, fig.height = 3.5}
+race <- critical_rt |>
+  filter(task == "mazerace", is_race_adjective) |>
+  mutate(race = tolower(race_adjective),
+         capitalized = if_else(race_adjective == str_to_title(race_adjective), "Capitalized", "lowercase"))
+ggplot(race, aes(x = round, y = rt, color = race, linetype = capitalized,
+                 group = interaction(race, capitalized))) +
+  line_with_errorbars(dodge) +
+  scale_color_brewer(palette = "Dark2") +
+  log_ms_axis +
+  labs(x = NULL, color = "Adjective", linetype = NULL, title = "Mazerace: RT at the race adjective")
+```
+
+# Recall
+
+After the reading task, participants said whom the writer believed would win.
+
+Split by the pronoun pair the participant read (pronoun 1 – pronoun 2).
+
+```{r recall, fig.height = 4.5, fig.width = 9}
+pair_levels <- c("he–he", "she–she", "they–they", "he–she", "she–he")
+recall_by_pronoun <- recall |>
+  filter(session_id %in% kept_sessions) |>
+  inner_join(distinct(filter(critical_words, task %in% reading_tasks), session_id, pro1_type, pro2_type),
+             by = "session_id", relationship = "one-to-one") |>
+  mutate(round = factor(round, levels = round_levels), study = as.character(study),
+         pronoun_pair = factor(paste0(pro1_type, "–", pro2_type), levels = pair_levels))
+stopifnot(!anyNA(recall_by_pronoun$pronoun_pair))
+plot_recall <- function(df, facet, title = NULL) {
+  df |>
+    count(study, round, across(any_of("party")), pronoun_pair, recall_response) |>
+    mutate(prop = n / sum(n), .by = c(study, round, any_of("party"), pronoun_pair)) |>
+    mutate(recall_response = factor(recall_response, levels = names(recall_colors))) |>
+    ggplot(aes(x = pronoun_pair, y = prop, fill = recall_response)) +
+    geom_col() +
+    facet +
+    scale_fill_manual(values = recall_colors) +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "Pronoun 1 – pronoun 2", y = "Proportion of sessions", fill = "Writer believes...", title = title)
+}
+plot_recall(recall_by_pronoun, facet_grid(study ~ round))
+```
+
+# Participants
+
+```{r demographics}
+sessions |>
+  filter(session_id %in% kept_sessions) |>
+  group_by(study, round) |>
+  summarize(
+    n = n(),
+    age_median = median(age, na.rm = TRUE),
+    female = mean(gender == "Female", na.rm = TRUE),
+    democrat = mean(political_affiliation == "Democrat", na.rm = TRUE),
+    republican = mean(political_affiliation == "Republican", na.rm = TRUE),
+    prefer_dem = mean(election_pref %in% c("Kamala Harris", "Joe Biden"), na.rm = TRUE),
+    prefer_rep = mean(election_pref %in% c("Donald Trump", "Mike Pence"), na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  mutate(across(female:prefer_rep, \(x) round(x, 2))) |>
+  show_table("Kept sessions: demographics (proportions)")
+```
+
+```{r awareness}
+sessions |>
+  filter(session_id %in% kept_sessions, study == "2020", round == "post") |>
+  count(aware) |>
+  mutate(prop = round(n / sum(n), 2)) |>
+  show_table("2020 post-election: aware the race had been called?")
+```
+
+# By expected probability that the female candidate wins
+
+Each session's own event expectation, P(female candidate wins), against its
+critical-trial result, in the **`r params$main_set`** set. Harris is the
+Democratic candidate in both studies, so this is `expect_prob_dem`. In 2020
+the vice-presidency and presidency questions are pooled: Harris becomes vice
+president exactly when Biden wins. Sessions with all sliders at 0 have no
+expectation and are left out. Lines are per-session fits with 95% CIs:
+linear on log RT for RTs, logistic for cloze proportions. Dots are sessions
+(cloze: one dot per session per pronoun, at 0 or 1 with a little vertical
+jitter).
+
+```{r p-female-setup}
+p_female <- sessions |>
+  filter(!is.na(expect_prob_dem)) |>
+  select(session_id, p_female = expect_prob_dem)
+with_p_female <- function(df) inner_join(df, p_female, by = "session_id", relationship = "many-to-one")
+p_female_axis <- scale_x_continuous(name = "P(female candidate wins), participant's own estimate",
+                                    limits = c(0, 1), breaks = c(0, .5, 1))
+```
+
+```{r p-female-cloze, fig.height = 5, fig.width = 9}
+# Denominator: completions with a target pronoun (including hedged ones,
+# which are not plotted).
+first_pronouns |>
+  with_p_female() |>
+  filter(code %in% names(pronoun_colors)) |>
+  ggplot(aes(x = p_female, y = present, color = code, fill = code)) +
+  geom_smooth(method = "glm", method.args = list(family = binomial), formula = y ~ x, alpha = .15) +
+  # Outcomes are 0/1; a little vertical jitter shows how many sessions sit at each x.
+  geom_point(position = position_jitter(width = 0, height = .03, seed = 1), alpha = .2, size = .8) +
+  facet_grid(study ~ round) +
+  pronoun_scale +
+  scale_fill_manual(values = pronoun_colors, guide = "none") +
+  p_female_axis +
+  coord_cartesian(ylim = c(0, 1)) +
+  labs(y = "Proportion of completions with a target pronoun", color = "First target pronoun",
+       title = "Cloze: first target pronoun by expected P(female candidate wins)")
+```
+
+```{r p-female-maze, fig.height = 5, fig.width = 9}
+ggplot(with_p_female(filter(region_1, task == "maze")),
+       aes(x = p_female, y = rt, color = pro1_type, fill = pro1_type)) +
+  geom_point(alpha = .2, size = .8) +
+  geom_smooth(method = "lm", formula = y ~ x, alpha = .15) +
+  facet_grid(study ~ round) +
+  pronoun_scale +
+  scale_fill_manual(values = pronoun_colors, guide = "none") +
+  p_female_axis +
+  log_ms_axis +
+  labs(color = "Pronoun 1", title = "Maze: RT at pronoun 1 by expected P(female candidate wins)")
+```
+
+```{r p-female-spr, fig.height = 9, fig.width = 11}
+ggplot(with_p_female(filter(region_1, task == "spr")),
+       aes(x = p_female, y = rt, color = pro1_type, fill = pro1_type)) +
+  geom_point(alpha = .2, size = .8) +
+  geom_smooth(method = "lm", formula = y ~ x, alpha = .15) +
+  facet_grid(study + round ~ word) +
+  pronoun_scale +
+  scale_fill_manual(values = pronoun_colors, guide = "none") +
+  p_female_axis +
+  log_ms_axis +
+  labs(color = "Pronoun 1",
+       title = "SPR: RT at pronoun 1 and the next three words by expected P(female candidate wins)")
+```
+
+# By political affiliation
+
+The same summaries split by self-reported party affiliation, in the
+**`r params$main_set`** set. "Other / none / didn't say" pools "Other",
+"None", "Rather not say" and missing answers.
+
+```{r party-setup}
+party_levels <- c("Democrat", "Republican", "Independent", "other / none / didn't say")
+party <- sessions |>
+  transmute(session_id,
+            party = factor(if_else(political_affiliation %in% party_levels[1:3], political_affiliation,
+                                   party_levels[4]), levels = party_levels))
+stopifnot(!anyNA(party$party))
+with_party <- function(df) inner_join(df, party, by = "session_id", relationship = "many-to-one")
+sessions |>
+  filter(session_id %in% kept_sessions) |>
+  with_party() |>
+  count(study, round, party) |>
+  pivot_wider(names_from = party, values_from = n, values_fill = 0) |>
+  show_table("Sessions per party affiliation")
+```
+
+```{r party-expectations, fig.height = 3.5, fig.width = 10}
+expectation_plot_data |>
+  with_party() |>
+  ggplot(aes(x = round, y = expect_prob_dem, color = party, group = party)) +
+  line_with_errorbars(dodge) +
+  facet_wrap(~study) +
+  scale_color_brewer(palette = "Set1") +
+  coord_cartesian(ylim = c(0, 1)) +
+  labs(x = NULL, y = "P(Democratic candidate wins)", color = NULL,
+       title = "Expected probability that the Democratic candidate wins, by party")
+```
+
+```{r party-cloze, fig.height = 5, fig.width = 11}
+first_pronouns |>
+  with_party() |>
+  ggplot(aes(x = round, y = present, color = code, group = code)) +
+  line_with_errorbars(dodge) +
+  facet_grid(study ~ party) +
+  pronoun_code_scale +
+  labs(x = NULL, y = "Proportion of completions with a target pronoun", color = "First target pronoun",
+       title = "Cloze: first pronoun referring to the target office-holder, by party")
+```
+
+```{r party-maze, fig.height = 5, fig.width = 11}
+ggplot(with_party(filter(region_1, task == "maze")), aes(x = round, y = rt, color = pro1_type, group = pro1_type)) +
+  line_with_errorbars(dodge) +
+  facet_grid(study ~ party, scales = "free_y") +
+  pronoun_scale +
+  log_ms_axis +
+  labs(x = NULL, color = "Pronoun 1", title = "Maze: RT at pronoun 1, by party")
+ggplot(with_party(filter(region_2, task == "maze")), aes(x = round, y = rt, color = pro2_type, linetype = pair,
+                                                         group = interaction(pro2_type, pair))) +
+  line_with_errorbars(dodge) +
+  facet_grid(study ~ party, scales = "free_y") +
+  pronoun_scale +
+  log_ms_axis +
+  labs(x = NULL, color = "Pronoun 2", linetype = "Pronoun pair", title = "Maze: RT at pronoun 2, by party")
+```
+
+```{r party-spr, fig.height = 12, fig.width = 11}
+ggplot(with_party(filter(region_1, task == "spr")), aes(x = round, y = rt, color = pro1_type, group = pro1_type)) +
+  line_with_errorbars(dodge) +
+  facet_grid(paste(study, word) ~ party, scales = "free_y") +
+  pronoun_scale +
+  log_ms_axis +
+  labs(x = NULL, color = "Pronoun 1", title = "SPR: RT at pronoun 1 and the next three words, by party")
+ggplot(with_party(filter(region_2, task == "spr")), aes(x = round, y = rt, color = pro2_type, linetype = pair,
+                                                        group = interaction(pro2_type, pair))) +
+  line_with_errorbars(dodge) +
+  facet_grid(paste(study, word) ~ party, scales = "free_y") +
+  pronoun_scale +
+  log_ms_axis +
+  labs(x = NULL, color = "Pronoun 2", linetype = "Pronoun pair",
+       title = "SPR: RT at pronoun 2 and the next three words, by party")
+```
+
+```{r party-recall, fig.height = 8, fig.width = 11}
+recall_by_pronoun |>
+  with_party() |>
+  plot_recall(facet_grid(paste(study, round) ~ party), title = "Recall, by party")
+```
+
+# Robustness: the same summaries in every session set
+
+Each panel column is one session set. The RT window and Maze filter are the
+same in every set.
+
+```{r robustness-data}
+in_set <- function(df, set) filter(df, session_id %in% session_sets[[set]]) |> mutate(set = set)
+across_sets <- function(df) {
+  map(set_levels, \(set) in_set(df, set)) |>
+    list_rbind() |>
+    mutate(set = factor(set, levels = set_levels))
+}
+# Same RT window and Maze filter as above, but before restricting to the main set.
+all_rt <- critical_words |>
+  filter(task %in% reading_tasks,
+         coalesce(rt >= params$rt_min & rt <= params$rt_max, FALSE),
+         !params$maze_correct_only | task == "spr" | coalesce(maze_correct, FALSE))
+pronoun_1_all_sets <- all_rt |>
+  relative_to_pronoun(1, "is_pro1") |>
+  region_words() |>
+  across_sets()
+pronoun_2_all_sets <- all_rt |>
+  relative_to_pronoun(2, "is_pro2") |>
+  pronoun_2_pairs() |>
+  region_words() |>
+  across_sets()
+cloze_all_sets <- first_pronoun_indicators(cloze) |>
+  across_sets()
+```
+
+```{r robustness-pronoun-1-maze, fig.height = 4.5, fig.width = 12}
+ggplot(filter(pronoun_1_all_sets, task == "maze"), aes(x = round, y = rt, color = pro1_type, group = pro1_type)) +
+  line_with_errorbars(dodge) +
+  facet_grid(study ~ set, scales = "free_y") +
+  pronoun_scale +
+  log_ms_axis +
+  labs(x = NULL, color = "Pronoun 1", title = "Maze: RT at pronoun 1, by session set")
+```
+
+```{r robustness-pronoun-1-spr, fig.height = 12, fig.width = 12}
+ggplot(filter(pronoun_1_all_sets, task == "spr"), aes(x = round, y = rt, color = pro1_type, group = pro1_type)) +
+  line_with_errorbars(dodge) +
+  facet_grid(paste(study, word) ~ set, scales = "free_y") +
+  pronoun_scale +
+  log_ms_axis +
+  labs(x = NULL, color = "Pronoun 1", title = "SPR: RT at pronoun 1 and the next three words, by session set")
+```
+
+```{r robustness-pronoun-2-maze, fig.height = 4.5, fig.width = 12}
+ggplot(filter(pronoun_2_all_sets, task == "maze"), aes(x = round, y = rt, color = pro2_type, linetype = pair,
+                                                       group = interaction(pro2_type, pair))) +
+  line_with_errorbars(dodge) +
+  facet_grid(study ~ set, scales = "free_y") +
+  pronoun_scale +
+  log_ms_axis +
+  labs(x = NULL, color = "Pronoun 2", linetype = "Pronoun pair", title = "Maze: RT at pronoun 2, by session set")
+```
+
+```{r robustness-pronoun-2-spr, fig.height = 12, fig.width = 12}
+ggplot(filter(pronoun_2_all_sets, task == "spr"), aes(x = round, y = rt, color = pro2_type, linetype = pair,
+                                                      group = interaction(pro2_type, pair))) +
+  line_with_errorbars(dodge) +
+  facet_grid(paste(study, word) ~ set, scales = "free_y") +
+  pronoun_scale +
+  log_ms_axis +
+  labs(x = NULL, color = "Pronoun 2", linetype = "Pronoun pair",
+       title = "SPR: RT at pronoun 2 and the next three words, by session set")
+```
+
+```{r robustness-cloze, fig.height = 4.5, fig.width = 12}
+ggplot(cloze_all_sets, aes(x = round, y = present, color = code, group = code)) +
+  line_with_errorbars(dodge) +
+  facet_grid(study ~ set) +
+  pronoun_code_scale +
+  labs(x = NULL, y = "Proportion of completions with a target pronoun", color = "First target pronoun",
+       title = "Cloze: first target pronoun, by session set (comprehension, strict_timing = main for cloze)")
+```
+
+```{r robustness-expectations, fig.height = 3.5, fig.width = 12}
+imap(expectation_sets, \(ids, set) filter(sessions, session_id %in% ids) |> mutate(set = set)) |>
+  list_rbind() |>
+  mutate(set = factor(set, levels = set_levels),
+         target = recode(expectation_target, vice_president = "vice president"),
+         panel = paste(study, target)) |>
+  ggplot(aes(x = round, y = expect_prob_dem, color = panel, group = panel)) +
+  line_with_errorbars(dodge) +
+  facet_wrap(~set, nrow = 1) +
+  scale_color_brewer(palette = "Dark2") +
+  coord_cartesian(ylim = c(0, 1)) +
+  labs(x = NULL, y = "P(Democratic candidate wins)", color = NULL,
+       title = "Event expectations, by session set")
+```
+
+Task order also matters for the event sliders: if the critical task primes
+expectations, the task-first sessions are the cleaner measure.
+
+```{r order-expectations, fig.height = 3.5}
+ggplot(expectation_plot_data, aes(x = round, y = expect_prob_dem, color = task_order,
+                                  group = task_order)) +
+  line_with_errorbars(dodge) +
+  facet_wrap(~panel, nrow = 1) +
+  scale_color_brewer(palette = "Dark2") +
+  coord_cartesian(ylim = c(0, 1)) +
+  labs(x = NULL, y = "P(Democratic candidate wins)", color = NULL,
+       title = "Event expectations by task order")
+```
+
+## Still to add
+
+- Log vs. raw RT, and residualized RT (deferred to the modeling stage).
