@@ -25,7 +25,10 @@ REFERENTS = ["target", "other_office", "neither"]
 
 CLOZE_CODES = ["she", "he", "they", "hedged", "female_candidate_name", "male_candidate_name",
                "other_candidate_name", "target_office_np", "other_office_np", "generic_np", "other", "blank"]
-NONSENSE_REASONS = ["blank", "filler_or_number", "pasted_id", "copied_context", "pasted_text", "single_word"]
+# The reasons the coding uses (cloze_nonsense_reason), plus "doesnt_make_sense"
+# for the coder (added 2026-10-08).
+NONSENSE_REASONS = ["doesnt_make_sense", "blank", "filler_or_number", "pasted_id", "copied_context", "pasted_text",
+                    "single_word"]
 
 DECISION_COLUMNS = (["item_id", "study", "cloze_item", "response", "coder", "saved_at", "cloze_code",
                      "referents"] + COREF_COLUMNS +
@@ -244,3 +247,39 @@ def review_changes(items: pd.DataFrame, decisions: pd.DataFrame) -> pd.DataFrame
                              "response": item["response_current"], "field": code, "current": current_value,
                              "coder": coder_value, "note": item["note"]})
     return pd.DataFrame(rows, columns=["study", "cloze_item", "response", "field", "current", "coder", "note"])
+
+
+# Hand-review export ---------------------------------------------------------------------------------------
+
+HAND_REVIEW_COLUMNS = (["study", "cloze_item", "response", "source", "coder", "cloze_code"] + COREF_COLUMNS +
+                       ["first_coref_pronoun", "cloze_nonsense", "cloze_nonsense_reason", "note"])
+_BARE_NUMBER = r"^[0-9\s\W_]+$"
+
+
+def hand_review_table(items: pd.DataFrame, blind: pd.DataFrame, review: pd.DataFrame) -> pd.DataFrame:
+    """The coder's decisions as overrides for the prep (shared/cloze_hand_review.csv).
+
+    - Review decisions apply in full.
+    - Blind decisions for completions not reviewed change only the nonsense
+      flag; cloze_code and coreference keep the rule codes (the blind
+      cloze_code differences were definitional slips, decided 2026-10-08).
+    - Bare numbers are always nonsense (by rule); no decision unflags them.
+    """
+    by_id = items.set_index("item_id")
+    rows = []
+    for source, decisions in (("review", review), ("blind", blind[~blind["item_id"].isin(review["item_id"])])):
+        for _, d in decisions.iterrows():
+            item = by_id.loc[d["item_id"]]
+            if source == "review":
+                codes = {col: d[col] for col in ["cloze_code", "first_coref_pronoun"]}
+                codes |= {col: as_bool(d[col]) for col in COREF_COLUMNS}
+            else:
+                codes = {col: item[col] for col in ["cloze_code", "first_coref_pronoun"] + COREF_COLUMNS}
+            nonsense = as_bool(d["cloze_nonsense"])
+            reason = d["cloze_nonsense_reason"] if nonsense else ""
+            if pd.Series([item["response"]]).str.match(_BARE_NUMBER).iloc[0]:
+                nonsense, reason = True, "filler_or_number"
+            rows.append({"study": item["study"], "cloze_item": item["cloze_item"], "response": item["response"],
+                         "source": source, "coder": d["coder"], **codes, "cloze_nonsense": nonsense,
+                         "cloze_nonsense_reason": reason, "note": d["note"]})
+    return pd.DataFrame(rows, columns=HAND_REVIEW_COLUMNS)

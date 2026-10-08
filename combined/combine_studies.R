@@ -35,6 +35,14 @@ for (table in setdiff(names(combined), "sessions")) {
   if (length(orphans) > 0) stop(table, ": ", length(orphans), " session_ids not in sessions")
 }
 
+# Every hand-review decision must match a completion, or the decisions are stale.
+hand <- read_cloze_hand_review("../shared/cloze_hand_review.csv")
+reviewed_keys <- combined$cloze |>
+  filter(cloze_hand_reviewed) |>
+  distinct(study, cloze_item, response = coalesce(response, ""))
+stale <- anti_join(hand, reviewed_keys, by = c("study", "cloze_item", "response"))
+if (nrow(stale) > 0) stop(nrow(stale), " hand-review decisions match no cloze completion")
+
 iwalk(combined, \(df, table) {
   write_csv(df, paste0(table, ".csv.gz"))
   message(table, ".csv.gz: ", nrow(df), " rows")

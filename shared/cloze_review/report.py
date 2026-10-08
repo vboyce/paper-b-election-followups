@@ -3,9 +3,11 @@
 Run from the repo root:
     .venv/bin/python shared/cloze_review/report.py agreement   # blind sample vs. current codes
     .venv/bin/python shared/cloze_review/report.py changes     # review mode: corrections to make
+    .venv/bin/python shared/cloze_review/report.py export      # decisions -> shared/cloze_hand_review.csv
 
 Writes decisions/blind_agreement.csv and decisions/blind_disagreements.csv,
-or decisions/review_changes.csv, and prints a summary.
+or decisions/review_changes.csv, or (export) the hand overrides that both
+studies' prep applies, and prints a summary.
 """
 import sys
 from pathlib import Path
@@ -40,10 +42,18 @@ def main(command: str) -> None:
             raise ValueError("No review decisions yet")
         changes = rl.review_changes(items, decisions)
         changes.to_csv(DECISIONS / "review_changes.csv", index=False)
-        print(f"{len(decisions)} completions reviewed; {changes['response'].nunique()} with changes "
+        n_changed = len(changes.drop_duplicates(["study", "cloze_item", "response"]))
+        print(f"{len(decisions)} completions reviewed; {n_changed} with changes "
               f"({len(changes)} fields) -> decisions/review_changes.csv")
+    elif command == "export":
+        table = rl.hand_review_table(items, rl.load_decisions(DECISIONS / "blind.csv"),
+                                     rl.load_decisions(DECISIONS / "review.csv"))
+        out = HERE.parent / "cloze_hand_review.csv"
+        table.to_csv(out, index=False)
+        print(f"{len(table)} hand-reviewed completions ({(table['source'] == 'review').sum()} review, "
+              f"{(table['source'] == 'blind').sum()} blind only) -> {out.relative_to(HERE.parent.parent)}")
     else:
-        raise ValueError(f"Unknown command {command!r}; use 'agreement' or 'changes'")
+        raise ValueError(f"Unknown command {command!r}; use 'agreement', 'changes' or 'export'")
 
 
 if __name__ == "__main__":

@@ -61,3 +61,35 @@ def test_review_mode_shows_current_codes_prefilled(app):
     assert not app.exception
     assert any("Current codes" in m.value for m in app.markdown)
     assert app.selectbox[0].value is not None
+
+
+def test_prompt_and_completion_are_visibly_separated(app):
+    cloze = next(m.value for m in app.markdown if "class='cloze'" in m.value)
+    prompt_end = cloze.index("</span>")
+    assert cloze.index("class='prompt-end'") > prompt_end
+    assert cloze.index("class='prompt-end'") < cloze.index("class='completion'")
+
+
+def test_app_picks_up_a_regenerated_items_file(tmp_path, monkeypatch):
+    # Regression: the item list was cached for the life of the app, so a
+    # regenerated review_items.csv (new columns) crashed a running app.
+    items_file = tmp_path / "review_items.csv"
+    original = (Path(APP).parent / "review_items.csv").read_text()
+    lines = original.splitlines(keepends=True)
+    items_file.write_text("".join(lines[:200]))  # header + 199 completions
+    monkeypatch.setenv("CLOZE_REVIEW_ITEMS_FILE", str(items_file))
+    monkeypatch.setenv("CLOZE_REVIEW_DECISIONS_DIR", str(tmp_path))
+    at = AppTest.from_file(APP, default_timeout=30)
+    at.run()
+    at.sidebar.radio[0].set_value("review")
+    at.run()
+    before = at.subheader[0].value
+    items_file.write_text(original)
+    at.run()
+    assert not at.exception
+    assert at.subheader[0].value != before
+
+
+def test_nonsense_reasons_include_doesnt_make_sense(app):
+    reason_box = next(s for s in app.selectbox if s.label.startswith("If nonsense"))
+    assert "doesn't make sense" in reason_box.options

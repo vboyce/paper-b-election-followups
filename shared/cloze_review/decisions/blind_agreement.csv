@@ -1,0 +1,12 @@
+code,n,agreement,kappa
+cloze_code,150,0.9466666666666667,0.9329309188464118
+first_coref_pronoun,150,1.0,1.0
+cloze_nonsense,150,0.8866666666666667,0.6053853296193131
+coref_hedge,2,1.0,
+coref_she,7,1.0,
+coref_he,23,1.0,1.0
+coref_they,18,1.0,1.0
+coref_other_hedge,2,1.0,
+coref_other_she,7,1.0,
+coref_other_he,23,1.0,1.0
+coref_other_they,18,1.0,

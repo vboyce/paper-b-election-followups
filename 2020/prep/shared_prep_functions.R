@@ -653,6 +653,7 @@ build_common_tables <- function(sessions, cloze, recall, comprehension, spr, maz
                                                 reference_columns = df, target_office = settings$target_office,
                                                 judgments = read_cloze_coreference_judgments(),
                                                 them_not_referential = str_detect(df$prompt, "one of\\s*$"))))() |>
+    apply_cloze_hand_review(study = "2020", hand = read_cloze_hand_review()) |>
     with_ids()
 
   # Reading: SPR and Maze/mazerace words, critical and practice trials.

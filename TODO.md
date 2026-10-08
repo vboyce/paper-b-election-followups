@@ -31,6 +31,20 @@ The cloze completions are tagged partly by rule and partly by hand
 
   Rule-coded coreference (627 completions; a 65-item check by Claude found
   1 error) is checked only through the random sample.
+- **Done (2026-10-08).** Blind coding: `cloze_code` 94.7% agreement (kappa
+  .93), coreference 100%, nonsense 88.7% (kappa .61). Rule fixes from it:
+  office adjectives count, office nouns after "of", misspellings, titles
+  before names count as the name. Review of 289 priority completions done;
+  all hand decisions (417 completions) are applied in the prep via
+  `shared/cloze_hand_review.csv`. Robustness set `all_pronoun_clozes` keeps
+  nonsense-flagged completions with a pronoun referring to the office-holder
+  (adds 6 sessions, all 2024 *they*); we rely on it instead of refining
+  pasted / AI-generated detection.
+- Optional: collapse the nonsense reasons (`single_word` and
+  `doesnt_make_sense` were used interchangeably for single words) if the
+  reason is ever used.
+- Optional: "precident" misspelling for the office noun (only hand-coded
+  so far).
 
 ## Party affiliation vs. stated candidate preference
 

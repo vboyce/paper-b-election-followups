@@ -106,7 +106,8 @@ Biden/Trump, 2024 sessions Harris/Trump.
 | `coref_other_she`, `coref_other_he`, `coref_other_they`, `coref_other_hedge` | Whether a pronoun of that kind refers to the holder of the **other office** (2020: the president, as in "if the president cannot perform *his* duties"; 2024: the vice president) |
 | `first_coref_pronoun` | Which kind of pronoun referring to the target office-holder comes first: `she`, `he`, `they`, `hedged`, or `none`. A hedge ("his or her") counts as one hedge, not as "his" and "her" |
 | `cloze_nonsense` | The completion is obvious nonsense (see below) |
-| `cloze_nonsense_reason` | Why: `blank`, `filler_or_number`, `pasted_id`, `copied_context`, `pasted_text` or `single_word`; NA if not flagged |
+| `cloze_nonsense_reason` | Why: `blank`, `filler_or_number`, `pasted_id`, `copied_context`, `pasted_text`, `single_word` or (hand review only) `doesnt_make_sense`; NA if not flagged |
+| `cloze_hand_reviewed` | The cloze codes come from the hand review in `shared/cloze_hand_review.csv` (see below) |
 
 `cloze_code` values: `she`, `he`, `they`, `hedged` ("he or she", "s/he",
 "his or her"…), `female_candidate_name` (Harris), `male_candidate_name`
@@ -117,9 +118,23 @@ VP"; 2024: "the president", "the new president"), `other_office_np` (the
 other office; 2020: "the president"; 2024: "the vice president"),
 `generic_np` ("the winner", "the candidate": neither office), `other` (no
 reference found), `blank`. Office nouns count after a determiner ("the",
-"next", "our", "US"…) or at the very start of the completion ("vice
+"next", "our", "US", "of"…) or at the very start of the completion ("vice
 president" after "…protect the president and"), not as a bare predicate
-("will become president").
+("will become president"). Office adjectives ("presidential",
+"vice-presidential") count anywhere, as possessive pronouns do. Common
+misspellings are matched too ("vic president", "vice- president",
+"presidental", "Trumph"). An office noun used as a title before a
+candidate's name ("President Trump", "Vice President Pence") counts as the
+name, not the office.
+
+**Hand review.** 417 unique completions were checked by hand in the cloze
+review app (`shared/cloze_review/`): a random sample of 150 coded blind, and
+every completion whose codes rested on a hand judgment or that was all caps,
+a single word or long (excluding bare numbers and completions typed only by
+repeat participants). The decisions are exported to
+`shared/cloze_hand_review.csv` and replace the rule codes in both studies'
+prep. Review decisions replace every cloze code; blind-only decisions
+replace only the nonsense flag. Bare numbers stay nonsense.
 
 The shared coder is `code_cloze_response()` in `shared/common_schema.R`.
 Each study also keeps its original coding as `cloze_code_original`. The two

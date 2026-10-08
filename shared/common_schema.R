@@ -47,7 +47,7 @@ core_columns <- list(
     coref_she = "logical", coref_he = "logical", coref_they = "logical", coref_hedge = "logical",
     coref_other_she = "logical", coref_other_he = "logical", coref_other_they = "logical",
     coref_other_hedge = "logical", first_coref_pronoun = "character",
-    cloze_nonsense = "logical", cloze_nonsense_reason = "character"
+    cloze_nonsense = "logical", cloze_nonsense_reason = "character", cloze_hand_reviewed = "logical"
   ),
   reading = c(
     study = "character", round = "character", session_id = "character",
@@ -142,8 +142,14 @@ cloze_pronoun_patterns <- c(
 #                     "the vice president" (2024)
 #   generic_np        "the winner", "the candidate": neither office
 # An office noun counts when it follows a determiner ("the", "next", "our",
-# "US"...) or starts the completion ("vice president" after "...protect the
-# president and"), so a bare predicate ("will become president") does not.
+# "US", "of"...) or starts the completion ("vice president" after "...protect
+# the president and"), so a bare predicate ("will become president") does
+# not. Office adjectives ("presidential", "vice-presidential") count
+# anywhere, as possessive pronouns do (decided 2026-10-08). Common
+# misspellings are included: "vic president", "vice- president",
+# "presidental". An office noun used as a title before a candidate's name
+# ("President Trump", "Vice President Pence") is not an office reference;
+# the name is (decided 2026-10-08).
 #
 # `female_names` / `male_names` are regexes for the candidates in the
 # referent's office (2020: Harris / Pence for vice president; 2024: Harris /
@@ -155,9 +161,9 @@ cloze_pronoun_patterns <- c(
 # Each study's candidates and target office, used by both studies' prep and
 # by the cloze review app (shared/cloze_review/).
 cloze_coding_settings <- list(
-  "2020" = list(female_names = "harris|kamala", male_names = "pence", other_names = "biden|trump",
+  "2020" = list(female_names = "harris|kamala", male_names = "pence", other_names = "biden|trumph?",
                 target_office = "vice_president"),
-  "2024" = list(female_names = "harris|kamala", male_names = "trump|donald", other_names = NA,
+  "2024" = list(female_names = "harris|kamala", male_names = "trumph?|donald", other_names = NA,
                 target_office = "president")
 )
 
@@ -165,14 +171,20 @@ cloze_coding_settings <- list(
 # patterns are cloze_pronoun_patterns; the rest depend on the study.
 cloze_reference_patterns <- function(female_names, male_names, other_names, target_office) {
   stopifnot(target_office %in% c("vice_president", "president"))
-  # An office noun after a determiner, or at the very start of the completion.
-  office_np_re <- function(nouns) {
-    paste0("(?i)(\\b(the|next|new|newly elected|incoming|us|u\\.s\\.|our) |^\\s*)(", nouns, ")\\b")
+  # A candidate's name from either study (so "President Biden" in 2024 is a
+  # title too), possibly after a first name or initial: an office noun right
+  # before one is a title ("President Trump"), not a reference.
+  before_name <- "(?!\\s+((joe|donald|kamala|mike|j\\.?)\\s+)*(harris|kamala|pence|trumph?|biden|donald)\\b)"
+  # An office noun after a determiner or at the very start of the
+  # completion (unless it is a title), or an office adjective anywhere.
+  office_re <- function(nouns, adjective) {
+    paste0("(?i)((\\b(the|next|new|newly elected|incoming|us|u\\.s\\.|our|of) |^\\s*)(", nouns, ")\\b",
+           before_name, "|", adjective, ")")
   }
-  vice_president_np_re <- office_np_re("vice president|vice-president|vp")
-  # "the vice president" can't match here: "president" must follow the
-  # determiner (or the start) directly.
-  president_np_re <- office_np_re("president|potus")
+  vice_president_np_re <- office_re("vice?\\s*-?\\s*president|vp", "\\bvice?\\s*-?\\s*presidenti?al\\b")
+  # "the vice president" can't match the noun: "president" must follow the
+  # determiner (or the start) directly. The adjective must not follow "vice".
+  president_np_re <- office_re("president|potus", "(?<!vice?[\\s-]{0,3})\\bpresidenti?al\\b")
   c(
     cloze_pronoun_patterns,
     female_candidate_name = paste0("(?i)\\b(", female_names, ")\\b"),
@@ -445,4 +457,46 @@ code_cloze_coreference <- function(response, study, cloze_item, reference_column
   out$first_coref_pronoun <- if_else(any_coref, colnames(positions)[max.col(-positions, ties.method = "first")],
                                      "none")
   out
+}
+
+# Hand review: the coder's decisions from the cloze review app
+# (shared/cloze_review/, exported with `report.py export` to
+# shared/cloze_hand_review.csv), keyed by study, item and exact response.
+# They replace the rule / earlier hand codes for cloze_code, coref_*,
+# first_coref_pronoun, cloze_nonsense and cloze_nonsense_reason (which
+# completions and fields: see hand_review_table() in
+# shared/cloze_review/review_logic.py). `cloze_hand_reviewed` marks them.
+read_cloze_hand_review <- function(path = "../../shared/cloze_hand_review.csv") {
+  hand <- read_csv(path, col_types = cols(study = col_character(), cloze_item = col_character(),
+                                          response = col_character(), cloze_code = col_character(),
+                                          first_coref_pronoun = col_character(),
+                                          cloze_nonsense_reason = col_character(), note = col_character(),
+                                          source = col_character(), coder = col_character(),
+                                          .default = col_logical()),
+                   na = "")
+  stopifnot(!anyDuplicated(select(hand, study, cloze_item, response)),
+            !anyNA(select(hand, starts_with("coref_"), cloze_nonsense, cloze_code, first_coref_pronoun)),
+            all(hand$cloze_code %in% core_values$cloze_code),
+            all(!is.na(hand$cloze_nonsense_reason) == hand$cloze_nonsense))
+  hand
+}
+
+apply_cloze_hand_review <- function(df, study, hand) {
+  overrides <- hand |>
+    filter(study == !!study) |>
+    select(cloze_item, response, cloze_code, starts_with("coref_"), first_coref_pronoun,
+           cloze_nonsense, cloze_nonsense_reason) |>
+    mutate(cloze_hand_reviewed = TRUE)
+  key <- tibble(cloze_item = as.character(df$cloze_item), response = coalesce(df$response, ""))
+  matched <- left_join(key, overrides, by = c("cloze_item", "response"), relationship = "many-to-one")
+  reviewed <- coalesce(matched$cloze_hand_reviewed, FALSE)
+  for (col in setdiff(names(overrides), c("cloze_item", "response", "cloze_hand_reviewed"))) {
+    df[[col]][reviewed] <- matched[[col]][reviewed]
+  }
+  df$cloze_hand_reviewed <- reviewed
+  # The first target pronoun must be one the coref columns say refers to the target.
+  first <- df$first_coref_pronoun
+  first_col <- paste0("coref_", if_else(first == "hedged", "hedge", first))
+  stopifnot(all(first == "none" | map2_lgl(seq_along(first), first_col, \(i, col) col %in% names(df) && df[[col]][i])))
+  df
 }

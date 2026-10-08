@@ -202,3 +202,58 @@ def test_review_changes_lists_only_fields_that_differ(tmp_path):
     assert changes.set_index("field").loc["coref_he", "current"] == "True"
     assert changes.set_index("field").loc["coref_he", "coder"] == "False"
     assert (changes["note"] == "he = Trump").all()
+
+
+# hand-review export ------------------------------------------------------------------
+
+def decision_row(item_id, **values):
+    row = {col: "" for col in rl.DECISION_COLUMNS} | {"item_id": item_id, "coder": "VB",
+                                                      "cloze_code": "other", "first_coref_pronoun": "none",
+                                                      "cloze_nonsense": "False"}
+    row.update({c: "False" for c in rl.COREF_COLUMNS})
+    row.update(values)
+    return row
+
+
+def three_items(tmp_path):
+    he_text = "he wins"
+    path = make_items_csv(tmp_path, [
+        {"response": he_text, "spans": [span(he_text, "he", "he")], "coref_he": True,
+         "cloze_code": "he", "first_coref_pronoun": "he"},
+        {"response": "KAMALA HARRIS", "cloze_code": "female_candidate_name"},
+        {"response": "1", "cloze_nonsense": True, "cloze_nonsense_reason": "filler_or_number"},
+    ])
+    return rl.load_items(path)
+
+
+def test_review_decisions_apply_in_full_and_win_over_blind(tmp_path):
+    items = three_items(tmp_path)
+    he_id = items.loc[0, "item_id"]
+    blind = pd.DataFrame([decision_row(he_id, cloze_code="they", cloze_nonsense="True",
+                                       cloze_nonsense_reason="doesnt_make_sense")])
+    review = pd.DataFrame([decision_row(he_id, cloze_code="he", first_coref_pronoun="he", coref_he="True")])
+    table = rl.hand_review_table(items, blind, review).set_index("response")
+    assert table.loc["he wins", "source"] == "review"
+    assert table.loc["he wins", "cloze_code"] == "he"
+    assert not table.loc["he wins", "cloze_nonsense"]
+
+
+def test_blind_only_decisions_change_nonsense_but_keep_rule_codes(tmp_path):
+    items = three_items(tmp_path)
+    harris_id = items.loc[1, "item_id"]
+    blind = pd.DataFrame([decision_row(harris_id, cloze_code="other", cloze_nonsense="True",
+                                       cloze_nonsense_reason="doesnt_make_sense")])
+    table = rl.hand_review_table(items, blind, rl.empty_decisions()).set_index("response")
+    row = table.loc["KAMALA HARRIS"]
+    assert row["source"] == "blind"
+    assert row["cloze_nonsense"] and row["cloze_nonsense_reason"] == "doesnt_make_sense"
+    assert row["cloze_code"] == "female_candidate_name"  # the rule's code, not the blind one
+
+
+def test_bare_numbers_stay_nonsense(tmp_path):
+    items = three_items(tmp_path)
+    number_id = items.loc[2, "item_id"]
+    blind = pd.DataFrame([decision_row(number_id, cloze_nonsense="False")])
+    table = rl.hand_review_table(items, blind, rl.empty_decisions()).set_index("response")
+    assert table.loc["1", "cloze_nonsense"]
+    assert table.loc["1", "cloze_nonsense_reason"] == "filler_or_number"

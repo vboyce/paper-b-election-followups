@@ -7,10 +7,16 @@ A small Streamlit app for checking the cloze codes (`cloze_code`, `coref_*`,
   random (fixed seed) from all non-blank ones. The current codes are hidden.
   Agreement with the current codes (percent agreement and Cohen's kappa) is
   the reliability check. Do this before review mode.
-- **Review (hand-judged completions):** the 286 completions whose current
+- **Review (priority completions):** the 289 completions whose current
   codes rest on a hand judgment (coreference judged by hand, pasted-text
-  judgments, single-word judgments). The current codes are shown and
-  prefilled, so you confirm or correct them.
+  judgments, single-word judgments), plus, since the blind coding, every
+  all-caps, single-word or long completion (above the study's 95th
+  percentile in words). The current codes are shown and prefilled, so you
+  confirm or correct them. Bare numbers are left out (always nonsense), and
+  so are completions typed only by repeat participants (already excluded).
+  The header says how many of the sessions that
+  typed the completion pass the participant screens (most junk comes from
+  sessions already excluded as repeat participants).
 
 In both modes the references the coding rules matched are highlighted:
 pronouns (numbered and coloured), candidate names (solid underline), and
@@ -30,7 +36,8 @@ Anything the rules missed is not highlighted; note it in the Note field.
   completion, so "will become president" doesn't count. If there is none,
   choose "none of these".
 - **Nonsense:** whether the completion is not a real attempt (and why).
-  The reasons are the same as for `cloze_nonsense_reason` in `DATA.md`.
+  The reasons are those of `cloze_nonsense_reason` in `DATA.md`, plus
+  "doesn't make sense" (saved as `doesnt_make_sense`).
 
 ## Running it
 
@@ -63,10 +70,18 @@ everywhere else both sides are trivially FALSE. Kappa is NaN when both sides
 use a single value. `changes` writes `decisions/review_changes.csv`: one row
 per completion and code where your answer differs from the current code.
 
-Corrections are not applied automatically. They go into the hand-judgment
-files in `shared/` (`cloze_coreference_judgments.csv` and the others), and
-the prep is then re-run. A correction to a rule-coded completion means
-changing the rule or adding a hand judgment for it.
+To apply the decisions, export them and re-run both studies' prep and
+`combined/combine_studies.R`:
+
+```
+.venv/bin/python shared/cloze_review/report.py export   # -> shared/cloze_hand_review.csv
+```
+
+Review decisions replace every cloze code for that completion; blind-only
+decisions replace only the nonsense flag (the blind `cloze_code` differences
+were definitional slips); bare numbers always stay nonsense. The processed
+data marks these rows with `cloze_hand_reviewed`, and `combine_studies.R`
+stops if a decision no longer matches any completion.
 
 ## Files
 
@@ -76,6 +91,9 @@ changing the rule or adding a hand judgment for it.
 - `review_logic.py`: everything except the UI (highlighting, referents to
   codes, saving, agreement).
 - `report.py`: the agreement and changes reports.
+- `list_screens.R`: writes `screen_lists.md`, the pasted/copied, generated-sounding,
+  all-caps and single-word completions as tables, with how many sessions pass the
+  participant screens.
 - `tests/`: `pytest` tests for `review_logic.py`, plus end-to-end tests of
   `app.py` (Streamlit's `AppTest`) on the real `review_items.csv`. Run them with
   `cd shared/cloze_review && ../../.venv/bin/pytest`.

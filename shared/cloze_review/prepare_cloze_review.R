@@ -7,6 +7,10 @@
 # sessions get the same codes, and the hand-judgment files are keyed the
 # same way). Columns:
 #   study, cloze_item, prompt, response, n_sessions
+#   n_not_repeat   how many of those sessions are not repeat participants
+#   n_pass_screens how many of those sessions pass the participant-level
+#                  screens (complete, not a repeat participant, native
+#                  English, US citizen and resident)
 #   current codes: cloze_code, coref_*, coref_other_*, first_coref_pronoun,
 #                  cloze_nonsense, cloze_nonsense_reason
 #   spans          JSON list of the references the coding rules matched:
@@ -14,8 +18,13 @@
 #                  kind (a cloze_code level: she, target_office_np, ...),
 #                  text (the matched text)
 #   blind_order    1..n for the random blind-recoding sample, NA otherwise
-#   priority       TRUE if the current codes rest on a hand judgment
-#   priority_reasons  which hand judgments ("; "-separated)
+#   priority       TRUE if the completion goes into review mode: its codes
+#                  rest on a hand judgment, or it is all caps, a single word,
+#                  or long (above the study's 95th percentile in words;
+#                  added 2026-10-08 after the blind coding). Bare numbers are
+#                  left out: they are always nonsense. So are completions
+#                  typed only by repeat participants (already excluded).
+#   priority_reasons  which of these ("; "-separated)
 #
 # Highlights use the same regexes as the coding (cloze_reference_patterns()
 # in ../common_schema.R), so they show exactly what the rules saw.
@@ -24,6 +33,7 @@ library(tidyverse)
 library(here)
 library(jsonlite)
 source(here("shared", "common_schema.R"))
+source(here("analysis", "analysis_data.R"))
 
 blind_sample_size <- 150
 blind_sample_seed <- 20261008
@@ -44,6 +54,19 @@ if (anyDuplicated(select(items, all_of(key_columns)))) {
   stop("Identical completions with different codes or prompts")
 }
 stopifnot(sum(items$n_sessions) == nrow(cloze))
+
+analysis_data <- load_analysis_data(default_analysis_settings)
+not_repeat_sessions <- analysis_data$sessions |>
+  filter(!step_2_repeat) |>
+  pull(session_id)
+passing_sessions <- analysis_data$sessions |>
+  filter(!if_any(all_of(analysis_data$participant_steps))) |>
+  pull(session_id)
+pass_counts <- cloze |>
+  mutate(response = coalesce(response, "")) |>
+  summarize(n_pass_screens = sum(session_id %in% passing_sessions),
+            n_not_repeat = sum(session_id %in% not_repeat_sessions), .by = all_of(key_columns))
+items <- inner_join(items, pass_counts, by = key_columns, relationship = "one-to-one")
 
 # Highlight spans ---------------------------------------------------------------
 
@@ -119,11 +142,22 @@ is_judged_single_word <- str_count(normalized, "\\S+") == 1 &
   paste(items$study, items$cloze_item, normalized, sep = "\r") %in% single_word_keys
 stopifnot(sum(is_judged_single_word) >= nrow(single_words))
 
+n_words <- str_count(str_squish(items$response), "\\S+")
+long_cutoff <- tapply(n_words, items$study, \(n) quantile(n, .95))
 reasons <- cbind(
   "coreference judged by hand" = item_keys %in% key_of(coref_judgments),
   "pasted-text judgment" = item_keys %in% key_of(pasted_text),
-  "single-word judgment" = is_judged_single_word
+  "single-word judgment" = is_judged_single_word,
+  "all caps" = str_count(items$response, "[A-Za-z]") >= 2 & !str_detect(items$response, "[a-z]"),
+  "single word" = n_words == 1,
+  "long" = n_words > long_cutoff[items$study]
 )
+# Bare numbers are always nonsense (by rule), so they need no review.
+is_number_only <- str_detect(items$response, "^[0-9[:space:][:punct:]]+$")
+reasons[is_number_only, ] <- FALSE
+# Completions only repeat participants typed are excluded already, so they
+# need no review either.
+reasons[items$n_not_repeat == 0, ] <- FALSE
 items$priority_reasons <- apply(reasons, 1, \(row) if (any(row)) paste(colnames(reasons)[row], collapse = "; ") else NA)
 items$priority <- !is.na(items$priority_reasons)
 
@@ -138,7 +172,7 @@ items$blind_order[sampled] <- seq_len(blind_sample_size)
 
 out <- items |>
   arrange(study, as.integer(cloze_item), response) |>
-  select(all_of(key_columns), prompt, n_sessions, all_of(code_columns), spans, blind_order, priority,
+  select(all_of(key_columns), prompt, n_sessions, n_not_repeat, n_pass_screens, all_of(code_columns), spans, blind_order, priority,
          priority_reasons)
 write_csv(out, here("shared", "cloze_review", "review_items.csv"), na = "")
 

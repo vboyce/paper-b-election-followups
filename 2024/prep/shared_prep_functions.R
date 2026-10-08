@@ -241,6 +241,7 @@ process_wave <- function(trials_path, cloze_stim_path, comp_q_path, maze_stim_pa
                                                 reference_columns = df, target_office = settings$target_office,
                                                 judgments = read_cloze_coreference_judgments(),
                                                 them_not_referential = str_detect(df$prompt, "one of\\s*$"))))() |>
+    apply_cloze_hand_review(study = "2024", hand = read_cloze_hand_review()) |>
     mutate(
       cloze_code_original = classify_cloze_response_original(response),
       cloze_code_original = if_else(

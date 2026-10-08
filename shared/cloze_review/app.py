@@ -15,17 +15,22 @@ import streamlit as st
 import review_logic as rl
 
 HERE = Path(__file__).parent
-ITEMS_FILE = HERE / "review_items.csv"
+# CLOZE_REVIEW_ITEMS_FILE is only for tests (tests/test_app.py).
+ITEMS_FILE = Path(os.environ.get("CLOZE_REVIEW_ITEMS_FILE", HERE / "review_items.csv"))
 # CLOZE_REVIEW_DECISIONS_DIR is only for tests (tests/test_app.py).
 DECISIONS_DIR = Path(os.environ.get("CLOZE_REVIEW_DECISIONS_DIR", HERE / "decisions"))
 DECISIONS_FILES = {"blind": DECISIONS_DIR / "blind.csv", "review": DECISIONS_DIR / "review.csv"}
-MODE_LABELS = {"blind": "Blind recode (random sample)", "review": "Review (hand-judged completions)"}
+MODE_LABELS = {"blind": "Blind recode (random sample)", "review": "Review (priority completions)"}
 
 # Highlight colours by kind of reference; pronouns are the ones to judge.
 CSS = """
 <style>
 .cloze { font-size: 1.25rem; line-height: 2.2; }
 .cloze .prompt { color: #6b6b6b; }
+/* Where the prompt ends and the participant's text begins. */
+.cloze .prompt-end { display: inline-block; width: 3px; height: 1.4em; margin: 0 0.4em;
+  vertical-align: middle; background: #d62728; border-radius: 2px; }
+.cloze .completion { background: rgba(31, 120, 180, 0.08); padding: 0.15em 0.3em; border-radius: 0.25em; }
 mark.ref { padding: 0.1em 0.25em; border-radius: 0.25em; color: inherit; }
 mark.ref sup { font-weight: 700; margin-left: 0.1em; }
 mark.ref-she { background: rgba(217, 95, 2, 0.35); }
@@ -38,7 +43,8 @@ mark.ref-target_office_np, mark.ref-other_office_np, mark.ref-generic_np {
   background: transparent; border-bottom: 3px dashed #1f78b4; border-radius: 0; }
 </style>
 """
-LEGEND = ("Highlighted: pronouns (numbered; say who each refers to) · "
+LEGEND = ("<span style='color:#d62728'>|</span> marks where the prompt ends; the shaded text is the "
+          "participant's completion. Highlighted: pronouns (numbered; say who each refers to) · "
           "<span style='border-bottom:3px solid #e6ab02'>candidate names</span> · "
           "<span style='border-bottom:3px dashed #1f78b4'>office / winner noun phrases</span>. "
           "Highlights are what the coding rules matched; anything they missed is not highlighted.")
@@ -62,15 +68,28 @@ def code_labels(study: str) -> dict:
     }
 
 
+NONSENSE_REASON_LABELS = {
+    "doesnt_make_sense": "doesn't make sense",
+    "blank": "blank",
+    "filler_or_number": "filler ('yes', 'ok', 'idk') or a number",
+    "pasted_id": "pasted ID",
+    "copied_context": "copied from the prompt",
+    "pasted_text": "pasted text (article, ad, generated text, ...)",
+    "single_word": "single word that doesn't fit",
+}
+
+
 def referent_labels(study: str) -> dict:
     office, other_office = ("vice president", "president") if study == "2020" else ("president", "vice president")
     return {"target": f"the {office} (target)", "other_office": f"the {other_office}",
             "neither": "someone / something else, or not referential"}
 
 
+# Cached per file version: re-running prepare_cloze_review.R takes effect
+# without restarting the app.
 @st.cache_data
-def load_items():
-    return rl.load_items(ITEMS_FILE)
+def load_items(path: Path, modified: float):
+    return rl.load_items(path)
 
 
 def mode_order(items, mode: str) -> list[str]:
@@ -108,7 +127,7 @@ def show_current_codes(item, labels: dict) -> None:
 def main():
     st.set_page_config(page_title="Cloze review", layout="wide")
     st.markdown(CSS, unsafe_allow_html=True)
-    items = load_items()
+    items = load_items(ITEMS_FILE, ITEMS_FILE.stat().st_mtime)
     by_id = items.set_index("item_id", drop=False)
 
     with st.sidebar:
@@ -135,9 +154,13 @@ def main():
 
     status = "done" if item["item_id"] in done else "not done yet"
     st.subheader(f"{position + 1} of {len(order)} ({status})")
-    st.caption(f"Study {study} · item {item['cloze_item']} · {item['n_sessions']} session(s) typed this")
-    st.markdown(f"<div class='cloze'><span class='prompt'>{html.escape(item['prompt'])}</span> "
-                f"{rl.render_html(item['response'], item['spans'])}</div>", unsafe_allow_html=True)
+    st.caption(f"Study {study} · item {item['cloze_item']} · {item['n_sessions']} session(s) typed this, "
+               f"{item['n_pass_screens']} passing the participant screens (complete, not a repeat, "
+               f"native English, US)")
+    st.markdown(f"<div class='cloze'><span class='prompt'>{html.escape(item['prompt'])}</span>"
+                f"<span class='prompt-end' title='end of prompt'></span>"
+                f"<span class='completion'>{rl.render_html(item['response'], item['spans'])}</span></div>",
+                unsafe_allow_html=True)
     st.caption(LEGEND, unsafe_allow_html=True)
     if mode == "review":
         show_current_codes(item, labels)
@@ -159,7 +182,8 @@ def main():
         nonsense = st.radio("Nonsense / not a real attempt?", [False, True], horizontal=True,
                             format_func={False: "no", True: "yes"}.get,
                             index=index_of([False, True], start["nonsense"]), key=f"{key}-nonsense")
-        reason = st.selectbox("If nonsense: why", rl.NONSENSE_REASONS, index=index_of(rl.NONSENSE_REASONS, start["reason"]),
+        reason = st.selectbox("If nonsense: why", rl.NONSENSE_REASONS, format_func=NONSENSE_REASON_LABELS.get,
+                              index=index_of(rl.NONSENSE_REASONS, start["reason"]),
                               key=f"{key}-reason")
         note = st.text_input("Note (optional: a missed reference, a doubt, ...)", value=start["note"], key=f"{key}-note")
         submitted = st.form_submit_button("Save and next", type="primary")

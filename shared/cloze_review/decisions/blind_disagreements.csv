@@ -1,0 +1,26 @@
+study,cloze_item,response,field,current,coder,note
+2024,9,them will be easy.,cloze_code,other,they,
+2020,8,then to shake things up.,cloze_code,other,they,"believe that ""then"" is a typo for ""them"""
+2024,1,"the next U.S. president will likely focus on is setting their agenda for the coming term, which could include addressing key national issues, meeting with advisors to outline immediate priorities, and possibly signing executive orders to kick-start their administration's goals.",cloze_code,target_office_np,they,could be real? need to check if it's a context or copied from somewhere
+2024,9,them will be how to handle Russia's invasion of Ukraine.,cloze_code,other,they,
+2020,7,next presidenti,cloze_code,other,other_office_np,
+2020,5,presidential,cloze_code,other_office_np,other,
+2020,1,the vice president chooses their party's side,cloze_code,target_office_np,they,
+2024,8,President Trump will follow President Biden in that role.,cloze_code,target_office_np,male_candidate_name,
+2020,7,KAMALA HARRIS,cloze_nonsense,False,True,all caps candidate name with nothing else
+2020,3,OUR COUNTRY,cloze_nonsense,False,True,"questionable, all caps"
+2020,12,Ronald Trumph,cloze_nonsense,False,True,doesn't make sense & misspelled
+2020,6,president,cloze_nonsense,False,True,
+2020,2,OF CORONA SESSION,cloze_nonsense,False,True,all caps
+2020,5,kamala harris,cloze_nonsense,False,True,weird when KH was a VP candidate
+2024,1,"the next U.S. president will likely focus on is setting their agenda for the coming term, which could include addressing key national issues, meeting with advisors to outline immediate priorities, and possibly signing executive orders to kick-start their administration's goals.",cloze_nonsense,False,True,could be real? need to check if it's a context or copied from somewhere
+2020,7,0F CORONA VIRUS,cloze_nonsense,False,True,and all caps
+2020,7,HE,cloze_nonsense,False,True,
+2020,7,"AVOID RACISM,TREAT PEOPLE EQUALLY",cloze_nonsense,False,True,"all caps, nonsense"
+2020,8,Kamala Harris,cloze_nonsense,False,True,not complete
+2020,5,Mike Pence,cloze_nonsense,False,True,VP and pence doesn't make sense
+2020,1,KAMALA HARRIS,cloze_nonsense,False,True,
+2024,8,Donald J Trump,cloze_nonsense,False,True,
+2020,10,PRESIDENT GIVE MANY SPEECH,cloze_nonsense,False,True,"all caps, not grammatical"
+2020,7,1,cloze_nonsense,True,False,
+2020,7,april 2021,cloze_nonsense,False,True,
